@@ -1,0 +1,19 @@
+title: Start
+---
+<<declare $testStringVariable to "This is a string in a variable">>
+<<declare $testNumberVariable to 666>>
+This is some text.
+This is some more text.
+<<testcaseAction>>
+We called an action with zero arguments.
+<<testcaseAction 42>>
+We called an action with an integer argument.
+<<testcaseAction 3.141>>
+We called an action with a decimal argument.
+<<testcaseAction "Hello world!">>
+We called an action with a string argument.
+<<testcaseAction 42 3.141 "Hello world!">>
+We called an action with many mixed arguments.
+<<testcaseAction $testStringVariable {$testNumberVariable + 10}>>
+The test will now end.
+===

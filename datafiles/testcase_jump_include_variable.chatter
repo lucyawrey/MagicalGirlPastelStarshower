@@ -1,0 +1,20 @@
+title: Start
+---
+<<declare $a = "Tar">>
+<<declare $b = "get">>
+<<jump ($a + $b)>>
+===
+
+title: Target
+---
+This is the target node.
+<<declare $c = "Final">>
+<<jump $c>>
+===
+
+title: Final
+---
+This is the final node.
+We expected an error to occur when we jump to a non-existent node.
+<<jump expectedFailure>>
+===
