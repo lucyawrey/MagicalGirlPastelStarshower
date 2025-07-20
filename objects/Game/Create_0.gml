@@ -2,6 +2,10 @@ available_save_slots = 5;
 
 state = {
     game_is_loaded: false,
+    shared_is_touched: false,
+    save_slot_is_touched: false,
+    player_is_touched: false,
+    secret_is_touched: false,
     /* /saves/shared.json */
     shared: {
         active_save_slot_number: 0,
@@ -10,12 +14,15 @@ state = {
     /* /saves/slots/slot_[number].json */
     save_slot: {
         player_name: "",
+        room: "",
+        scene: "",
+        scene_position: 0,
     },
     /* /saves/players/player_[name].json */
     player: {
         name: "",
         gender: {
-            fluid: false,
+            is_fluid: false,
             // Enum - Androgynous, Feminine, Masculine
             form: "Androgynous",
             // Enum - ItIts, TheyThem, SheHer, HeHim, Custom
