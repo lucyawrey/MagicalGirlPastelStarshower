@@ -2,7 +2,7 @@
   "$GMProject":"v1",
   "%Name":"MagicalGirlPastelStarshower",
   "AudioGroups":[
-    {"$GMAudioGroup":"v1","%Name":"audiogroup_default","exportDir":"","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
   ],
   "configs":{
     "children":[],
@@ -89,6 +89,7 @@
     {"id":{"name":"Enemy_1","path":"objects/Enemy_1/Enemy_1.yy",},},
     {"id":{"name":"Enemy_2","path":"objects/Enemy_2/Enemy_2.yy",},},
     {"id":{"name":"Enemy","path":"objects/Enemy/Enemy.yy",},},
+    {"id":{"name":"Game","path":"objects/Game/Game.yy",},},
     {"id":{"name":"NPC_1","path":"objects/NPC_1/NPC_1.yy",},},
     {"id":{"name":"NPC_2","path":"objects/NPC_2/NPC_2.yy",},},
     {"id":{"name":"NPC","path":"objects/NPC/NPC.yy",},},
