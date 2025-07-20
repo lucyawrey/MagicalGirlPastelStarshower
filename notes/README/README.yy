@@ -3,8 +3,8 @@
   "%Name":"README",
   "name":"README",
   "parent":{
-    "name":"rpg_test",
-    "path":"rpg_test.yyp",
+    "name":"MagicalGirlPastelStarshower",
+    "path":"MagicalGirlPastelStarshower.yyp",
   },
   "resourceType":"GMNotes",
   "resourceVersion":"2.0",

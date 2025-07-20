@@ -1,8 +1,8 @@
 {
   "$GMProject":"v1",
-  "%Name":"rpg_test",
+  "%Name":"MagicalGirlPastelStarshower",
   "AudioGroups":[
-    {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMAudioGroup":"v1","%Name":"audiogroup_default","exportDir":"","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
   ],
   "configs":{
     "children":[],
@@ -81,7 +81,7 @@
   "MetaData":{
     "IDEVersion":"2024.1400.0.841",
   },
-  "name":"rpg_test",
+  "name":"MagicalGirlPastelStarshower",
   "resources":[
     {"id":{"name":"Dialogue_Font","path":"fonts/Dialogue_Font/Dialogue_Font.yy",},},
     {"id":{"name":"README","path":"notes/README/README.yy",},},
