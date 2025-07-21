@@ -15,10 +15,11 @@ state = {
         runs_completed: int64(0),
         player_name: "",
         current_room: "",
-        current_scene: "",
         current_location: "",
-        scene_position: int64(0),
-        completed_scenes: [],
+        current_story_node: "",
+        node_line_position: int64(0),
+        // TODO consider separating concept of story_nodes and scenes
+        completed_story_nodes: [],
         flags: {},
     },
     /* /saves/players/player_[name].json */
@@ -30,7 +31,7 @@ state = {
             form: PlayerForm.Androgynous,
             pronouns: PlayerPronouns.ItIts,
         },
-        completed_scenes: [],
+        completed_story_nodes: [],
         flags: {},
     },
     /* /game_data/internal_configuration */
