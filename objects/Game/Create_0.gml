@@ -6,24 +6,24 @@ state = {
     secret_is_touched: false,
     /* /saves/shared.json */
     shared: {
-        active_save_slot_number: 0,
+        active_save_slot_number: int64(0),
         active_player_name: "",
         first_play: true,
     },
     /* /saves/slots/slot_[number].json */
     save_slot: {
-        runs_completed: 0,
+        runs_completed: int64(0),
         player_name: "",
         current_room: "",
         current_scene: "",
         current_location: "",
-        scene_position: 0,
+        scene_position: int64(0),
         completed_scenes: [],
         flags: {},
     },
     /* /saves/players/player_[name].json */
     player: {
-        runs_completed: 0,
+        runs_completed: int64(0),
         name: "",
         gender: {
             is_fluid: false,
