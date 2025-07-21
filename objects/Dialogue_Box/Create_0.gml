@@ -1,10 +1,10 @@
 messages = [];
 current_message = -1;
 current_char = 0;
-draw_message = "";
+message_to_draw = "";
 
 char_speed = 0.5;
 input_key = vk_space;
 
-gui_w = display_get_gui_width();
-gui_h = display_get_gui_height();
+gui_width = display_get_gui_width();
+gui_height = display_get_gui_height();

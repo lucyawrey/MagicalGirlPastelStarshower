@@ -8,4 +8,4 @@ else
     target_y = random_range(ystart - 100, ystart + 100);
 }
 
-alarm[0] = alarm_time;
+alarm[0] = loop_time;

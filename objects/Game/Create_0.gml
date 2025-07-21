@@ -1,5 +1,3 @@
-available_save_slots = 5;
-
 state = {
     game_is_loaded: false,
     shared_is_touched: false,
@@ -14,8 +12,8 @@ state = {
     /* /saves/slots/slot_[number].json */
     save_slot: {
         player_name: "",
-        room: "",
-        scene: "",
+        current_room: "",
+        current_scene: "",
         scene_position: 0,
     },
     /* /saves/players/player_[name].json */
@@ -23,10 +21,8 @@ state = {
         name: "",
         gender: {
             is_fluid: false,
-            // Enum - Androgynous, Feminine, Masculine
-            form: "Androgynous",
-            // Enum - ItIts, TheyThem, SheHer, HeHim, Custom
-            pronouns: "ItIts",
+            form: PlayerForm.Androgynous,
+            pronouns: PlayerPronouns.ItIts,
         }
     },
     /* /game_data/internal_configuration */
