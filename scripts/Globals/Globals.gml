@@ -1,4 +1,4 @@
-available_save_slots = 5;
+available_save_slots = 10;
 
 characters = {
     cross: { name: "Cross", color: c_yellow },

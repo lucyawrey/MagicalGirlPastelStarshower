@@ -94,7 +94,7 @@
     {"id":{"name":"NPC_2","path":"objects/NPC_2/NPC_2.yy",},},
     {"id":{"name":"NPC","path":"objects/NPC/NPC.yy",},},
     {"id":{"name":"Player","path":"objects/Player/Player.yy",},},
-    {"id":{"name":"Room_1","path":"rooms/Room_1/Room_1.yy",},},
+    {"id":{"name":"Start","path":"rooms/Start/Start.yy",},},
     {"id":{"name":"__ChatterboxArrayCopyPart","path":"scripts/__ChatterboxArrayCopyPart/__ChatterboxArrayCopyPart.yy",},},
     {"id":{"name":"__ChatterboxArrayToString","path":"scripts/__ChatterboxArrayToString/__ChatterboxArrayToString.yy",},},
     {"id":{"name":"__ChatterboxBufferBatch","path":"scripts/__ChatterboxBufferBatch/__ChatterboxBufferBatch.yy",},},
@@ -202,6 +202,7 @@
     {"id":{"name":"Enums","path":"scripts/Enums/Enums.yy",},},
     {"id":{"name":"Globals","path":"scripts/Globals/Globals.yy",},},
     {"id":{"name":"IsChatterbox","path":"scripts/IsChatterbox/IsChatterbox.yy",},},
+    {"id":{"name":"Saves","path":"scripts/Saves/Saves.yy",},},
     {"id":{"name":"spr_battle_screen","path":"sprites/spr_battle_screen/spr_battle_screen.yy",},},
     {"id":{"name":"spr_box","path":"sprites/spr_box/spr_box.yy",},},
     {"id":{"name":"spr_button_heavy","path":"sprites/spr_button_heavy/spr_button_heavy.yy",},},
@@ -229,7 +230,7 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"Room_1","path":"rooms/Room_1/Room_1.yy",},},
+    {"roomId":{"name":"Start","path":"rooms/Start/Start.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
