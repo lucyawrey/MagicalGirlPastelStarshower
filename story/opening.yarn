@@ -1,16 +1,35 @@
 title: OpeningDream
-tags: scene, location_dream, day_1
+tags: scene, location_dream, day_1, day_start
 ---
-Welcome to
-Mae: What did you say to her?
--> Nothing.
-    Mae: Oh, man. Maybe you should have.
--> That she was a jerk.
-    Mae: Hah! I bet that pissed her off.
-    Mae: How'd she react?
-    -> She didn't.
-        Mae: Booooo. That's boring.
-    -> Furiously.
-        Mae: That's what I like to hear!
-Mae: Anyway, I'd better get going.
+You float formless in the space between.
+It is quiet, comfortable, and vast beyond even your comprehension.
+But also empty. You are alone. You have been alone for a very long time.
+You drift as you always have, for what might be eons or an instant.
+Then, you find yourself looking at a glowing speck of something, floating in that eternal void. It feels familiar.
+You reach out to touch it.
+Then, suddenly, light. It is blinding.
+The nothingness that had surrounded you becomes everything all at once and then--
+DreamStella:: Hey.
+DreamStella:: It's going to be alright.
+DreamStella:: You're not going to be alone anymore.
+DreamStella:: It's so, so hard to keep living, but I'd like it if you tried to once more. If both of us tried.
+DreamStella:: So, let's go.
+DreamStella:: Together.
+<<jump OpeningCafe>>
+===
+
+title: OpeningCafe
+tags: scene, location_cafe, day_1
+---
+<<show Stella: at left>>
+Azalea: Hey Stella:, are you awake?
+Stella: Um, yeah, I am now. Sorry I passed out.
+Azalea: You're good, it's not like you're sleeping in {i}my{/i} café after closing time.
+Azalea: I've only been keeping an eye on you, and that's easy to do while I'm here caring for the plants anyways.
+Stella: Oh. You didn't have to do that.
+Azalea: Probably not, with this city being so safe, and you being... you. But still, it doesn't feel quite right leaving a friend alone in public while they're totally passed out.
+Stella: A friend?
+Azalea: Yes, obviously.
+Stella: Right, sorry. Why didn't you just wake me up?
+Azalea: Stella:, please, we both know you need whatever sleep you can get.
 ===
