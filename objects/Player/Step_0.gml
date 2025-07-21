@@ -1,5 +1,5 @@
-var _horizontal_vector = real(keyboard_check(ord("D"))) - real(keyboard_check(ord("A")));
-var _vertical_vector = real(keyboard_check(ord("S"))) - real(keyboard_check(ord("W")));
+var _horizontal_vector = real(keyboard_check(right_key)) - real(keyboard_check(left_key));
+var _vertical_vector = real(keyboard_check(down_key)) - real(keyboard_check(up_key));
 
 move_and_collide(_horizontal_vector * move_speed, _vertical_vector * move_speed, walls_tilemap, undefined, undefined, undefined, move_speed, move_speed);
 
