@@ -1,4 +1,5 @@
-function save_game() {
+function save_game()
+{
     if (Game.state.shared_is_touched) 
     {
         var shared_json = json_stringify(Game.state.shared);
@@ -35,36 +36,44 @@ function save_game() {
     }
 }
 
-function load_game() {
+function load_game()
+{
 
 }
 
-function switch_slot() {
+function switch_slot()
+{
     
 }
 
-function switch_player() {
+function switch_player()
+{
     
 }
 
-function write_text_to_file_by_filename(filename, text) {
+function write_text_to_file_by_filename(filename, text)
+{
     var file = file_text_open_write(filename);
     file_text_write_string(file, text);
     file_text_close(file);
 }
 
-function touch_shared() {
+function touch_shared()
+{
     Game.state.shared_is_touched = true;
 }
 
-function touch_secret() {
+function touch_secret()
+{
     Game.state.secret_is_touched = true;
 }
 
-function touch_slot() {
+function touch_slot()
+{
     Game.state.save_slot_is_touched = true;
 }
 
-function touch_player() {
+function touch_player() 
+{
     Game.state.player_is_touched = true;
 }

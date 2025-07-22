@@ -1,7 +1,9 @@
-enum PlayerForm {
+enum PlayerForm
+{
     Androgynous, Feminine, Masculine
 }
 
-enum PlayerPronouns {
+enum PlayerPronouns
+{
     ItIts, TheyThem, SheHer, HeHim
 }
