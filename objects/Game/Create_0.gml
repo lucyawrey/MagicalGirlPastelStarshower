@@ -45,6 +45,8 @@ state = {
     },
 }
 
+load_game();
+
 touch_shared();
 touch_secret();
 touch_slot();
