@@ -2,7 +2,7 @@
   "$GMProject":"v1",
   "%Name":"MagicalGirlPastelStarshower",
   "AudioGroups":[
-    {"$GMAudioGroup":"v1","%Name":"audiogroup_default","exportDir":"","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
   ],
   "configs":{
     "children":[],
@@ -36,6 +36,7 @@
     {"$GMIncludedFile":"","%Name":"example_speakerdata_sprite.chatter","CopyToMask":-1,"filePath":"datafiles","name":"example_speakerdata_sprite.chatter","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"example.chatter","CopyToMask":-1,"filePath":"datafiles","name":"example.chatter","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"localization table.csv","CopyToMask":-1,"filePath":"datafiles","name":"localization table.csv","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"opening.yarn","CopyToMask":-1,"filePath":"datafiles","name":"opening.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"testcase_action.chatter","CopyToMask":-1,"filePath":"datafiles","name":"testcase_action.chatter","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"testcase_all_content_string.chatter","CopyToMask":-1,"filePath":"datafiles","name":"testcase_all_content_string.chatter","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"testcase_async_functions.chatter","CopyToMask":-1,"filePath":"datafiles","name":"testcase_async_functions.chatter","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
