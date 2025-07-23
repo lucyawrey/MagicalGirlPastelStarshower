@@ -2,7 +2,7 @@
   "$GMProject":"v1",
   "%Name":"MagicalGirlPastelStarshower",
   "AudioGroups":[
-    {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMAudioGroup":"v1","%Name":"audiogroup_default","exportDir":"","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
   ],
   "configs":{
     "children":[],
@@ -85,7 +85,7 @@
   "resources":[
     {"id":{"name":"Dialogue_Font","path":"fonts/Dialogue_Font/Dialogue_Font.yy",},},
     {"id":{"name":"README","path":"notes/README/README.yy",},},
-    {"id":{"name":"Dialogue_Box","path":"objects/Dialogue_Box/Dialogue_Box.yy",},},
+    {"id":{"name":"Dialogue_Manager","path":"objects/Dialogue_Manager/Dialogue_Manager.yy",},},
     {"id":{"name":"Enemy_1","path":"objects/Enemy_1/Enemy_1.yy",},},
     {"id":{"name":"Enemy_2","path":"objects/Enemy_2/Enemy_2.yy",},},
     {"id":{"name":"Enemy","path":"objects/Enemy/Enemy.yy",},},
