@@ -2,7 +2,7 @@
   "$GMProject":"v1",
   "%Name":"MagicalGirlPastelStarshower",
   "AudioGroups":[
-    {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMAudioGroup":"v1","%Name":"audiogroup_default","exportDir":"","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
   ],
   "configs":{
     "children":[],
@@ -80,7 +80,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.1400.0.841",
+    "IDEVersion":"2024.1400.0.849",
   },
   "name":"MagicalGirlPastelStarshower",
   "resources":[
@@ -136,6 +136,7 @@
     {"id":{"name":"__ChatterboxVerifyDatatypes","path":"scripts/__ChatterboxVerifyDatatypes/__ChatterboxVerifyDatatypes.yy",},},
     {"id":{"name":"__ChatterboxVM","path":"scripts/__ChatterboxVM/__ChatterboxVM.yy",},},
     {"id":{"name":"__ChatterboxXORShift32Random","path":"scripts/__ChatterboxXORShift32Random/__ChatterboxXORShift32Random.yy",},},
+    {"id":{"name":"Characters","path":"scripts/Characters/Characters.yy",},},
     {"id":{"name":"ChatterboxAddFindReplace","path":"scripts/ChatterboxAddFindReplace/ChatterboxAddFindReplace.yy",},},
     {"id":{"name":"ChatterboxAddFunction","path":"scripts/ChatterboxAddFunction/ChatterboxAddFunction.yy",},},
     {"id":{"name":"ChatterboxContinue","path":"scripts/ChatterboxContinue/ChatterboxContinue.yy",},},

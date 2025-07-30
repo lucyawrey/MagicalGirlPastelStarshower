@@ -25,7 +25,7 @@ state = {
         current_room: "",
         current_location: "",
         current_story_node: "",
-        node_line_position: int64(0),
+        current_line_position: int64(0),
         // TODO consider separating concept of story_nodes and scenes
         completed_story_nodes: [],
         flags: {},

@@ -2,13 +2,23 @@ input_key = vk_space;
 gui_width = display_get_gui_width();
 gui_height = display_get_gui_height();
 
-messages = [];
-current_message = 0;
+current_text = "";
+current_metadata = [];
+current_character = get_character(global.default_character_id);
+current_text_speed = current_character.text_speed;
 current_char = 0;
-message_to_draw = "";
-char_speed = 0.5;
+current_line_position = 0;
+text_to_draw = "";
 
-// https://www.jujuadams.com/Chatterbox/#/3.0/getting-started?id=gml-implementation
 ChatterboxLoadFromFile("opening.yarn")
 chatterbox = ChatterboxCreate();
-ChatterboxJump(chatterbox, "OpeningDream");
+
+function next() {
+    var content = get_content();
+    current_line_position++;
+    current_char = 0;
+    current_text = content.text;
+    current_metadata = content.metadata;
+    current_character = content.character;
+    current_text_speed = content.character.text_speed;
+}

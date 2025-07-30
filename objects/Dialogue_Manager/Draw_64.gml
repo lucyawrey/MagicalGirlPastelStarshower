@@ -10,11 +10,10 @@ dy += 16;
 
 draw_set_font(Dialogue_Font);
 
-var character = messages[current_message].character;
-draw_set_color(global.characters[$ character].color);
-draw_text(dx, dy, global.characters[$ character].name);
-draw_set_color(c_white);
+draw_set_color(current_character.name_color);
+draw_text(dx, dy, current_character.name);
+draw_set_color(current_character.text_color);
 
 dy += 40;
 
-draw_text_ext(dx, dy, message_to_draw, -1, box_width - dx * 2);
+draw_text_ext(dx, dy, text_to_draw, -1, box_width - dx * 2);

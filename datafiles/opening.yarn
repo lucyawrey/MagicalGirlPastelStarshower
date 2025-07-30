@@ -9,20 +9,21 @@ Then, you find yourself looking at a glowing speck of something, floating in tha
 You reach out to touch it.
 Then, suddenly, light. It is blinding.
 The nothingness that had surrounded you becomes everything all at once and then--
-DreamStella: Hey.
-DreamStella: It's going to be alright.
-DreamStella: You're not going to be alone anymore.
-DreamStella: It's so, so hard to keep living, but I'd like it if you tried to once more. If both of us tried.
-DreamStella: So, let's go.
-DreamStella: Together.
+Stella[Dream]: Hey.
+Stella[Dream]: It's going to be alright.
+Stella[Dream]: You're not going to be alone anymore.
+Stella[Dream]: It's so, so hard to keep living, but I'd like it if you tried to once more. If both of us tried.
+Stella[Dream]: So, let's go.
+Stella[Dream]: Together.
 <<jump OpeningCafe>>
 ===
 
 title: OpeningCafe
 tags: scene, location_cafe, day_1
 ---
-<<show Stella at Left>>
-Azalea: Hey Stella:, are you awake?
+//<<show "azalea">>
+//<<show "stella">>
+Azalea: Hey Stella, are you awake?
 Stella: Um, yeah, I am now. Sorry I passed out.
 Azalea: You're good, it's not like you're sleeping in [i]my[/i] café after closing time.
 Azalea: I've only been keeping an eye on you, and that's easy to do while I'm here caring for the plants anyways.
@@ -31,5 +32,5 @@ Azalea: Probably not, with this city being so safe, and you being... you. But st
 Stella: A friend?
 Azalea: Yes, obviously.
 Stella: Right, sorry. Why didn't you just wake me up?
-Azalea: Stella:, please, we both know you need whatever sleep you can get.
+Azalea: Stella, please, we both know you need whatever sleep you can get.
 ===
