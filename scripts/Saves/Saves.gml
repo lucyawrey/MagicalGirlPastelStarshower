@@ -77,9 +77,9 @@ function write_text_to_file_by_filename(filename, text)
 
 function read_text_from_file_by_filename(filename)
 {
-    var file = file_text_open_read(filename);
-    var text = file_text_read_string(file);
-    file_text_close(file);
+    var file_buffer = buffer_load(filename);
+    var text = buffer_read(file_buffer, buffer_string);
+    buffer_delete(file_buffer);
     return text;
 }
 

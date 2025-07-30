@@ -10,7 +10,7 @@ current_char = 0;
 current_line_position = 0;
 text_to_draw = "";
 
-ChatterboxLoadFromFile("opening.yarn")
+load_all_chatterbox_files();
 chatterbox = ChatterboxCreate();
 
 function next() {
