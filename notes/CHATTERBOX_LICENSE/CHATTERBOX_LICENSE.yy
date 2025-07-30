@@ -1,0 +1,11 @@
+{
+  "$GMNotes":"v1",
+  "%Name":"CHATTERBOX_LICENSE",
+  "name":"CHATTERBOX_LICENSE",
+  "parent":{
+    "name":"Chatterbox",
+    "path":"folders/Extensions/Chatterbox.yy",
+  },
+  "resourceType":"GMNotes",
+  "resourceVersion":"2.0",
+}

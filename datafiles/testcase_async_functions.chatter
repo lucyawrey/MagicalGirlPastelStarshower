@@ -1,8 +1,0 @@
-title: Start
----
-Here's some text
-<<delay(60)>>
-Here's some more text
-<<delay(60)>>
-<<jump Start>>
-===
