@@ -3,6 +3,7 @@ gui_width = display_get_gui_width();
 gui_height = display_get_gui_height();
 
 current_text = "";
+current_text_length = 0;
 current_metadata = [];
 current_character = get_character(global.default_character_id);
 current_text_speed = current_character.text_speed;
@@ -18,6 +19,7 @@ function next() {
     current_line_position++;
     current_char = 0;
     current_text = content.text;
+    current_text_length = string_length(current_text);
     current_metadata = content.metadata;
     current_character = content.character;
     current_text_speed = content.character.text_speed;

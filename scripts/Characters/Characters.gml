@@ -7,7 +7,7 @@ characters = {
         name: "Stella", 
         name_color: c_yellow, 
         text_color: c_yellow, 
-        text_speed: 0.6,
+        text_speed: 0.5,
         prefix: "(",
         sufix: ")",
     },

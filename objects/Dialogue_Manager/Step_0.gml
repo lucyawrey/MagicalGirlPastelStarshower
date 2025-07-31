@@ -1,9 +1,16 @@
 if (visible)
 {
-    if (current_char < string_length(current_text))
+    if (current_char < current_text_length)
     {
-        current_char += current_text_speed * (1 + real(keyboard_check(input_key)));
-        text_to_draw = string_copy(current_text, 0, current_char);
+        if (keyboard_check_released(input_key))
+        {
+            current_char = current_text_length;
+            text_to_draw = current_text;
+            exit;
+        } else {
+            current_char += current_text_speed;
+            text_to_draw = string_copy(current_text, 0, current_char);
+        }
     }
 
     
