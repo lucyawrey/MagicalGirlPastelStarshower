@@ -2,6 +2,7 @@ if (visible)
 {
     if (current_char < current_text_length)
     {
+        text_sound_clock += 1 * current_text_speed;
         if (keyboard_check_released(input_key))
         {
             current_char = current_text_length;
@@ -10,6 +11,10 @@ if (visible)
         } else {
             current_char += current_text_speed;
             text_to_draw = string_copy(current_text, 0, current_char);
+        }
+        if (text_sound_clock >= 4) {
+            audio_play_sound(click, 1, false);
+            text_sound_clock = 0;
         }
     }
 

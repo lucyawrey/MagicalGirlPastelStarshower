@@ -25,7 +25,7 @@ character_defaults = {
     name: "", 
     name_color: c_white, 
     text_color: c_white, 
-    text_speed: 0.5,
+    text_speed: 1,
     prefix: "",
     sufix: "",
 }

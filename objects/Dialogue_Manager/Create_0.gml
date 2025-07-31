@@ -10,6 +10,7 @@ current_text_speed = current_character.text_speed;
 current_char = 0;
 current_line_position = 0;
 text_to_draw = "";
+text_sound_clock = 0;
 
 load_all_chatterbox_files();
 chatterbox = ChatterboxCreate();
