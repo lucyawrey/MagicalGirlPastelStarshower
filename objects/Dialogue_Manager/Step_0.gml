@@ -13,8 +13,12 @@ if (visible)
             text_to_draw = string_copy(current_text, 0, current_char);
         }
         if (text_sound_clock >= 4) {
-            audio_play_sound(click, 1, false);
-            text_sound_clock = 0;
+            if (string_char_at(current_text, current_char) == " ") {
+                text_sound_clock -= 2;
+            } else {
+                audio_play_sound(click, 1, false);
+                text_sound_clock = 0;
+            }
         }
     }
 
