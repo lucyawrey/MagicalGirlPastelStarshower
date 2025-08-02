@@ -6,7 +6,7 @@ move_and_collide(horizontal_vector * move_speed, vertical_vector * move_speed, w
 /* Animation Logic */
 if (horizontal_vector != 0 or vertical_vector != 0)
 {
-    ++animation_clock;
+    animation_clock++;
     if (animation_clock >= animation_speed) {
         if (vertical_vector > 0) {
             if (image_index == 0) image_index = 2 else image_index = 0;

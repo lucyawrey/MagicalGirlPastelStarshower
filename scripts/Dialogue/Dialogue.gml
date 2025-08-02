@@ -36,3 +36,24 @@ function get_content() {
         character, metadata, text,
     }
 }
+
+function add_text_line_breaks(input_text, line_width, char_width) {
+    var char_limit = line_width / char_width;
+    var output_text = "";
+    var current_char = 0;
+    var tokens = string_split(input_text, " ", true);
+    for(var i = 0; i < array_length(tokens); i++) {
+        var token = tokens[i];
+        var length = string_length(token);
+        current_char += length;
+        if (current_char == length) {
+            output_text += token;
+        } else if (current_char > char_limit) {
+            current_char = length;
+            output_text += "\n" + token;
+        } else {
+            output_text += " " + token;
+        }
+    }
+    return output_text;
+}
