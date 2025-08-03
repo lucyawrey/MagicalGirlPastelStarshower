@@ -19,6 +19,10 @@ characters = {
         name: "Azalea",
         name_color: c_purple,
     },
+    ever: {
+        name: "Ever",
+        name_color: c_green,
+    },
     lucy: {
         name: "Lucy",
         name_color: c_blue,
