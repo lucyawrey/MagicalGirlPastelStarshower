@@ -33,8 +33,11 @@
   "ForcedPrefabProjectReferences":[],
   "IncludedFiles":[
     {"$GMIncludedFile":"","%Name":"day_1.yarn","CopyToMask":-1,"filePath":"datafiles/days","name":"day_1.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
-    {"$GMIncludedFile":"","%Name":"forever_foretold.yarn","CopyToMask":-1,"filePath":"datafiles/misc","name":"forever_foretold.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"day_2.yarn","CopyToMask":-1,"filePath":"datafiles/days","name":"day_2.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"city_map.yarn","CopyToMask":-1,"filePath":"datafiles/misc","name":"city_map.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"ending.yarn","CopyToMask":-1,"filePath":"datafiles/misc","name":"ending.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"forever_foretold.yarn","CopyToMask":-1,"filePath":"datafiles/misc","name":"forever_foretold.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"void_heart.yarn","CopyToMask":-1,"filePath":"datafiles/misc","name":"void_heart.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"start.yarn","CopyToMask":-1,"filePath":"datafiles","name":"start.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
   ],
   "isEcma":false,

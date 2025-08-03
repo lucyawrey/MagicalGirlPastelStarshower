@@ -1,0 +1,22 @@
+title: Day2Dream
+tags: scene, location_dream, day_2, day_start
+---
+Stella[Dream]: ...
+<<if $player_name == "">>
+    Stella[Dream]: I'm realizing now that I never asked you what I should call you.
+    Stella[Dream]: So... what's it going to be?
+    //<<input player_name>>
+    Stella[Dream]: {$player_name}. I like it, and I'll be sure to remember it. Not that I wouldn't remember if I like hated it or something.
+<<else>>
+    Stella[Dream]: It's good to see you again, {$player_name}.
+    Stella[Dream]: Oh! Now that I think about it, is that something you'd still like me to call you?
+    -> Yes
+        Stella[Dream]: Awesome.
+    -> No
+        Stella[Dream]: Oh, uh, I hope I didn't use a name you don't like to hear.
+        Stella[Dream]: What name should I use instead?
+        //<<input player_name>>
+        Stella[Dream]: Thanks.
+<<endif>>
+Stella[Dream]: Well, see you later.
+===

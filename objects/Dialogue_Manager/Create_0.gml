@@ -14,7 +14,7 @@ text_sound_clock = 0;
 
 // Need to keep updated with values in draw event.
 line_width = 1140;
-character_width = 25;
+character_width = 25.5;
 
 load_all_chatterbox_files();
 chatterbox = ChatterboxCreate();

@@ -1,0 +1,67 @@
+title: EndingEverConversation
+tags: scene, location_city_streets
+---
+//<<background black>>
+//<<play music dream>>
+Stella[Narrator]: And then, everything is over. The three of us enter Earth's atmosphere after what feels like an eternity drifting in space.
+Stella[Narrator]: With a flex of will and magic I aim our meteoric fall towards... home.
+Stella[Narrator]: The fall is as joyous as ever despite my anxiety, and I take extra care to make sure you and Ever are safe. When the spell ends we land gently upon the streets of Neo Detroit.
+//<<play sound sfx_land>>
+//<<background city_night_1>>
+Stella: And we're back.
+Stella[Narrator]: I sigh, look to you, then Ever, then the city. Things don't look different, but fear bubbles up in me all the same.
+Ever: Hey.
+Stella[Narrator]: I snap to attention to find her looking into my eyes.
+Ever: No need to look so down, cutie. I know it might be hard to believe, but it's only been an hour since you left. I made sure of it.
+Ever: No one died of old age while you were gone. You haven't lost anyone else.
+Stella[Narrator]: She smiles wide, and I start to cry.
+Stella: Thank you. I... I was so scared.
+Stella: I pull her into an embrace, and rest my head on her shoulder.
+Stella: I'm sorry to still be like this, in the end.
+Ever: Shhhh. It's okay. You're allowed to feel your emotions and express them freely, no matter what they are.
+Ever: You just saved the universe, so you deserve at least this much.
+Stella[Narrator]: Guilt washes over me, until I turn my head to look at you, watching us impassively from a short ways away. I remember that I'd make every choice again.
+Stella: Not forever, everything will still end.
+-> (Sorry)
+    EverAndStella: It's okay.
+Ever: And yeah, it will end. In a few hundred to a few thousand years. I think we shouldn't demand more than that.
+Ever: You deserve to let go of all this and relax. Grab the silent Elder God or whatever {$player_pronoun_1} is and go celebrate with drinks and karaoke.
+Ever: I'd really, really like to join you but, well, I don't have the Time.
+Stella[Narrator]: Then, Ever turns away from us, and looks up towards the moon. My heart lurches with realization. I didn't lose anyone. Not yet.
+Stella[Narrator]: I know that even now, we still share thought and action, but could you give us some space for a while?
+-> (Of course)
+    And then you're gone, nestled comfortably in Stella's mind.
+Ever: Oh, {$player_pronoun_1} disappeared. Huh. I guess it doesn't really matter. Maybe go find Eris instead?
+Ever: Find someone, please, because I really do need to get going and don't want you to be alone right now.
+Stella[Narrator]: Very much unlike herself, she sounds like she is about to cry.
+Ever: This is the last time you see me. I'm at the end of the line.
+Ever: It's time for me to go save your life. It's time for me to die.
+Ever: But don't worry, we always knew this was coming. I told you that you'd only see me one more time the last time we saw each other.
+Ever: I've known it myself much longer. I'm not afraid.
+Ever: You have to let me go.
+This is the last time.
+-> Hold her, and say goodbye
+    Stella[Narrator]: I hug her from behind, squeezing so tight that it probably hurts. She does not complain, she simply leans into the touch.
+    Stella: I love you Ever, in every way those words can mean.
+    Ever: I love you too, Stella.
+    Stella: Goodbye.
+    And then she's gone, and Stella weeps.
+-> No
+    //<<play music main_theme>>
+    Stella: Ever, I... Look at me.
+    Stella[Narrator]: And she does.
+    -> Give her your shield
+        Stella: Please, take this.
+        Stella[Narrator]: And she does.
+        Stella: This shield is my Soul Instrument. Once a spear, it became something else when I decided I deserved, and wanted, to live.
+        Stella: I want you to have it, and I hope it will protect you.
+        Ever: Stella, you know it won't be enough. I'm all out of Time.
+        -> Grip the Shard of Borrowed Time tight
+            Stella: And you have to know I can't lose anyone else.
+            Stella: That, and I love you Ever. I love you so fucking much, so...
+            -> Say the words:
+                Stella[Spell]: Please Come Back to Me
+                Magical Girl Forever Foretold pauses, emotions flashing across her face in quick succession. Shock. Realization. Horror. Appreciation. Joy. Love.
+                Ever: I will.
+                And then she vanishes, not for the last time.
+===

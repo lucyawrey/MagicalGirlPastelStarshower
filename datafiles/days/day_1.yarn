@@ -1,8 +1,8 @@
 title: Day1Cafe
 tags: scene, location_cafe, day_1
 ---
-//<<show "azalea">>
-//<<show "stella">>
+//<<show stella left>>
+//<<show azalea right>>
 Azalea: Hey Stella, are you awake?
 Stella: Um, yeah, I am now. Sorry I passed out.
 Azalea: You're good, it's not like you're sleeping in my cafe after closing time.
@@ -13,4 +13,119 @@ Stella: A friend?
 Azalea: Yes, obviously.
 Stella: Right, sorry. Why didn't you just wake me up?
 Azalea: Stella, please, we both know you need whatever sleep you can get.
+//<<show stella_happy left>>
+Stella[Narrator]: She flashes a small smile at me, one I find myself returning.
+Stella: You're not wrong. Thank you.
+//<<show stella left>>
+Azalea: Anytime. Again, I was working as well. Just about finished up, actually.
+Stella[Narrator]: I glance over at the shelves of pots and planters near the building's largest windows.
+Stella[Narrator]: They're teaming with freshly watered vegetation: a mix of colorful flowers, herbs, leafy greens, and fresh vegetables. I'm fairly certain the edible stuff is used in the cafe's cooking.
+Stella: Well they're looking great and, uh, alive, so you must be doing a good job.
+Stella[Narrator]: Azalea laughs as she continues the last of her work.
+Azalea: Alive is a low bar, but thank you. I'm guessing the peace lilies I gave you arn't having a similar experience?
+Stella[Narrator]: Her words are casual, but she looks annoyed.
+Stella[Narrator]: I wince.
+Stella: Nope. It's dead.
+Stella[Narrator]: She sighs.
+Azalea: I wish you wouldn't keep killing them.
+Stella: Sorry.
+Azalea: It's okay... I'm somewhat responsible, since I keep giving you houseplants despite knowing your struggles with routine.
+Azalea: I did think it might be good practice for that.
+Azalea: Plus, we all need to learn how to care for nature a little bit if we are going to make this world green again.
+Stella: That's a very you thing to think, Azalea.
+Azalea: I'll take that as a compliment.
+Stella: Good.
+Azalea: I might have also thought that particular plant would be a good fit for you, you know?
+Stella: Because it's pretty, easy to take care of, and I'm gay?
+Azalea: Well, I mean, yeah.
+Stella[Narrator]: We both giggle.
+Stella: Not that you need any more explanation, but I guess I just didn't want to take any shortcuts for once.
+Stella: I found it a good place in my apartment with lots of sunlight, watered it by hand regularly, even pruned it a couple times. I probably shouldn't have bothered.
+Azalea: I appreciate that you did though.
+Azalea: And I'm done by the way. Do you mind if I sit with you for a bit before I head home?
+Stella[Narrator]: I nod my head, and she pulls up a chair at the coffee bar I've been using as a pillow.
+Stella: So, I really did think I was doing a decent job taking care of the thing for a while. But eventually... I just stopped.
+Stella: Forgot about it completely first, and when I finally noticed it was nearly dead I couldn't summon any motivation to try and save it.
+Stella: Just felt kind of ashamed every time I glanced at it.
+Azalea: I understand that feeling, honestly. Not with plants necessarily, but with other things.
+Azalea: You put off something long enough and the idea of facing your failure can become painful and embarrassing.
+Stella: Exactly. I'm glad you're not, like, really mad.
+Azalea: There's no way I would be.
+Stella: I don't know, I've seen the way you look so lovingly at each one of your leafy children.
+Stella: Woe be upon any who would do them harm.
+Stella: That's me by the way.
+Azalea: I'd only actually be mad if you started killing them on purpose. And at that point, I'd probably have to kick your ass.
+Stella: I'd like to see you try.
+Stella: ...
+Stella: I don't mean that in a "I'm going to kill more of your plants just to provoke you" kind of way.
+Azalea: I know, Stella.
+Azalea: I also know to never try to fight you, scolding you is going to have to be good enough.
+Stella: Well I am very receptive to negative feedback.
+Stella[Narrator]: That gets a halfhearted chuckle.
+Stella: Especially if it's things like: "Why can't you even do a single fucking thing reliably?"
+Azalea: We've already established that it's okay you couldn't take care of the lilies.
+Stella: I know, it's just...
+Stella[Narrator]: More proof I'm always going to be like this.
+Stella[Narrator]: A little more reason to hate myself.
+Azalea: Hey, this might be a bit sudden but, are you doing alright?
+Stella: Oh, yeah, I'm fine.
+Stella[Narrator]: I am absolutely not fine.
+Azalea: You're sure?
+Stella: No, I'm not.
+Stella: I never really feel like I can just say I'm not doing okay, though.
+Stella: So, when people ask, I always try to say I'm fine.
+Stella: Even if I'm not.
+Stella: But I think everyone does that. It's what you're supposed to do, right?
+Azalea: It is, I suppose.
+Azalea: Thanks for being honest with me when I asked again, at least.
+Stella: You're welcome.
+Stella[Narrator]: An awkward silence hangs between us for a while.
+Azalea: So, do you want to talk about it?
+Stella[Narrator]: I shrug weakly.
+Azalea: I know I was on your case a bit about the houseplant, and I know we're not the closest, but...
+Azalea: I'm here if you need to talk, okay?
+Stella: Right, thank you.
+Stella[Narrator]: She leans into me. I flinch.
+Stella[Narrator]: Then I realize she had meant it to be comforting.
+Azalea: Sorry.
+Stella: No, it's alright. You just surprised me is all, I appreciate the contact.
+Stella: I suppose I should talk about it with someone.
+Stella: So, I'll begin with something that is probably either very surprising or not surprising at all.
+Stella: I don't really have a lot of friends.
+Stella: Sure, I have acquaintances like Giovanni; the girls from the Association; a few people who work on events for the city; the lovely, lovely folks at the hospital; and you.
+Stella: You and I have been running into each other here at the cafe and in the park for a while now, it's been nice.
+Stella: But I'm not actually that close to anyone, not anymore. So, outside of my new therapist, I tend to not talk about myself much.
+Stella[Narrator]: This time I lean into her, and she wraps me in a gentle hug.
+Stella: I know I'm not supposed to say that it's because I don't want to be a bother. But the reality is that it's because I don't want to be a bother.
+Stella: I... I want to stay out of people's way. Just do the things that I need to do for the world and for this city, at least as much as I'm able to handle.
+Stella: I'm really rambling.
+Azalea: That's alright.
+Stella: So yeah, I guess I would like to talk to you about how I'm feeling.
+Stella[Narrator]: I steady myself.
+Stella: It's going to be five years tomorrow since...
+Stella: Since Saoirse, and Ever, and Reality and Blossom left me.
+Stella: Th-that's a horrible way to say it since they gave their lives to save everyone, and all I've done these past five years is grieve.
+Stella: But that's how it feels sometimes.
+Stella: And I'm still grieving, but I feel like I need to try something new.
+Stella: So I asked Gio if I could start working at the cafe, I finally started therapy two weeks ago, and I'm trying to be more willing to get close to people. Like right now.
+Stella: But all that work... it doesn't... it hasn't started to make me feel better yet. So, I'm here and absolutely not okay.
+Stella[Narrator]: We are both silent for a while, a comfortable silence.
+Stella[Narrator]: Then, I start to cry, even though I shouldn't. Azalea doesn't say anything, and just holds me until I stop.
+Stella[Narrator]: it couldn't have been more than a minute.
+Azalea: That sounds really hard.
+Azalea: I don't think there's anything I can say to make it better.
+Azalea: But thank you for sharing with me.
+Azalea: I'll be here if... if or when you need to talk.
+Azalea: And I'll be here if you need a friend.
+Stella: Thanks, Azalea.
+Stella: I really appreciate it.
+Stella: I... probably need to get going soon.
+Stella: It's late.
+Stella: My first day is tomorrow.
+Stella: And...
+Stella: As you say, I need whatever sleep I can get.
+Azalea: Yeah.
+Azalea: Sorry things left off on such a sad note.
+Stella: It's alright.
+Stella: They usually do.
 ===
