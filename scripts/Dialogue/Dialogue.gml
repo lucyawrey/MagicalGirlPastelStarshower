@@ -32,6 +32,13 @@ function get_content() {
     var metadata = ChatterboxGetContentMetadata(Dialogue_Manager.chatterbox, 0);
     var text = ChatterboxGetContentSpeech(Dialogue_Manager.chatterbox, 0);
     
+    if (character.suffix != "") {
+        text += character.suffix;
+    }    
+    if (character.prefix != "") {
+        text = character.prefix + text;
+    }
+    
     return {
         character, metadata, text,
     }

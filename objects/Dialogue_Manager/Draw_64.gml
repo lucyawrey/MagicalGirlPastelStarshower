@@ -16,4 +16,4 @@ draw_set_color(current_character.text_color);
 
 dy += 40;
 
-draw_text_ext(dx, dy, text_to_draw, -1, line_width);
+draw_text_ext(dx, dy, text_to_draw, -1, line_width + character_width * 2);

@@ -6,10 +6,10 @@ characters = {
     stella_narrator: { 
         name: "Stella", 
         name_color: c_yellow, 
-        text_color: c_yellow, 
-        text_speed: 0.5,
+        text_color: c_silver, 
+        text_speed: 0.8,
         prefix: "(",
-        sufix: ")",
+        suffix: ")",
     },
     stella: { 
         name: "Stella", 
@@ -35,7 +35,7 @@ character_defaults = {
     text_color: c_white, 
     text_speed: 1,
     prefix: "",
-    sufix: "",
+    suffix: "",
 }
 
 function get_character(character_id = undefined) {
@@ -54,6 +54,6 @@ function get_character(character_id = undefined) {
         text_color: struct_exists(character, "text_color") ? character.text_color : global.character_defaults.text_color,
         text_speed: struct_exists(character, "text_speed") ? character.text_speed : global.character_defaults.text_speed,
         prefix: struct_exists(character, "prefix") ? character.prefix : global.character_defaults.prefix,
-        suffix: struct_exists(character, "suffix") ? character.suffix : global.character_defaults.sufix,
+        suffix: struct_exists(character, "suffix") ? character.suffix : global.character_defaults.suffix,
     }
 }
