@@ -49,7 +49,6 @@
   "resources":[
     {"id":{"name":"Dialogue_Font","path":"fonts/Dialogue_Font/Dialogue_Font.yy",},},
     {"id":{"name":"CHATTERBOX_LICENSE","path":"notes/CHATTERBOX_LICENSE/CHATTERBOX_LICENSE.yy",},},
-    {"id":{"name":"README","path":"notes/README/README.yy",},},
     {"id":{"name":"Azalea","path":"objects/Azalea/Azalea.yy",},},
     {"id":{"name":"Dialogue_Manager","path":"objects/Dialogue_Manager/Dialogue_Manager.yy",},},
     {"id":{"name":"Enemy_Bottle","path":"objects/Enemy_Bottle/Enemy_Bottle.yy",},},
