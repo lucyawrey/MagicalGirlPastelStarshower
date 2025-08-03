@@ -34,6 +34,7 @@
   "IncludedFiles":[
     {"$GMIncludedFile":"","%Name":"day_1.yarn","CopyToMask":-1,"filePath":"datafiles/days","name":"day_1.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"forever_foretold.yarn","CopyToMask":-1,"filePath":"datafiles/misc","name":"forever_foretold.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"city_map.yarn","CopyToMask":-1,"filePath":"datafiles/misc","name":"city_map.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"start.yarn","CopyToMask":-1,"filePath":"datafiles","name":"start.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
   ],
   "isEcma":false,
@@ -54,6 +55,7 @@
     {"id":{"name":"NPC","path":"objects/NPC/NPC.yy",},},
     {"id":{"name":"Player","path":"objects/Player/Player.yy",},},
     {"id":{"name":"City_Map","path":"rooms/City_Map/City_Map.yy",},},
+    {"id":{"name":"Scene","path":"rooms/Scene/Scene.yy",},},
     {"id":{"name":"__ChatterboxArrayCopyPart","path":"scripts/__ChatterboxArrayCopyPart/__ChatterboxArrayCopyPart.yy",},},
     {"id":{"name":"__ChatterboxArrayToString","path":"scripts/__ChatterboxArrayToString/__ChatterboxArrayToString.yy",},},
     {"id":{"name":"__ChatterboxBufferBatch","path":"scripts/__ChatterboxBufferBatch/__ChatterboxBufferBatch.yy",},},
@@ -176,6 +178,7 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"Scene","path":"rooms/Scene/Scene.yy",},},
     {"roomId":{"name":"City_Map","path":"rooms/City_Map/City_Map.yy",},},
   ],
   "templateType":"game",

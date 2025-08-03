@@ -1,4 +1,4 @@
-title: OpeningDream
+title: Start
 tags: scene, location_dream, day_1, day_start
 ---
 You float formless in the space between.
@@ -15,5 +15,5 @@ Stella[Dream]: You're not going to be alone anymore.
 Stella[Dream]: It's so, so hard to keep living, but I'd like it if you tried to once more. If both of us tried.
 Stella[Dream]: So, let's go.
 Stella[Dream]: Together.
-<<jump OpeningCafe>>
+<<jump Day1Cafe>>
 ===

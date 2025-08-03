@@ -7,9 +7,9 @@ state = {
     secret_is_touched: false,
     /* saves/shared.json */
     shared: {
-        active_save_slot_id: int64(0),
-        active_player_id: int64(0),
-        next_player_id: int64(1),
+        active_save_slot_id: 0,
+        active_player_id: 0,
+        next_player_id: 1,
     },
     /* game_data/internal.dat */
     secret: {
@@ -19,22 +19,22 @@ state = {
     },
     /* saves/slots/slot_[number].json */
     save_slot: {
-        id: int64(0),
-        player_id: int64(0),
-        runs_completed: int64(0),
-        current_room: "",
-        current_location: "",
-        current_story_node: "",
-        current_line_position: int64(0),
+        id: 0,
+        player_id: 0,
+        runs_completed: 0,
+        current_room: "Scene",
+        current_location: "location_dream",
+        current_story_node: "Start",
+        current_line_position: 0,
         // TODO consider separating concept of story_nodes and scenes
         completed_story_nodes: [],
         flags: {},
     },
     /* saves/players/player_[name].json */
     player: {
-        id: int64(0),
+        id: 0,
         name: "",
-        runs_completed: int64(0),
+        runs_completed: 0,
         gender: {
             is_fluid: false,
             form: PlayerForm.Androgynous,
@@ -47,10 +47,12 @@ state = {
 
 instance_create_depth(0, 0, 0, Dialogue_Manager)
 
-load_game();
+//load_game();
 
 touch_shared();
 touch_secret();
 touch_slot();
 touch_player();
 save_game();
+
+show_dialogue(state.save_slot.current_story_node);
