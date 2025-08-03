@@ -20,6 +20,8 @@ if (visible)
                 text_sound_clock = 0;
             }
         }
+    } else if (text_to_draw != current_text) {
+        text_to_draw = current_text;
     }
 
     
