@@ -24,6 +24,7 @@ function on_node_change(_old_node, new_node, _action) {
     Game.state.save_slot.current_node_position = 0;
     Game.state.save_slot.current_node = new_node;
     touch_slot();
+    save_game();
 }
 
 function next() {

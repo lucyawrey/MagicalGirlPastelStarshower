@@ -9,7 +9,7 @@ state = {
     shared: {
         active_save_slot_id: 0,
         active_player_id: 0,
-        next_player_id: 1,
+        player_count: 1,
     },
     /* game_data/internal.dat */
     secret: {
@@ -20,7 +20,7 @@ state = {
     /* saves/slots/slot_[number].json */
     save_slot: {
         id: 0,
-        player_id: 0,
+        player_id: -1,
         runs_completed: 0,
         current_room: "Scene",
         current_location: "location_dream",

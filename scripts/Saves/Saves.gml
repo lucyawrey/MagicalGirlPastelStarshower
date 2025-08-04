@@ -76,14 +76,32 @@ function load_game()
     save_game();
 }
 
-function switch_slot()
+function switch_slot(slot_number, update_player = true)
 {
-    
+    // Fix to use freshly default save_slot state
+    Game.state.shared.active_save_slot_id = slot_number;
+    touch_shared();
+    save_game();
+    load_game();
+    if (update_player && Game.state.save_slot.player_id != -1) {
+        switch_player(Game.state.save_slot.player_id);
+    }
 }
 
-function switch_player()
+function switch_player(player_id)
 {
-    
+    // Fix to use freshly default player state
+    Game.state.shared.active_player_id = player_id;
+    touch_shared();
+    save_game();
+    load_game();
+}
+
+function switch_player_new()
+{
+    var player_count = Game.state.shared.player_count;
+    Game.state.shared.player_count++;
+    switch_player(player_count);
 }
 
 function write_text_to_file_by_filename(filename, text)
