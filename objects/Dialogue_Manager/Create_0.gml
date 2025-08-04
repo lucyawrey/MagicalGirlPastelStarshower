@@ -8,7 +8,6 @@ current_metadata = [];
 current_character = get_character(global.default_character_id);
 current_text_speed = current_character.text_speed;
 current_char = 0;
-current_node_position = 0;
 text_to_draw = "";
 text_sound_clock = 0;
 
@@ -16,12 +15,24 @@ text_sound_clock = 0;
 line_width = 1140;
 character_width = 25.5;
 
+// Chatterbox Setup
 load_all_chatterbox_files();
 chatterbox = ChatterboxCreate();
+ChatterboxNodeChangeCallback(on_node_change);
+
+function on_node_change(_old_node, new_node, _action) {
+    Game.state.save_slot.current_node_position = 0;
+    Game.state.save_slot.current_node = new_node;
+    
+    var meta = ChatterboxGetCurrentMetadata(chatterbox);
+    
+    touch_slot();
+}
 
 function next() {
     ChatterboxContinue(chatterbox);
-    current_node_position++;
+    Game.state.save_slot.current_node_position++;
+    touch_slot();
     get_current_content();
 }
 

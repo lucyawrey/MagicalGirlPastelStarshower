@@ -3,6 +3,11 @@ function show_dialogue(node, node_position = 0)
     if (!instance_exists(Dialogue_Manager)) return;
     
     ChatterboxJump(Dialogue_Manager.chatterbox, node);
+    
+    if (node_position > 0) {
+        skip_to_position(node_position);
+    }
+    
     Dialogue_Manager.get_current_content();
     Dialogue_Manager.visible = true;
 }
@@ -12,6 +17,15 @@ function hide_dialogue() {
     {
         Dialogue_Manager.visible = false;
     }
+
+}
+
+function skip_to_position(node_position) {
+    repeat (node_position) {
+    	ChatterboxContinue(Dialogue_Manager.chatterbox);
+    }
+    Game.state.save_slot.current_node_position = node_position;
+    touch_slot();
 }
 
 function get_content() {

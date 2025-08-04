@@ -1,5 +1,7 @@
 function save_game()
 {
+    Game.alarm[0] = global.autosave_interval;
+    
     if (Game.state.shared_is_touched) 
     {
         var shared_json = json_stringify(Game.state.shared);
