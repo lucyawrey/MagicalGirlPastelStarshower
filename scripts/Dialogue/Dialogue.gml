@@ -1,9 +1,9 @@
-function show_dialogue(node)
+function show_dialogue(node, node_position = 0)
 {
     if (!instance_exists(Dialogue_Manager)) return;
     
     ChatterboxJump(Dialogue_Manager.chatterbox, node);
-    Dialogue_Manager.next();
+    Dialogue_Manager.get_current_content();
     Dialogue_Manager.visible = true;
 }
 

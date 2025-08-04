@@ -38,24 +38,40 @@ function save_game()
 
 function load_game()
 {
-    // TODO keep int64s and enums when parsing json
-    // TODO handle missing save files
-    var shared_json = read_text_from_file_by_filename(global.shared_path);
-    Game.state.shared = json_parse(shared_json);
+    if (file_exists(global.shared_path)) {
+        var shared_json = read_text_from_file_by_filename(global.shared_path);
+        Game.state.shared = json_parse(shared_json);   
+    } else {
+        touch_shared();
+    }
     
-    var secret_base64 = read_text_from_file_by_filename(global.secret_path);
-    var secret_json =  base64_decode(secret_base64);
-    Game.state.secret = json_parse(secret_json);
+    if (file_exists(global.secret_path)) {
+        var secret_base64 = read_text_from_file_by_filename(global.secret_path);
+        var secret_json =  base64_decode(secret_base64);
+        Game.state.secret = json_parse(secret_json);
+    } else {
+        touch_secret();
+    }
     
     var slot_number_string = string(Game.state.shared.active_save_slot_id);
     var slot_filename = global.slot_path + slot_number_string + global.json_ext;
-    var save_slot_json = read_text_from_file_by_filename(slot_filename);
-    Game.state.save_slot = json_parse(save_slot_json);
+    if (file_exists(slot_filename)) {
+        var save_slot_json = read_text_from_file_by_filename(slot_filename);
+        Game.state.save_slot = json_parse(save_slot_json);   
+    } else {
+        touch_slot();
+    }
     
     var player_number_string = string(Game.state.shared.active_player_id);
     var player_filename = global.player_path + player_number_string + global.json_ext;
-    var player_json = read_text_from_file_by_filename(player_filename);
-    Game.state.player = json_parse(player_json);
+    if (file_exists(player_filename)) {
+        var player_json = read_text_from_file_by_filename(player_filename);
+        Game.state.player = json_parse(player_json);
+    } else {
+        touch_player();
+    }
+    
+    save_game();
 }
 
 function switch_slot()
@@ -101,4 +117,31 @@ function touch_slot()
 function touch_player() 
 {
     Game.state.player_is_touched = true;
+}
+
+function get(variable_name) {
+    if (string_starts_with(variable_name, "player_")) {
+        variable_name = string_delete(variable_name, 1, 7);
+        return struct_get(Game.state.player.data, variable_name);
+    } else if (string_starts_with(variable_name, "secret_")) {
+        variable_name = string_delete(variable_name, 1, 7);
+        return struct_get(Game.state.secret.data, variable_name);
+    } else {
+        return struct_get(Game.state.save_slot.data, variable_name);
+    }
+}
+
+function set(variable_name, value) {
+    if (string_starts_with(variable_name, "player_")) {
+        variable_name = string_delete(variable_name, 1, 7);
+        struct_set(Game.state.player.data, variable_name, value);
+        touch_player();
+    } else if (string_starts_with(variable_name, "secret_")) {
+        variable_name = string_delete(variable_name, 1, 7);
+        struct_set(Game.state.secret.data, variable_name, value);
+        touch_secret();
+    } else {
+        struct_set(Game.state.save_slot.data, variable_name, value);
+        touch_slot();
+    }
 }

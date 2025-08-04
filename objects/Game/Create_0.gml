@@ -15,7 +15,7 @@ state = {
     secret: {
         player_names: [],
         file_hashes: {},
-        flags: {},
+        data: {},
     },
     /* saves/slots/slot_[number].json */
     save_slot: {
@@ -24,11 +24,11 @@ state = {
         runs_completed: 0,
         current_room: "Scene",
         current_location: "location_dream",
-        current_story_node: "Start",
-        current_line_position: 0,
-        // TODO consider separating concept of story_nodes and scenes
-        completed_story_nodes: [],
-        flags: {},
+        current_node: "Start",
+        current_node_position: 0,
+        // TODO consider separating nodes and scenes
+        completed_nodes: [],
+        data: {},
     },
     /* saves/players/player_[name].json */
     player: {
@@ -40,19 +40,14 @@ state = {
             form: PlayerForm.Androgynous,
             pronouns: PlayerPronouns.ItIts,
         },
-        completed_story_nodes: [],
-        flags: {},
+        completed_nodes: [],
+        data: {},
     },
 }
-
-instance_create_depth(0, 0, 0, Dialogue_Manager)
-
-//load_game();
-
-touch_shared();
-touch_secret();
-touch_slot();
-touch_player();
+// Create Dialogue Manager
+instance_create_depth(0, 0, 0, Dialogue_Manager);
+// Initial game load.
+load_game();
+// Open dialogue screen to current saved location.
+show_dialogue(state.save_slot.current_node, state.save_slot.current_node_position);
 save_game();
-
-show_dialogue(state.save_slot.current_story_node);

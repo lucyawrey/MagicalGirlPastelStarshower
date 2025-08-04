@@ -34,7 +34,6 @@ if (visible)
         //If we're in a "waiting" state then let the user press <space> to advance dialogue
         if (keyboard_check_released(input_key))
         {
-            ChatterboxContinue(chatterbox);
             next();
         }
     }
