@@ -23,9 +23,6 @@ ChatterboxNodeChangeCallback(on_node_change);
 function on_node_change(_old_node, new_node, _action) {
     Game.state.save_slot.current_node_position = 0;
     Game.state.save_slot.current_node = new_node;
-    
-    var meta = ChatterboxGetCurrentMetadata(chatterbox);
-    
     touch_slot();
 }
 
