@@ -1,5 +1,6 @@
 title: Day1Cafe
-tags: scene, location_cafe, day_1
+location: cafe
+day: 1
 ---
 //<<show stella left>>
 //<<show azalea right>>

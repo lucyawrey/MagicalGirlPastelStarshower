@@ -1,5 +1,6 @@
 title: Day2Dream
-tags: scene, location_dream, day_2, day_start
+location: dream
+day: 2
 ---
 Stella[Dream]: ...
 <<if $player_name == "">>

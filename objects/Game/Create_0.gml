@@ -23,10 +23,9 @@ state = {
         player_id: -1,
         runs_completed: 0,
         current_room: "Scene",
-        current_location: "location_dream",
+        current_location: "dream",
         current_node: "Start",
         current_node_position: 0,
-        // TODO consider separating nodes and scenes
         completed_nodes: [],
         data: {},
     },
@@ -51,6 +50,5 @@ alarm[0] = global.autosave_interval;
 instance_create_depth(0, 0, 0, Dialogue_Manager);
 // Initial game load.
 load_game();
-switch_slot(1);
 // Open dialogue screen to current saved location.
 show_dialogue(state.save_slot.current_node, state.save_slot.current_node_position);

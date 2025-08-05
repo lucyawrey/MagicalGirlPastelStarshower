@@ -2,6 +2,7 @@ input_key = vk_space;
 gui_width = display_get_gui_width();
 gui_height = display_get_gui_height();
 
+current_node_metadata = {};
 current_text = "";
 current_text_length = 0;
 current_metadata = [];
@@ -10,6 +11,7 @@ current_text_speed = current_character.text_speed;
 current_char = 0;
 text_to_draw = "";
 text_sound_clock = 0;
+is_new_node = false;
 
 // Need to keep updated with values in draw event.
 line_width = 1140;
@@ -20,13 +22,7 @@ load_all_chatterbox_files();
 chatterbox = ChatterboxCreate();
 ChatterboxNodeChangeCallback(on_node_change);
 
-function on_node_change(_old_node, new_node, _action) {
-    Game.state.save_slot.current_node_position = 0;
-    Game.state.save_slot.current_node = new_node;
-    touch_slot();
-    save_game();
-}
-
+// Method definitions
 function next() {
     ChatterboxContinue(chatterbox);
     Game.state.save_slot.current_node_position++;
@@ -35,6 +31,13 @@ function next() {
 }
 
 function get_current_content() {
+    if (is_new_node) {
+        current_node_metadata = ChatterboxGetCurrentMetadata(chatterbox);
+        Game.state.save_slot.current_location = current_node_metadata.location;
+        touch_slot();
+        save_game();
+        is_new_node = false;
+    }
     var content = get_content();
     current_char = 0;
     current_text = add_text_line_breaks(content.text, line_width, character_width);

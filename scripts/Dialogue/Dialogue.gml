@@ -28,6 +28,13 @@ function skip_to_position(node_position) {
     touch_slot();
 }
 
+function on_node_change(_old_node, new_node, _action) {
+    Game.state.save_slot.current_node_position = 0;
+    Game.state.save_slot.current_node = new_node;
+    touch_slot();
+    Dialogue_Manager.is_new_node = true;
+}
+
 function get_content() {
     if (!instance_exists(Dialogue_Manager)) return;
     

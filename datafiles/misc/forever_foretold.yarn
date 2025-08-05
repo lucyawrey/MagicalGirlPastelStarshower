@@ -1,5 +1,6 @@
 title: EversBirthdayMessage
-tags: scene, location_apartment
+location: apartment
+day: ?
 ---
 Ever: Hey Stella.
 Stella: Oh, Ever, hi. Come in.

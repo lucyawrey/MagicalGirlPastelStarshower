@@ -1,5 +1,6 @@
 title: EndingEverConversation
-tags: scene, location_city_streets
+location: city_streets
+day: ?
 ---
 //<<background black>>
 //<<play music dream>>
