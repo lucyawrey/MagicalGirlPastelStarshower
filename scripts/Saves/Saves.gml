@@ -78,10 +78,17 @@ function load_game()
 
 function switch_slot(slot_number, update_player = true)
 {
-    // Fix to use freshly default save_slot state
+    if (slot_number >= global.available_save_slots) {
+        return;
+    }
+    if (Game.state.shared.active_save_slot_id == slot_number) {
+        return;
+    }
+    save_game();
     Game.state.shared.active_save_slot_id = slot_number;
     touch_shared();
     save_game();
+    Game.state.save_slot = variable_clone(Game.initial_state.save_slot);
     load_game();
     if (update_player && Game.state.save_slot.player_id != -1) {
         switch_player(Game.state.save_slot.player_id);
@@ -90,10 +97,17 @@ function switch_slot(slot_number, update_player = true)
 
 function switch_player(player_id)
 {
-    // Fix to use freshly default player state
+    if (player_id >= global.available_player_slots) {
+        return;
+    }
+    if (Game.state.shared.active_player_id == player_id) {
+        return;
+    }
+    save_game();
     Game.state.shared.active_player_id = player_id;
     touch_shared();
     save_game();
+    Game.state.player = variable_clone(Game.initial_state.player);
     load_game();
 }
 

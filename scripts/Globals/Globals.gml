@@ -1,5 +1,5 @@
-available_save_slots = 10;
-available_players = 100;
+available_save_slots = 12;
+available_player_slots = 12;
 shared_path = "saves/shared.json";
 secret_path = "game_data/internal.dat";
 slot_path = "saves/slots/slot_";

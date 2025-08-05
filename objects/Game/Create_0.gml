@@ -44,11 +44,13 @@ state = {
         data: {},
     },
 }
+initial_state = variable_clone(state);
 alarm[0] = global.autosave_interval;
 
 // Create Dialogue Manager
 instance_create_depth(0, 0, 0, Dialogue_Manager);
 // Initial game load.
 load_game();
+switch_slot(1);
 // Open dialogue screen to current saved location.
 show_dialogue(state.save_slot.current_node, state.save_slot.current_node_position);
