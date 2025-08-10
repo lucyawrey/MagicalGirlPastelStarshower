@@ -15,11 +15,24 @@ function Story(json_filename = undefined, json_string = undefined, json_buffer =
         story_json = buffer_read(buffer, buffer_string);
         buffer_delete(buffer);
     }
+    var content = json_parse(story_json);
+    if (content.inkVersion < 1 || content.inkVersion > 21) {
+        throw ("Unsupported Ink version.")
+    }
     
-    content = json_parse(story_json);
+    list_defs = content.list_defs;
+    root = content.root;
     
-    static get_content = function()
+    state = {};
+    can_continue = true;
+    current_choices = [];
+    current_choices_count = [];
+    
+    static continue_forward = function()
     {
-        return content;
+    }
+    
+    static choose_choice_index = function(index)
+    {
     }
 }

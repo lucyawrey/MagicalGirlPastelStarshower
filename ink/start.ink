@@ -1,0 +1,21 @@
+-> day_1_dream
+
+=== day_1_dream ===
+# location: dream
+# day: 1
+You float formless in the space between.
+It is quiet, comfortable, and vast beyond even your comprehension.
+But also empty. You are alone. You have been alone for a very long time.
+You drift as you always have, for what might be eons or an instant.
+Then, you find yourself looking at a glowing speck of something, floating in that eternal void. It feels familiar.
+You reach out to touch it.
+Then, suddenly, light. It is blinding.
+The nothingness that had surrounded you becomes everything all at once and then--
+Stella[Dream]: Hey.
+Stella[Dream]: It's going to be alright.
+Stella[Dream]: You're not going to be alone anymore.
+Stella[Dream]: It's so, so hard to keep living, but I'd like it if you tried to once more. If both of us tried.
+Stella[Dream]: So, let's go.
+Stella[Dream]: Together.
+//-> day_1_cafe
+-> END

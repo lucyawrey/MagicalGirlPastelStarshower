@@ -1,0 +1,63 @@
+{
+    "inkVersion": 21,
+    "root": [
+        [
+            {
+                "->": "day_1_dream"
+            },
+            [
+                "done",
+                {
+                    "#f": 5,
+                    "#n": "g-0"
+                }
+            ],
+            null
+        ],
+        "done",
+        {
+            "day_1_dream": [
+                "#",
+                "^location: dream",
+                "/#",
+                "#",
+                "^day: 1",
+                "/#",
+                "^You float formless in the space between.",
+                "\n",
+                "^It is quiet, comfortable, and vast beyond even your comprehension.",
+                "\n",
+                "^But also empty. You are alone. You have been alone for a very long time.",
+                "\n",
+                "^You drift as you always have, for what might be eons or an instant.",
+                "\n",
+                "^Then, you find yourself looking at a glowing speck of something, floating in that eternal void. It feels familiar.",
+                "\n",
+                "^You reach out to touch it.",
+                "\n",
+                "^Then, suddenly, light. It is blinding.",
+                "\n",
+                "^The nothingness that had surrounded you becomes everything all at once and then--",
+                "\n",
+                "^Stella[Dream]: Hey.",
+                "\n",
+                "^Stella[Dream]: It's going to be alright.",
+                "\n",
+                "^Stella[Dream]: You're not going to be alone anymore.",
+                "\n",
+                "^Stella[Dream]: It's so, so hard to keep living, but I'd like it if you tried to once more. If both of us tried.",
+                "\n",
+                "^Stella[Dream]: So, let's go.",
+                "\n",
+                "^Stella[Dream]: Together.",
+                "\n",
+                "end",
+                {
+                    "#f": 1
+                }
+            ],
+            "#f": 1
+        }
+    ],
+    "listDefs": {}
+}

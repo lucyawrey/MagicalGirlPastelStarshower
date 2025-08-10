@@ -2,7 +2,7 @@
   "$GMProject":"v1",
   "%Name":"MagicalGirlPastelStarshower",
   "AudioGroups":[
-    {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMAudioGroup":"v1","%Name":"audiogroup_default","exportDir":"","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
   ],
   "configs":{
     "children":[],
@@ -84,6 +84,7 @@
     {"$GMIncludedFile":"","%Name":"forever_foretold.yarn","CopyToMask":-1,"filePath":"datafiles/misc","name":"forever_foretold.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"void_heart.yarn","CopyToMask":-1,"filePath":"datafiles/misc","name":"void_heart.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"start.yarn","CopyToMask":-1,"filePath":"datafiles","name":"start.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"story.json","CopyToMask":-1,"filePath":"datafiles","name":"story.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
   ],
   "isEcma":false,
   "LibraryEmitters":[],

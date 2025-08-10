@@ -23,8 +23,7 @@ chatterbox = ChatterboxCreate();
 ChatterboxNodeChangeCallback(on_node_change);
 
 // Ink Setup
-story = new Story("");
-story.get_content();
+story = new Story("story.json");
 
 // Method definitions
 function next() {
