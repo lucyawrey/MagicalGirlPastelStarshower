@@ -41,14 +41,7 @@ function get_content() {
 
 	var character_name = ChatterboxGetContentSpeaker(Dialogue_Manager.chatterbox, 0);
 	var character_data = ChatterboxGetContentSpeakerData(Dialogue_Manager.chatterbox, 0);
-	var character_id = "";
-	if (character_name != "") {
-		character_id += string_replace_all(string_lower(character_name), " ", "_");
-	}
-	if (character_data != "") {
-		character_id += "_" + string_replace_all(string_lower(character_data), " ", "_");
-	}
-	var character = get_character(character_id);
+	var character = get_character(character_name, character_data);
 	var metadata = ChatterboxGetContentMetadata(Dialogue_Manager.chatterbox, 0);
 	var text = ChatterboxGetContentSpeech(Dialogue_Manager.chatterbox, 0);
 

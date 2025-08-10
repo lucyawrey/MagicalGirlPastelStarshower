@@ -1,0 +1,33 @@
+{
+    "Stella": {
+        "Default": {
+            "name_color": "#FFFF00"
+        },
+        "Dream": {
+            "name": "",
+            "name_color": "#FFFF00"
+        },
+        "Narrator": {
+            "name_color:": "#FFFF00",
+            "text_color:": "#C0C0C0",
+            "text_speed:": 0.8,
+            "prefix:": "(",
+            "suffix:": ")"
+        },
+        "Azalea": {
+            "Default": {
+                "name_color": "#800080"
+            }
+        },
+        "Ever": {
+            "Default:": {
+                "name_color": "#008000"
+            }
+        },
+        "Lucy": {
+            "Default": {
+                "name_color": "#0000FF"
+            }
+        }
+    }
+}
