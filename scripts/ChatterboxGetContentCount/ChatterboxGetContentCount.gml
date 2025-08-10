@@ -3,8 +3,9 @@
 ///
 /// @param chatterbox
 
-function ChatterboxGetContentCount(_chatterbox)
-{
-    if (!IsChatterbox(_chatterbox)) return undefined;
-    return _chatterbox.GetContentCount();
+function ChatterboxGetContentCount(_chatterbox) {
+	if (!IsChatterbox(_chatterbox)) {
+		return undefined;
+	}
+	return _chatterbox.GetContentCount();
 }

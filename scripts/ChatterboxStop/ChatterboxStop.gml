@@ -3,7 +3,6 @@
 ///
 /// @param chatterbox
 
-function ChatterboxStop(_chatterbox)
-{
-    return _chatterbox.Stop();
+function ChatterboxStop(_chatterbox) {
+	return _chatterbox.Stop();
 }

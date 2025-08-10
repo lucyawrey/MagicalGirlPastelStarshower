@@ -3,7 +3,6 @@
 ///
 /// @param chatterbox
 
-function ChatterboxFastForward(_chatterbox)
-{
-    return _chatterbox.FastForward();
+function ChatterboxFastForward(_chatterbox) {
+	return _chatterbox.FastForward();
 }

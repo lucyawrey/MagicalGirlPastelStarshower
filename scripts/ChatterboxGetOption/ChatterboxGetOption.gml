@@ -4,8 +4,9 @@
 /// @param chatterbox
 /// @param index
 
-function ChatterboxGetOption(_chatterbox, _index)
-{
-    if (!IsChatterbox(_chatterbox)) return undefined;
-    return _chatterbox.GetOption(_index);
+function ChatterboxGetOption(_chatterbox, _index) {
+	if (!IsChatterbox(_chatterbox)) {
+		return undefined;
+	}
+	return _chatterbox.GetOption(_index);
 }

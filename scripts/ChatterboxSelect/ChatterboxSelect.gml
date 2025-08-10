@@ -6,7 +6,6 @@
 /// @param chatterbox
 /// @param optionIndex
 
-function ChatterboxSelect(_chatterbox, _index)
-{
-    return _chatterbox.Select(_index);
+function ChatterboxSelect(_chatterbox, _index) {
+	return _chatterbox.Select(_index);
 }

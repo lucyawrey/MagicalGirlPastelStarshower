@@ -1,4 +1,3 @@
-with (all)
-{
-    depth = -bbox_bottom;
+with (all) {
+	depth = -bbox_bottom;
 }

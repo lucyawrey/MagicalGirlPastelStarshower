@@ -3,18 +3,18 @@
 /// Returns a name for a binding when using a gamepad for a particular gamepad type, or the keyboard
 /// and mouse device (`INPUT_KBM`) if `forGamepad` is set to `false`. If a name for a binding
 /// cannot be found, this function will return `missingBindingName` (which is `"???"` by default).
-/// 
+///
 /// N.B. This function is provided for basic binding naming and is suitable for debugging or
 ///      alpha-quality games. Please use the "Binding Icons" plug-in for a higher quality system.
-/// 
+///
 /// @param {Any} binding
 /// @param {Boolean} forGamepad
 /// @param {Real} [missingBindingName="???"]
-/// 
+///
 /// If `forGamepad` is set to `true` then one of the following will be returned. This is an
 /// exhaustive list and you will probably not need to support every single one of these return
 /// values. Please see `__InputCreateGamepadBindingNameLookup()` for the specific mappings.
-/// 
+///
 ///   - `"thumbstick l left"`
 ///   - `"thumbstick l up"`
 ///   - `"thumbstick l right"`
@@ -55,10 +55,10 @@
 ///   - `"extra 5"`
 ///   - `"extra 6"`
 ///   - `"touchpad"`
-/// 
+///
 /// If `forGamepad` is set to `false` then one of the following will be returned under the
 /// assumption that the player is using an English Latin keyboard:
-///   
+///
 ///   - For numbers and letters, the label for the keyboard key
 ///   - `"scroll lock"`
 ///   - `"caps lock"`
@@ -121,17 +121,13 @@
 ///   - `"page down"`
 ///   - `"end"`
 
-function InputGetBindingName(_binding, _forGamepad, _missingBindingName = "???")
-{
-    static _gamepadButtonNameLookup = __InputSystem().__gamepadButtonNameLookup;
-    static _kbmBindingNameMap       = __InputSystem().__kbmBindingNameMap;
-    
-    if (_forGamepad)
-    {
-        return _gamepadButtonNameLookup[? _binding] ?? _missingBindingName;
-    }
-    else
-    {
-        return _kbmBindingNameMap[? _binding] ?? chr(_binding);
-    }
+function InputGetBindingName(_binding, _forGamepad, _missingBindingName = "???") {
+	static _gamepadButtonNameLookup = __InputSystem().__gamepadButtonNameLookup;
+	static _kbmBindingNameMap = __InputSystem().__kbmBindingNameMap;
+
+	if (_forGamepad) {
+		return _gamepadButtonNameLookup[? _binding] ?? _missingBindingName;
+	} else {
+		return _kbmBindingNameMap[? _binding] ?? chr(_binding);
+	}
 }

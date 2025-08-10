@@ -6,7 +6,9 @@
 /// @param optionIndex
 /// @param [default=""]
 
-function ChatterboxGetOptionSpeaker(_chatterbox, _index, _default = "")
-{
-    return __ChatterboxContentExtractSpeaker(ChatterboxGetOption(_chatterbox, _index), _default);
+function ChatterboxGetOptionSpeaker(_chatterbox, _index, _default = "") {
+	return __ChatterboxContentExtractSpeaker(
+		ChatterboxGetOption(_chatterbox, _index),
+		_default
+	);
 }

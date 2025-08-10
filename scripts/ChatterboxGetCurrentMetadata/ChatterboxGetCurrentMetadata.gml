@@ -3,8 +3,9 @@
 ///
 /// @param chatterbox
 
-function ChatterboxGetCurrentMetadata(_chatterbox)
-{
-    if (!IsChatterbox(_chatterbox)) return undefined;
-    return _chatterbox.GetCurrentNodeMetadata();
+function ChatterboxGetCurrentMetadata(_chatterbox) {
+	if (!IsChatterbox(_chatterbox)) {
+		return undefined;
+	}
+	return _chatterbox.GetCurrentNodeMetadata();
 }

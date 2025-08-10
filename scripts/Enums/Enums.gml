@@ -1,9 +1,12 @@
-enum PlayerForm
-{
-    Androgynous, Feminine, Masculine
+enum PlayerForm {
+	Androgynous,
+	Feminine,
+	Masculine,
 }
 
-enum PlayerPronouns
-{
-    ItIts, TheyThem, SheHer, HeHim
+enum PlayerPronouns {
+	ItIts,
+	TheyThem,
+	SheHer,
+	HeHim,
 }

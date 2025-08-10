@@ -4,8 +4,9 @@
 /// @param chatterbox
 /// @param index
 
-function ChatterboxGetOptionConditionBool(_chatterbox, _index)
-{
-    if (!IsChatterbox(_chatterbox)) return undefined;
-    return _chatterbox.GetOptionConditionBool(_index);
+function ChatterboxGetOptionConditionBool(_chatterbox, _index) {
+	if (!IsChatterbox(_chatterbox)) {
+		return undefined;
+	}
+	return _chatterbox.GetOptionConditionBool(_index);
 }

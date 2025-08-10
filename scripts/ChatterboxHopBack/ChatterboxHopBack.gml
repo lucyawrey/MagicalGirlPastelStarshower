@@ -4,7 +4,6 @@
 ///
 /// @param chatterbox
 
-function ChatterboxHopBack(_chatterbox)
-{
-    return _chatterbox.HopBack();
+function ChatterboxHopBack(_chatterbox) {
+	return _chatterbox.HopBack();
 }

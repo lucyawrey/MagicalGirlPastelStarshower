@@ -5,7 +5,9 @@
 /// @param contentIndex
 /// @param [default=""]
 
-function ChatterboxGetContentSpeech(_chatterbox, _index, _default = "")
-{
-    return __ChatterboxContentExtractSpeech(ChatterboxGetContent(_chatterbox, _index), _default);
+function ChatterboxGetContentSpeech(_chatterbox, _index, _default = "") {
+	return __ChatterboxContentExtractSpeech(
+		ChatterboxGetContent(_chatterbox, _index),
+		_default
+	);
 }

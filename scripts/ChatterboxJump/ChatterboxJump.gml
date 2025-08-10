@@ -6,7 +6,6 @@
 /// @param nodeTitle
 /// @param [filename]
 
-function ChatterboxJump(_chatterbox, _title, _filename = undefined)
-{
-    return _chatterbox.Jump(_title, _filename);
+function ChatterboxJump(_chatterbox, _title, _filename = undefined) {
+	return _chatterbox.Jump(_title, _filename);
 }

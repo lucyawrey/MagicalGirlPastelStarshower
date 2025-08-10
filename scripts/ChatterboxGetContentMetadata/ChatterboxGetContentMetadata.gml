@@ -4,8 +4,9 @@
 /// @param chatterbox
 /// @param contentIndex
 
-function ChatterboxGetContentMetadata(_chatterbox, _index)
-{
-    if (!IsChatterbox(_chatterbox)) return undefined;
-    return _chatterbox.GetContentMetadata(_index);
+function ChatterboxGetContentMetadata(_chatterbox, _index) {
+	if (!IsChatterbox(_chatterbox)) {
+		return undefined;
+	}
+	return _chatterbox.GetContentMetadata(_index);
 }

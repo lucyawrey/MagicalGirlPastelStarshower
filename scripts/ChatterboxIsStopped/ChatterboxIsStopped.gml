@@ -3,8 +3,9 @@
 ///
 /// @param chatterbox
 
-function ChatterboxIsStopped(_chatterbox)
-{
-    if (!IsChatterbox(_chatterbox)) return undefined;
-    return _chatterbox.IsStopped();
+function ChatterboxIsStopped(_chatterbox) {
+	if (!IsChatterbox(_chatterbox)) {
+		return undefined;
+	}
+	return _chatterbox.IsStopped();
 }

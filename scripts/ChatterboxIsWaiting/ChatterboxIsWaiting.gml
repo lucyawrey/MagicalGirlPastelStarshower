@@ -5,8 +5,9 @@
 ///
 /// @param chatterbox
 
-function ChatterboxIsWaiting(_chatterbox)
-{
-    if (!IsChatterbox(_chatterbox)) return undefined;
-    return _chatterbox.IsWaiting();
+function ChatterboxIsWaiting(_chatterbox) {
+	if (!IsChatterbox(_chatterbox)) {
+		return undefined;
+	}
+	return _chatterbox.IsWaiting();
 }

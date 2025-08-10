@@ -10,14 +10,17 @@
 ///  - `INPUT_GAMEPAD_TYPE_SWITCH`
 ///  - `INPUT_GAMEPAD_TYPE_JOYCON_LEFT`
 ///  - `INPUT_GAMEPAD_TYPE_JOYCON_RIGHT`
-/// 
+///
 /// @param {Real} device
 
-function InputDeviceGetGamepadType(_device)
-{
-    static _gamepadArray = __InputSystem().__gamepadArray;
-    
-    if (_device < 0) return INPUT_GAMEPAD_TYPE_NO_GAMEPAD;
-    
-    return InputDeviceIsConnected(_device)? _gamepadArray[_device].__type : INPUT_GAMEPAD_TYPE_NO_GAMEPAD;
+function InputDeviceGetGamepadType(_device) {
+	static _gamepadArray = __InputSystem().__gamepadArray;
+
+	if (_device < 0) {
+		return INPUT_GAMEPAD_TYPE_NO_GAMEPAD;
+	}
+
+	return InputDeviceIsConnected(_device)
+		? _gamepadArray[_device].__type
+		: INPUT_GAMEPAD_TYPE_NO_GAMEPAD;
 }

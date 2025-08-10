@@ -3,8 +3,9 @@
 ///
 /// @param chatterbox
 
-function ChatterboxGetCurrentSource(_chatterbox)
-{
-    if (!IsChatterbox(_chatterbox)) return undefined;
-    return _chatterbox.GetCurrentSource();
+function ChatterboxGetCurrentSource(_chatterbox) {
+	if (!IsChatterbox(_chatterbox)) {
+		return undefined;
+	}
+	return _chatterbox.GetCurrentSource();
 }

@@ -3,8 +3,9 @@
 ///
 /// @param chatterbox
 
-function ChatterboxGetCurrent(_chatterbox)
-{
-    if (!IsChatterbox(_chatterbox)) return undefined;
-    return _chatterbox.GetCurrentNodeTitle();
+function ChatterboxGetCurrent(_chatterbox) {
+	if (!IsChatterbox(_chatterbox)) {
+		return undefined;
+	}
+	return _chatterbox.GetCurrentNodeTitle();
 }

@@ -2,8 +2,7 @@
 
 /// Returns whether the mouse has moved between frames
 
-function InputMouseMoved()
-{
-    static _system = __InputSystem();
-    return _system.__pointerMoved;
+function InputMouseMoved() {
+	static _system = __InputSystem();
+	return _system.__pointerMoved;
 }

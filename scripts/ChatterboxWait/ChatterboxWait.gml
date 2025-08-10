@@ -4,7 +4,6 @@
 /// @param chatterbox
 /// @param [name=""]
 
-function ChatterboxWait(_chatterbox, _name = "")
-{
-    return _chatterbox.Wait(_name);
+function ChatterboxWait(_chatterbox, _name = "") {
+	return _chatterbox.Wait(_name);
 }
