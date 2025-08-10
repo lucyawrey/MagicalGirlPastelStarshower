@@ -2,7 +2,6 @@ title: Day2Dream
 location: dream
 day: 2
 ---
-<<declare $player_name = "">>
 Stella[Dream]: ...
 <<if $player_name == "">>
     Stella[Dream]: I'm realizing now that I never asked you what I should call you.
