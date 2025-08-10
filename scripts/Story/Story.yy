@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Story",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Story",
+  "parent":{
+    "name":"Ink",
+    "path":"folders/Scripts/Ink.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -22,6 +22,10 @@ load_all_chatterbox_files();
 chatterbox = ChatterboxCreate();
 ChatterboxNodeChangeCallback(on_node_change);
 
+// Ink Setup
+story = new Story("");
+story.get_content();
+
 // Method definitions
 function next() {
     ChatterboxContinue(chatterbox);
