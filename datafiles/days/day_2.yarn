@@ -20,4 +20,93 @@ Stella[Dream]: ...
         Stella[Dream]: Thanks.
 <<endif>>
 Stella[Dream]: Well, see you later.
+<<jump Day2Morning>>
+===
+
+title: Day2Morning
+location: apartment
+day: 2
+---
+Stella[Narrator]: I open my eyes. The morning sun is bright and pleasant through the window.
+Stella[Narrator]: I don't really remember making it back last night.
+Stella[Narrator]: I was very tired, physically and emotionally. It's a bit of a blur.
+Stella[Narrator]: Not a bad blur, really. Just the blur of normality, of a journey home so well trodden you barely need to be conscious for it.
+I'm doing better today, I think.
+Maybe not better, but...
+I feel clearer.
+After talking.
+I feel like I can get up today.
+I can do what I need to do.
+Some days, it's hard to get out of bed at all.
+So, I'm grateful for that.
+I climb out of my bed.
+I have messy hair draping over my shoulders.
+It's getting a little long.
+I head to the bathroom.
+Brush my teeth.
+Check my face.
+And it's perfect, as always.
+And then...
+I head back to my bedroom.
+Strip off my pajamas and my underwear.
+Throw on a fresh set.
+Or at least...
+Fresh enough.
+And grab a tank top and a pair of shorts from the floor.
+Throw them on.
+And I step onto my balcony.
+It's a beautiful morning.
+The sun is shining.
+The breeze is crisp.
+The fall air is... nice.
+It can't be too early.
+Considering how far along the sun is...
+But...
+I was never one for keeping a good sleep schedule.
+I climb up on the railing of my balcony.
+And dangle my feet off the edge.
+I'm still not wearing shoes.
+So...
+I can feel the wind on my feet.
+And the wind in my hair.
+It's hard being alive.
+but I think I've already said that before.
+I hope from here.
+It'll get better.
+And I want to start.
+By trying to do the things I want to do.
+And then I jump.
+===
+
+title: Day2Fall
+location: city_streets
+day: 2
+---
+I fall through the air.
+And for a beautiful moment, I experienced complete and utter freefall. But it's only X stories, so I know the fall is only going to last about 10 seconds.
+And for a long time, I just enjoy it. The wind running through my hair, over my body, embracing me, making me feel alive.
+And halfway down, I flex my magic. There's a burst of light that is visible to me, and I'm sure to the people on the ground.
+And for just a moment, I am my truest self, clad in a beautiful gown of whites and blues and yellows.
+And then I hit the ground. Hard enough that I feel it. But soft enough, the ground itself is undamaged.
+And then my perfect self, that beautiful gown, is gone. And I am my normal self again.
+I hope I didn't have you worried there.
+I don't jump off the balcony every morning, but when you're a magical girl and...
+Well, a fall from terminal velocity can't even scratch you.
+Sometimes it's just nice to take the quick way down.
+Both for sheer convenience and also the joy of the thing.
+The joy of being able to move without fear.
+I really hope...
+I didn't freak anyone out too bad.
+I glance around.
+And...
+No one is really around except for <Name of Old Woman>.
+And she's only giving me a mildly amused expression.
+I don't even know if she has seen me jump before.
+I don't do it often.
+I don't think I let myself have this much fun often.
+Even though I really should.
+But...
+She knows what I am.
+She knows to expect strangeness from me.
+I'm gonna go say hi.
 ===
