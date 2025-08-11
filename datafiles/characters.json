@@ -1,33 +1,32 @@
 {
     "Narrator": {
         "name": "",
-        "name_color": "#FFFFFF",
-        "text_color": "#FFFFFF",
+        "name_color": "#ffffff",
+        "text_color": "#ffffff",
         "text_speed": 1,
         "prefix": "",
         "suffix": ""
     },
     "Stella": {
-        "name_color": "#FFFF00",
+        "name_color": "#fff826",
         "variants": {
             "Dream": {
                 "name": ""
             },
             "Narrator": {
-                "text_color:": "#C0C0C0",
-                "text_speed:": 0.8,
+                "text_color:": "#f7f5a1",
                 "prefix:": "(",
                 "suffix:": ")"
             }
         }
     },
     "Azalea": {
-        "name_color": "#800080"
+        "name_color": "#bd0d9a"
     },
     "Ever": {
-        "name_color": "#008000"
+        "name_color": "#0a940a"
     },
     "Lucy": {
-        "name_color": "#0000FF"
+        "name_color": "#0000ff"
     }
 }
