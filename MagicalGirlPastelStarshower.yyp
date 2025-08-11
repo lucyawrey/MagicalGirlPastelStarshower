@@ -509,6 +509,7 @@
     {"id":{"name":"IsChatterbox","path":"scripts/IsChatterbox/IsChatterbox.yy",},},
     {"id":{"name":"Loader","path":"scripts/Loader/Loader.yy",},},
     {"id":{"name":"Saves","path":"scripts/Saves/Saves.yy",},},
+    {"id":{"name":"Utilities","path":"scripts/Utilities/Utilities.yy",},},
     {"id":{"name":"click","path":"sounds/click/click.yy",},},
     {"id":{"name":"spr_azalea_map","path":"sprites/spr_azalea_map/spr_azalea_map.yy",},},
     {"id":{"name":"spr_box","path":"sprites/spr_box/spr_box.yy",},},

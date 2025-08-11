@@ -1,3 +1,9 @@
+// Chatterbox Setup
+load_all_chatterbox();
+chatterbox = ChatterboxCreate();
+ChatterboxNodeChangeCallback(on_node_change);
+
+// Object variable definitions
 input_key = vk_space;
 gui_width = display_get_gui_width();
 gui_height = display_get_gui_height();
@@ -6,7 +12,7 @@ current_node_metadata = {};
 current_text = "";
 current_text_length = 0;
 current_metadata = [];
-current_character = global.default_character;
+current_character = get_character();
 current_text_speed = current_character.text_speed;
 current_char = 0;
 text_to_draw = "";
@@ -16,11 +22,6 @@ is_new_node = false;
 // Need to keep updated with values in draw event.
 line_width = 1140;
 character_width = 25.5;
-
-// Chatterbox Setup
-load_all_chatterbox_files();
-chatterbox = ChatterboxCreate();
-ChatterboxNodeChangeCallback(on_node_change);
 
 // Method definitions
 function next() {
