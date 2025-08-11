@@ -11,7 +11,8 @@
         "name_color": "#fff826",
         "variants": {
             "Dream": {
-                "name": ""
+                "name": "",
+                "text_color:": "#f7f5a1"
             },
             "Narrator": {
                 "text_color:": "#f7f5a1",

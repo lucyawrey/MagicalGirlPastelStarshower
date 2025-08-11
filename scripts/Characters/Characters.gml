@@ -6,24 +6,31 @@ function get_character(character_name = "", character_data = "") {
 	if (character_name == "") {
 		character_name = global.default_character_name;
 	}
+
+	var character_id =
+		character_name + (character_data == "" ? "" : "." + character_data);
+	if (struct_exists(global.characters_cache, character_id)) {
+		return struct_get(global.characters_cache, character_id);
+	}
+
 	if (!struct_exists(global.characters, global.default_character_name)) {
 		return;
 	}
 	var default_character = struct_get(global.characters, global.default_character_name);
-	var character = struct_exists(global.characters, character_name)
+	var base_character = struct_exists(global.characters, character_name)
 		? struct_get(global.characters, character_name)
 		: undefined;
-	var variant = is_struct(character)
-	&& struct_exists(character, "variants")
-	&& struct_exists(character.variants, character_data)
-		? struct_get(character.variants, character_data)
+	var variant = is_struct(base_character)
+	&& struct_exists(base_character, "variants")
+	&& struct_exists(base_character.variants, character_data)
+		? struct_get(base_character.variants, character_data)
 		: undefined;
-	var queue = [default_character, character, variant];
+	var queue = [default_character, base_character, variant];
 
-	return {
-		id: character_name + (is_string(character_data) ? "." + character_data : ""),
+	var character = {
+		id: character_id,
 		name: struct_get_merged_value(
-			[default_character, character_name, character, variant],
+			[default_character, character_name, base_character, variant],
 			"name"
 		),
 		name_color: hex_to_color(struct_get_merged_value(queue, "name_color")),
@@ -32,4 +39,8 @@ function get_character(character_name = "", character_data = "") {
 		prefix: struct_get_merged_value(queue, "prefix"),
 		suffix: struct_get_merged_value(queue, "suffix"),
 	};
+
+	struct_set(global.characters_cache, character_id, character);
+
+	return character;
 }
