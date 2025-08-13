@@ -67,7 +67,7 @@ function load_game() {
 		touch_player();
 	}
 
-    load_chatterbox_from_state();
+	load_chatterbox_variables_from_state();
 	save_game();
 }
 
@@ -139,29 +139,93 @@ function touch_player() {
 	Game.state.player_is_touched = true;
 }
 
-function get(variable_name) {
-	if (string_starts_with(variable_name, "player_")) {
-		variable_name = string_delete(variable_name, 1, 7);
-		return struct_get(Game.state.player.data, variable_name);
-	} else if (string_starts_with(variable_name, "secret_")) {
-		variable_name = string_delete(variable_name, 1, 7);
-		return struct_get(Game.state.secret.data, variable_name);
+function get(name) {
+	if (string_starts_with(name, "player_")) {
+		name = string_delete(name, 1, 7);
+		if (array_contains(global.player_base_variables, name)) {
+			return struct_get(Game.state.player, name);
+		}
+		return struct_get(Game.state.player.data, name);
+	} else if (string_starts_with(name, "secret_")) {
+		name = string_delete(name, 1, 7);
+		return struct_get(Game.state.secret.data, name);
 	} else {
-		return struct_get(Game.state.save_slot.data, variable_name);
+		if (array_contains(global.slot_base_variables, name)) {
+			return struct_get(Game.state.save_slot, name);
+		}
+		return struct_get(Game.state.save_slot.data, name);
 	}
 }
 
-function set(variable_name, value) {
-	if (string_starts_with(variable_name, "player_")) {
-		variable_name = string_delete(variable_name, 1, 7);
-		struct_set(Game.state.player.data, variable_name, value);
-		touch_player();
-	} else if (string_starts_with(variable_name, "secret_")) {
-		variable_name = string_delete(variable_name, 1, 7);
-		struct_set(Game.state.secret.data, variable_name, value);
-		touch_secret();
+function set(name, value) {
+	if (string_starts_with(name, "player_")) {
+		ChatterboxVariableSet(name, value);
+	} else if (string_starts_with(name, "secret_")) {
+		ChatterboxVariableSet(name, value);
 	} else {
-		struct_set(Game.state.save_slot.data, variable_name, value);
-		touch_slot();
+		ChatterboxVariableSet(name, value);
 	}
+}
+
+function load_chatterbox_variables_from_state() {
+    import = {};
+	array_foreach(global.slot_base_variables, function(name) {
+		struct_set(import, name, struct_get(Game.state.save_slot, name));
+	});
+	array_foreach(global.player_base_variables, function(name) {
+		struct_set(import, "player_" + name, struct_get(Game.state.player, name));
+	});
+	struct_foreach(Game.state.secret.data, function(name, value) {
+		struct_set(import, "secret_" + name, value);
+	});
+	struct_foreach(Game.state.save_slot.data, function(name, value) {
+		struct_set(import, name, value);
+	});
+	struct_foreach(Game.state.player.data, function(name, value) {
+		struct_set(import, "player_" + name, value);
+	});
+	struct_foreach(Game.state.player.visited_nodes, function(name, value) {
+		struct_set(import, "visited(default:" + name + ")", value);
+	});
+    struct_foreach(get_pronoun_list(Game.state.player.gender_pronouns), function(name, value) {
+		struct_set(import, name, value);
+	});
+    
+    ChatterboxVariablesImport(json_stringify(import));
+}
+
+function on_chatterbox_variable_set(name, value) {
+    if (string_starts_with(name, "player_gender_pronoun_")) {
+        return;
+    }
+	if (string_starts_with(name, "visited(default:")) {
+		touch_player();
+		name = string_delete(name, 1, 16);
+		name = string_delete(name, string_length(name), 1);
+		struct_set(Game.state.player.visited_nodes, name, value);
+	} else if (string_starts_with(name, "player_")) {
+		touch_player();
+		name = string_delete(name, 1, 7);
+		if (array_contains(global.player_base_variables, name)) {
+			struct_set(Game.state.player, name, value);
+		} else {
+            struct_set(Game.state.player.data, name, value);
+        }
+	} else if (string_starts_with(name, "secret_")) {
+		touch_secret();
+		name = string_delete(name, 1, 7);
+		struct_set(Game.state.secret.data, name, value);
+	} else {
+		touch_slot();
+		if (array_contains(global.slot_base_variables, name)) {
+			struct_set(Game.state.save_slot, name, value);
+		} else {
+            struct_set(Game.state.save_slot.data, name, value);
+        }
+	}
+    if (name == "gender_pronouns") {
+        struct_foreach(get_pronoun_list(value), function(pronoun_type, pronoun) {
+		    ChatterboxVariableSet(pronoun_type, pronoun);
+	    });
+    }
 }

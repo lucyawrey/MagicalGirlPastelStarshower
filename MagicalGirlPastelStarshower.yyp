@@ -305,7 +305,6 @@
     {"id":{"name":"ChatterboxVariablesResetAll","path":"scripts/ChatterboxVariablesResetAll/ChatterboxVariablesResetAll.yy",},},
     {"id":{"name":"ChatterboxWait","path":"scripts/ChatterboxWait/ChatterboxWait.yy",},},
     {"id":{"name":"Dialogue","path":"scripts/Dialogue/Dialogue.yy",},},
-    {"id":{"name":"Enums","path":"scripts/Enums/Enums.yy",},},
     {"id":{"name":"Globals","path":"scripts/Globals/Globals.yy",},},
     {"id":{"name":"InputBindingFind","path":"scripts/InputBindingFind/InputBindingFind.yy",},},
     {"id":{"name":"InputBindingFindCollisions","path":"scripts/InputBindingFindCollisions/InputBindingFindCollisions.yy",},},

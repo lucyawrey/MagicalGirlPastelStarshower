@@ -2,6 +2,7 @@
 load_all_chatterbox();
 chatterbox = ChatterboxCreate();
 ChatterboxNodeChangeCallback(on_node_change);
+ChatterboxVariableSetCallback(on_chatterbox_variable_set);
 
 // Object variable definitions
 input_key = vk_space;

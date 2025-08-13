@@ -1,7 +1,3 @@
-default_character_name = "Narrator";
-characters = {};
-characters_cache = {};
-
 function get_character(character_name = "", character_data = "") {
 	if (character_name == "") {
 		character_name = global.default_character_name;

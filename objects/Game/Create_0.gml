@@ -18,7 +18,6 @@ state = {
 		current_location: "start",
 		current_node: "Start",
 		current_node_position: 0,
-		completed_nodes: [],
 		data: {},
 	},
 	/* saves/players/player_[name].json */
@@ -26,12 +25,9 @@ state = {
 		id: 0,
 		name: "",
 		runs_completed: 0,
-		gender: {
-			is_fluid: false,
-			form: PlayerForm.Androgynous,
-			pronouns: PlayerPronouns.ItIts,
-		},
-		completed_nodes: [],
+        gender_form: global.PlayerForm.Androgynous,
+		gender_pronouns: global.PlayerPronouns.ItIts,
+		visited_nodes: {},
 		data: {},
 	},
 };

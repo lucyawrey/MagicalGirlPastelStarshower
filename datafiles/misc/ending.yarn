@@ -26,13 +26,13 @@ Stella: Not forever, everything will still end.
 -> (Sorry)
     EverAndStella: It's okay.
 Ever: And yeah, it will end. In a few hundred to a few thousand years. I think we shouldn't demand more than that.
-Ever: You deserve to let go of all this and relax. Grab the silent Elder God or whatever {$player_pronoun_1} is and go celebrate with drinks and karaoke.
+Ever: You deserve to let go of all this and relax. Grab the silent Elder God or whatever {$player_gender_pronoun_0} is and go celebrate with drinks and karaoke.
 Ever: I'd really, really like to join you but, well, I don't have the Time.
 Stella[Narrator]: Then, Ever turns away from us, and looks up towards the moon. My heart lurches with realization. I didn't lose anyone. Not yet.
 Stella[Narrator]: I know that even now, we still share thought and action, but could you give us some space for a while?
 -> (Of course)
     And then you're gone, nestled comfortably in Stella's mind.
-Ever: Oh, {$player_pronoun_1} disappeared. Huh. I guess it doesn't really matter. Maybe go find Eris instead?
+Ever: Oh, {$player_gender_pronoun_0} disappeared. Huh. I guess it doesn't really matter. Maybe go find Eris instead?
 Ever: Find someone, please, because I really do need to get going and don't want you to be alone right now.
 Stella[Narrator]: Very much unlike herself, she sounds like she is about to cry.
 Ever: This is the last time you see me. I'm at the end of the line.
