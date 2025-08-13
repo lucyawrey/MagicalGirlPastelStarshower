@@ -67,6 +67,7 @@ function load_game() {
 		touch_player();
 	}
 
+    load_chatterbox_from_state();
 	save_game();
 }
 

@@ -75,3 +75,7 @@ function add_text_line_breaks(input_text, line_width, char_width) {
 	}
 	return output_text;
 }
+
+function load_chatterbox_from_state() {
+    ChatterboxVariableSet("player_name", Game.state.player.name);
+}

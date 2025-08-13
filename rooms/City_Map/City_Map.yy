@@ -6,14 +6,12 @@
   "inheritCreationOrder":false,
   "inheritLayers":false,
   "instanceCreationOrder":[
-    {"name":"inst_game_persistent","path":"rooms/City_Map/City_Map.yy",},
     {"name":"inst_6EC66CC3","path":"rooms/City_Map/City_Map.yy",},
     {"name":"inst_439153E1","path":"rooms/City_Map/City_Map.yy",},
   ],
   "isDnd":false,
   "layers":[
     {"$GMRInstanceLayer":"","%Name":"Instances","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"$GMRInstance":"v4","%Name":"inst_game_persistent","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_game_persistent","objectId":{"name":"Game","path":"objects/Game/Game.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":0.0,"y":0.0,},
         {"$GMRInstance":"v4","%Name":"inst_6EC66CC3","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6EC66CC3","objectId":{"name":"Azalea","path":"objects/Azalea/Azalea.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"NPC","path":"objects/NPC/NPC.yy",},"propertyId":{"name":"text","path":"objects/NPC/NPC.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"CityMapAzalea",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":320.0,"y":224.0,},

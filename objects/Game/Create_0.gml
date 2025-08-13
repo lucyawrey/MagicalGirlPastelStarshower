@@ -15,7 +15,7 @@ state = {
 		player_id: -1,
 		runs_completed: 0,
 		current_room: "Scene",
-		current_location: "dream",
+		current_location: "start",
 		current_node: "Start",
 		current_node_position: 0,
 		completed_nodes: [],
@@ -38,7 +38,7 @@ state = {
 initial_state = variable_clone(state);
 alarm[0] = global.autosave_interval;
 
-// Create Dialogue Manager
+// Create Dialogue Manager Object
 instance_create_depth(0, 0, 0, Dialogue_Manager);
 // Initial game load.
 load_game();
