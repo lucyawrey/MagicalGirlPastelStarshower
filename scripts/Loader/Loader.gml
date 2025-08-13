@@ -29,7 +29,7 @@ function load_all_chatterbox_files_to_buffer(buffer, directory = "") {
 }
 
 function load_all_chatterbox() {
-	buffer = buffer_create(1048576, buffer_grow, 1);
+	var buffer = buffer_create(1048576, buffer_grow, 1);
 	load_all_chatterbox_files_to_buffer(buffer);
 	ChatterboxLoadFromBuffer("default", buffer);
 	buffer_delete(buffer);
