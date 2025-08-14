@@ -1,3 +1,7 @@
+if (!is_undefined(current_background_sprite)) {
+    draw_sprite(current_background_sprite, 0, 0, 0);
+}
+
 var dx = 5;
 var dy = gui_height * 0.65;
 var box_width = gui_width - dx * 2;

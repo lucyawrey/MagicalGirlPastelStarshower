@@ -17,6 +17,7 @@ current_character = get_character();
 current_text_speed = current_character.text_speed;
 current_char = 0;
 text_to_draw = "";
+current_background_sprite = spr_bg_cafe;
 text_sound_clock = 0;
 is_new_node = false;
 
