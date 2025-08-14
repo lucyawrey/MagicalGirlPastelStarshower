@@ -29,8 +29,8 @@ function get_character(character_name = "", character_data = "") {
 			[default_character, character_name, base_character, variant],
 			"name"
 		),
-		name_color: hex_to_color(struct_get_merged_value(queue, "name_color")),
-		text_color: hex_to_color(struct_get_merged_value(queue, "text_color")),
+		name_color: struct_get_merged_value(queue, "name_color"),
+		text_color: struct_get_merged_value(queue, "text_color"),
 		text_speed: struct_get_merged_value(queue, "text_speed"),
 		prefix: struct_get_merged_value(queue, "prefix"),
 		suffix: struct_get_merged_value(queue, "suffix"),

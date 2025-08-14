@@ -14,8 +14,8 @@ Stella[Dream]: Hey.
 Stella[Dream]: It's going to be alright.
 Stella[Dream]: You're not going to be alone anymore.
 Stella[Dream]: It's so, so hard to keep living, but I'd like it if you tried to once more. If both of us tried.
-Stella[Dream]: So, let's go.
-Stella[Dream]: Together.
+Stella[Dream]: [wave]So, let's go.[/wave]
+Stella[Dream]: [wave]Together.[/wave]
 <<jump Day1Cafe>>
 ===
 
@@ -23,12 +23,12 @@ title: Day1Cafe
 location: cafe
 day: 1
 ---
-<<background "spr_bg_cafe">>
+<<background "spr_bg _cafe">>
 <<show "spr_stella" "left">>
 <<show "spr_azalea" "right">>
 Azalea: Hey Stella, are you awake?
 Stella: Um, yeah, I am now. Sorry I passed out.
-Azalea: You're good, it's not like you're sleeping in my cafe after closing time.
+Azalea: You're good, it's not like you're sleeping in *my* cafe after closing time.
 Azalea: I've only been keeping an eye on you, and that's easy to do while I'm here caring for the plants anyways.
 Stella: Oh. You didn't have to do that.
 Azalea: Probably not, with this city being so safe, and you being... you. But still, it doesn't feel quite right leaving a friend alone in public while they're totally passed out.

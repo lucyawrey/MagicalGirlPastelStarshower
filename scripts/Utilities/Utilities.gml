@@ -26,14 +26,6 @@ function struct_get_merged_value(structs, name) {
 	}
 }
 
-function hex_to_color(hex_code) {
-	var hex_val = real("0x" + string_delete(hex_code, 1, 1));
-	var red = (hex_val >> 16) & 0xFF;
-	var green = (hex_val >> 8) & 0xFF;
-	var blue = hex_val & 0xFF;
-	return (blue << 16) | (green << 8) | red;
-}
-
 function get_pronoun_list(pronouns) {
 	out = {};
 	var list = struct_get(global.PronounMap, pronouns);

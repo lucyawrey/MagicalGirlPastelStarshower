@@ -55,23 +55,14 @@ function get_content() {
 	return {character, metadata, text};
 }
 
-function add_text_line_breaks(input_text, line_width, char_width) {
-	var char_limit = line_width / char_width;
-	var output_text = "";
-	var current_char = 0;
-	var tokens = string_split(input_text, " ", true);
-	for (var i = 0; i < array_length(tokens); i++) {
-		var token = tokens[i];
-		var length = string_length(token);
-		current_char += length;
-		if (current_char == length) {
-			output_text += token;
-		} else if (current_char > char_limit) {
-			current_char = length;
-			output_text += "\n" + token;
-		} else {
-			output_text += " " + token;
-		}
-	}
-	return output_text;
+function text_play_sound(element, position, typist) {
+    Dialogue_Manager.typist_sound_clock++;
+    var current_char = string_char_at(Dialogue_Manager.current_text, position);
+    if (current_char == " ") {
+        Dialogue_Manager.typist_sound_clock -= 2;
+    }
+    if (Dialogue_Manager.typist_sound_clock >= 4) {
+        audio_play_sound(click, 1, false, 0.4, undefined, 1);
+        Dialogue_Manager.typist_sound_clock = 0;
+    }
 }

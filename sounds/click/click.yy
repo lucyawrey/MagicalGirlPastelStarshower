@@ -22,5 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"click.mp3",
-  "volume":0.25,
+  "volume":1.0,
 }
