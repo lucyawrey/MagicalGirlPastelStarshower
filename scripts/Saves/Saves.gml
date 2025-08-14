@@ -168,7 +168,7 @@ function set(name, value) {
 }
 
 function load_chatterbox_variables_from_state() {
-    import = {};
+	import = {};
 	array_foreach(global.slot_base_variables, function(name) {
 		struct_set(import, name, struct_get(Game.state.save_slot, name));
 	});
@@ -187,17 +187,20 @@ function load_chatterbox_variables_from_state() {
 	struct_foreach(Game.state.player.visited_nodes, function(name, value) {
 		struct_set(import, "visited(default:" + name + ")", value);
 	});
-    struct_foreach(get_pronoun_list(Game.state.player.gender_pronouns), function(name, value) {
+	struct_foreach(get_pronoun_list(Game.state.player.gender_pronouns), function(
+		name,
+		value
+	) {
 		struct_set(import, name, value);
 	});
-    
-    ChatterboxVariablesImport(json_stringify(import));
+
+	ChatterboxVariablesImport(json_stringify(import));
 }
 
 function on_chatterbox_variable_set(name, value) {
-    if (string_starts_with(name, "player_gender_pronoun_")) {
-        return;
-    }
+	if (string_starts_with(name, "player_gender_pronoun_")) {
+		return;
+	}
 	if (string_starts_with(name, "visited(default:")) {
 		touch_player();
 		name = string_delete(name, 1, 16);
@@ -209,8 +212,8 @@ function on_chatterbox_variable_set(name, value) {
 		if (array_contains(global.player_base_variables, name)) {
 			struct_set(Game.state.player, name, value);
 		} else {
-            struct_set(Game.state.player.data, name, value);
-        }
+			struct_set(Game.state.player.data, name, value);
+		}
 	} else if (string_starts_with(name, "secret_")) {
 		touch_secret();
 		name = string_delete(name, 1, 7);
@@ -220,12 +223,12 @@ function on_chatterbox_variable_set(name, value) {
 		if (array_contains(global.slot_base_variables, name)) {
 			struct_set(Game.state.save_slot, name, value);
 		} else {
-            struct_set(Game.state.save_slot.data, name, value);
-        }
+			struct_set(Game.state.save_slot.data, name, value);
+		}
 	}
-    if (name == "gender_pronouns") {
-        struct_foreach(get_pronoun_list(value), function(pronoun_type, pronoun) {
-		    ChatterboxVariableSet(pronoun_type, pronoun);
-	    });
-    }
+	if (name == "gender_pronouns") {
+		struct_foreach(get_pronoun_list(value), function(pronoun_type, pronoun) {
+			ChatterboxVariableSet(pronoun_type, pronoun);
+		});
+	}
 }

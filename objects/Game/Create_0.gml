@@ -25,7 +25,7 @@ state = {
 		id: 0,
 		name: "",
 		runs_completed: 0,
-        gender_form: global.PlayerForm.Androgynous,
+		gender_form: global.PlayerForm.Androgynous,
 		gender_pronouns: global.PlayerPronouns.ItIts,
 		visited_nodes: {},
 		data: {},

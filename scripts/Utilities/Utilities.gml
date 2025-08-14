@@ -35,10 +35,10 @@ function hex_to_color(hex_code) {
 }
 
 function get_pronoun_list(pronouns) {
-    out = {};
-    var list = struct_get(global.PronounMap, pronouns);
-    array_foreach(list, function (item, i) {
-        struct_set(out, "player_gender_pronoun_" + string(i), item)
-    });
-    return out;
+	out = {};
+	var list = struct_get(global.PronounMap, pronouns);
+	array_foreach(list, function(item, i) {
+		struct_set(out, "player_gender_pronoun_" + string(i), item);
+	});
+	return out;
 }

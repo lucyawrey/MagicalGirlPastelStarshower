@@ -1,5 +1,5 @@
 if (!is_undefined(current_background_sprite)) {
-    draw_sprite(current_background_sprite, 0, 0, 0);
+	draw_sprite(current_background_sprite, 0, 0, 0);
 }
 
 var dx = 5;

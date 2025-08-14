@@ -8,7 +8,13 @@ player_path = "saves/players/player_";
 json_ext = ".json";
 autosave_interval = 20 * 60;
 slot_base_variables = ["id", "runs_completed"];
-player_base_variables = ["id", "name", "runs_completed", "gender_form", "gender_pronouns"];
+player_base_variables = [
+	"id",
+	"name",
+	"runs_completed",
+	"gender_form",
+	"gender_pronouns"
+];
 
 // Characters constant
 default_character_name = "Narrator";
@@ -17,20 +23,11 @@ characters = {};
 characters_cache = {};
 
 // Gender constants
-PlayerForm = {
-	Androgynous: "Androgynous",
-	Feminine: "Feminine",
-	Masculine: "Masculine",
-}
-PlayerPronouns = {
-	ItIts: "ItIts",
-	TheyThem: "TheyThem",
-	SheHer: "SheHer",
-	HeHim: "HeHim",
-}
+PlayerForm = {Androgynous: "Androgynous", Feminine: "Feminine", Masculine: "Masculine"};
+PlayerPronouns = {ItIts: "ItIts", TheyThem: "TheyThem", SheHer: "SheHer", HeHim: "HeHim"};
 PronounMap = {
 	ItIts: ["it", "it", "it's", "itself"],
 	TheyThem: ["they", "them", "theirs", "themself"],
 	SheHer: ["she", "her", "hers", "herself"],
 	HeHim: ["he", "him", "his", "himself"],
-}
+};
