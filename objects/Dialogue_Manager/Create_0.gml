@@ -3,6 +3,10 @@ load_all_chatterbox();
 chatterbox = ChatterboxCreate();
 ChatterboxNodeChangeCallback(on_node_change);
 ChatterboxVariableSetCallback(on_chatterbox_variable_set);
+ChatterboxAddFunction("background", background);
+ChatterboxAddFunction("show", show);
+ChatterboxAddFunction("play", play);
+ChatterboxAddFunction("input", input);
 
 // Object variable definitions
 input_key = vk_space;
@@ -17,7 +21,7 @@ current_character = get_character();
 current_text_speed = current_character.text_speed;
 current_char = 0;
 text_to_draw = "";
-current_background_sprite = spr_bg_cafe;
+current_background_sprite = undefined;
 text_sound_clock = 0;
 is_new_node = false;
 

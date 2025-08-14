@@ -2,13 +2,13 @@ title: EndingEverConversation
 location: city_streets
 day: ?
 ---
-//<<background black>>
-//<<play music dream>>
+<<background "none">>
+<<play "music" "dream">>
 Stella[Narrator]: And then, everything is over. The three of us enter Earth's atmosphere after what feels like an eternity drifting in space.
 Stella[Narrator]: With a flex of will and magic I aim our meteoric fall towards... home.
 Stella[Narrator]: The fall is as joyous as ever despite my anxiety, and I take extra care to make sure you and Ever are safe. When the spell ends we land gently upon the streets of Neo Detroit.
-//<<play sound sfx_land>>
-//<<background city_night_1>>
+<<play "sound" "sfx_land">>
+<<background "spr_city_night">>
 Stella: And we're back.
 Stella[Narrator]: I sigh, look to you, then Ever, then the city. Things don't look different, but fear bubbles up in me all the same.
 Ever: Hey.
