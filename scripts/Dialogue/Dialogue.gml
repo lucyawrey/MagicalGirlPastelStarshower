@@ -45,24 +45,17 @@ function get_content() {
 	var metadata = ChatterboxGetContentMetadata(Dialogue_Manager.chatterbox, 0);
 	var text = ChatterboxGetContentSpeech(Dialogue_Manager.chatterbox, 0);
 
-	if (character.suffix != "") {
-		text += character.suffix;
-	}
-	if (character.prefix != "") {
-		text = character.prefix + text;
-	}
-
 	return {character, metadata, text};
 }
 
 function text_play_sound(element, position, typist) {
-    Dialogue_Manager.typist_sound_clock++;
-    var current_char = string_char_at(Dialogue_Manager.current_text, position);
-    if (current_char == " ") {
-        Dialogue_Manager.typist_sound_clock -= 2;
-    }
-    if (Dialogue_Manager.typist_sound_clock >= 4) {
-        audio_play_sound(click, 1, false, 0.4, undefined, 1);
-        Dialogue_Manager.typist_sound_clock = 0;
-    }
+	Dialogue_Manager.typist_sound_clock++;
+	var current_char = string_char_at(Dialogue_Manager.current_text, position);
+	if (current_char == " ") {
+		Dialogue_Manager.typist_sound_clock -= 2;
+	}
+	if (Dialogue_Manager.typist_sound_clock >= 4) {
+		audio_play_sound(click, 1, false, 0.4, undefined, 1);
+		Dialogue_Manager.typist_sound_clock = 0;
+	}
 }

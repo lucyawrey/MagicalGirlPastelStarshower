@@ -1,11 +1,11 @@
 if (visible) {
-    if (typist.get_state() < 1) {
-        if (keyboard_check_released(input_key)) {
+	if (typist.get_state() < 1) {
+		if (keyboard_check_released(input_key)) {
 			typist.skip();
-            exit;
+			exit;
 		}
-    }
-    
+	}
+
 	if (ChatterboxIsStopped(chatterbox)) {
 		visible = false;
 	} else if (ChatterboxIsWaiting(chatterbox)) {

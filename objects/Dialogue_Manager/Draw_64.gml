@@ -1,4 +1,4 @@
-if (current_background_sprite != "none") {
+if (!is_undefined(current_background_sprite)) {
 	draw_sprite(current_background_sprite, 0, 0, 0);
 }
 
@@ -16,4 +16,10 @@ scribble($"[{current_character.name_color}]{current_character.name}").draw(dx, d
 
 dy += 40;
 
-scribble($"[{current_character.text_color}]{current_text}").wrap(box_width - 120).draw(dx, dy, typist);
+scribble(
+	$"[speed,{current_character.text_speed}][{current_character.text_color}]{
+		current_character.prefix
+	}{current_text}{current_character.suffix}"
+)
+	.wrap(box_width - 120)
+	.draw(dx, dy, typist);

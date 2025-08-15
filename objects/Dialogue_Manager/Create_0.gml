@@ -24,7 +24,7 @@ current_node_metadata = {};
 current_text = "";
 current_metadata = [];
 current_character = get_character();
-current_background_sprite = "none";
+current_background_sprite = undefined;
 is_new_node = false;
 
 // Method definitions
