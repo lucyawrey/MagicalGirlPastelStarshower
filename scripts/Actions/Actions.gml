@@ -11,12 +11,18 @@ function background(background_name) {
 	}
 }
 
-function delay(time_in_seconds = 1, behaviour = "keep") {
-	if (behaviour == "clear") {
-		Dialogue_Manager.get_current_content();
-	}
+function delay(time_in_seconds = 1, behavior = "stay") {
+    if (Dialogue_Manager.skipping) {
+        return;
+    }
 	Game.pause(time_in_seconds);
-	ChatterboxWait(Dialogue_Manager.chatterbox);
+    if (behavior != "next") {
+        ChatterboxWait(Dialogue_Manager.chatterbox);
+    }
+    if (behavior == "clear") {
+        Dialogue_Manager.get_current_content();
+    }
+    Dialogue_Manager.delay_behavior = behavior;
 }
 
 function show(sprite_name, position) {

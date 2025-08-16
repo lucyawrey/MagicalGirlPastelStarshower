@@ -20,11 +20,18 @@ function hide_dialogue() {
 }
 
 function skip_to_position(node_position) {
+    Dialogue_Manager.skipping = true;
 	repeat (node_position) {
 		ChatterboxContinue(Dialogue_Manager.chatterbox);
 	}
 	Game.state.save_slot.current_node_position = node_position;
 	touch_slot();
+    Dialogue_Manager.skipping = false;
+}
+
+function increment_current_node_position() {
+    Game.state.save_slot.current_node_position++;
+    touch_slot();
 }
 
 function on_node_change(_old_node, new_node, _action) {

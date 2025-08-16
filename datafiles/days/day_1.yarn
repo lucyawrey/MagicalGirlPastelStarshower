@@ -16,7 +16,7 @@ Stella[Dream]: You're not going to be alone anymore.
 Stella[Dream]: It's so, so hard to keep living, but I'd like it if you tried to once more. If both of us tried.
 Stella[Dream]: [wave]So, let's go.
 Stella[Dream]: [wave]Together.
-<<delay 1 "clear">>
+<<delay 0.6 "clear">>
 <<jump Day1Cafe>>
 ===
 
@@ -27,6 +27,7 @@ day: 1
 <<background "spr_bg_cafe">>
 <<show "spr_stella" "left">>
 <<show "spr_azalea" "right">>
+<<delay 0.3>>
 Azalea: Hey Stella, are you awake?
 Stella: Um, yeah, I am now. Sorry I passed out.
 Azalea: You're good, it's not like you're sleeping in *my* cafe after closing time.

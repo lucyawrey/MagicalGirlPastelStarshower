@@ -27,13 +27,14 @@ current_metadata = [];
 current_character = get_character();
 current_background_sprite = undefined;
 is_new_node = false;
+skipping = false;
+delay_behavior = "";
 
 // Method definitions
 function continue_on() {
 	ChatterboxContinue(chatterbox);
-	if (!Game.paused) {
-		Game.state.save_slot.current_node_position++;
-		touch_slot();
+	if (!Game.paused || delay_behavior == "next") {
+        increment_current_node_position();
 		get_current_content();
 	}
 }

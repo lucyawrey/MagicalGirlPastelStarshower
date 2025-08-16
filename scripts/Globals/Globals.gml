@@ -1,3 +1,6 @@
+// Dev constants
+is_development = true;
+
 // Saves constants
 available_save_slots = 12;
 available_player_slots = 12;
