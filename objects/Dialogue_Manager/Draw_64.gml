@@ -18,8 +18,7 @@ dy += 40;
 
 scribble(
 	$"[speed,{current_character.text_speed}][{current_character.text_color}]{
-		current_character.prefix
-	}{current_text}{current_character.suffix}"
+		current_character.prefix}{current_text}{current_character.suffix}"
 )
 	.wrap(box_width - 120)
 	.draw(dx, dy, typist);

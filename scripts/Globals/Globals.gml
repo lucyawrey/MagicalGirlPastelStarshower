@@ -9,7 +9,7 @@ secret_path = "game_data/internal.dat";
 slot_path = "saves/slots/slot_";
 player_path = "saves/players/player_";
 json_ext = ".json";
-autosave_interval = 20 * 60;
+autosave_interval = 10 * 60;
 slot_base_variables = ["id", "runs_completed"];
 player_base_variables = [
 	"id",

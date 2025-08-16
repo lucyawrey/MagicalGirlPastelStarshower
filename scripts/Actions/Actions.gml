@@ -12,7 +12,7 @@ function background(background_name) {
 }
 
 function delay(time_in_seconds = 1, behavior = "stay") {
-    if (Dialogue_Manager.skipping) {
+    if (Dialogue_Manager.loading) {
         return;
     }
 	Game.pause(time_in_seconds);

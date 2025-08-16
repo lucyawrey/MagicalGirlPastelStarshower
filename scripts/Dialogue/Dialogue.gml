@@ -3,6 +3,7 @@ function show_dialogue(node, node_position = 0) {
 		return;
 	}
 
+    Dialogue_Manager.loading = true;
 	ChatterboxJump(Dialogue_Manager.chatterbox, node);
 
 	if (node_position > 0) {
@@ -11,6 +12,7 @@ function show_dialogue(node, node_position = 0) {
 
 	Dialogue_Manager.get_current_content();
 	Dialogue_Manager.visible = true;
+    Dialogue_Manager.loading = false;
 }
 
 function hide_dialogue() {
@@ -20,13 +22,11 @@ function hide_dialogue() {
 }
 
 function skip_to_position(node_position) {
-    Dialogue_Manager.skipping = true;
 	repeat (node_position) {
 		ChatterboxContinue(Dialogue_Manager.chatterbox);
 	}
 	Game.state.save_slot.current_node_position = node_position;
 	touch_slot();
-    Dialogue_Manager.skipping = false;
 }
 
 function increment_current_node_position() {

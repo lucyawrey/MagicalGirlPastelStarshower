@@ -35,9 +35,13 @@ initial_state = variable_clone(state);
 
 paused = false;
 resumed = false;
+// Set autosave alarm
 alarm[0] = global.autosave_interval;
+// Set game pause function alarms
 alarm[1] = 0;
 alarm[2] = 0;
+// Set start game delay alarm
+alarm[3] = 2;
 
 // Method definitions
 function pause(time_in_seconds = -1) {
@@ -55,5 +59,3 @@ function unpause() {
 instance_create_depth(0, 0, 0, Dialogue_Manager);
 // Initial game load.
 load_game();
-// Open dialogue screen to current saved location.
-show_dialogue(state.save_slot.current_node, state.save_slot.current_node_position);
