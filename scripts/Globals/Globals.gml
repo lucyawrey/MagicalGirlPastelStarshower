@@ -1,5 +1,5 @@
 // Dev constants
-is_development = true;
+is_development = false;
 
 // Saves constants
 available_save_slots = 12;

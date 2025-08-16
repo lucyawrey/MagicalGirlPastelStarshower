@@ -2,6 +2,7 @@ title: Day1Dream
 location: dream
 day: 1
 ---
+<<play "music" "dream">>
 You float formless in the space between.
 It is quiet, comfortable, and vast beyond even your comprehension.
 But also empty. You are alone. You have been alone for a very long time.
@@ -28,6 +29,7 @@ day: 1
 <<show "spr_stella" "left">>
 <<show "spr_azalea" "right">>
 <<delay 0.3>>
+<<play "music" "morning">>
 Azalea: Hey Stella, are you awake?
 Stella: Um, yeah, I am now. Sorry I passed out.
 Azalea: You're good, it's not like you're sleeping in *my* cafe after closing time.

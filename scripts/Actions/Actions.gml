@@ -29,8 +29,20 @@ function show(sprite_name, position) {
 	// TODO implement sprite drawing
 }
 
-function play(audio_type, audio_name) {
-	// TODO implement audio playing
+function play(audio_type, audio_name, volume = 1) {
+    var audio = asset_get_index(audio_name);
+    if (asset_get_type(audio) == asset_sound) {
+        if (audio_type == "music") {
+            if (!is_undefined(Dialogue_Manager.current_music)) {
+                audio_stop_sound(Dialogue_Manager.current_music);
+            }
+            audio_play_sound(audio, 1, true, volume);
+            Dialogue_Manager.current_music = audio;
+            
+        } else if (audio_type == "sound") {
+            audio_play_sound(audio, 1, false, volume);
+        }
+    }
 }
 
 function input(variable_name) {

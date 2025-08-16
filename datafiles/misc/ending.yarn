@@ -48,7 +48,7 @@ This is the last time.
     Stella: Goodbye.
     And then she's gone, and Stella weeps.
 -> No
-    //<<play music main_theme>>
+    <<play "music" "main_theme">>
     Stella: Ever, I... Look at me.
     Stella[Narrator]: And she does.
     -> Give her your shield

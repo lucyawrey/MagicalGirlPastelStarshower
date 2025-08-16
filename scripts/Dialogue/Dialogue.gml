@@ -62,7 +62,7 @@ function text_play_sound(element, position, typist) {
 		Dialogue_Manager.typist_sound_clock -= 2;
 	}
 	if (Dialogue_Manager.typist_sound_clock >= 4) {
-		audio_play_sound(click, 1, false, 0.4, undefined, 1);
+		audio_play_sound(click, 1, false, 0.3, undefined, 1);
 		Dialogue_Manager.typist_sound_clock = 0;
 	}
 }
