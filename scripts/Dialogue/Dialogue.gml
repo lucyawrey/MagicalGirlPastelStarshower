@@ -56,6 +56,9 @@ function get_content() {
 }
 
 function text_play_sound(element, position, typist) {
+    if (typist.get_skip()) {
+        return;
+    }
 	Dialogue_Manager.typist_sound_clock++;
 	var current_char = string_char_at(Dialogue_Manager.current_text, position);
 	if (current_char == " ") {

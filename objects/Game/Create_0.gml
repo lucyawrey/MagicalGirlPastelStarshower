@@ -39,13 +39,6 @@ alarm[0] = global.autosave_interval;
 alarm[1] = 0;
 alarm[2] = 0;
 
-// Create Dialogue Manager Object
-instance_create_depth(0, 0, 0, Dialogue_Manager);
-// Initial game load.
-load_game();
-// Open dialogue screen to current saved location.
-show_dialogue(state.save_slot.current_node, state.save_slot.current_node_position);
-
 // Method definitions
 function pause(time_in_seconds = -1) {
 	Game.paused = true;
@@ -57,3 +50,10 @@ function pause(time_in_seconds = -1) {
 function unpause() {
 	alarm[1] = 1;
 }
+
+// Create Dialogue Manager Object
+instance_create_depth(0, 0, 0, Dialogue_Manager);
+// Initial game load.
+load_game();
+// Open dialogue screen to current saved location.
+show_dialogue(state.save_slot.current_node, state.save_slot.current_node_position);
