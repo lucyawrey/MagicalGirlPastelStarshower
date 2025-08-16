@@ -11,6 +11,11 @@ function background(background_name) {
 	}
 }
 
+function wait(time_in_seconds) {
+    Game.waiting = true;
+    Game.alarm[1] = time_in_seconds * 60;
+}
+
 function show(sprite_name, position) {
 	// TODO implement sprite drawing
 }

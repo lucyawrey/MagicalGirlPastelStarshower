@@ -32,6 +32,7 @@ state = {
 	},
 };
 initial_state = variable_clone(state);
+waiting = false;
 alarm[0] = global.autosave_interval;
 
 // Create Dialogue Manager Object

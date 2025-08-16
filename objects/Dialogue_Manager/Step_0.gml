@@ -1,4 +1,4 @@
-if (visible) {
+if (visible && !Game.waiting) {
 	if (typist.get_state() < 1) {
 		if (keyboard_check_released(input_key)) {
 			typist.skip();
