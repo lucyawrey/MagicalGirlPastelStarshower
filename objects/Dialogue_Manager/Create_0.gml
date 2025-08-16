@@ -7,6 +7,7 @@ ChatterboxAddFunction("background", background);
 ChatterboxAddFunction("show", show);
 ChatterboxAddFunction("play", play);
 ChatterboxAddFunction("input", input);
+ChatterboxAddFunction("delay", delay);
 
 // Scribble setup
 typist = scribble_typist();
@@ -28,11 +29,13 @@ current_background_sprite = undefined;
 is_new_node = false;
 
 // Method definitions
-function next() {
+function continue_on() {
 	ChatterboxContinue(chatterbox);
-	Game.state.save_slot.current_node_position++;
-	touch_slot();
-	get_current_content();
+	if (!Game.paused) {
+		Game.state.save_slot.current_node_position++;
+		touch_slot();
+		get_current_content();
+	}
 }
 
 function get_current_content() {

@@ -1,4 +1,7 @@
-if (visible && !Game.waiting) {
+if (visible && !Game.paused) {
+	if (Game.resumed) {
+		continue_on();
+	}
 	if (typist.get_state() < 1) {
 		if (keyboard_check_released(input_key)) {
 			typist.skip();
@@ -11,7 +14,7 @@ if (visible && !Game.waiting) {
 	} else if (ChatterboxIsWaiting(chatterbox)) {
 		//If we're in a "waiting" state then let the user press <space> to advance dialogue
 		if (keyboard_check_released(input_key)) {
-			next();
+			continue_on();
 		}
 	} else {
 		//If we're not waiting then we have some options!

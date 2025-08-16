@@ -11,9 +11,12 @@ function background(background_name) {
 	}
 }
 
-function wait(time_in_seconds) {
-    Game.waiting = true;
-    Game.alarm[1] = time_in_seconds * 60;
+function delay(time_in_seconds = 1, behaviour = "keep") {
+	if (behaviour == "clear") {
+		Dialogue_Manager.get_current_content();
+	}
+	Game.pause(time_in_seconds);
+	ChatterboxWait(Dialogue_Manager.chatterbox);
 }
 
 function show(sprite_name, position) {

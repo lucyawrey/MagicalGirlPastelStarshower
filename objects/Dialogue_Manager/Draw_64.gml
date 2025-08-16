@@ -5,8 +5,8 @@ var box_height = gui_height - dy - 5;
 
 if (!is_undefined(current_background_sprite)) {
 	draw_sprite(current_background_sprite, 0, 0, 0);
-    
-    draw_sprite_stretched(spr_box, 0, dx, dy, box_width, box_height);
+
+	draw_sprite_stretched(spr_box, 0, dx, dy, box_width, box_height);
 }
 
 dx += 60;
