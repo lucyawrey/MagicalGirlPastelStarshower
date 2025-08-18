@@ -1,6 +1,3 @@
-// Dev constants
-is_development = false;
-
 // Saves constants
 available_save_slots = 12;
 available_player_slots = 12;
@@ -21,7 +18,7 @@ player_base_variables = [
 
 // Characters constant
 default_character_name = "Narrator";
-// Characters global state
+// Characters state
 characters = {};
 characters_cache = {};
 

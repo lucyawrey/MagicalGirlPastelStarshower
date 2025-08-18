@@ -1,5 +1,5 @@
 function save_game() {
-    if(global.is_development) {
+    if(Game.state.shared.developer_mode) {
         exit;
     }
     

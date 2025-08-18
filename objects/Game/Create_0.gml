@@ -6,7 +6,7 @@ state = {
 	player_is_touched: false,
 	secret_is_touched: false,
 	/* saves/shared.json */
-	shared: {active_save_slot_id: 0, active_player_id: 0, player_count: 1},
+	shared: {active_save_slot_id: 0, active_player_id: 0, player_count: 1, developer_mode: false},
 	/* game_data/internal.dat */
 	secret: {player_names: [], file_hashes: {}, data: {}},
 	/* saves/slots/slot_[number].json */
