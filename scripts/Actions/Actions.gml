@@ -55,11 +55,11 @@ function show(sprite_name, position, y_position) {
 }
 
 function hide(sprite_name = undefined) {
-    if (is_undefined(sprite_name)) {
-        Dialogue_Manager.current_shown_sprites = {};
-    }else if (struct_exists(Dialogue_Manager.current_shown_sprites, sprite_name)) {
-        struct_remove(Dialogue_Manager.current_shown_sprites, sprite_name);
-    }
+	if (is_undefined(sprite_name)) {
+		Dialogue_Manager.current_shown_sprites = {};
+	} else if (struct_exists(Dialogue_Manager.current_shown_sprites, sprite_name)) {
+		struct_remove(Dialogue_Manager.current_shown_sprites, sprite_name);
+	}
 }
 
 function play(audio_type, audio_name, volume = 1) {
@@ -78,16 +78,17 @@ function play(audio_type, audio_name, volume = 1) {
 }
 
 function pause(audio_name = undefined) {
-    if (is_undefined(audio_name)) {
-        audio_stop_all();
-        return;
-    }
-    var audio = asset_get_index(audio_name);
-    if (asset_get_type(audio) == asset_sound) {
-        audio_stop_sound(audio);
-    }
+	if (is_undefined(audio_name)) {
+		audio_stop_all();
+		return;
+	}
+	var audio = asset_get_index(audio_name);
+	if (asset_get_type(audio) == asset_sound) {
+		audio_stop_sound(audio);
+	}
 }
 
 function input(variable_name) {
 	// TODO implement user text input
+	Dialogue_Manager.current_state = DialogueState.Input;
 }

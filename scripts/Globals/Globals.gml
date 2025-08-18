@@ -31,3 +31,10 @@ PronounMap = {
 	SheHer: ["she", "her", "hers", "herself"],
 	HeHim: ["he", "him", "his", "himself"],
 };
+
+// Enums
+enum DialogueState {
+	Text,
+	Option,
+	Input,
+}

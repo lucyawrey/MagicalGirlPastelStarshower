@@ -23,6 +23,7 @@ input_key = vk_space;
 gui_width = display_get_gui_width();
 gui_height = display_get_gui_height();
 
+current_state = DialogueState.Text;
 current_node_metadata = {};
 current_text = "";
 current_metadata = [];
@@ -37,9 +38,17 @@ delay_behavior = "";
 // Method definitions
 function continue_on() {
 	ChatterboxContinue(chatterbox);
-	if (!Game.paused || delay_behavior == "next") {
-		get_current_content();
-		increment_current_node_position();
+	if (ChatterboxIsStopped(chatterbox)) {
+		visible = false;
+	} else if (ChatterboxIsWaiting(chatterbox)) {
+		current_state = DialogueState.Text;
+		if (!Game.paused || delay_behavior == "next") {
+			get_current_content();
+			increment_current_node_position();
+		}
+	} else {
+		// TODO Option
+		current_state = DialogueState.Option;
 	}
 }
 
