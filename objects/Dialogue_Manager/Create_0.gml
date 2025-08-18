@@ -26,6 +26,7 @@ current_text = "";
 current_metadata = [];
 current_character = get_character();
 current_background_sprite = undefined;
+current_shown_sprites = {};
 current_music = undefined;
 loading = false;
 is_new_node = false;
@@ -36,7 +37,7 @@ function continue_on() {
 	ChatterboxContinue(chatterbox);
 	if (!Game.paused || delay_behavior == "next") {
 		get_current_content();
-        increment_current_node_position();
+		increment_current_node_position();
 	}
 }
 

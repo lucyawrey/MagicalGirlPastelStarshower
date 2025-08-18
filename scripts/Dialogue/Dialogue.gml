@@ -3,7 +3,7 @@ function show_dialogue(node, node_position = 0) {
 		return;
 	}
 
-    Dialogue_Manager.loading = true;
+	Dialogue_Manager.loading = true;
 	ChatterboxJump(Dialogue_Manager.chatterbox, node);
 
 	if (node_position > 0) {
@@ -12,7 +12,7 @@ function show_dialogue(node, node_position = 0) {
 
 	Dialogue_Manager.get_current_content();
 	Dialogue_Manager.visible = true;
-    Dialogue_Manager.loading = false;
+	Dialogue_Manager.loading = false;
 }
 
 function hide_dialogue() {
@@ -30,8 +30,8 @@ function skip_to_position(node_position) {
 }
 
 function increment_current_node_position() {
-    Game.state.save_slot.current_node_position++;
-    touch_slot();
+	Game.state.save_slot.current_node_position++;
+	touch_slot();
 }
 
 function on_node_change(_old_node, new_node, _action) {
@@ -56,9 +56,9 @@ function get_content() {
 }
 
 function text_play_sound(element, position, typist) {
-    if (typist.get_skip()) {
-        return;
-    }
+	if (typist.get_skip()) {
+		return;
+	}
 	Dialogue_Manager.typist_sound_clock++;
 	var current_char = string_char_at(Dialogue_Manager.current_text, position);
 	if (current_char == " ") {

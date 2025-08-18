@@ -1,8 +1,8 @@
 function save_game() {
-    if(Game.state.shared.developer_mode) {
-        exit;
-    }
-    
+	if (Game.state.shared.developer_mode) {
+		exit;
+	}
+
 	Game.alarm[0] = global.autosave_interval;
 
 	if (Game.state.shared_is_touched) {

@@ -5,7 +5,7 @@ if (visible && !Game.paused) {
 	if (typist.get_state() < 1) {
 		if (keyboard_check_released(input_key)) {
 			typist.skip();
-            audio_play_sound(click, 1, false, 0.5, undefined, 1);
+			audio_play_sound(click, 1, false, 0.5, undefined, 1);
 			exit;
 		}
 	}
