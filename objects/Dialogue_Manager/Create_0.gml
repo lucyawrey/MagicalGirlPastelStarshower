@@ -5,7 +5,9 @@ ChatterboxNodeChangeCallback(on_node_change);
 ChatterboxVariableSetCallback(on_chatterbox_variable_set);
 ChatterboxAddFunction("background", background);
 ChatterboxAddFunction("show", show);
+ChatterboxAddFunction("hide", hide);
 ChatterboxAddFunction("play", play);
+ChatterboxAddFunction("pause", pause);
 ChatterboxAddFunction("input", input);
 ChatterboxAddFunction("delay", delay);
 
