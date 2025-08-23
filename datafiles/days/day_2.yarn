@@ -3,26 +3,8 @@ location: dream
 day: 2
 ---
 <<background "none">>
-Stella[Dream]: ...
-<<if $player_name == "">>
-    Stella[Dream]: I'm realizing now that I never asked you what I should call you.
-    Stella[Dream]: So... what's it going to be?
-    <<input "player_name">>
-    <<set $player_name to "Lucy">>
-    Stella[Dream]: {$player_name}. I like it, and I'll be sure to remember it. Not that I wouldn't remember if I like hated it or something.
-<<else>>
-    Stella[Dream]: It's good to see you again, {$player_name}.
-    Stella[Dream]: Oh! Now that I think about it, is that something you'd still like me to call you?
-    -> Yes
-        Stella[Dream]: Awesome.
-    -> No
-        Stella[Dream]: Oh, uh, I hope I didn't use a name you don't like to hear.
-        Stella[Dream]: What name should I use instead?
-        <<input "player_name">>
-        <<set $player_name to "Elise">>
-        Stella[Dream]: Thanks.
-<<endif>>
-Stella[Dream]: Well, see you later.
+<<play "music" "dream">>
+Add spooky dream text here.
 <<jump Day2Morning>>
 ===
 
@@ -31,17 +13,14 @@ location: apartment
 day: 2
 ---
 Stella[Narrator]: I open my eyes. The morning sun is bright and pleasant through the window.
-Stella[Narrator]: I don't really remember making it back last night.
-Stella[Narrator]: I was very tired, physically and emotionally. It's a bit of a blur.
-Stella[Narrator]: Not a bad blur, really. Just the blur of normality, of a journey home so well trodden you barely need to be conscious for it.
-I'm doing better today, I think.
-Maybe not better, but...
-I feel clearer.
-After talking.
-I feel like I can get up today.
-I can do what I need to do.
-Some days, it's hard to get out of bed at all.
-So, I'm grateful for that.
+Stella[Narrator]: I don't really remember making it back home last night.
+Stella[Narrator]: I was very tired, both physically and emotionally. It's all a bit of a blur.
+Stella[Narrator]: Not a bad blur, really. More the blur of routine. Taking a path home so well trodden I barely need to be conscious for it.
+Stella[Narrator]: I'm doing better today, I think.
+Stella[Narrator]: It may be only by a little, but I feel like my mind is clearer.
+Stella[Narrator]: Talking so much yesterday really did help.
+Stella[Narrator]: I feel like I can actually get out of bed today and do what I need to.
+Stella[Narrator]: Some days, it's really hard to do that, so I'm grateful.
 I climb out of my bed.
 I have messy hair draping over my shoulders.
 It's getting a little long.

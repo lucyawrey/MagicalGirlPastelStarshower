@@ -1,0 +1,35 @@
+title: Day3Dream
+location: dream
+day: 3
+---
+<<background "none">>
+<<play "music" "dream">>
+Stella[Dream]: Hey.
+<<if $player_name == "">>
+    Stella[Dream]: I don't think I ever asked what I should call you.
+    <<input "player_name">>
+    <<set $player_name to "Lucy">>
+    Stella[Dream]: {$player_name}. I like it, thank you. You can call me Stella.
+<<else>>
+    Stella[Dream]: It's good to see you again, {$player_name}.
+    Stella[Dream]: Is that something you'd still like me to call you?
+    -> Yes
+        Stella[Dream]: Perfect, thank you.
+    -> No
+        Stella[Dream]: Ah, sorry if that is a name don't like to hear.
+        Stella[Dream]: What name should I use instead?
+        <<input "player_name">>
+        <<set $player_name to "Elise">>
+        Stella[Dream]: {$player_name}. I like it, thank you.
+<<endif>>
+Stella[Dream]: I've been thinking--
+And then you start to see fade away.
+<<jump Day3Morning>>
+===
+
+title: Day3Morning
+location: apartment
+day: 3
+---
+Add content here.
+===
