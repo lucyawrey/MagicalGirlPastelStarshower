@@ -64,8 +64,8 @@ function text_play_sound(element, position, typist) {
 	if (current_char == " ") {
 		Dialogue_Manager.typist_sound_clock -= 2;
 	}
-	if (Dialogue_Manager.typist_sound_clock >= 4) {
-		audio_play_sound(click, 1, false, 0.3, undefined, 1);
+	if (Dialogue_Manager.typist_sound_clock >= Dialogue_Manager.current_character.sound_spacing) {
+		audio_play_sound(Dialogue_Manager.current_character.sound, 1, false, 0.3, undefined, 1);
 		Dialogue_Manager.typist_sound_clock = 0;
 	}
 }

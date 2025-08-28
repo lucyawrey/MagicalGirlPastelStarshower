@@ -5,7 +5,10 @@
         "text_color": "#ffffff",
         "text_speed": 1,
         "prefix": "",
-        "suffix": ""
+        "suffix": "",
+        "sound": "click",
+        "sound_pitch": 1,
+        "sound_spacing": 4
     },
     "Stella": {
         "name_color": "#fff826",

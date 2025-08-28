@@ -95,6 +95,7 @@
     {"$GMIncludedFile":"","%Name":"characters.json","CopyToMask":-1,"filePath":"datafiles","name":"characters.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"day_1.yarn","CopyToMask":-1,"filePath":"datafiles/days","name":"day_1.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"day_2.yarn","CopyToMask":-1,"filePath":"datafiles/days","name":"day_2.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"day_3.yarn","CopyToMask":-1,"filePath":"datafiles/days","name":"day_3.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"chatterbox_license.txt","CopyToMask":-1,"filePath":"datafiles/extensions","name":"chatterbox_license.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"gamecontrollerdb.txt","CopyToMask":-1,"filePath":"datafiles/extensions","name":"gamecontrollerdb.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"input_license.txt","CopyToMask":-1,"filePath":"datafiles/extensions","name":"input_license.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
@@ -108,7 +109,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.1400.0.865",
+    "IDEVersion":"2024.1400.0.874",
   },
   "name":"MagicalGirlPastelStarshower",
   "resources":[

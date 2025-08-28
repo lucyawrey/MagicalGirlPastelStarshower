@@ -22,7 +22,9 @@ function get_character(character_name = "", character_data = "") {
 		? struct_get(base_character.variants, character_data)
 		: undefined;
 	var queue = [default_character, base_character, variant];
-
+    var sound_name = struct_get_merged_value(queue, "sound");
+    var sound = asset_get_index(sound_name);
+    
 	var character = {
 		id: character_id,
 		name: struct_get_merged_value(
@@ -34,6 +36,9 @@ function get_character(character_name = "", character_data = "") {
 		text_speed: struct_get_merged_value(queue, "text_speed"),
 		prefix: struct_get_merged_value(queue, "prefix"),
 		suffix: struct_get_merged_value(queue, "suffix"),
+        sound,
+        sound_pitch: struct_get_merged_value(queue, "sound_pitch"),
+        sound_spacing: struct_get_merged_value(queue, "sound_spacing"),
 	};
 
 	struct_set(global.characters_cache, character_id, character);
