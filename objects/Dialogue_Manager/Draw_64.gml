@@ -25,7 +25,7 @@ scribble($"[{current_character.name_color}]{current_character.name}").draw(dx, d
 dy += 40;
 
 scribble(
-	$"[pitch,{current_character.sound_pitch}][speed,{current_character.text_speed}][{current_character.text_color}]{
+	$"[speed,{current_character.text_speed}][{current_character.text_color}]{
 		current_character.prefix
 	}{current_text}{current_character.suffix}"
 )
