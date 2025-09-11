@@ -12,6 +12,7 @@ title: Day2Morning
 location: apartment
 day: 2
 ---
+<<play "music" "morning">>
 Stella[Narrator]: I open my eyes. The morning sun is bright and pleasant through the window.
 Stella[Narrator]: I don't really remember making it back home last night.
 Stella[Narrator]: I was very tired, both physically and emotionally. It's all a bit of a blur.
@@ -19,17 +20,17 @@ Stella[Narrator]: Not a bad blur, really. More the blur of routine. Taking a pat
 Stella[Narrator]: I'm doing better today, I think.
 Stella[Narrator]: It may be only by a small amount, but I feel like my mind is clearer.
 Stella[Narrator]: Talking so much yesterday really did help.
-Stella[Narrator]: I feel like for once, I can actually get out of bed and do the things I need to do.
+Stella[Narrator]: I feel like for once, I can actually get out of bed and do the things I need to.
 Stella[Narrator]: So I do.
 Stella[Narrator]: I get up, stretch, and try to run my fingers through shoulder length hair. It's somehow even messier than usual.
 Stella[Narrator]: And getting a little long.
-Stella[Narrator]: I sigh, and slowly make my way to the bathroom.
-Stella[Narrator]: There, I roughly brush my hair into some semblance of order, then I brush my teeth even if it's more out of habit than necessity.
+Stella[Narrator]: It doesn't really matter, so I slowly make my way to the bathroom.
+Stella[Narrator]: There, I roughly brush my hair into some semblance of order, then brush my teeth even if it's more out of habit than necessity.
 Stella[Narrator]: I splash my face with water, and force myself to smile at my reflection.
-Stella[Narrator]: It's perfect, as always.
-Stella[Narrator]: And then I head back to my bedroom.
-Stella[Narrator]: I strip off my sleepwear, and look around for a some fresh clothes.
-Stella[Narrator]: I manage to locate some underwear, a tank top, and a pair of leggings in my "clean" pile of clothes and throw them on.
+Stella[Narrator]: It's almost flawless, as always.
+Stella[Narrator]: I sign, and head back to my bedroom.
+Stella[Narrator]: I strip off my sleepwear, and look around for fresh clothes.
+Stella[Narrator]: There is a set of underwear, a tank top, and a pair of leggings in my "clean" pile of clothes that I quickly throw on.
 Stella[Narrator]: I step onto my apartment's balcony. It's a beautiful morning.
 Stella[Narrator]: The skies are clear, the sun is shining, and the fall air is... nice.
 Stella[Narrator]: I'm pretty sure I'm late for work, if only by a little.
@@ -38,20 +39,27 @@ Stella[Narrator]: I hope Gio isn't too annoyed with me. Still, It's hard to be t
 Stella[Narrator]: I climb up on the railing of the balcony, dangling my feet off the edge, and enjoy the sight for a little longer.
 Stella[Narrator]: I forgot to put on shoes, I realize, as my feet start to get cold.
 Stella: Nothing for it.
-Stella[Narrator]: And I jump.
+Stella[Narrator]: I jump.
+<<pause>>
+<<delay 0.5>>
+<<jump Day2Fall>>
 ===
 
 title: Day2Fall
 location: city_streets
 day: 2
 ---
-I fall through the air.
-And for a beautiful moment, I experienced complete and utter freefall. But it's only X stories, so I know the fall is only going to last about 10 seconds.
-And for a long time, I just enjoy it. The wind running through my hair, over my body, embracing me, making me feel alive.
-And halfway down, I flex my magic. There's a burst of light that is visible to me, and I'm sure to the people on the ground.
-And for just a moment, I am my truest self, clad in a beautiful gown of whites and blues and yellows.
-And then I hit the ground. Hard enough that I feel it. But soft enough, the ground itself is undamaged.
-And then my perfect self, that beautiful gown, is gone. And I am my normal self again.
+<<play "music" "woosh">>
+Stella[Narrator]: I'm falling through the air.
+Stella[Narrator]: And for a joyful moment, I experienced complete freefall. I know the drop is only seventy floors or so, so this feeling won't last long.
+Stella[Narrator]: Still, I love it, these seconds with the wind rushing through my hair.
+Stella[Narrator]: Halfway down, I flex my magic in a burst of light, color, and emotion.
+Stella[Narrator]: For just a moment, I am my truest self, clad in a beautiful gown of whites, blues and yellows.
+<<play "sound" "power_of_the_wind">>
+<<play "sound" "land">>
+Stella[Narrator]: And then I hit the ground.
+Stella[Narrator]: The impact is hard enough that I feel it, but soft enough that the pavement is undamaged.
+Stella[Narrator]: And then my truest self is gone, motes of magic dissipating in the transformation's wake.
 I hope I didn't have you worried there.
 I don't jump off the balcony every morning, but when you're a magical girl and...
 Well, a fall from terminal velocity can't even scratch you.

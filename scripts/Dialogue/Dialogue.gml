@@ -56,16 +56,13 @@ function get_content() {
 }
 
 function text_play_sound(element, position, typist) {
-	if (typist.get_skip()) {
+    var current_char = string_char_at(Dialogue_Manager.current_text, position);
+	if (typist.get_skip() || current_char == " ") {
 		return;
-	}
-	Dialogue_Manager.typist_sound_clock++;
-	var current_char = string_char_at(Dialogue_Manager.current_text, position);
-	if (current_char == " ") {
-		Dialogue_Manager.typist_sound_clock -= 2;
 	}
 	if (Dialogue_Manager.typist_sound_clock >= Dialogue_Manager.current_character.sound_spacing) {
 		audio_play_sound(Dialogue_Manager.current_character.sound, 1, false, 0.5, undefined, Dialogue_Manager.current_character.sound_pitch);
 		Dialogue_Manager.typist_sound_clock = 0;
 	}
+    Dialogue_Manager.typist_sound_clock++;
 }
