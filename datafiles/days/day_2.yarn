@@ -4,7 +4,8 @@ day: 2
 ---
 <<background "none">>
 <<play "music" "dream">>
-Add spooky dream text here.
+TODO - Add spooky dream text here.
+
 <<jump Day2Morning>>
 ===
 
@@ -42,6 +43,7 @@ Stella: Nothing for it.
 Stella[Narrator]: I jump.
 <<pause>>
 <<delay 0.5>>
+
 <<jump Day2Fall>>
 ===
 
@@ -50,34 +52,46 @@ location: city_streets
 day: 2
 ---
 <<play "music" "woosh">>
-Stella[Narrator]: I'm falling through the air.
+Stella[Narrator]: I fall through the air.
 Stella[Narrator]: And for a joyful moment, I experienced complete freefall. I know the drop is only seventy floors or so, so this feeling won't last long.
 Stella[Narrator]: Still, I love it, these seconds with the wind rushing through my hair.
 Stella[Narrator]: Halfway down, I flex my magic in a burst of light, color, and emotion.
 Stella[Narrator]: For just a moment, I am my truest self, clad in a beautiful gown of whites, blues and yellows.
 <<play "sound" "power_of_the_wind">>
 <<play "sound" "land">>
-Stella[Narrator]: And then I hit the ground.
-Stella[Narrator]: The impact is hard enough that I feel it, but soft enough that the pavement is undamaged.
+Stella[Narrator]: And then I hit the ground. The nearby birds scatter.
+Stella[Narrator]: The impact is hard enough that I feel it, yet soft enough that the pavement is undamaged.
 Stella[Narrator]: And then my truest self is gone, motes of magic dissipating in the transformation's wake.
-I hope I didn't have you worried there.
-I don't jump off the balcony every morning, but when you're a magical girl and...
-Well, a fall from terminal velocity can't even scratch you.
-Sometimes it's just nice to take the quick way down.
-Both for sheer convenience and also the joy of the thing.
-The joy of being able to move without fear.
-I really hope...
-I didn't freak anyone out too bad.
-I glance around.
-And...
-No one is really around except for <Name of Old Woman>.
-And she's only giving me a mildly amused expression.
-I don't even know if she has seen me jump before.
-I don't do it often.
-I don't think I let myself have this much fun often.
-Even though I really should.
-But...
-She knows what I am.
-She knows to expect strangeness from me.
-I'm gonna go say hi.
+
+<<jump Day2Streets>>
+===
+
+title: Day2Streets
+location: city_streets
+day: 2
+---
+Stella[Narrator]: I don't jump from the balcony every morning, as it's not a very responsible use of my power.
+Stella[Narrator]: But when a fall at terminal velocity can't hurt you, it feels refreshing and joyful instead.
+Stella[Narrator]: And it's faster than the elevator.
+Stella[Narrator]: I brush myself off unnessisarily and look around.
+Stella[Narrator]: I really hope I didn't startle anyone too bad.
+Stella[Narrator]: I spot one familiar face nearby, an older woman who had been feeding birds again, something I'm still unsure whether she should be doing.
+Stella[Narrator]: Neither her nor any other person on the street seems to be paying me much mind aside from short, largely friendly, glances.
+Stella[Narrator]: People must expect this sort of thing from me, since they know what I am.
+Stella[Narrator]: I probably still shouldn't make a habbit of it.
+Stella: Good morning ma'am.
+Bird Mother: Morning dear. You sure gave them a fright.
+Stella[Narrator]: She chuckles, looking towards where the birds are now conspicuously absent. 
+Stella: Sorry about that.
+Bird Mother: It's alright, they'll be back. Unlike my ex wife.
+Stella[Narrator]: She laughs at her own joke.
+Stella: I thought you've never been married.
+Bird Mother: Details, details. Now don't you need to be somewhere?
+-> Yes
+    Stella: Right! Yes, see you!
+    
+    TODO - Finish Day 2.
+    <<jump Day3Dream>>
+-> No
+    Stella: Actually, I think I'm just gonna go back to bed.
 ===

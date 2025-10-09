@@ -1,7 +1,7 @@
 {
     "Narrator": {
         "name": "",
-        "name_color": "#ffffff",
+        "name_color": "#999999",
         "text_color": "#ffffff",
         "text_speed": 1,
         "prefix": "",
@@ -11,7 +11,7 @@
         "sound_spacing": 4
     },
     "Stella": {
-        "name_color": "#fff826",
+        "name_color": "#f7f5a1",
         "variants": {
             "Dream": {
                 "name": "",
