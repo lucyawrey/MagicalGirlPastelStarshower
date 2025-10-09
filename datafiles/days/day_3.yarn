@@ -8,7 +8,6 @@ Stella[Dream]: Hey.
 <<if $player_name == "">>
     Stella[Dream]: I don't think I ever asked what I should call you.
     <<input "player_name">>
-    <<set $player_name to "Lucy">>
     Stella[Dream]: {$player_name}. I like it, thank you. You can call me Stella.
 <<else>>
     Stella[Dream]: It's good to see you again, {$player_name}.
@@ -19,11 +18,10 @@ Stella[Dream]: Hey.
         Stella[Dream]: Ah, sorry if that is a name don't like to hear.
         Stella[Dream]: What name should I use instead?
         <<input "player_name">>
-        <<set $player_name to "Elise">>
         Stella[Dream]: {$player_name}. I like it, thank you.
 <<endif>>
 Stella[Dream]: I've been thinking--
-And then you start to see fade away.
+And then you start to fade away.
 <<jump Day3Morning>>
 ===
 
