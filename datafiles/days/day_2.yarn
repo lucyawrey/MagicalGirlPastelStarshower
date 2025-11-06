@@ -70,30 +70,30 @@ title: Day2Streets
 location: city_streets
 day: 2
 ---
-Stella[Narrator]: I don't jump from the balcony every morning, as it's not a very responsible use of my power.
-Stella[Narrator]: But when a fall at terminal velocity can't hurt you, it feels refreshing and joyful instead.
-Stella[Narrator]: And it's faster than the elevator.
-Stella[Narrator]: I brush myself off unnessisarily and look around.
-Stella[Narrator]: I really hope I didn't startle anyone too bad.
-Stella[Narrator]: I spot one familiar face nearby, an older woman who had been feeding birds again, something I'm still unsure whether she should be doing.
-Stella[Narrator]: Neither her nor any other person on the street seems to be paying me much mind aside from short, largely friendly, glances.
-Stella[Narrator]: People must expect this sort of thing from me, since they know what I am.
-Stella[Narrator]: I probably still shouldn't make a habbit of it.
+Stella[Narrator]: I don't jump from the balcony every morning. It's... really not a very responsible use of my power.
+Stella[Narrator]: But when a falling can't hurt you, it feels freeing. It feels refreshing like cold water in the morning.
+Stella[Narrator]: And it's faster than an elevator.
+Stella[Narrator]: I lightly brush myself off and look around, hoping I didn't startle anyone.
+Stella[Narrator]: The only person who seems to be paying me any mind is a familiar face, an older woman who had been feeding the birds I just scared off.
+Stella[Narrator]: She was looking at me without any surprise and a half smile filled with feigned annoyance.
 Stella: Good morning ma'am.
-Bird Mother: Morning dear. You sure gave them a fright.
-Stella[Narrator]: She chuckles, looking towards where the birds are now conspicuously absent. 
+Bird Caretaker: Morning dearie. You sure gave them a fright.
+Stella[Narrator]: She chuckles, looking towards where the birds circling overhead. 
 Stella: Sorry about that.
-Bird Mother: It's alright, they'll be back. Unlike my ex wife.
-Stella[Narrator]: She laughs at her own joke.
-Stella: I thought you've never been married.
-Bird Mother: Details, details. Now don't you need to be somewhere?
--> Yes
-    Stella: Right! Yes, see you!
-    
-    TODO - Finish Day 2.
-    <<jump Day3Dream>>
--> No
-    Stella: Actually, I think I'm just gonna go back to bed.
+Bird Caretaker: It's alright, they'll be back. To be honest I don't think they'd even leave me alone at this point.
+Stella: That's the life you've earned I suppose. I don't think you're even supposed to be feeding them.
+Bird Caretaker: What are you, a cop?
+Stella: I try my very best not to be.
+Bird Caretaker: Good. I only feed them seeds, anyhow, bread is not good for them. Would you like some?
+Stella: Would I like any bird seed?
+Bird Caretaker: You fly, don't you?
+-> Eat Bird Seed
+    Tasty...
+-> Do Not
+    You do not eat any bird seed...
+-> Explain That You Technically Do Not Fly
+    This is going to take a while...
+<<jump Day2Cafe>>
 ===
 
 title: Day2Cafe
