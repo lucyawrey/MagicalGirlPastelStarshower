@@ -14,13 +14,13 @@ You reach out to touch it.
 Light.
 Blinding.
 The void becomes everything all at once and then
-Stella[Dream]: Hey.
-Stella[Dream]: It's going to be alright.
-Stella[Dream]: You're not going to be alone anymore.
-Stella[Dream]: It's so, so hard to keep living, but I'd like it if you tried to once more.
-Stella[Dream] If both of us did.
-Stella[Dream]: So, let's go.
-Stella[Dream]: Together.
+Stella[Narrator]: Hey.
+Stella[Narrator]: It's going to be alright.
+Stella[Narrator]: You're not going to be alone anymore.
+Stella[Narrator]: It's so, so hard to keep living, but I'd like it if you tried to once more.
+Stella[Narrator] If both of us did.
+Stella[Narrator]: So, let's go.
+Stella[Narrator]: Together.
 <<delay 0.6 "clear">>
 <<jump Day1Cafe>>
 ===

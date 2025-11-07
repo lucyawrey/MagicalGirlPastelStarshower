@@ -85,12 +85,12 @@ Caretaker: It's alright, they'll be back. To be honest I don't think they'd even
 Stella: That's the life you've earned I suppose. I don't think you're even supposed to be feeding them.
 Caretaker: What are you, a cop?
 Stella: I try my very best not to be.
-Caretaker: Good. I only feed them seeds, anyway, since I heard break isn't any good for them.
+Caretaker: Good. I only feed them seeds, anyway, since I heard bread isn't any good for them.
 Caretaker: Would you like any?
 Stella: Would I like any... bird seed?
 Caretaker: You fly, don't you?
 -> Eat Bird Seed
-    Stella[Narrator] They taste like completely normal sunflour seeds.
+    Stella[Narrator] They taste like completely normal sunflower seeds.
 -> Do Not
     You do not eat any bird seed...
 -> Explain That You Technically Do Not Fly

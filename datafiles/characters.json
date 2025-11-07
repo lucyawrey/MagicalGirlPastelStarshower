@@ -13,11 +13,8 @@
     "Stella": {
         "name_color": "#f7f5a1",
         "variants": {
-            "Dream": {
-                "name": "",
-                "text_color:": "#f7f5a1"
-            },
             "Narrator": {
+                "name": "",
                 "text_color:": "#f7f5a1",
                 "prefix:": "(",
                 "suffix:": ")"
