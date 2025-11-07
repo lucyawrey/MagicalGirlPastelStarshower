@@ -71,28 +71,31 @@ location: city_streets
 day: 2
 ---
 Stella[Narrator]: I don't jump from the balcony every morning. It's... really not a very responsible use of my power.
-Stella[Narrator]: But when a falling can't hurt you, it feels freeing. It feels refreshing like cold water in the morning.
+Stella[Narrator]: But when a falling can't hurt you, it feels freeing. It feels refreshing, like a splash of cold water in the morning.
 Stella[Narrator]: And it's faster than an elevator.
-Stella[Narrator]: I lightly brush myself off and look around, hoping I didn't startle anyone.
-Stella[Narrator]: The only person who seems to be paying me any mind is a familiar face, an older woman who had been feeding the birds I just scared off.
-Stella[Narrator]: She was looking at me without any surprise and a half smile filled with feigned annoyance.
-Stella: Good morning ma'am.
+Stella[Narrator]: I lightly brush myself off and look around, checking to see if I startled anyone.
+Stella[Narrator]: I feel a little embarrassed that I just did that.
+Stella[Narrator]: But no one on the street is paying me much attention to me at all, aside from an older woman who had been feeding birds before I sscared them all off.
+Stella[Narrator]: She looks at me with little surprise and an amused smile.
+Stella: Good morning ma'am, It's good to see you again.
 Caretaker: Morning dearie. You sure gave them a fright.
 Stella[Narrator]: She chuckles, looking towards where the birds circling overhead. 
 Stella: Sorry about that.
-Caretaker: It's alright, they'll be back. To be honest I don't think they'd even leave me alone at this point.
+Caretaker: It's alright, they'll be back. To be honest I don't think they'd even leave me alone if I wanted them to at this point.
 Stella: That's the life you've earned I suppose. I don't think you're even supposed to be feeding them.
 Caretaker: What are you, a cop?
 Stella: I try my very best not to be.
-Caretaker: Good. I only feed them seeds, anyhow, bread is not good for them. Would you like some?
-Stella: Would I like any bird seed?
+Caretaker: Good. I only feed them seeds, anyway, since I heard break isn't any good for them.
+Caretaker: Would you like any?
+Stella: Would I like any... bird seed?
 Caretaker: You fly, don't you?
 -> Eat Bird Seed
-    Tasty...
+    Stella[Narrator] They taste like completely normal sunflour seeds.
 -> Do Not
     You do not eat any bird seed...
 -> Explain That You Technically Do Not Fly
-    This is going to take a while...
+    Stella: I don't. Fly I mean.
+    Stella: Technically.
 <<jump Day2Cafe>>
 ===
 
