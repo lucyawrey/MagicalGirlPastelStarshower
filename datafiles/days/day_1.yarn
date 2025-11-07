@@ -7,7 +7,7 @@ You float formless in the space between.
 It is quiet. It is comfortable. It is vast beyond even your comprehension.
 And it is empty.
 You are alone. You have been alone for a very long time.
-You drift as you always have, for what might be eons or an instant.
+You drift as you always have, for what might have been eons or an instant.
 Then, you observe a tiny mote of light floating in that eternal void.
 It feels familiar. It feels warm.
 You reach out to touch it.
@@ -17,9 +17,10 @@ The void becomes everything all at once and then
 Stella[Dream]: Hey.
 Stella[Dream]: It's going to be alright.
 Stella[Dream]: You're not going to be alone anymore.
-Stella[Dream]: It's so, so hard to keep living, but I'd like it if you tried to once more. If both of us tried.
-Stella[Dream]: [wave]So, let's go.
-Stella[Dream]: [wave]Together.
+Stella[Dream]: It's so, so hard to keep living, but I'd like it if you tried to once more.
+Stella[Dream] If both of us did.
+Stella[Dream]: So, let's go.
+Stella[Dream]: Together.
 <<delay 0.6 "clear">>
 <<jump Day1Cafe>>
 ===
@@ -55,7 +56,7 @@ Stella[Narrator]: Azalea laughs as she continues the last of her work.
 Azalea: Alive is a low bar, but thank you. I'm guessing the peace lilies I gave you arn't having a similar experience?
 Stella[Narrator]: Her words are casual, but she looks annoyed.
 Stella[Narrator]: I wince.
-Stella: Nope. It's dead.
+Stella: Nope. They're dead.
 Stella[Narrator]: She sighs.
 Azalea: I wish you wouldn't keep killing them.
 Stella: Sorry.

@@ -77,16 +77,16 @@ Stella[Narrator]: I lightly brush myself off and look around, hoping I didn't st
 Stella[Narrator]: The only person who seems to be paying me any mind is a familiar face, an older woman who had been feeding the birds I just scared off.
 Stella[Narrator]: She was looking at me without any surprise and a half smile filled with feigned annoyance.
 Stella: Good morning ma'am.
-Bird Caretaker: Morning dearie. You sure gave them a fright.
+Caretaker: Morning dearie. You sure gave them a fright.
 Stella[Narrator]: She chuckles, looking towards where the birds circling overhead. 
 Stella: Sorry about that.
-Bird Caretaker: It's alright, they'll be back. To be honest I don't think they'd even leave me alone at this point.
+Caretaker: It's alright, they'll be back. To be honest I don't think they'd even leave me alone at this point.
 Stella: That's the life you've earned I suppose. I don't think you're even supposed to be feeding them.
-Bird Caretaker: What are you, a cop?
+Caretaker: What are you, a cop?
 Stella: I try my very best not to be.
-Bird Caretaker: Good. I only feed them seeds, anyhow, bread is not good for them. Would you like some?
+Caretaker: Good. I only feed them seeds, anyhow, bread is not good for them. Would you like some?
 Stella: Would I like any bird seed?
-Bird Caretaker: You fly, don't you?
+Caretaker: You fly, don't you?
 -> Eat Bird Seed
     Tasty...
 -> Do Not

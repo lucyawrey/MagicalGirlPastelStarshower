@@ -6,7 +6,7 @@
         "text_speed": 1,
         "prefix": "",
         "suffix": "",
-        "sound": "click2",
+        "sound": "click",
         "sound_pitch": 1,
         "sound_spacing": 4
     },
@@ -27,10 +27,14 @@
     "Azalea": {
         "name_color": "#bd0d9a"
     },
+    "Gio": {
+        "name_color": "#8a3812"
+    },
+    "Caretaker": {
+        "name": "Bird Caretaker",
+        "name_color": "#917263"
+    },
     "Ever": {
         "name_color": "#0a940a"
-    },
-    "Lucy": {
-        "name_color": "#0000ff"
     }
 }
