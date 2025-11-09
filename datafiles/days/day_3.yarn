@@ -4,23 +4,23 @@ day: 3
 ---
 <<background "none">>
 <<play "music" "dream">>
-Stella[Narrator]: Hey.
+Stella[Dream]: Hey.
 <<if $player_name == "">>
-    Stella[Narrator]: I don't think I ever asked what I should call you.
+    Stella[Dream]: I don't think I ever asked what I should call you.
     <<input "player_name">>
-    Stella[Narrator]: {$player_name}. I like it, thank you. You can call me Stella.
+    Stella[Dream]: {$player_name}. I like it, thank you. You can call me Stella.
 <<else>>
-    Stella[Narrator]: It's good to see you again, {$player_name}.
-    Stella[Narrator]: Is that something you'd still like me to call you?
+    Stella[Dream]: It's good to see you again, {$player_name}.
+    Stella[Dream]: Is that something you'd still like me to call you?
     -> Yes
-        Stella[Narrator]: Perfect, thank you.
+        Stella[Dream]: Perfect, thank you.
     -> No
-        Stella[Narrator]: Ah, sorry if that is a name don't like to hear.
-        Stella[Narrator]: What name should I use instead?
+        Stella[Dream]: Ah, sorry if that is a name don't like to hear.
+        Stella[Dream]: What name should I use instead?
         <<input "player_name">>
-        Stella[Narrator]: {$player_name}. I like it, thank you.
+        Stella[Dream]: {$player_name}. I like it, thank you.
 <<endif>>
-Stella[Narrator]: I've been thinking--
+Stella[Dream]: I've been thinking--
 And then you start to fade away.
 <<jump Day3Morning>>
 ===

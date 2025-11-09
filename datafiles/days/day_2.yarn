@@ -78,17 +78,17 @@ Stella[Narrator]: I feel a little embarrassed that I just did that.
 Stella[Narrator]: But no one on the street is paying me much attention to me at all, aside from the woman who had been feeding the birds before I scared them all off.
 Stella[Narrator]: She looks at me with little surprise and an amused smile.
 Stella: Good morning ma'am, It's good to see you again.
-Caretaker: Morning dearie. You sure gave them a fright.
+Olivia[?]: Morning dearie. You sure gave them a fright.
 Stella[Narrator]: She chuckles, looking towards where the birds circling overhead. 
 Stella: Sorry about that.
-Caretaker: It's alright, they'll be back. To be honest I don't think they'd even leave me alone if I wanted them to at this point.
+Olivia[?]: It's alright, they'll be back. To be honest I don't think they'd even leave me alone if I wanted them to at this point.
 Stella: That's the life you've earned I suppose. I don't think you're even supposed to be feeding them.
-Caretaker: What are you, a cop?
+Olivia[?]: What are you, a cop?
 Stella: I try my very best not to be.
-Caretaker: Good. I only feed them seeds, anyway, since I heard bread isn't any good for them.
-Caretaker: Would you like any?
+Olivia[?]: Good. I only feed them seeds, anyway, since I heard bread isn't any good for them.
+Olivia[?]: Would you like any?
 Stella: Would I like any... bird seed?
-Caretaker: You fly, don't you?
+Olivia[?]: You fly, don't you?
 -> Eat Bird Seed
     Stella[Narrator] They taste like completely normal sunflower seeds.
 -> Do Not
