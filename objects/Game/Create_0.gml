@@ -23,6 +23,7 @@ state = {
 		current_location: "start",
 		current_node: "Start",
 		current_node_position: 0,
+        current_node_option_queue: [],
 		data: {},
 	},
 	/* saves/players/player_[name].json */

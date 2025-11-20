@@ -19,7 +19,7 @@ typist_sound_clock = 0;
 scribble_font_set_default("Base_Font");
 
 // Object variable definitions
-input_key = vk_space;
+continue_key = vk_space;
 gui_width = display_get_gui_width();
 gui_height = display_get_gui_height();
 
@@ -27,28 +27,33 @@ current_state = DialogueState.Text;
 current_node_metadata = {};
 current_text = "";
 current_metadata = [];
+current_options = [];
 current_character = get_character();
 current_background_sprite = undefined;
 current_shown_sprites = {};
 current_music = undefined;
+current_input_text = "";
+current_input_variable = "";
 loading = false;
 is_new_node = false;
 delay_behavior = "";
 
 // Method definitions
 function continue_on() {
-	ChatterboxContinue(chatterbox);
 	if (ChatterboxIsStopped(chatterbox)) {
 		visible = false;
 	} else if (ChatterboxIsWaiting(chatterbox)) {
-		current_state = DialogueState.Text;
+        ChatterboxContinue(chatterbox);
+        if (current_state == DialogueState.Option) {
+            current_state = DialogueState.Text; 
+        }
 		if (!Game.paused || delay_behavior == "next") {
 			get_current_content();
 			increment_current_node_position();
 		}
 	} else {
-		// TODO Option
 		current_state = DialogueState.Option;
+        current_options = ChatterboxGetOptionArray(chatterbox);
 	}
 }
 

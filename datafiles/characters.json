@@ -1,23 +1,24 @@
 {
     "Narrator": {
         "name": "",
-        "name_color": "#ffffff",
+        "name_color": "#999999",
         "text_color": "#ffffff",
         "text_speed": 1,
         "prefix": "",
         "suffix": "",
-        "sound": "click2",
+        "sound": "click",
         "sound_pitch": 1,
         "sound_spacing": 4
     },
     "Stella": {
-        "name_color": "#fff826",
+        "name_color": "#f7f5a1",
         "variants": {
             "Dream": {
                 "name": "",
                 "text_color:": "#f7f5a1"
             },
             "Narrator": {
+                "name": "",
                 "text_color:": "#f7f5a1",
                 "prefix:": "(",
                 "suffix:": ")"
@@ -27,10 +28,16 @@
     "Azalea": {
         "name_color": "#bd0d9a"
     },
+    "Gio": {
+        "name_color": "#8a3812"
+    },
+    "Olivia": {
+        "name_color": "#917263",
+        "variants": {
+            "?": {"name": "Bird Caretaker"}
+        }
+    },
     "Ever": {
         "name_color": "#0a940a"
-    },
-    "Lucy": {
-        "name_color": "#0000ff"
     }
 }

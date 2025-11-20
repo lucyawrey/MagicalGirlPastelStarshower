@@ -1,4 +1,4 @@
-function show_dialogue(node, node_position = 0) {
+function show_dialogue(node, node_position = 0, option_queue = []) {
 	if (!instance_exists(Dialogue_Manager)) {
 		return;
 	}
@@ -7,7 +7,7 @@ function show_dialogue(node, node_position = 0) {
 	ChatterboxJump(Dialogue_Manager.chatterbox, node);
 
 	if (node_position > 0) {
-		skip_to_position(node_position);
+		skip_to_position(node_position, option_queue);
 	}
 
 	Dialogue_Manager.get_current_content();
@@ -21,9 +21,19 @@ function hide_dialogue() {
 	}
 }
 
-function skip_to_position(node_position) {
+function skip_to_position(node_position, option_queue) {
+    var option_queue_index = 0;
 	repeat (node_position) {
-		ChatterboxContinue(Dialogue_Manager.chatterbox);
+        if (ChatterboxIsStopped(Dialogue_Manager.chatterbox)) {
+            return;
+        }
+        if (ChatterboxIsWaiting(Dialogue_Manager.chatterbox)) {
+            ChatterboxContinue(Dialogue_Manager.chatterbox);
+        } else {
+            var option = option_queue[option_queue_index];
+            ChatterboxSelect(Dialogue_Manager.chatterbox, option);
+            option_queue_index++;
+        }
 	}
 	Game.state.save_slot.current_node_position = node_position;
 	touch_slot();
@@ -36,6 +46,7 @@ function increment_current_node_position() {
 
 function on_node_change(_old_node, new_node, _action) {
 	Game.state.save_slot.current_node_position = 0;
+    Game.state.save_slot.current_node_option_queue = [];
 	Game.state.save_slot.current_node = new_node;
 	touch_slot();
 	Dialogue_Manager.is_new_node = true;

@@ -4,19 +4,23 @@ day: 1
 ---
 <<play "music" "dream">>
 You float formless in the space between.
-It is quiet, comfortable, and vast beyond even your comprehension.
-But also empty. You are alone. You have been alone for a very long time.
-You drift as you always have, for what might be eons or an instant.
-Then, you find yourself looking at a glowing speck of something, floating in that eternal void. It feels familiar.
+It is quiet. It is comfortable. It is vast beyond even your comprehension.
+And it is empty.
+You are alone. You have been alone for a very long time.
+You drift as you always have, for what might have been eons or an instant.
+Then, you observe a tiny mote of light floating in that eternal void.
+It feels familiar. It feels warm.
 You reach out to touch it.
-Then, suddenly, light. It is blinding.
-The nothingness that had surrounded you becomes everything all at once and then--
+Light.
+Blinding.
+The void becomes everything all at once and then
 Stella[Dream]: Hey.
 Stella[Dream]: It's going to be alright.
 Stella[Dream]: You're not going to be alone anymore.
-Stella[Dream]: It's so, so hard to keep living, but I'd like it if you tried to once more. If both of us tried.
-Stella[Dream]: [wave]So, let's go.
-Stella[Dream]: [wave]Together.
+Stella[Dream]: It's so, so hard to keep living, but I'd like it if you tried to once more.
+Stella[Dream]: If both of us did.
+Stella[Dream]: So, let's go.
+Stella[Dream]: Together.
 <<delay 0.6 "clear">>
 <<jump Day1Cafe>>
 ===
@@ -52,7 +56,7 @@ Stella[Narrator]: Azalea laughs as she continues the last of her work.
 Azalea: Alive is a low bar, but thank you. I'm guessing the peace lilies I gave you arn't having a similar experience?
 Stella[Narrator]: Her words are casual, but she looks annoyed.
 Stella[Narrator]: I wince.
-Stella: Nope. It's dead.
+Stella: Nope. They're dead.
 Stella[Narrator]: She sighs.
 Azalea: I wish you wouldn't keep killing them.
 Stella: Sorry.
@@ -86,15 +90,15 @@ Stella: I'd like to see you try.
 Stella: ...
 Stella: I don't mean that in a "I'm going to kill more of your plants just to provoke you" kind of way.
 Azalea: I know, Stella.
-Azalea: I also know to never try to fight you, scolding you is going to have to be good enough.
-Stella: Well I am very receptive to negative feedback.
+Azalea: I also know to never [i]actually[/i] try to kick your ass. Scolding you is going to have to be good enough.
+Stella: Well, I am very receptive to negative feedback.
 Stella[Narrator]: That gets a halfhearted chuckle.
 Stella: Especially if it's things like: "Why can't you even do a single fucking thing reliably?"
 Azalea: We've already established that it's okay you couldn't take care of the lilies.
 Stella: I know, it's just...
 Stella[Narrator]: More proof I'm always going to be like this.
 Stella[Narrator]: A little more reason to hate myself.
-Azalea: Hey, this might be a bit sudden but, are you doing alright?
+Azalea: Hey, are you doing alright? In general?
 Stella: Oh, yeah, I'm fine.
 Stella[Narrator]: I am absolutely not fine.
 Azalea: You're sure?
