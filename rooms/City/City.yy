@@ -1,13 +1,13 @@
 {
   "$GMRoom":"v1",
-  "%Name":"City_Map",
+  "%Name":"City",
   "creationCodeFile":"",
   "inheritCode":false,
   "inheritCreationOrder":false,
   "inheritLayers":false,
   "instanceCreationOrder":[
-    {"name":"inst_6EC66CC3","path":"rooms/City_Map/City_Map.yy",},
-    {"name":"inst_439153E1","path":"rooms/City_Map/City_Map.yy",},
+    {"name":"inst_6EC66CC3","path":"rooms/City/City.yy",},
+    {"name":"inst_439153E1","path":"rooms/City/City.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -71,10 +71,10 @@
           58,59,57,58,59,57,58,59,38,39,40,57,
         ],},"tilesetId":{"name":"Base","path":"tilesets/Base/Base.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
   ],
-  "name":"City_Map",
+  "name":"City",
   "parent":{
-    "name":"Rooms",
-    "path":"folders/Rooms.yy",
+    "name":"Maps",
+    "path":"folders/Rooms/Maps.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

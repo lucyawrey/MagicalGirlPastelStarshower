@@ -86,11 +86,14 @@
     {"$GMFolder":"","%Name":"Fonts","folderPath":"folders/Fonts.yy","name":"Fonts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Objects","folderPath":"folders/Objects.yy","name":"Objects","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Rooms","folderPath":"folders/Rooms.yy","name":"Rooms","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Maps","folderPath":"folders/Rooms/Maps.yy","name":"Maps","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Scripts","folderPath":"folders/Scripts.yy","name":"Scripts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Sprites","folderPath":"folders/Sprites.yy","name":"Sprites","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Tilesets","folderPath":"folders/Tilesets.yy","name":"Tilesets","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
-  "ForcedPrefabProjectReferences":[],
+  "ForcedPrefabProjectReferences":[
+    {"link":"io.gamemaker.sdfshaders-1.0.0","name":"io.gamemaker.sdfshaders-1.0.0","path":"io.gamemaker.sdfshaders-1.0.0.yyp",},
+  ],
   "IncludedFiles":[
     {"$GMIncludedFile":"","%Name":"characters.json","CopyToMask":-1,"filePath":"datafiles","name":"characters.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"day_1.yarn","CopyToMask":-1,"filePath":"datafiles/days","name":"day_1.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
@@ -109,7 +112,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.1400.1.921",
+    "IDEVersion":"2024.1400.1.926",
   },
   "name":"MagicalGirlPastelStarshower",
   "resources":[
@@ -121,8 +124,9 @@
     {"id":{"name":"Game","path":"objects/Game/Game.yy",},},
     {"id":{"name":"NPC","path":"objects/NPC/NPC.yy",},},
     {"id":{"name":"Player","path":"objects/Player/Player.yy",},},
-    {"id":{"name":"City_Map","path":"rooms/City_Map/City_Map.yy",},},
+    {"id":{"name":"City","path":"rooms/City/City.yy",},},
     {"id":{"name":"Scene","path":"rooms/Scene/Scene.yy",},},
+    {"id":{"name":"Startup","path":"rooms/Startup/Startup.yy",},},
     {"id":{"name":"__ChatterboxArrayCopyPart","path":"scripts/__ChatterboxArrayCopyPart/__ChatterboxArrayCopyPart.yy",},},
     {"id":{"name":"__ChatterboxArrayToString","path":"scripts/__ChatterboxArrayToString/__ChatterboxArrayToString.yy",},},
     {"id":{"name":"__ChatterboxBufferBatch","path":"scripts/__ChatterboxBufferBatch/__ChatterboxBufferBatch.yy",},},
@@ -676,8 +680,9 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"Startup","path":"rooms/Startup/Startup.yy",},},
     {"roomId":{"name":"Scene","path":"rooms/Scene/Scene.yy",},},
-    {"roomId":{"name":"City_Map","path":"rooms/City_Map/City_Map.yy",},},
+    {"roomId":{"name":"City","path":"rooms/City/City.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

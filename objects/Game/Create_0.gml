@@ -47,7 +47,7 @@ alarm[0] = global.autosave_interval;
 alarm[1] = 0;
 alarm[2] = 0;
 // Set start game delay alarm
-alarm[3] = 2;
+alarm[3] = 30;
 
 // Method definitions
 function pause(time_in_seconds = -1) {
