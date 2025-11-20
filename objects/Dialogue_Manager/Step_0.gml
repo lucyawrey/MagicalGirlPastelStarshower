@@ -7,6 +7,7 @@ if (visible && !Game.paused) {
         if (typist.get_state() < 1) {
     		if (keyboard_check_released(continue_key)) {
     			typist.skip();
+                audio_stop_sound(current_character.sound);
     			exit;
     		}
     	}
