@@ -125,9 +125,9 @@
     {"id":{"name":"Game","path":"objects/Game/Game.yy",},},
     {"id":{"name":"NPC","path":"objects/NPC/NPC.yy",},},
     {"id":{"name":"Player","path":"objects/Player/Player.yy",},},
-    {"id":{"name":"City","path":"rooms/City/City.yy",},},
     {"id":{"name":"Scene","path":"rooms/Scene/Scene.yy",},},
     {"id":{"name":"Startup","path":"rooms/Startup/Startup.yy",},},
+    {"id":{"name":"World","path":"rooms/World/World.yy",},},
     {"id":{"name":"__ChatterboxArrayCopyPart","path":"scripts/__ChatterboxArrayCopyPart/__ChatterboxArrayCopyPart.yy",},},
     {"id":{"name":"__ChatterboxArrayToString","path":"scripts/__ChatterboxArrayToString/__ChatterboxArrayToString.yy",},},
     {"id":{"name":"__ChatterboxBufferBatch","path":"scripts/__ChatterboxBufferBatch/__ChatterboxBufferBatch.yy",},},
@@ -683,7 +683,7 @@
   "RoomOrderNodes":[
     {"roomId":{"name":"Startup","path":"rooms/Startup/Startup.yy",},},
     {"roomId":{"name":"Scene","path":"rooms/Scene/Scene.yy",},},
-    {"roomId":{"name":"City","path":"rooms/City/City.yy",},},
+    {"roomId":{"name":"World","path":"rooms/World/World.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
