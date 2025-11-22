@@ -1,7 +1,7 @@
 dx = 5;
-dy = gui_height * 0.65;
-var box_width = gui_width - dx * 2;
-var box_height = gui_height - dy - 5;
+dy = display_get_height() * 0.65;
+var box_width = display_get_width() - dx * 2;
+var box_height = display_get_height() - dy - 5;
 
 // Draw Images
 if (!is_undefined(current_background_sprite)) {

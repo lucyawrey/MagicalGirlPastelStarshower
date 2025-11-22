@@ -20,8 +20,6 @@ scribble_font_set_default("Base_Font");
 
 // Object variable definitions
 continue_key = vk_space;
-gui_width = display_get_gui_width();
-gui_height = display_get_gui_height();
 
 current_state = DialogueState.Text;
 current_node_metadata = {};
