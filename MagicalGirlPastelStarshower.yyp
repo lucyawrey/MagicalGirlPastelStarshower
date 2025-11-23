@@ -117,7 +117,7 @@
   },
   "name":"MagicalGirlPastelStarshower",
   "resources":[
-    {"id":{"name":"Base_Font","path":"fonts/Base_Font/Base_Font.yy",},},
+    {"id":{"name":"Dialogue_Font","path":"fonts/Dialogue_Font/Dialogue_Font.yy",},},
     {"id":{"name":"scribble_fallback_font","path":"fonts/scribble_fallback_font/scribble_fallback_font.yy",},},
     {"id":{"name":"__InputUpdateController","path":"objects/__InputUpdateController/__InputUpdateController.yy",},},
     {"id":{"name":"Azalea","path":"objects/Azalea/Azalea.yy",},},

@@ -14,8 +14,9 @@ ChatterboxAddFunction("delay", delay);
 // Scribble setup
 typist = scribble_typist();
 typist.in(1, 0);
+typist_sound_clock = 0;
 typist.function_per_char(text_play_sound);
-scribble_font_set_default("Base_Font");
+scribble_font_set_default("Dialogue_Font");
 
 // Object variable definitions
 continue_key = vk_space;
