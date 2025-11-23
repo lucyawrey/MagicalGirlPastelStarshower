@@ -28,6 +28,7 @@ game_width = 640
 game_height = 360
 gui_width = display_get_gui_width() // Default 1280
 gui_height = display_get_gui_height() // Default 720
+gui_scale = gui_height / game_height;
 
 // Gender constants
 PlayerForm = {Androgynous: "Androgynous", Feminine: "Feminine", Masculine: "Masculine"};
