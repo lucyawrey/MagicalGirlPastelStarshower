@@ -91,7 +91,7 @@ function switch_slot(slot_number, update_player = true) {
 	if (update_player && Game.state.save_slot.player_id != -1) {
 		switch_player(Game.state.save_slot.player_id);
 	}
-    ChatterboxVariablesResetAll();
+	ChatterboxVariablesResetAll();
 }
 
 function switch_player(player_id) {

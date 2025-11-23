@@ -22,9 +22,9 @@ state = {
 		current_room: "Scene",
 		current_location: "start",
 		current_node: "Start",
-        in_dialogue_mode: true,
+		in_dialogue_mode: true,
 		current_node_position: 0,
-        current_node_option_queue: [],
+		current_node_option_queue: [],
 		data: {},
 	},
 	/* saves/players/player_[name].json */

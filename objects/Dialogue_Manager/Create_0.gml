@@ -41,17 +41,17 @@ function continue_on() {
 	if (ChatterboxIsStopped(chatterbox)) {
 		visible = false;
 	} else if (ChatterboxIsWaiting(chatterbox)) {
-        ChatterboxContinue(chatterbox);
-        if (current_state == DialogueState.Option) {
-            current_state = DialogueState.Text; 
-        }
+		ChatterboxContinue(chatterbox);
+		if (current_state == DialogueState.Option) {
+			current_state = DialogueState.Text;
+		}
 		if (!Game.paused || delay_behavior == "next") {
 			get_current_content();
 			increment_current_node_position();
 		}
 	} else {
 		current_state = DialogueState.Option;
-        current_options = ChatterboxGetOptionArray(chatterbox);
+		current_options = ChatterboxGetOptionArray(chatterbox);
 	}
 }
 

@@ -90,7 +90,7 @@ function pause(audio_name = undefined) {
 
 function input(variable_name) {
 	Dialogue_Manager.current_state = DialogueState.Input;
-    Dialogue_Manager.current_input_text = "";
-    keyboard_lastchar = "";
-    Dialogue_Manager.current_input_variable = variable_name;
+	Dialogue_Manager.current_input_text = "";
+	keyboard_lastchar = "";
+	Dialogue_Manager.current_input_variable = variable_name;
 }
