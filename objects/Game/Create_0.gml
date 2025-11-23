@@ -22,6 +22,7 @@ state = {
 		current_room: "Scene",
 		current_location: "start",
 		current_node: "Start",
+        in_dialogue_mode: true,
 		current_node_position: 0,
         current_node_option_queue: [],
 		data: {},
@@ -46,8 +47,6 @@ alarm[0] = global.autosave_interval;
 // Set game pause function alarms
 alarm[1] = 0;
 alarm[2] = 0;
-// Set start game delay alarm
-alarm[3] = 30;
 
 // Method definitions
 function pause(time_in_seconds = -1) {
@@ -65,3 +64,6 @@ function unpause() {
 instance_create_depth(0, 0, 0, Dialogue_Manager);
 // Initial game load.
 load_game();
+
+// Set game loading alarm
+alarm[3] = 30;
