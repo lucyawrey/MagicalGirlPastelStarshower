@@ -6,7 +6,7 @@
   "name":"InputDeviceIsAvailable",
   "parent":{
     "name":"Device",
-    "path":"folders/Extensions/Input/Device.yy",
+    "path":"folders/extensions/input/Device.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

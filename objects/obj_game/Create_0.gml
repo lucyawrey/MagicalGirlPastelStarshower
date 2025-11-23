@@ -50,9 +50,9 @@ alarm[2] = 0;
 
 // Method definitions
 function pause(time_in_seconds = -1) {
-	Game.paused = true;
+	obj_game.paused = true;
 	if (time_in_seconds > 0) {
-		Game.alarm[1] = time_in_seconds * 60;
+		obj_game.alarm[1] = time_in_seconds * 60;
 	}
 }
 
@@ -61,7 +61,7 @@ function unpause() {
 }
 
 // Create Dialogue Manager Object
-instance_create_depth(0, 0, 0, Dialogue_Manager);
+instance_create_depth(0, 0, 0, obj_dialogue);
 // Initial game load.
 load_game();
 

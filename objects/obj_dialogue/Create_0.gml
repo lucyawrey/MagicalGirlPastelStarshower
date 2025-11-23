@@ -45,7 +45,7 @@ function continue_on() {
 		if (current_state == DialogueState.Option) {
 			current_state = DialogueState.Text;
 		}
-		if (!Game.paused || delay_behavior == "next") {
+		if (!obj_game.paused || delay_behavior == "next") {
 			get_current_content();
 			increment_current_node_position();
 		}
@@ -58,7 +58,7 @@ function continue_on() {
 function get_current_content() {
 	if (is_new_node) {
 		current_node_metadata = ChatterboxGetCurrentMetadata(chatterbox);
-		Game.state.save_slot.current_location = current_node_metadata.location;
+		obj_game.state.save_slot.current_location = current_node_metadata.location;
 		touch_slot();
 		save_game();
 		is_new_node = false;

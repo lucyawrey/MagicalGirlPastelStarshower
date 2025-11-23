@@ -1,5 +1,5 @@
-if (visible && !Game.paused) {
-	if (Game.resumed) {
+if (visible && !obj_game.paused) {
+	if (obj_game.resumed) {
 		continue_on();
 	}
 
@@ -33,7 +33,7 @@ if (visible && !Game.paused) {
 		//If we've pressed a button, select that option
 		if (option != undefined) {
 			ChatterboxSelect(chatterbox, option);
-			array_push(Game.state.save_slot.current_node_option_queue, option);
+			array_push(obj_game.state.save_slot.current_node_option_queue, option);
 			current_state = DialogueState.Text;
 			get_current_content();
 			increment_current_node_position();

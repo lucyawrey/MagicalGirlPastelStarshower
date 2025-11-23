@@ -6,7 +6,7 @@
   "name":"__InputIconConfigEdgeCases",
   "parent":{
     "name":"Config",
-    "path":"folders/Extensions/Input Plug-Ins/Binding Icons/Config.yy",
+    "path":"folders/extensions/input_plugins/Binding Icons/Config.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

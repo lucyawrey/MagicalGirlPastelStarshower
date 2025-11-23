@@ -6,7 +6,7 @@
   "name":"scribble_external_sprite_exists",
   "parent":{
     "name":"External Assets",
-    "path":"folders/Extensions/Scribble/External Assets.yy",
+    "path":"folders/extensions/scribble/External Assets.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

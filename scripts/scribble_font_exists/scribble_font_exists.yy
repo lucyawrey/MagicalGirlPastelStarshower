@@ -6,7 +6,7 @@
   "name":"scribble_font_exists",
   "parent":{
     "name":"Fonts",
-    "path":"folders/Extensions/Scribble/Fonts.yy",
+    "path":"folders/extensions/scribble/Fonts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

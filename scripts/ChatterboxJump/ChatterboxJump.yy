@@ -6,7 +6,7 @@
   "name":"ChatterboxJump",
   "parent":{
     "name":"Flow",
-    "path":"folders/Extensions/Chatterbox/Flow.yy",
+    "path":"folders/extensions/chatterbox/Flow.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

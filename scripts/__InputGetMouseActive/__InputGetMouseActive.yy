@@ -6,7 +6,7 @@
   "name":"__InputGetMouseActive",
   "parent":{
     "name":"Device Scanning",
-    "path":"folders/Extensions/Input/(System)/Device Scanning.yy",
+    "path":"folders/extensions/input/(System)/Device Scanning.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

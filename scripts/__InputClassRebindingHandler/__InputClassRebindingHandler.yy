@@ -6,7 +6,7 @@
   "name":"__InputClassRebindingHandler",
   "parent":{
     "name":"Classes",
-    "path":"folders/Extensions/Input/(System)/Classes.yy",
+    "path":"folders/extensions/input/(System)/Classes.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

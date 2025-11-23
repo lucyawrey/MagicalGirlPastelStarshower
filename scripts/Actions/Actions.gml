@@ -1,28 +1,28 @@
 function background(background_name) {
 	if (background_name == "none") {
-		Dialogue_Manager.current_background_sprite = undefined;
+		obj_dialogue.current_background_sprite = undefined;
 	} else {
 		var spr = asset_get_index(background_name);
 		if (asset_get_type(spr) == asset_sprite) {
-			Dialogue_Manager.current_background_sprite = spr;
+			obj_dialogue.current_background_sprite = spr;
 		} else {
-			Dialogue_Manager.current_background_sprite = undefined;
+			obj_dialogue.current_background_sprite = undefined;
 		}
 	}
 }
 
 function delay(time_in_seconds = 1, behavior = "stay") {
-	if (Dialogue_Manager.loading) {
+	if (obj_dialogue.loading) {
 		return;
 	}
-	Game.pause(time_in_seconds);
+	obj_game.pause(time_in_seconds);
 	if (behavior != "next") {
-		ChatterboxWait(Dialogue_Manager.chatterbox);
+		ChatterboxWait(obj_dialogue.chatterbox);
 	}
 	if (behavior == "clear") {
-		Dialogue_Manager.get_current_content();
+		obj_dialogue.get_current_content();
 	}
-	Dialogue_Manager.delay_behavior = behavior;
+	obj_dialogue.delay_behavior = behavior;
 }
 
 function show(sprite_name, position, y_position) {
@@ -48,7 +48,7 @@ function show(sprite_name, position, y_position) {
 		y_pos = y_position;
 	}
 	struct_set(
-		Dialogue_Manager.current_shown_sprites,
+		obj_dialogue.current_shown_sprites,
 		sprite_name,
 		{sprite: spr, x_pos, y_pos}
 	);
@@ -56,9 +56,9 @@ function show(sprite_name, position, y_position) {
 
 function hide(sprite_name = undefined) {
 	if (is_undefined(sprite_name)) {
-		Dialogue_Manager.current_shown_sprites = {};
-	} else if (struct_exists(Dialogue_Manager.current_shown_sprites, sprite_name)) {
-		struct_remove(Dialogue_Manager.current_shown_sprites, sprite_name);
+		obj_dialogue.current_shown_sprites = {};
+	} else if (struct_exists(obj_dialogue.current_shown_sprites, sprite_name)) {
+		struct_remove(obj_dialogue.current_shown_sprites, sprite_name);
 	}
 }
 
@@ -66,11 +66,11 @@ function play(audio_type, audio_name, volume = 1) {
 	var audio = asset_get_index(audio_name);
 	if (asset_get_type(audio) == asset_sound) {
 		if (audio_type == "music") {
-			if (!is_undefined(Dialogue_Manager.current_music)) {
-				audio_stop_sound(Dialogue_Manager.current_music);
+			if (!is_undefined(obj_dialogue.current_music)) {
+				audio_stop_sound(obj_dialogue.current_music);
 			}
 			audio_play_sound(audio, 1, true, volume);
-			Dialogue_Manager.current_music = audio;
+			obj_dialogue.current_music = audio;
 		} else if (audio_type == "sound") {
 			audio_play_sound(audio, 1, false, volume);
 		}
@@ -89,8 +89,8 @@ function pause(audio_name = undefined) {
 }
 
 function input(variable_name) {
-	Dialogue_Manager.current_state = DialogueState.Input;
-	Dialogue_Manager.current_input_text = "";
+	obj_dialogue.current_state = DialogueState.Input;
+	obj_dialogue.current_input_text = "";
 	keyboard_lastchar = "";
-	Dialogue_Manager.current_input_variable = variable_name;
+	obj_dialogue.current_input_variable = variable_name;
 }

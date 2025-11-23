@@ -14,8 +14,8 @@
   "exportDir":"",
   "name":"power_of_the_wind",
   "parent":{
-    "name":"Audio",
-    "path":"folders/Audio.yy",
+    "name":"audio",
+    "path":"folders/audio.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

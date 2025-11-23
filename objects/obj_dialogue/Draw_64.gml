@@ -11,8 +11,7 @@ if (current_state == DialogueState.Text) {
 
 	scribble(
 		$"[speed,{current_character.text_speed}][{current_character.text_color}]{
-			current_character.prefix
-		}{current_text}{current_character.suffix}"
+			current_character.prefix}{current_text}{current_character.suffix}"
 	)
 		.wrap(line_width)
 		.draw(gx, gy, typist);

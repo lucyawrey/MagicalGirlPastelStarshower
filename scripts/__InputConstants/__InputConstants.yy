@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"__InputConstants",
   "parent":{
-    "name":"Input",
-    "path":"folders/Extensions/Input.yy",
+    "name":"input",
+    "path":"folders/extensions/input.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

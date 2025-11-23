@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scribble_typist",
   "parent":{
-    "name":"Scribble",
-    "path":"folders/Extensions/Scribble.yy",
+    "name":"scribble",
+    "path":"folders/extensions/scribble.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

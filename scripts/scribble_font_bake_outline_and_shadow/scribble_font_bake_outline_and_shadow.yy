@@ -6,7 +6,7 @@
   "name":"scribble_font_bake_outline_and_shadow",
   "parent":{
     "name":"Fonts",
-    "path":"folders/Extensions/Scribble/Fonts.yy",
+    "path":"folders/extensions/scribble/Fonts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

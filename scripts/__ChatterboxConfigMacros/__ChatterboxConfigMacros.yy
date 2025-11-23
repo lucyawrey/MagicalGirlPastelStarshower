@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"__ChatterboxConfigMacros",
   "parent":{
-    "name":"Chatterbox",
-    "path":"folders/Extensions/Chatterbox.yy",
+    "name":"chatterbox",
+    "path":"folders/extensions/chatterbox.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

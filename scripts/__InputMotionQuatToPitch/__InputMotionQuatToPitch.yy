@@ -6,7 +6,7 @@
   "name":"__InputMotionQuatToPitch",
   "parent":{
     "name":"(System)",
-    "path":"folders/Extensions/Input Plug-Ins/Gyro & Motion/(System).yy",
+    "path":"folders/extensions/input_plugins/Gyro & Motion/(System).yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

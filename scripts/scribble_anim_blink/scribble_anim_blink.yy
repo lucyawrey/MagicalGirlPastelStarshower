@@ -6,7 +6,7 @@
   "name":"scribble_anim_blink",
   "parent":{
     "name":"Animation",
-    "path":"folders/Extensions/Scribble/Animation.yy",
+    "path":"folders/extensions/scribble/Animation.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

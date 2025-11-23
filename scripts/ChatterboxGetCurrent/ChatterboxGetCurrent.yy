@@ -6,7 +6,7 @@
   "name":"ChatterboxGetCurrent",
   "parent":{
     "name":"Chatterboxes",
-    "path":"folders/Extensions/Chatterbox/Chatterboxes.yy",
+    "path":"folders/extensions/chatterbox/Chatterboxes.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

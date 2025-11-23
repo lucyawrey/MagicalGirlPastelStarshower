@@ -6,7 +6,7 @@
   "name":"InputMotionIsCalibrated",
   "parent":{
     "name":"Gyro & Motion",
-    "path":"folders/Extensions/Input Plug-Ins/Gyro & Motion.yy",
+    "path":"folders/extensions/input_plugins/Gyro & Motion.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -6,7 +6,7 @@
   "name":"InputGetSteamInfo",
   "parent":{
     "name":"Miscellaneous",
-    "path":"folders/Extensions/Input/Miscellaneous.yy",
+    "path":"folders/extensions/input/Miscellaneous.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

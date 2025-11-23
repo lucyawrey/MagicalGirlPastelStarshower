@@ -1,17 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"Azalea",
+  "%Name":"obj_azalea",
   "eventList":[],
   "managed":true,
-  "name":"Azalea",
+  "name":"obj_azalea",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"map",
+    "path":"folders/objects/map.yy",
   },
   "parentObjectId":{
-    "name":"NPC",
-    "path":"objects/NPC/NPC.yy",
+    "name":"obj_npc",
+    "path":"objects/obj_npc/obj_npc.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

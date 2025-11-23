@@ -6,7 +6,7 @@
   "name":"InputPlayerLowestConnectedIndex",
   "parent":{
     "name":"Player",
-    "path":"folders/Extensions/Input/Player.yy",
+    "path":"folders/extensions/input/Player.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

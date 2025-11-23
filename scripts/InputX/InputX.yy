@@ -6,7 +6,7 @@
   "name":"InputX",
   "parent":{
     "name":"Clusters",
-    "path":"folders/Extensions/Input/Checkers/Clusters.yy",
+    "path":"folders/extensions/input/Checkers/Clusters.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

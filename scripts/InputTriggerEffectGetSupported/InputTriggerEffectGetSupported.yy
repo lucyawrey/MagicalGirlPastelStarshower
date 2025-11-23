@@ -6,7 +6,7 @@
   "name":"InputTriggerEffectGetSupported",
   "parent":{
     "name":"Trigger Effects",
-    "path":"folders/Extensions/Input Plug-Ins/Trigger Effects.yy",
+    "path":"folders/extensions/input_plugins/Trigger Effects.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

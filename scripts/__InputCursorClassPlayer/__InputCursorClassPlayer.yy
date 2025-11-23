@@ -6,7 +6,7 @@
   "name":"__InputCursorClassPlayer",
   "parent":{
     "name":"(System)",
-    "path":"folders/Extensions/Input Plug-Ins/Cursor/(System).yy",
+    "path":"folders/extensions/input_plugins/Cursor/(System).yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

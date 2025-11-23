@@ -6,7 +6,7 @@
   "name":"ChatterboxSourceNodeCount",
   "parent":{
     "name":"Setup",
-    "path":"folders/Extensions/Chatterbox/Setup.yy",
+    "path":"folders/extensions/chatterbox/Setup.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

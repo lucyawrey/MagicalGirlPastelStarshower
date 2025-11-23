@@ -6,7 +6,7 @@
   "name":"InputPlugInError",
   "parent":{
     "name":"Plug-In API",
-    "path":"folders/Extensions/Input/Plug-In API.yy",
+    "path":"folders/extensions/input/Plug-In API.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -6,7 +6,7 @@
   "name":"__InputInitializeSteam",
   "parent":{
     "name":"Initializing",
-    "path":"folders/Extensions/Input/(System)/Initializing.yy",
+    "path":"folders/extensions/input/(System)/Initializing.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

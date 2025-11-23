@@ -14,8 +14,8 @@
   "exportDir":"",
   "name":"morning",
   "parent":{
-    "name":"Audio",
-    "path":"folders/Audio.yy",
+    "name":"audio",
+    "path":"folders/audio.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

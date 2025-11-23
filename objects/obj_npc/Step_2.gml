@@ -1,4 +1,4 @@
-if (!instance_exists(Dialogue_Manager) || Dialogue_Manager.visible) {
+if (!instance_exists(obj_dialogue) || obj_dialogue.visible) {
 	exit;
 }
 
