@@ -1,7 +1,7 @@
 gx = 34 * global.gui_scale;
 gy = global.gui_height * 0.68;
 spacer = 20 * global.gui_scale;
-var line_width = global.gui_width - gx;
+var line_width = global.gui_width - gx * 2;
 
 if (current_state == DialogueState.Text) {
     //Draw text
