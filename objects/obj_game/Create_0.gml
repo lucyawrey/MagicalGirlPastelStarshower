@@ -11,9 +11,9 @@ alarm[2] = 0;
 
 // Method definitions
 function pause(time_in_seconds = -1) {
-	obj_game.paused = true;
+	paused = true;
 	if (time_in_seconds > 0) {
-		obj_game.alarm[1] = time_in_seconds * 60;
+		alarm[1] = time_in_seconds * 60;
 	}
 }
 

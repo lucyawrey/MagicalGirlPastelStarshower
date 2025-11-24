@@ -32,7 +32,12 @@ gui_scale = gui_height / game_height;
 
 // Gender constants
 player_form = {androgynous: "androgynous", feminine: "feminine", masculine: "masculine"};
-player_pronouns = {it_its: "it_its", they_them: "they_them", she_her: "she_her", he_him: "he_him"};
+player_pronouns = {
+	it_its: "it_its",
+	they_them: "they_them",
+	she_her: "she_her",
+	he_him: "he_him",
+};
 pronoun_map = {
 	it_its: ["it", "it", "it's", "itself"],
 	they_them: ["they", "them", "theirs", "themself"],

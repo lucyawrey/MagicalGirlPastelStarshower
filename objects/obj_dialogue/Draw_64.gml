@@ -11,7 +11,8 @@ if (current_state == DIALOGUE_STATE.TEXT) {
 
 	scribble(
 		$"[speed,{current_character.text_speed}][{current_character.text_color}]{
-			current_character.prefix}{current_text}{current_character.suffix}"
+			current_character.prefix
+		}{current_text}{current_character.suffix}"
 	)
 		.wrap(_line_width)
 		.draw(gx, gy, typist);

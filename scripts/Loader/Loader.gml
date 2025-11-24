@@ -8,7 +8,10 @@ function load_all_chatterbox_files_to_buffer(_buffer, _directory = "") {
 	file_find_close();
 
 	// Load character definition JSON files
-	var _character_filename = file_find_first(_directory + "*characters.json", fa_readonly);
+	var _character_filename = file_find_first(
+		_directory + "*characters.json",
+		fa_readonly
+	);
 	while (_character_filename != "") {
 		var _json = read_text_from_file_by_filename(_directory + _character_filename);
 		var _characters = json_parse(_json);

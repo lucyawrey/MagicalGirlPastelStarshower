@@ -37,13 +37,16 @@ function show(_sprite_name, _position, _y_position) {
 	if (is_string(_position)) {
 		if (_position == "center") {
 			_x_pos = (display_get_gui_width() * 0.5) - (sprite_get_width(_sprite) * 0.5);
-			_y_pos = (display_get_gui_height() * 0.5) - (sprite_get_height(_sprite) * 0.5);
+			_y_pos =
+				(display_get_gui_height() * 0.5) - (sprite_get_height(_sprite) * 0.5);
 		} else if (_position == "left") {
 			_x_pos = (display_get_gui_width() * 0.25) - (sprite_get_width(_sprite) * 0.5);
-			_y_pos = (display_get_gui_height() * 0.5) - (sprite_get_height(_sprite) * 0.5);
+			_y_pos =
+				(display_get_gui_height() * 0.5) - (sprite_get_height(_sprite) * 0.5);
 		} else if (_position == "right") {
 			_x_pos = (display_get_gui_width() * 0.75) - (sprite_get_width(_sprite) * 0.5);
-			_y_pos = (display_get_gui_height() * 0.5) - (sprite_get_height(_sprite) * 0.5);
+			_y_pos =
+				(display_get_gui_height() * 0.5) - (sprite_get_height(_sprite) * 0.5);
 		}
 	} else if (is_real(_position) && is_real(_y_position)) {
 		_x_pos = _position;

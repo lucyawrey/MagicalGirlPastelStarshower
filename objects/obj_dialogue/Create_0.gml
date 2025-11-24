@@ -1,24 +1,6 @@
-// Chatterbox Setup
-load_all_chatterbox();
-chatterbox = ChatterboxCreate();
-ChatterboxNodeChangeCallback(on_node_change);
-ChatterboxVariableSetCallback(on_chatterbox_variable_set);
-ChatterboxAddFunction("background", background);
-ChatterboxAddFunction("show", show);
-ChatterboxAddFunction("hide", hide);
-ChatterboxAddFunction("play", play);
-ChatterboxAddFunction("pause", pause);
-ChatterboxAddFunction("input", input);
-ChatterboxAddFunction("delay", delay);
-
-// Scribble setup
-typist = scribble_typist();
-typist.in(1, 0);
-typist_sound_clock = 0;
-typist.function_per_char(text_play_sound);
-scribble_font_set_default("fnt_dialogue");
-
 // Set instance variables
+typist = scribble_setup(); // Set up Scribble plugin for text rendering
+chatterbox = chatterbox_setup(); // Set up Chatterbox plugin for dialogue scripting
 continue_key = vk_space;
 current_state = DIALOGUE_STATE.TEXT;
 current_node_metadata = {};
@@ -34,6 +16,8 @@ current_input_variable = "";
 loading = false;
 is_new_node = false;
 delay_behavior = "";
+gx = 0;
+gy = 0;
 
 // Method definitions
 function continue_on() {
