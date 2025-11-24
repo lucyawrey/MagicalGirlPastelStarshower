@@ -20,7 +20,7 @@
     {"$GMRTileLayer":"","%Name":"Tile_Walls","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Tile_Walls","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":15,"SerialiseWidth":27,"TileCompressedData":[
           -23,0,-4,-2147483648,-23,0,-4,-2147483648,-23,0,-4,-2147483648,-23,0,-4,-2147483648,-185,0,-4,-2147483648,
           -23,0,-4,-2147483648,-23,0,-4,-2147483648,-23,0,-4,-2147483648,-23,0,-4,-2147483648,
-        ],"TileDataFormat":1,},"tilesetId":{"name":"Base","path":"tilesets/Base/Base.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
+        ],"TileDataFormat":1,},"tilesetId":{"name":"ts_base","path":"tilesets/ts_base/ts_base.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"$GMRTileLayer":"","%Name":"Tile_Ground","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Tile_Ground","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":15,"SerialiseWidth":27,"TileSerialiseData":[
           19,20,21,19,20,21,19,20,21,19,20,21,19,20,21,19,20,21,19,20,21,19,20,21,19,20,21,38,39,19,20,21,40,38,
           39,40,38,39,40,38,39,40,38,19,20,21,19,20,21,19,20,21,19,20,57,19,38,39,40,20,21,19,20,21,19,20,21,19,
@@ -34,7 +34,7 @@
           57,58,59,57,58,59,57,58,59,57,58,59,57,58,59,57,58,59,19,20,57,58,59,21,19,20,21,19,20,21,19,20,21,19,
           20,21,19,20,21,19,20,21,19,20,21,38,39,19,20,21,40,38,39,40,38,39,40,38,39,40,38,39,40,38,39,40,38,39,
           40,38,39,40,57,58,38,39,40,59,57,58,59,57,58,59,39,58,59,57,58,59,57,58,59,57,58,59,57,58,59,
-        ],},"tilesetId":{"name":"Base","path":"tilesets/Base/Base.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
+        ],},"tilesetId":{"name":"ts_base","path":"tilesets/ts_base/ts_base.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
   ],
   "name":"rm_world_map",
   "parent":{
