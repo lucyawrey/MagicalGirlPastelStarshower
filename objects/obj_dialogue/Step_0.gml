@@ -5,29 +5,29 @@ if (visible && !obj_game.paused) {
 
 	if (current_state == DialogueState.Text) {
 		if (typist.get_state() < 1) {
-			if (keyboard_check_released(continue_key)) {
+			if (keyboard_check_pressed(continue_key)) {
 				typist.skip();
 				audio_stop_sound(current_character.sound);
 				exit;
 			}
 		}
 		//If we're in a Text state then let the user press space to advance dialogue
-		if (keyboard_check_released(continue_key)) {
+		if (keyboard_check_pressed(continue_key)) {
 			continue_on();
 		}
 	} else if (current_state == DialogueState.Option) {
 		//Check for keyboard input
 		var option = undefined;
-		if (keyboard_check_released(ord("1"))) {
+		if (keyboard_check_pressed(ord("1"))) {
 			option = 0;
 		}
-		if (keyboard_check_released(ord("2"))) {
+		if (keyboard_check_pressed(ord("2"))) {
 			option = 1;
 		}
-		if (keyboard_check_released(ord("3"))) {
+		if (keyboard_check_pressed(ord("3"))) {
 			option = 2;
 		}
-		if (keyboard_check_released(ord("4"))) {
+		if (keyboard_check_pressed(ord("4"))) {
 			option = 3;
 		}
 		//If we've pressed a button, select that option

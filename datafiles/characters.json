@@ -34,7 +34,9 @@
     "Olivia": {
         "name_color": "#917263",
         "variants": {
-            "?": {"name": "Bird Caretaker"}
+            "?": {
+                "name": "Bird Caretaker"
+            }
         }
     },
     "Ever": {

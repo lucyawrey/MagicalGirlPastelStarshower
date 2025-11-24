@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"click",
+  "%Name":"snd_click",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -12,15 +12,15 @@
   "conversionMode":0,
   "duration":1.0320182,
   "exportDir":"",
-  "name":"click",
+  "name":"snd_click",
   "parent":{
-    "name":"audio",
-    "path":"folders/audio.yy",
+    "name":"sound",
+    "path":"folders/sound.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"click.mp3",
+  "soundFile":"snd_click.mp3",
   "volume":1.0,
 }

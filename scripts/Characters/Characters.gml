@@ -23,6 +23,7 @@ function get_character(character_name = "", character_data = "") {
 		: undefined;
 	var queue = [default_character, base_character, variant];
 	var sound_name = struct_get_merged_value(queue, "sound");
+    sound_name = add_prefix(sound_name, "snd_")
 	var sound = asset_get_index(sound_name);
 
 	var character = {

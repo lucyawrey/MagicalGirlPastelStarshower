@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"nostalgia",
+  "%Name":"snd_power_of_the_wind",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -10,17 +10,17 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":129.28,
+  "duration":430.26285,
   "exportDir":"",
-  "name":"nostalgia",
+  "name":"snd_power_of_the_wind",
   "parent":{
-    "name":"audio",
-    "path":"folders/audio.yy",
+    "name":"sound",
+    "path":"folders/sound.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"nostalgia.mp3",
+  "soundFile":"snd_power_of_the_wind.mp3",
   "volume":1.0,
 }

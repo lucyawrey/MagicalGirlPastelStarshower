@@ -34,3 +34,11 @@ function get_pronoun_list(pronouns) {
 	});
 	return out;
 }
+
+function add_prefix(base_str, prefix_str) {
+    if (string_starts_with(base_str, prefix_str)) {
+        return base_str;
+    } else {
+        return prefix_str + base_str;
+    }
+}

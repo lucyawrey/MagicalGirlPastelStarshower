@@ -2,6 +2,7 @@ function background(background_name) {
 	if (background_name == "none") {
 		obj_dialogue.current_background_sprite = undefined;
 	} else {
+        background_name = add_prefix(background_name, "spr_")
 		var spr = asset_get_index(background_name);
 		if (asset_get_type(spr) == asset_sprite) {
 			obj_dialogue.current_background_sprite = spr;
@@ -26,6 +27,7 @@ function delay(time_in_seconds = 1, behavior = "stay") {
 }
 
 function show(sprite_name, position, y_position) {
+    sprite_name = add_prefix(sprite_name, "spr_");
 	var spr = asset_get_index(sprite_name);
 	if (asset_get_type(spr) != asset_sprite) {
 		return;
@@ -63,6 +65,7 @@ function hide(sprite_name = undefined) {
 }
 
 function play(audio_type, audio_name, volume = 1) {
+    audio_name = add_prefix(audio_name, "snd_")
 	var audio = asset_get_index(audio_name);
 	if (asset_get_type(audio) == asset_sound) {
 		if (audio_type == "music") {
