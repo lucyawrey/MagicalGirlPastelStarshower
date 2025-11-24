@@ -1,1 +1,1 @@
-resumed = false;
+resumedThisTick = false;

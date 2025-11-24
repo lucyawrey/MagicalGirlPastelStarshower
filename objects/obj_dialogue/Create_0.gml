@@ -18,9 +18,8 @@ typist_sound_clock = 0;
 typist.function_per_char(text_play_sound);
 scribble_font_set_default("fnt_dialogue");
 
-// Object variable definitions
+// Set instance variables
 continue_key = vk_space;
-
 current_state = DIALOGUE_STATE.TEXT;
 current_node_metadata = {};
 current_text = "";

@@ -40,10 +40,13 @@ state = {
 };
 initial_state = variable_clone(state);
 
+// Set instance variables
 paused = false;
-resumed = false;
+resumedThisTick = false;
+
 // Set autosave alarm
 alarm[0] = global.autosave_interval;
+
 // Set game pause function alarms
 alarm[1] = 0;
 alarm[2] = 0;
@@ -62,6 +65,7 @@ function unpause() {
 
 // Create Dialogue Manager Object
 instance_create_depth(0, 0, 0, obj_dialogue);
+
 // Initial game load.
 load_game();
 

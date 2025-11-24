@@ -1,5 +1,5 @@
 if (visible && !obj_game.paused) {
-	if (obj_game.resumed) {
+	if (obj_game.resumedThisTick) {
 		continue_on();
 	}
 
