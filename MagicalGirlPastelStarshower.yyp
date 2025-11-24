@@ -351,6 +351,7 @@
     {"id":{"name":"ChatterboxLocalizationLoad","path":"scripts/ChatterboxLocalizationLoad/ChatterboxLocalizationLoad.yy",},},
     {"id":{"name":"ChatterboxNodeChangeCallback","path":"scripts/ChatterboxNodeChangeCallback/ChatterboxNodeChangeCallback.yy",},},
     {"id":{"name":"ChatterboxSelect","path":"scripts/ChatterboxSelect/ChatterboxSelect.yy",},},
+    {"id":{"name":"ChatterboxSetup","path":"scripts/ChatterboxSetup/ChatterboxSetup.yy",},},
     {"id":{"name":"ChatterboxSourceGetNodeMetadata","path":"scripts/ChatterboxSourceGetNodeMetadata/ChatterboxSourceGetNodeMetadata.yy",},},
     {"id":{"name":"ChatterboxSourceGetNodeTitles","path":"scripts/ChatterboxSourceGetNodeTitles/ChatterboxSourceGetNodeTitles.yy",},},
     {"id":{"name":"ChatterboxSourceGetTags","path":"scripts/ChatterboxSourceGetTags/ChatterboxSourceGetTags.yy",},},

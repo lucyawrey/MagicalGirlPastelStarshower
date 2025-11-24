@@ -13,8 +13,6 @@ function save_game() {
 
 	if (global.state.secret_is_touched) {
 		var _secret_json = json_stringify(global.state.secret);
-		// TODO encrypt secrets with static secret key instead of encoding them.
-		// TODO it would be a fun to see players decrypt them, so actual security does not matter!
 		var _secret_base64 = base64_encode(_secret_json);
 		write_text_to_file_by_filename(global.secret_path, _secret_base64);
 		global.state.secret_is_touched = false;
