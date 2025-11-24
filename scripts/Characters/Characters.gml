@@ -1,48 +1,48 @@
-function get_character(character_name = "", character_data = "") {
-	if (character_name == "") {
-		character_name = global.default_character_name;
+function get_character(_character_name = "", _character_data = "") {
+	if (_character_name == "") {
+		_character_name = global.default_character_name;
 	}
 
-	var character_id =
-		character_name + (character_data == "" ? "" : "." + character_data);
-	if (struct_exists(global.characters_cache, character_id)) {
-		return struct_get(global.characters_cache, character_id);
+	var _character_id =
+		_character_name + (_character_data == "" ? "" : "." + _character_data);
+	if (struct_exists(global.characters_cache, _character_id)) {
+		return struct_get(global.characters_cache, _character_id);
 	}
 
 	if (!struct_exists(global.characters, global.default_character_name)) {
 		return;
 	}
-	var default_character = struct_get(global.characters, global.default_character_name);
-	var base_character = struct_exists(global.characters, character_name)
-		? struct_get(global.characters, character_name)
+	var _default_character = struct_get(global.characters, global.default_character_name);
+	var _base_character = struct_exists(global.characters, _character_name)
+		? struct_get(global.characters, _character_name)
 		: undefined;
-	var variant = is_struct(base_character)
-	&& struct_exists(base_character, "variants")
-	&& struct_exists(base_character.variants, character_data)
-		? struct_get(base_character.variants, character_data)
+	var _variant = is_struct(_base_character)
+	&& struct_exists(_base_character, "variants")
+	&& struct_exists(_base_character.variants, _character_data)
+		? struct_get(_base_character.variants, _character_data)
 		: undefined;
-	var queue = [default_character, base_character, variant];
-	var sound_name = struct_get_merged_value(queue, "sound");
-    sound_name = add_prefix(sound_name, "snd_")
-	var sound = asset_get_index(sound_name);
+	var _queue = [_default_character, _base_character, _variant];
+	var _sound_name = struct_get_merged_value(_queue, "sound");
+	_sound_name = add_prefix(_sound_name, "snd_");
+	var _sound = asset_get_index(_sound_name);
 
-	var character = {
-		id: character_id,
+	var _character = {
+		id: _character_id,
 		name: struct_get_merged_value(
-			[default_character, character_name, base_character, variant],
+			[_default_character, _character_name, _base_character, _variant],
 			"name"
 		),
-		name_color: struct_get_merged_value(queue, "name_color"),
-		text_color: struct_get_merged_value(queue, "text_color"),
-		text_speed: struct_get_merged_value(queue, "text_speed"),
-		prefix: struct_get_merged_value(queue, "prefix"),
-		suffix: struct_get_merged_value(queue, "suffix"),
-		sound,
-		sound_pitch: struct_get_merged_value(queue, "sound_pitch"),
-		sound_spacing: struct_get_merged_value(queue, "sound_spacing"),
+		name_color: struct_get_merged_value(_queue, "name_color"),
+		text_color: struct_get_merged_value(_queue, "text_color"),
+		text_speed: struct_get_merged_value(_queue, "text_speed"),
+		prefix: struct_get_merged_value(_queue, "prefix"),
+		suffix: struct_get_merged_value(_queue, "suffix"),
+		sound: _sound,
+		sound_pitch: struct_get_merged_value(_queue, "sound_pitch"),
+		sound_spacing: struct_get_merged_value(_queue, "sound_spacing"),
 	};
 
-	struct_set(global.characters_cache, character_id, character);
+	struct_set(global.characters_cache, _character_id, _character);
 
-	return character;
+	return _character;
 }

@@ -1,99 +1,99 @@
-function background(background_name) {
-	if (background_name == "none") {
+function background(_background_name) {
+	if (_background_name == "none") {
 		obj_dialogue.current_background_sprite = undefined;
 	} else {
-        background_name = add_prefix(background_name, "spr_")
-		var spr = asset_get_index(background_name);
-		if (asset_get_type(spr) == asset_sprite) {
-			obj_dialogue.current_background_sprite = spr;
+		_background_name = add_prefix(_background_name, "spr_");
+		var _sprite = asset_get_index(_background_name);
+		if (asset_get_type(_sprite) == asset_sprite) {
+			obj_dialogue.current_background_sprite = _sprite;
 		} else {
 			obj_dialogue.current_background_sprite = undefined;
 		}
 	}
 }
 
-function delay(time_in_seconds = 1, behavior = "stay") {
+function delay(_time_in_seconds = 1, _behavior = "stay") {
 	if (obj_dialogue.loading) {
 		return;
 	}
-	obj_game.pause(time_in_seconds);
-	if (behavior != "next") {
+	obj_game.pause(_time_in_seconds);
+	if (_behavior != "next") {
 		ChatterboxWait(obj_dialogue.chatterbox);
 	}
-	if (behavior == "clear") {
+	if (_behavior == "clear") {
 		obj_dialogue.get_current_content();
 	}
-	obj_dialogue.delay_behavior = behavior;
+	obj_dialogue.delay_behavior = _behavior;
 }
 
-function show(sprite_name, position, y_position) {
-    sprite_name = add_prefix(sprite_name, "spr_");
-	var spr = asset_get_index(sprite_name);
-	if (asset_get_type(spr) != asset_sprite) {
+function show(_sprite_name, _position, _y_position) {
+	_sprite_name = add_prefix(_sprite_name, "spr_");
+	var _sprite = asset_get_index(_sprite_name);
+	if (asset_get_type(_sprite) != asset_sprite) {
 		return;
 	}
-	var x_pos = 0;
-	var y_pos = 0;
-	if (is_string(position)) {
-		if (position == "center") {
-			x_pos = (display_get_gui_width() * 0.5) - (sprite_get_width(spr) * 0.5);
-			y_pos = (display_get_gui_height() * 0.5) - (sprite_get_height(spr) * 0.5);
-		} else if (position == "left") {
-			x_pos = (display_get_gui_width() * 0.25) - (sprite_get_width(spr) * 0.5);
-			y_pos = (display_get_gui_height() * 0.5) - (sprite_get_height(spr) * 0.5);
-		} else if (position == "right") {
-			x_pos = (display_get_gui_width() * 0.75) - (sprite_get_width(spr) * 0.5);
-			y_pos = (display_get_gui_height() * 0.5) - (sprite_get_height(spr) * 0.5);
+	var _x_pos = 0;
+	var _y_pos = 0;
+	if (is_string(_position)) {
+		if (_position == "center") {
+			_x_pos = (display_get_gui_width() * 0.5) - (sprite_get_width(_sprite) * 0.5);
+			_y_pos = (display_get_gui_height() * 0.5) - (sprite_get_height(_sprite) * 0.5);
+		} else if (_position == "left") {
+			_x_pos = (display_get_gui_width() * 0.25) - (sprite_get_width(_sprite) * 0.5);
+			_y_pos = (display_get_gui_height() * 0.5) - (sprite_get_height(_sprite) * 0.5);
+		} else if (_position == "right") {
+			_x_pos = (display_get_gui_width() * 0.75) - (sprite_get_width(_sprite) * 0.5);
+			_y_pos = (display_get_gui_height() * 0.5) - (sprite_get_height(_sprite) * 0.5);
 		}
-	} else if (is_real(position) && is_real(y_position)) {
-		x_pos = position;
-		y_pos = y_position;
+	} else if (is_real(_position) && is_real(_y_position)) {
+		_x_pos = _position;
+		_y_pos = _y_position;
 	}
 	struct_set(
 		obj_dialogue.current_shown_sprites,
-		sprite_name,
-		{sprite: spr, x_pos, y_pos}
+		_sprite_name,
+		{sprite: _sprite, _x_pos, _y_pos}
 	);
 }
 
-function hide(sprite_name = undefined) {
-	if (is_undefined(sprite_name)) {
+function hide(_sprite_name = undefined) {
+	if (is_undefined(_sprite_name)) {
 		obj_dialogue.current_shown_sprites = {};
-	} else if (struct_exists(obj_dialogue.current_shown_sprites, sprite_name)) {
-		struct_remove(obj_dialogue.current_shown_sprites, sprite_name);
+	} else if (struct_exists(obj_dialogue.current_shown_sprites, _sprite_name)) {
+		struct_remove(obj_dialogue.current_shown_sprites, _sprite_name);
 	}
 }
 
-function play(audio_type, audio_name, volume = 1) {
-    audio_name = add_prefix(audio_name, "snd_")
-	var audio = asset_get_index(audio_name);
-	if (asset_get_type(audio) == asset_sound) {
-		if (audio_type == "music") {
+function play(_audio_type, _audio_name, _volume = 1) {
+	_audio_name = add_prefix(_audio_name, "snd_");
+	var _audio = asset_get_index(_audio_name);
+	if (asset_get_type(_audio) == asset_sound) {
+		if (_audio_type == "music") {
 			if (!is_undefined(obj_dialogue.current_music)) {
 				audio_stop_sound(obj_dialogue.current_music);
 			}
-			audio_play_sound(audio, 1, true, volume);
-			obj_dialogue.current_music = audio;
-		} else if (audio_type == "sound") {
-			audio_play_sound(audio, 1, false, volume);
+			audio_play_sound(_audio, 1, true, _volume);
+			obj_dialogue.current_music = _audio;
+		} else if (_audio_type == "sound") {
+			audio_play_sound(_audio, 1, false, _volume);
 		}
 	}
 }
 
-function pause(audio_name = undefined) {
-	if (is_undefined(audio_name)) {
+function pause(_audio_name = undefined) {
+	if (is_undefined(_audio_name)) {
 		audio_stop_all();
 		return;
 	}
-	var audio = asset_get_index(audio_name);
-	if (asset_get_type(audio) == asset_sound) {
-		audio_stop_sound(audio);
+	var _audio = asset_get_index(_audio_name);
+	if (asset_get_type(_audio) == asset_sound) {
+		audio_stop_sound(_audio);
 	}
 }
 
-function input(variable_name) {
-	obj_dialogue.current_state = DialogueState.Input;
+function input(_variable_name) {
+	obj_dialogue.current_state = DIALOGUE_STATE.INPUT;
 	obj_dialogue.current_input_text = "";
 	keyboard_lastchar = "";
-	obj_dialogue.current_input_variable = variable_name;
+	obj_dialogue.current_input_variable = _variable_name;
 }

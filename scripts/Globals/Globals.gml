@@ -31,18 +31,18 @@ gui_height = display_get_gui_height(); // Default 720
 gui_scale = gui_height / game_height;
 
 // Gender constants
-PlayerForm = {Androgynous: "Androgynous", Feminine: "Feminine", Masculine: "Masculine"};
-PlayerPronouns = {ItIts: "ItIts", TheyThem: "TheyThem", SheHer: "SheHer", HeHim: "HeHim"};
-PronounMap = {
-	ItIts: ["it", "it", "it's", "itself"],
-	TheyThem: ["they", "them", "theirs", "themself"],
-	SheHer: ["she", "her", "hers", "herself"],
-	HeHim: ["he", "him", "his", "himself"],
+player_form = {androgynous: "androgynous", feminine: "feminine", masculine: "masculine"};
+player_pronouns = {it_its: "it_its", they_them: "they_them", she_her: "she_her", he_him: "he_him"};
+pronoun_map = {
+	it_its: ["it", "it", "it's", "itself"],
+	they_them: ["they", "them", "theirs", "themself"],
+	she_her: ["she", "her", "hers", "herself"],
+	he_him: ["he", "him", "his", "himself"],
 };
 
 // Enums
-enum DialogueState {
-	Text,
-	Option,
-	Input,
+enum DIALOGUE_STATE {
+	TEXT,
+	OPTION,
+	INPUT,
 }

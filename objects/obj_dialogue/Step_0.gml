@@ -3,7 +3,7 @@ if (visible && !obj_game.paused) {
 		continue_on();
 	}
 
-	if (current_state == DialogueState.Text) {
+	if (current_state == DIALOGUE_STATE.TEXT) {
 		if (typist.get_state() < 1) {
 			if (keyboard_check_pressed(continue_key)) {
 				typist.skip();
@@ -15,31 +15,31 @@ if (visible && !obj_game.paused) {
 		if (keyboard_check_pressed(continue_key)) {
 			continue_on();
 		}
-	} else if (current_state == DialogueState.Option) {
+	} else if (current_state == DIALOGUE_STATE.OPTION) {
 		//Check for keyboard input
-		var option = undefined;
+		var _option = undefined;
 		if (keyboard_check_pressed(ord("1"))) {
-			option = 0;
+			_option = 0;
 		}
 		if (keyboard_check_pressed(ord("2"))) {
-			option = 1;
+			_option = 1;
 		}
 		if (keyboard_check_pressed(ord("3"))) {
-			option = 2;
+			_option = 2;
 		}
 		if (keyboard_check_pressed(ord("4"))) {
-			option = 3;
+			_option = 3;
 		}
 		//If we've pressed a button, select that option
-		if (option != undefined) {
-			ChatterboxSelect(chatterbox, option);
-			array_push(obj_game.state.save_slot.current_node_option_queue, option);
-			current_state = DialogueState.Text;
+		if (_option != undefined) {
+			ChatterboxSelect(chatterbox, _option);
+			array_push(obj_game.state.save_slot.current_node_option_queue, _option);
+			current_state = DIALOGUE_STATE.TEXT;
 			get_current_content();
 			increment_current_node_position();
 			touch_slot();
 		}
-	} else if (current_state == DialogueState.Input) {
+	} else if (current_state == DIALOGUE_STATE.INPUT) {
 		if (keyboard_check_pressed(vk_backspace) || keyboard_check_pressed(vk_delete)) {
 			current_input_text = string_delete(
 				current_input_text,

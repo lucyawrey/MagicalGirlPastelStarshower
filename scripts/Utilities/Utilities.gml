@@ -1,44 +1,44 @@
-function struct_merge(destination, source) {
-	if (!is_struct(destination) || !is_struct(source)) {
+function struct_merge(_destination, _source) {
+	if (!is_struct(_destination) || !is_struct(_source)) {
 		return;
 	}
-	destination_ = destination;
-	struct_foreach(source, function(name, value) {
-		struct_set(destination_, name, value);
+	destination_ = _destination;
+	struct_foreach(_source, function(_name, _value) {
+		struct_set(destination_, _name, _value);
 	});
 }
 
-function struct_get_merged_value(structs, name) {
-	for (var i = array_length(structs) - 1; i >= 0; i--) {
-		var item = structs[i];
-		if (is_undefined(item)) {
+function struct_get_merged_value(_structs, _name) {
+	for (var _i = array_length(_structs) - 1; _i >= 0; _i--) {
+		var _item = _structs[_i];
+		if (is_undefined(_item)) {
 			continue;
 		}
-		if (is_string(item) || is_bool(item) || is_real(item)) {
-			return item;
+		if (is_string(_item) || is_bool(_item) || is_real(_item)) {
+			return _item;
 		}
-		if (struct_exists(item, name)) {
-			return struct_get(item, name);
+		if (struct_exists(_item, _name)) {
+			return struct_get(_item, _name);
 		}
-		if (struct_exists(item, name + ":")) {
-			return struct_get(item, name + ":");
+		if (struct_exists(_item, _name + ":")) {
+			return struct_get(_item, _name + ":");
 		}
 	}
 }
 
-function get_pronoun_list(pronouns) {
+function get_pronoun_list(_pronouns) {
 	out = {};
-	var list = struct_get(global.PronounMap, pronouns);
-	array_foreach(list, function(item, i) {
-		struct_set(out, "player_gender_pronoun_" + string(i), item);
+	var _list = struct_get(global.pronoun_map, _pronouns);
+	array_foreach(_list, function(_item, _i) {
+		struct_set(out, "player_gender_pronoun_" + string(_i), _item);
 	});
 	return out;
 }
 
-function add_prefix(base_str, prefix_str) {
-    if (string_starts_with(base_str, prefix_str)) {
-        return base_str;
-    } else {
-        return prefix_str + base_str;
-    }
+function add_prefix(_base_str, _prefix_str) {
+	if (string_starts_with(_base_str, _prefix_str)) {
+		return _base_str;
+	} else {
+		return _prefix_str + _base_str;
+	}
 }

@@ -21,7 +21,7 @@ scribble_font_set_default("fnt_dialogue");
 // Object variable definitions
 continue_key = vk_space;
 
-current_state = DialogueState.Text;
+current_state = DIALOGUE_STATE.TEXT;
 current_node_metadata = {};
 current_text = "";
 current_metadata = [];
@@ -42,15 +42,15 @@ function continue_on() {
 		visible = false;
 	} else if (ChatterboxIsWaiting(chatterbox)) {
 		ChatterboxContinue(chatterbox);
-		if (current_state == DialogueState.Option) {
-			current_state = DialogueState.Text;
+		if (current_state == DIALOGUE_STATE.OPTION) {
+			current_state = DIALOGUE_STATE.TEXT;
 		}
 		if (!obj_game.paused || delay_behavior == "next") {
 			get_current_content();
 			increment_current_node_position();
 		}
 	} else {
-		current_state = DialogueState.Option;
+		current_state = DIALOGUE_STATE.OPTION;
 		current_options = ChatterboxGetOptionArray(chatterbox);
 	}
 }
@@ -63,8 +63,8 @@ function get_current_content() {
 		save_game();
 		is_new_node = false;
 	}
-	var content = get_content();
-	current_text = scribble_markdown_format(content.text);
-	current_metadata = content.metadata;
-	current_character = content.character;
+	var _content = get_content();
+	current_text = scribble_markdown_format(_content.text);
+	current_metadata = _content.metadata;
+	current_character = _content.character;
 }
