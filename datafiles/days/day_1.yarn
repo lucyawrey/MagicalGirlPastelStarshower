@@ -29,7 +29,7 @@ location: cafe
 day: 1
 ---
 <<background "bg_cafe">>
-<<show "azalea_2" "left">>
+<<show "stella" "left">>
 <<show "azalea" "right">>
 <<delay 0.3>>
 <<play "music" "nostalgia">>
@@ -43,10 +43,8 @@ Stella: A friend?
 Azalea: Yes, obviously.
 Stella: Right, sorry. Why didn't you just wake me up?
 Azalea: Stella, please, we both know you need whatever sleep you can get.
-<<show "stella" "left">>
 Stella[Narrator]: She flashes a small smile at me, one I find myself returning.
 Stella: You're not wrong. Thank you.
-<<show "stella" "left">>
 Azalea: Anytime. Again, I was working as well. Just about finished up, actually.
 Stella[Narrator]: I glance over at the shelves of pots and planters near the building's largest windows.
 Stella[Narrator]: They're teaming with freshly watered vegetation: a mix of colorful flowers, herbs, leafy greens, and fresh vegetables. I'm fairly certain the edible stuff is used in the cafe's cooking.
@@ -139,8 +137,9 @@ Stella: I know that's a horrible thing to say because—
 Stella: Because they died.
 Stella: But that's how it feels sometimes.
 Stella: And I'm still grieving, but I feel like I need to try something new.
-Stella: So I asked Gio if I could start working at the cafe, I finally started therapy two weeks ago, and I'm trying to be more willing to get close to people. Like right now.
-Stella: But all that work... it doesn't... it hasn't started to make me feel better yet. So, I'm here and absolutely not okay.
+Stella: So I asked Gio if I could start working here at the cafe a few weeks back, I started therapy again around the same time, and I've been trying open up to people more.
+Stella: Like right now.
+Stella: But all that effort... it doesn't... it hasn't started to make me feel better yet. So, I'm here and absolutely not okay.
 Stella[Narrator]: We are both silent for a while, a comfortable silence.
 Stella[Narrator]: Then, I start to cry, even though I shouldn't. Azalea doesn't say anything, and just holds me until I stop.
 Stella[Narrator]: It couldn't have been more than a minute.
@@ -156,13 +155,12 @@ Stella: And spending time with people does too.
 Azalea: I'm glad.
 Stella: I... probably need to get going soon.
 Stella: It's late.
-Stella: I'm actually working tomorrow, it's my second day.
+Stella: I'm actually going to be back here working first shift tomorrow.
 Stella: And...
 Stella: As you say, I need whatever sleep I can get.
-Azalea: Yeah. I hope work goes well.
-Stella: Oh, actually, before I head out. Do you think I should let Gio know he's good to close up?
-Azalea: No need, I actually have a key to the place. I'll lock up on our way out.
-Stella: Awesome. I suppose I'll talk to Gio tomorrow then.
+Azalea: Yeah. I hope work goes well tomorrow.
+Azalea: I'm going to head out so you can get the place locked up, unless you needed anything else?
+Stella: No, I'm all good.
 Stella: Good night, Azalea.
 Azalea: Sleep well. Sorry things left off on such a sad note.
 Stella: It's alright.
