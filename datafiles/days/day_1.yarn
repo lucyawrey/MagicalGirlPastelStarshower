@@ -28,9 +28,9 @@ title: Day1Cafe
 location: cafe
 day: 1
 ---
-<<background "spr_bg_cafe">>
-<<show "spr_stella" "left">>
-<<show "spr_azalea" "right">>
+<<background "bg_cafe">>
+<<show "azalea_2" "left">>
+<<show "azalea" "right">>
 <<delay 0.3>>
 <<play "music" "nostalgia">>
 Azalea: Hey Stella, are you awake?
@@ -43,10 +43,10 @@ Stella: A friend?
 Azalea: Yes, obviously.
 Stella: Right, sorry. Why didn't you just wake me up?
 Azalea: Stella, please, we both know you need whatever sleep you can get.
-<<show "spr_stella_happy" "left">>
+<<show "stella" "left">>
 Stella[Narrator]: She flashes a small smile at me, one I find myself returning.
 Stella: You're not wrong. Thank you.
-<<show "spr_stella" "left">>
+<<show "stella" "left">>
 Azalea: Anytime. Again, I was working as well. Just about finished up, actually.
 Stella[Narrator]: I glance over at the shelves of pots and planters near the building's largest windows.
 Stella[Narrator]: They're teaming with freshly watered vegetation: a mix of colorful flowers, herbs, leafy greens, and fresh vegetables. I'm fairly certain the edible stuff is used in the cafe's cooking.
