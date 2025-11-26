@@ -1,7 +1,7 @@
-gx = 4;
-gy = global.game_height * 0.65;
+gx = 20;
+gy = global.game_height * 0.7;
 var _box_width = global.game_width - gx * 2;
-var _box_height = global.game_height - gy - gx;
+var _box_height = global.game_height - gy;
 
 if (!is_undefined(current_background_sprite)) {
 	draw_sprite(current_background_sprite, 0, 0, 0);
@@ -23,4 +23,7 @@ struct_foreach(current_shown_sprites, function(_key, _value) {
 
 if (!is_undefined(current_background_sprite)) {
 	draw_sprite_stretched(spr_box, 0, gx, gy, _box_width, _box_height);
+    if (current_character.name != "") {
+        draw_sprite_stretched(spr_box, 0, gx + 10, gy - 15, 80, 30);
+    }
 }

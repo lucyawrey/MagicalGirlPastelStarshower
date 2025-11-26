@@ -1,16 +1,13 @@
 gpu_set_tex_filter(true);
 
-gx = 34 * global.gui_scale;
-gy = global.gui_height * 0.68;
 spacer = 20 * global.gui_scale;
+gx = 44 * global.gui_scale;
+gy = global.gui_height * 0.7 + spacer;
 var _line_width = global.gui_width - gx * 2;
 
 if (current_state == DIALOGUE_STATE.TEXT) {
 	//Draw text
-	scribble($"[{current_character.name_color}]{current_character.name}").draw(gx, gy);
-
-	gy += spacer;
-
+    scribble($"[{current_character.name_color}]{current_character.name}").draw(gx, gy - 1.5 * spacer);
 	scribble(
 		$"[speed,{current_character.text_speed}][{current_character.text_color}]{
 			current_character.prefix
