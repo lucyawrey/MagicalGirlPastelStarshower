@@ -34,18 +34,18 @@ function show(_sprite_name, _position, _y_position) {
 	}
 	var _x_pos = 0;
 	var _y_pos = 0;
-    var _x_scale = 1; // Set to -1 to mirror image along the x axis
+	var _x_scale = 1; // Set to -1 to mirror image along the x axis
 	if (is_string(_position)) {
 		if (_position == "center") {
 			_x_pos = (global.game_width * 0.5) - (sprite_get_width(_sprite) * 0.5);
 		} else if (_position == "left") {
 			_x_pos = (global.game_width * 0.25) + (sprite_get_width(_sprite) * 0.5);
-            _x_scale = -1;
+			_x_scale = -1;
 		} else if (_position == "right") {
 			_x_pos = (global.game_width * 0.75) - (sprite_get_width(_sprite) * 0.5);
 		}
-        _y_pos = 234 - sprite_get_height(_sprite);
-        //_y_pos = (global.game_height * 0.5) - (sprite_get_height(_sprite) * 0.5);
+		_y_pos = 234 - sprite_get_height(_sprite);
+		//_y_pos = (global.game_height * 0.5) - (sprite_get_height(_sprite) * 0.5);
 	} else if (is_real(_position) && is_real(_y_position)) {
 		_x_pos = _position;
 		_y_pos = _y_position;

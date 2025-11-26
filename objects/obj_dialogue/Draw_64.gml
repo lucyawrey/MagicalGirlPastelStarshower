@@ -1,3 +1,5 @@
+gpu_set_tex_filter(true);
+
 gx = 34 * global.gui_scale;
 gy = global.gui_height * 0.68;
 spacer = 20 * global.gui_scale;
@@ -25,3 +27,5 @@ if (current_state == DIALOGUE_STATE.TEXT) {
 	gy += spacer;
 	scribble($"{current_input_text}[c_gray]_").draw(gx, gy);
 }
+
+gpu_set_tex_filter(false);
