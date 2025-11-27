@@ -7,7 +7,9 @@ var _line_width = global.gui_width - gx * 2;
 
 if (current_state == DIALOGUE_STATE.TEXT) {
 	//Draw text
-    scribble($"[{current_character.name_color}]{current_character.name}").draw(gx, gy - 1.5 * spacer);
+    if (current_character.name != "") {
+        scribble($"[{current_character.name_color}]{current_character.name}").draw(gx, gy - 1.5 * spacer);
+    }
 	scribble(
 		$"[speed,{current_character.text_speed}][{current_character.text_color}]{
 			current_character.prefix
