@@ -1,7 +1,7 @@
 gpu_set_tex_filter(true);
 
 spacer = 20 * global.gui_scale;
-gx = 44 * global.gui_scale;
+gx = 54 * global.gui_scale;
 gy = global.gui_height * 0.7 + spacer;
 var _line_width = global.gui_width - gx * 2;
 
