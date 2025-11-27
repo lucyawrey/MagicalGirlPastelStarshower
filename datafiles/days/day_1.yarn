@@ -33,6 +33,7 @@ day: 1
 <<background "bg_cafe">>
 <<show "stella" "left">>
 <<show "azalea" "right">>
+<<block "Azalea" "right">>
 <<delay 0.3>>
 <<play "music" "nostalgia">>
 Azalea: Hey Stella, are you awake?

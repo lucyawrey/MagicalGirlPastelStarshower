@@ -10,6 +10,7 @@ current_options = [];
 current_character = get_character();
 current_background_sprite = undefined;
 current_shown_sprites = {};
+current_character_blocking = {};
 current_music = undefined;
 current_input_text = "";
 current_input_variable = "";

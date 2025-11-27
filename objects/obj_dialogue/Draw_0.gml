@@ -25,6 +25,12 @@ if (!is_undefined(current_background_sprite)) {
 	draw_sprite_stretched(spr_box, 0, gx, gy, _box_width, _box_height);
     if (current_character.name != "") {
         var _name_width = scribble($"{current_character.name}").get_width() / 2;
-        draw_sprite_stretched(spr_box, 0, gx + 15, gy - 14, _name_width + 28, 30);
+        var _name_box_width = _name_width + 28;
+        if (struct_exists(current_character_blocking, current_character.id) && struct_get(current_character_blocking, current_character.id) == "right") {
+            gx += global.game_width - _name_box_width - 70;
+        } else {
+            gx += 15;
+        }
+        draw_sprite_stretched(spr_box, 0, gx, gy - 14, _name_box_width, 30);
     }
 }

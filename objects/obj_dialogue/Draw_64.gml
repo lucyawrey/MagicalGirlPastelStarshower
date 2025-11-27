@@ -7,8 +7,14 @@ var _line_width = global.gui_width - gx * 2;
 
 if (current_state == DIALOGUE_STATE.TEXT) {
 	//Draw text
+    var _name_width = scribble($"{current_character.name}").get_width() / 2;
+    var _name_x = gx;
+    if (struct_exists(current_character_blocking, current_character.id) && struct_get(current_character_blocking, current_character.id) == "right") {
+        _name_x = global.gui_width - _name_width - 168;
+    }
+    
     if (current_character.name != "") {
-        scribble($"[{current_character.name_color}]{current_character.name}").draw(gx, gy - 1.5 * spacer);
+        scribble($"[{current_character.name_color}]{current_character.name}").draw(_name_x, gy - 1.5 * spacer);
     }
 	scribble(
 		$"[speed,{current_character.text_speed}][{current_character.text_color}]{
