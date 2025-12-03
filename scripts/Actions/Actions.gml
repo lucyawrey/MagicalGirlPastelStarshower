@@ -58,15 +58,11 @@ function show(_sprite_name, _position, _y_position) {
 }
 
 function block(_character_id = "", _position = 0) {
-    if (_character_id == "") {
-        obj_dialogue.current_character_blocking = {};
-    } else {
-        struct_set(
-    		obj_dialogue.current_character_blocking,
-    		_character_id,
-            _position
-    	);
-    }
+	if (_character_id == "") {
+		obj_dialogue.current_character_blocking = {};
+	} else {
+		struct_set(obj_dialogue.current_character_blocking, _character_id, _position);
+	}
 }
 
 function hide(_sprite_name = undefined) {

@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"DebugTools",
+  "%Name":"Debug",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"DebugTools",
+  "name":"Debug",
   "parent":{
     "name":"scripts",
     "path":"folders/scripts.yy",

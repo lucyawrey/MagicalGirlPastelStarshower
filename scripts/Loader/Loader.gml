@@ -35,5 +35,8 @@ function load_all_chatterbox() {
 	var _buffer = buffer_create(1048576, buffer_grow, 1);
 	load_all_chatterbox_files_to_buffer(_buffer);
 	ChatterboxLoadFromBuffer("default", _buffer);
+	if (debug_mode) {
+		debug_load_chatterbox_full_text_from_buffer(_buffer);
+	}
 	buffer_delete(_buffer);
 }

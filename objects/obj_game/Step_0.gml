@@ -1,1 +1,3 @@
-debug_loop();
+if (debug_mode) {
+	debug_step();
+}

@@ -32,3 +32,7 @@ load_game();
 
 // Set game loading alarm
 alarm[3] = 30;
+
+if (debug_mode) {
+	debug_create();
+}

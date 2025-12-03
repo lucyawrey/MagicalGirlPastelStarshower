@@ -12,7 +12,7 @@ function chatterbox_setup() {
 	ChatterboxAddFunction("pause", pause);
 	ChatterboxAddFunction("input", input);
 	ChatterboxAddFunction("delay", delay);
-    ChatterboxAddFunction("block", block);
+	ChatterboxAddFunction("block", block);
 
 	return _chatterbox;
 }
