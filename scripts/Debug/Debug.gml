@@ -21,19 +21,39 @@ function debug_run_all_tests() {
 }
 
 function test_printed_dialogue_line_count() {
-    line_width = global.gui_width - 54 * global.gui_scale * 2;
-    
-    var _buffer = buffer_create(1048576, buffer_grow, 1);
+	line_width = global.gui_width - 54 * global.gui_scale * 2;
+
+	var _buffer = buffer_create(1048576, buffer_grow, 1);
 	load_all_chatterbox_files_to_buffer(_buffer);
-    var _full_text = buffer_read(_buffer, buffer_string);
+	var _full_text = buffer_read(_buffer, buffer_string);
 	buffer_delete(_buffer);
 	var _lines = string_split(_full_text, "\n", true);
 
 	array_foreach(_lines, function(_line, _i) {
-		var _character_prefix = "";
-		var _character_suffix = "";
+		_line = string_trim(_line);
+        
+        if (string_starts_with(_line, "<") || string_starts_with(_line, "-")) {
+            return;
+        }
+        
+		var _name = "";
+		var _data = "";
+        
+		var _split = string_split(_line, ": ", true);
+		if (array_length(_split) > 1) {
+			_name = _split[0];
+			_line = _split[1];
+			var _split2 = string_split_ext(_name, ["[", "]"], true);
+			if (array_length(_split2) > 1) {
+				_name = _split2[0];
+				_data = _split2[1];
+			}
+		}
+        
+		var _character = get_character(_name, _data);
+        
 		var _printed_line_count = scribble(
-			$"{_character_prefix}{_line}{_character_suffix}"
+			$"{_character.prefix}{_line}{_character.suffix}"
 		)
 			.wrap(line_width)
 			.get_line_count();
