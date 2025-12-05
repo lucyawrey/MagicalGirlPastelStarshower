@@ -22,7 +22,7 @@ Stella[Dream]: You're not going to be alone anymore.
 Stella[Dream]: It's so, so hard to keep living, but I'd like it if you tried.
 Stella[Dream]: I'd like it... if both of us did.
 Stella[Dream]: So, let's get going, it's a long road.
-<<delay 0.6 "clear">>
+<<delay 1 "clear">>
 <<jump Day1Cafe>>
 ===
 
@@ -31,11 +31,12 @@ location: cafe
 day: 1
 ---
 <<background "bg_cafe">>
+<<play "music" "nostalgia">>
+<<delay 1>>
 <<show "stella" "left">>
 <<show "azalea" "right">>
 <<block "Azalea" "right">>
-<<delay 0.3>>
-<<play "music" "nostalgia">>
+<<delay 1>>
 Azalea: Hey Stella, are you awake?
 Stella: Um, yeah, I am now. Sorry I passed out.
 Azalea: You're good, it's not like you're sleeping in *my* cafe after closing time.
