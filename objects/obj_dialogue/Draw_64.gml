@@ -2,7 +2,7 @@ gpu_set_tex_filter(true);
 
 spacer = 20 * global.gui_scale;
 gx = 54 * global.gui_scale;
-gy = global.gui_height * 0.7 + spacer;
+gy = global.gui_height * 0.7 + 34;
 var _line_width = global.gui_width - gx * 2;
 
 if (current_state == DIALOGUE_STATE.TEXT) {
@@ -13,7 +13,7 @@ if (current_state == DIALOGUE_STATE.TEXT) {
 		struct_exists(current_character_blocking, current_character.id)
 		&& struct_get(current_character_blocking, current_character.id) == "right"
 	) {
-		_name_x = global.gui_width - _name_width - 172;
+		_name_x = global.gui_width - _name_width - 162;
 	}
 
 	if (current_character.name != "") {

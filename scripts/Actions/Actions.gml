@@ -44,7 +44,7 @@ function show(_sprite_name, _position, _y_position) {
 		} else if (_position == "right") {
 			_x_pos = (global.game_width * 0.75) - (sprite_get_width(_sprite) * 0.5);
 		}
-		_y_pos = 240 - sprite_get_height(_sprite);
+		_y_pos = 241 - sprite_get_height(_sprite);
 		//_y_pos = (global.game_height * 0.5) - (sprite_get_height(_sprite) * 0.5);
 	} else if (is_real(_position) && is_real(_y_position)) {
 		_x_pos = _position;

@@ -30,7 +30,7 @@ function get_character(_character_name = "", _character_data = "") {
         _sound = undefined;
     }
     
-    var _background_name = struct_get_merged_value(_queue, "background"),
+    var _background_name = struct_get_merged_value(_queue, "background");
     _background_name = add_prefix(_background_name, "spr_");
 	var _background = asset_get_index(_background_name);
 	if (asset_get_type(_background) != asset_sprite) {
