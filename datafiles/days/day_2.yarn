@@ -57,7 +57,7 @@ Stella[Narrator]: And for a joyful moment, I experienced complete freefall. I kn
 Stella[Narrator]: Still, I love it, these seconds with the wind rushing through my hair.
 Stella[Narrator]: Halfway down, I flex my magic in a burst of light, color, and emotion.
 Stella[Narrator]: For just a moment, I am my truest self, clad in a beautiful gown of whites, blues and yellows.
-<<play "sound" "power_of_the_wind">>
+<<play "music" "power_of_the_wind">>
 <<play "sound" "land">>
 Stella[Narrator]: And then I hit the ground. The nearby birds scatter.
 Stella[Narrator]: The impact is hard enough that I feel it, yet soft enough that the pavement is undamaged.
@@ -70,6 +70,9 @@ title: Day2Streets
 location: city_streets
 day: 2
 ---
+<<background "bg_street_1">>
+<<show "stella" "left">>
+<<block "Olivia.?" "right">>
 Stella[Narrator]: I don't jump from the balcony every morning. It's... really not a very responsible use of my power.
 Stella[Narrator]: But when a falling can't hurt you, it feels freeing. It feels refreshing, like a splash of cold water in the morning.
 Stella[Narrator]: And it's faster than an elevator.
