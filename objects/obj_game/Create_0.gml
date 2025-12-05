@@ -4,6 +4,7 @@ gpu_set_tex_filter(false);
 // Set instance variables
 paused = false;
 resumedThisTick = false;
+enableParticles = true;
 
 // Set autosave alarm
 alarm[0] = global.autosave_interval;
