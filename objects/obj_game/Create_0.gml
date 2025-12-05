@@ -4,7 +4,6 @@ gpu_set_tex_filter(false);
 // Set instance variables
 paused = false;
 resumedThisTick = false;
-enableParticles = true;
 
 // Set autosave alarm
 alarm[0] = global.autosave_interval;
@@ -27,6 +26,10 @@ function unpause() {
 
 // Create Dialogue Manager Object
 instance_create_depth(0, 0, 0, obj_dialogue);
+
+// Create particle system
+void_dust = part_system_create(ps_void_dust);
+part_system_depth(void_dust, 1);
 
 // Initial game load.
 load_game();
