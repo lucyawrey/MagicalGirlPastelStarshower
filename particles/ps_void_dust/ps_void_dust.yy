@@ -13,8 +13,8 @@
   ],
   "name":"ps_void_dust",
   "parent":{
-    "name":"MagicalGirlPastelStarshower",
-    "path":"MagicalGirlPastelStarshower.yyp",
+    "name":"systems",
+    "path":"folders/systems.yy",
   },
   "resourceType":"GMParticleSystem",
   "resourceVersion":"2.0",

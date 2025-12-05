@@ -23,10 +23,8 @@ struct_foreach(current_shown_sprites, function(_key, _value) {
 	);
 });
 
-if (!is_undefined(current_background_sprite)) {
-    show_debug_message($"\n\n{_box_width} x {_bg_height}\n\n");
-    
-	draw_sprite_stretched(spr_box, 0, gx, gy, _box_width, _box_height);
+if (!is_undefined(current_character.background)) {
+	draw_sprite_stretched(current_character.background, 0, gx, gy, _box_width, _box_height);
 	if (current_character.name != "") {
 		var _name_width = scribble($"{current_character.name}").get_width() / 2;
 		var _name_box_width = _name_width + 30            ;
