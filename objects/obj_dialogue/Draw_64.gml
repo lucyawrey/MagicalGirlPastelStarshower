@@ -13,7 +13,7 @@ if (current_state == DIALOGUE_STATE.TEXT) {
 		struct_exists(current_character_blocking, current_character.id)
 		&& struct_get(current_character_blocking, current_character.id) == "right"
 	) {
-		_name_x = global.gui_width - _name_width - 168;
+		_name_x = global.gui_width - _name_width - 172;
 	}
 
 	if (current_character.name != "") {
