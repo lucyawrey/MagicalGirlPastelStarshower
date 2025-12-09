@@ -1,5 +1,3 @@
-gpu_set_tex_filter(true);
-
 spacer = 20 * global.gui_scale;
 gx = 54 * global.gui_scale;
 gy = global.gui_height * 0.7 + 34;
@@ -39,4 +37,16 @@ if (current_state == DIALOGUE_STATE.TEXT) {
 	scribble($"{current_input_text}[c_gray]_").draw(gx, gy);
 }
 
-gpu_set_tex_filter(false);
+struct_foreach(current_shown_sprites, function(_key, _value) {
+	draw_sprite_ext(
+		_value.sprite,
+		0,
+		_value.x_pos,
+		_value.y_pos,
+		_value.x_scale,
+		1,
+		0,
+		c_white,
+		1
+	);
+});
