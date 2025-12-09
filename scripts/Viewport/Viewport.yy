@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Viewport",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Viewport",
+  "parent":{
+    "name":"scripts",
+    "path":"folders/scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

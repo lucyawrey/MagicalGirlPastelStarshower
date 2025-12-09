@@ -21,7 +21,7 @@ function debug_run_all_tests() {
 }
 
 function test_printed_dialogue_line_count() {
-	line_width = global.gui_width - 54 * global.gui_scale * 2;
+	line_width = global.view_width - 216;
 
 	var _buffer = buffer_create(1048576, buffer_grow, 1);
 	load_all_chatterbox_files_to_buffer(_buffer);

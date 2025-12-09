@@ -55,8 +55,8 @@
   },
   "origin":0,
   "parent":{
-    "name":"sprites",
-    "path":"folders/sprites.yy",
+    "name":"map",
+    "path":"folders/sprites/map.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

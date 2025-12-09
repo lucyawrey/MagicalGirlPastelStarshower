@@ -19,7 +19,7 @@ state = {
 		id: 0,
 		player_id: -1,
 		runs_completed: 0,
-		current_room: "rm_dialogue_scene",
+		current_room: "rm_scene",
 		current_location: "start",
 		current_node: "Start",
 		in_dialogue_mode: true,
