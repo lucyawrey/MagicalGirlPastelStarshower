@@ -4,11 +4,13 @@ gx = _gutter * 3;
 gy = global.view_height * 0.7;
 var _box_width = global.view_width - gx * 2;
 var _box_height = global.view_height - gy - _gutter;
-var _bg_height = global.view_height - _box_height - _gutter * 3;
+var _bg_box_height = global.view_height - _box_height - _gutter * 3;
+var _bg_width = _box_width - 12;
+var _bg_height = _bg_box_height - 9;
 
 if (!is_undefined(current_background_sprite)) {
-    draw_sprite_stretched(spr_box, 0, gx, _gutter, _box_width, _bg_height);
-	draw_sprite(current_background_sprite, 0, gx + 4, _gutter + 4);
+    draw_sprite_stretched(spr_box, 0, gx, _gutter, _box_width, _bg_box_height);
+	draw_sprite_stretched(current_background_sprite, 0, gx + 6, _gutter + 6, _bg_width, _bg_height);
 }
 
 if (!is_undefined(current_character.background)) {
