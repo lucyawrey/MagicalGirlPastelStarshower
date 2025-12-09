@@ -2,7 +2,7 @@
   "$GMSprite":"v2",
   "%Name":"spr_bg_cafe",
   "bboxMode":0,
-  "bbox_bottom":458,
+  "bbox_bottom":455,
   "bbox_left":0,
   "bbox_right":1159,
   "bbox_top":0,
@@ -16,7 +16,7 @@
   ],
   "gridX":0,
   "gridY":0,
-  "height":459,
+  "height":456,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"56908760-16b3-421f-9a6f-6c4a72596890","blendMode":0,"displayName":"default","isLocked":false,"name":"56908760-16b3-421f-9a6f-6c4a72596890","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"sprites",
-    "path":"folders/sprites.yy",
+    "name":"backgrounds",
+    "path":"folders/sprites/backgrounds.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

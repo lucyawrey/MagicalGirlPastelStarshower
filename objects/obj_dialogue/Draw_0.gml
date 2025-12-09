@@ -6,10 +6,10 @@ var _box_width = global.view_width - gx * 2;
 var _box_height = global.view_height - gy - _gutter;
 var _bg_box_height = global.view_height - _box_height - _gutter * 3;
 var _bg_width = _box_width - 12;
-var _bg_height = _bg_box_height - 9;
+var _bg_height = _bg_box_height - 12;
 
 if (!is_undefined(current_background_sprite)) {
-    draw_sprite_stretched(spr_box, 0, gx, _gutter, _box_width, _bg_box_height);
+    draw_sprite_stretched(current_character.background, 0, gx, _gutter, _box_width, _bg_box_height);
 	draw_sprite_stretched(current_background_sprite, 0, gx + 6, _gutter + 6, _bg_width, _bg_height);
 }
 
@@ -26,7 +26,7 @@ if (!is_undefined(current_character.background)) {
 		} else {
 			gx += 28
 		}
-		draw_sprite_stretched(spr_box, 0, gx, gy - 36, _name_box_width, 64);
+		draw_sprite_stretched(current_character.background, 0, gx, gy - 36, _name_box_width, 64);
 	}
 }
 
