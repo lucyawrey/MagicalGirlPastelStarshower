@@ -12,25 +12,25 @@
         "background": ""
     },
     "Stella": {
-        "name_color": "#f7f5a1",
+        "name_color": "#e3e06f",
         "background": "box",
         "variants": {
             "Dream": {
                 "name": "",
-                "text_color:": "#f7f5a1",
+                "text_color:": "#e3e06f",
                 "background": ""
             },
             "Narrator": {
                 "name": "",
-                "text_color:": "#f7f5a1",
+                "text_color:": "#e3e06f",
                 "prefix:": "(",
                 "suffix:": ")"
             }
         }
     },
     "Azalea": {
-        "name_color": "#f20cc4",
-        "background": "box_classic"
+        "name_color": "#1fad46",
+        "background": "box"
     },
     "Gio": {
         "name_color": "#8a3812",
