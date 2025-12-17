@@ -15,7 +15,7 @@ alarm[2] = 0;
 
 // Method definitions
 function pause(time = -1, mode = "second") {
-    var _factor = mode == "step" ? 1 : 60;
+	var _factor = mode == "step" ? 1 : 60;
 	paused = true;
 	if (time > 0) {
 		alarm[1] = time * _factor;

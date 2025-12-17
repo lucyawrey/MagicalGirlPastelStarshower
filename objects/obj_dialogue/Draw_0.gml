@@ -9,28 +9,51 @@ var _bg_width = _box_width - 12;
 var _bg_height = _bg_box_height - 12;
 
 if (!is_undefined(current_background_sprite)) {
-    var _bg_box_border = is_undefined(current_character.background) ? get_character(global.base_character_name).background : current_character.background;
-    draw_sprite_stretched(_bg_box_border, 0, gx, _gutter, _box_width, _bg_box_height);
+	var _bg_box_border = is_undefined(current_character.background)
+		? get_character(global.base_character_name).background
+		: current_character.background;
+	draw_sprite_stretched(_bg_box_border, 0, gx, _gutter, _box_width, _bg_box_height);
 }
 
 if (!is_undefined(current_background_sprite)) {
-	draw_sprite_stretched(current_background_sprite, 0, gx + 6, _gutter + 6, _bg_width, _bg_height);
+	draw_sprite_stretched(
+		current_background_sprite,
+		0,
+		gx + 6,
+		_gutter + 6,
+		_bg_width,
+		_bg_height
+	);
 }
 
 if (!is_undefined(current_character.background)) {
-	draw_sprite_stretched(current_character.background, 0, gx, gy, _box_width, _box_height);
+	draw_sprite_stretched(
+		current_character.background,
+		0,
+		gx,
+		gy,
+		_box_width,
+		_box_height
+	);
 	if (current_character.name != "") {
 		var _name_width = scribble($"{current_character.name}").get_width();
-		var _name_box_width = _name_width + 50
+		var _name_box_width = _name_width + 50;
 		if (
 			struct_exists(current_character_blocking, current_character.id)
 			&& struct_get(current_character_blocking, current_character.id) == "right"
 		) {
 			gx += global.view_width - _name_box_width - 138;
 		} else {
-			gx += 28
+			gx += 28;
 		}
-		draw_sprite_stretched(current_character.background, 0, gx, gy - 36, _name_box_width, 64);
+		draw_sprite_stretched(
+			current_character.background,
+			0,
+			gx,
+			gy - 36,
+			_name_box_width,
+			64
+		);
 	}
 }
 

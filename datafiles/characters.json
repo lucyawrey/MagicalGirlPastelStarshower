@@ -49,7 +49,11 @@
             }
         }
     },
-    "Ev": {
+    "Evie": {
         "name_color": "#0a940a"
+    },
+    "[Awkward]": {
+        "text_speed": 0.05,
+        "sound_spacing": 1
     }
 }
