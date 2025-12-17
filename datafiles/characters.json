@@ -1,6 +1,6 @@
 {
-    "Narrator": {
-        "name": "",
+    "Base": {
+        "name": "Base Character",
         "name_color": "#999999",
         "text_color": "#ffffff",
         "text_speed": 1,
@@ -9,11 +9,18 @@
         "sound": "click",
         "sound_pitch": 1,
         "sound_spacing": 4,
-        "background": ""
+        "background": "box"
+    },
+    "Narrator": {
+        "name": "",
+        "variants": {
+            "Dream": {
+                "background": ""
+            }
+        }
     },
     "Stella": {
         "name_color": "#e3e06f",
-        "background": "box",
         "variants": {
             "Dream": {
                 "name": "",
@@ -29,16 +36,13 @@
         }
     },
     "Azalea": {
-        "name_color": "#1fad46",
-        "background": "box"
+        "name_color": "#1fad46"
     },
     "Gio": {
-        "name_color": "#8a3812",
-        "background": "box"
+        "name_color": "#8a3812"
     },
     "Olivia": {
         "name_color": "#917263",
-        "background": "box",
         "variants": {
             "?": {
                 "name": "Bird Caretaker"
@@ -46,7 +50,6 @@
         }
     },
     "Ev": {
-        "name_color": "#0a940a",
-        "background": "box"
+        "name_color": "#0a940a"
     }
 }

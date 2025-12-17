@@ -9,10 +9,10 @@ function get_character(_character_name = "", _character_data = "") {
 		return struct_get(global.characters_cache, _character_id);
 	}
 
-	if (!struct_exists(global.characters, global.default_character_name)) {
+	if (!struct_exists(global.characters, global.base_character_name)) {
 		return;
 	}
-	var _default_character = struct_get(global.characters, global.default_character_name);
+	var _default_character = struct_get(global.characters, global.base_character_name);
 	var _base_character = struct_exists(global.characters, _character_name)
 		? struct_get(global.characters, _character_name)
 		: undefined;

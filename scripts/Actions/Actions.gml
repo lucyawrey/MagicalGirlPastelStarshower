@@ -20,9 +20,6 @@ function delay(_time_in_seconds = 1, _behavior = "stay") {
 	if (_behavior != "next") {
 		ChatterboxWait(obj_dialogue.chatterbox);
 	}
-	if (_behavior == "clear") {
-		obj_dialogue.get_current_content();
-	}
 	obj_dialogue.delay_behavior = _behavior;
 }
 
