@@ -12,21 +12,27 @@ function background(_background_name) {
 	}
 }
 
-function delay(_time_in_seconds = 1, _behavior = "normal") {
+function delay(_time_in_seconds = 1) {
 	if (obj_dialogue.loading) {
 		return;
 	}
-	if (_time_in_seconds == "next") {
-		obj_game.pause();
-		obj_dialogue.delay_behavior = "next";
-	}
 	if (is_numeric(_time_in_seconds)) {
 		obj_game.pause(_time_in_seconds);
-		if (_behavior != "next") {
-			ChatterboxWait(obj_dialogue.chatterbox);
-		}
-		obj_dialogue.delay_behavior = _behavior;
+        ChatterboxWait(obj_dialogue.chatterbox);
+		obj_dialogue.delay_behavior = "delay";
 	}
+}
+
+function auto(_time_in_seconds = -1) {
+	if (obj_dialogue.loading) {
+		return;
+	}
+	if (_time_in_seconds == -1) {
+		obj_game.pause();
+	} else if (is_numeric(_time_in_seconds)) {
+		obj_game.pause(_time_in_seconds);
+	}
+    obj_dialogue.delay_behavior = "auto";
 }
 
 function show(_sprite_name, _position, _y_position) {

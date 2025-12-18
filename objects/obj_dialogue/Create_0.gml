@@ -29,7 +29,7 @@ function continue_on() {
 		if (current_state == DIALOGUE_STATE.OPTION) {
 			current_state = DIALOGUE_STATE.TEXT;
 		}
-		if (!obj_game.paused || delay_behavior == "next") {
+		if (!obj_game.paused || delay_behavior == "auto") {
 			get_current_content();
 			increment_current_node_position();
 		}

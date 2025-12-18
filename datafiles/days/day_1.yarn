@@ -22,7 +22,7 @@ Stella[Dream]: You're not going to be alone anymore.
 Stella[Dream]: It's so, so hard to keep living, but I'd like it if you tried.
 Stella[Dream]: I'd like it... if both of us did.
 Stella[Dream]: So, let's get going, it's a long road.
-<<delay 1 "next">>
+<<auto 1>>
 [Dream]: _
 <<jump Day1Cafe>>
 ===
@@ -33,7 +33,7 @@ day: 1
 ---
 <<background "bg_cafe">>
 <<play "music" "nostalgia">>
-<<delay 1 "next">>
+<<auto 1>>
 _
 <<show "stella" "left">>
 <<show "azalea" "right">>
@@ -45,7 +45,7 @@ Azalea: You're good, it's not like you're sleeping in *my* cafe after closing ti
 Azalea: I've only been keeping an eye on you, and that's easy to do while I'm here caring for the plants anyways.
 Stella: Oh. You didn't have to do that.
 Azalea: Probably not, with this city being so safe, and you being... you. But still, it doesn't feel quite right leaving a friend alone in public while they're totally passed out.
-<<delay 2.5 "next">>
+<<auto>>
 Stella[Awkward]: . . .
 Stella: A friend?
 Azalea: Yes, obviously.
