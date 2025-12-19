@@ -31,14 +31,14 @@ function test_printed_dialogue_line_count() {
 
 	array_foreach(_lines, function(_line, _i) {
 		_line = string_trim(_line);
-        
-        if (string_starts_with(_line, "<") || string_starts_with(_line, "-")) {
-            return;
-        }
-        
+
+		if (string_starts_with(_line, "<") || string_starts_with(_line, "-")) {
+			return;
+		}
+
 		var _name = "";
 		var _data = "";
-        
+
 		var _split = string_split(_line, ": ", true);
 		if (array_length(_split) > 1) {
 			_name = _split[0];
@@ -49,9 +49,9 @@ function test_printed_dialogue_line_count() {
 				_data = _split2[1];
 			}
 		}
-        
+
 		var _character = get_character(_name, _data);
-        
+
 		var _printed_line_count = scribble(
 			$"{_character.prefix}{_line}{_character.suffix}"
 		)

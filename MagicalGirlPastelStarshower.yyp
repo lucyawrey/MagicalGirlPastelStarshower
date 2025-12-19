@@ -678,6 +678,7 @@
     {"id":{"name":"snd_woosh","path":"sounds/snd_woosh/snd_woosh.yy",},},
     {"id":{"name":"scribble_fallback_bulletpoint","path":"sprites/scribble_fallback_bulletpoint/scribble_fallback_bulletpoint.yy",},},
     {"id":{"name":"spr_azalea_map","path":"sprites/spr_azalea_map/spr_azalea_map.yy",},},
+    {"id":{"name":"spr_azalea","path":"sprites/spr_azalea/spr_azalea.yy",},},
     {"id":{"name":"spr_bg_cafe","path":"sprites/spr_bg_cafe/spr_bg_cafe.yy",},},
     {"id":{"name":"spr_bg_street_1","path":"sprites/spr_bg_street_1/spr_bg_street_1.yy",},},
     {"id":{"name":"spr_box_classic","path":"sprites/spr_box_classic/spr_box_classic.yy",},},

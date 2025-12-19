@@ -8,20 +8,22 @@ resumedThisTick = false;
 // Set autosave alarm
 alarm[0] = global.autosave_interval;
 
-// Set game pause function alarms
+// Set game pause alarm
 alarm[1] = 0;
+// set game resumed this tick alarm
 alarm[2] = 0;
 
 // Method definitions
-function pause(time_in_seconds = -1) {
+function pause(time = -1, mode = "second") {
+	var _factor = mode == "step" ? 1 : 60;
 	paused = true;
-	if (time_in_seconds > 0) {
-		alarm[1] = time_in_seconds * 60;
+	if (time > 0) {
+		alarm[1] = time * _factor;
 	}
 }
 
 function unpause() {
-	alarm[1] = 1;
+	alarm[1] = 2;
 }
 
 // Create Dialogue Manager Object

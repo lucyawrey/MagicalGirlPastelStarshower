@@ -5,24 +5,25 @@ day: 1
 <<hide>>
 <<background "none">>
 <<play "music" "dream">>
-You float formless in the space between.
-It is quiet. It is comfortable. It is vast beyond even your comprehension.
-And it is empty.
-You are alone. You have been alone for a very long time.
-You drift as you always have, for what might have been eons or an instant.
-Then, you observe a tiny mote of light floating in that eternal void.
-It feels familiar. It feels warm.
-You reach out to touch it.
-Light.
-Blinding.
-The void becomes everything all at once and then—
+[Dream]: You float formless in the space between.
+[Dream]: It is quiet. It is comfortable. It is vast beyond even your comprehension.
+[Dream]: And it is empty.
+[Dream]: You are alone. You have been alone for a very long time.
+[Dream]: You drift as you always have, for what might have been eons or an instant.
+[Dream]: Then, you observe a tiny mote of light floating in that eternal void.
+[Dream]: It feels familiar. It feels warm.
+[Dream]: You reach out to touch it.
+[Dream]: Light.
+[Dream]: Blinding.
+[Dream]: The void becomes everything all at once and then—
 Stella[Dream]: Hey.
 Stella[Dream]: It's going to be alright.
 Stella[Dream]: You're not going to be alone anymore.
 Stella[Dream]: It's so, so hard to keep living, but I'd like it if you tried.
 Stella[Dream]: I'd like it... if both of us did.
 Stella[Dream]: So, let's get going, it's a long road.
-<<delay 1 "clear">>
+<<auto 1>>
+[Dream]: _
 <<jump Day1Cafe>>
 ===
 
@@ -32,7 +33,8 @@ day: 1
 ---
 <<background "bg_cafe">>
 <<play "music" "nostalgia">>
-<<delay 1>>
+<<auto 1>>
+_
 <<show "stella" "left">>
 <<show "azalea" "right">>
 <<block "Azalea" "right">>
@@ -43,6 +45,8 @@ Azalea: You're good, it's not like you're sleeping in *my* cafe after closing ti
 Azalea: I've only been keeping an eye on you, and that's easy to do while I'm here caring for the plants anyways.
 Stella: Oh. You didn't have to do that.
 Azalea: Probably not, with this city being so safe, and you being... you. But still, it doesn't feel quite right leaving a friend alone in public while they're totally passed out.
+<<auto>>
+Stella[Awkward]: . . .
 Stella: A friend?
 Azalea: Yes, obviously.
 Stella: Right, sorry. Why didn't you just wake me up?

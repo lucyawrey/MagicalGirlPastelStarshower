@@ -12,18 +12,27 @@ function background(_background_name) {
 	}
 }
 
-function delay(_time_in_seconds = 1, _behavior = "stay") {
+function delay(_time_in_seconds = 1) {
 	if (obj_dialogue.loading) {
 		return;
 	}
-	obj_game.pause(_time_in_seconds);
-	if (_behavior != "next") {
-		ChatterboxWait(obj_dialogue.chatterbox);
+	if (is_numeric(_time_in_seconds)) {
+		obj_game.pause(_time_in_seconds);
+        ChatterboxWait(obj_dialogue.chatterbox);
+		obj_dialogue.delay_behavior = "delay";
 	}
-	if (_behavior == "clear") {
-		obj_dialogue.get_current_content();
+}
+
+function auto(_time_in_seconds = -1) {
+	if (obj_dialogue.loading) {
+		return;
 	}
-	obj_dialogue.delay_behavior = _behavior;
+	if (_time_in_seconds == -1) {
+		obj_game.pause();
+	} else if (is_numeric(_time_in_seconds)) {
+		obj_game.pause(_time_in_seconds);
+	}
+    obj_dialogue.delay_behavior = "auto";
 }
 
 function show(_sprite_name, _position, _y_position) {
@@ -39,9 +48,9 @@ function show(_sprite_name, _position, _y_position) {
 		if (_position == "center") {
 			_x_pos = (global.view_width * 0.3) - (sprite_get_width(_sprite) * 0.5);
 		} else if (_position == "left") {
-			_x_pos = (global.view_width * 0.1) + (sprite_get_width(_sprite) * 0.5);
+			_x_pos = (global.view_width * 0.08) + (sprite_get_width(_sprite) * 0.5);
 		} else if (_position == "right") {
-			_x_pos = (global.view_width * 0.5) - (sprite_get_width(_sprite) * 0.5);
+			_x_pos = (global.view_width * 0.7) - (sprite_get_width(_sprite) * 0.5);
 		}
 		_y_pos = 504 - sprite_get_height(_sprite);
 	} else if (is_real(_position) && is_real(_y_position)) {

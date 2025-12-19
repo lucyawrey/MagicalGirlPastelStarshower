@@ -5,8 +5,15 @@ function scribble_setup() {
 	var _typist = scribble_typist();
 	_typist.in(1, 0);
 	_typist.function_per_char(text_play_sound);
+	_typist.function_on_complete(on_typist_complete);
 	scribble_font_set_default("fnt_dialogue");
 	return _typist;
+}
+
+function on_typist_complete() {
+	if (obj_game.paused && obj_game.alarm[1] < 1 && obj_dialogue.delay_behavior == "auto") {
+		obj_game.unpause();
+	}
 }
 
 function text_play_sound(_element, _position, _typist) {
