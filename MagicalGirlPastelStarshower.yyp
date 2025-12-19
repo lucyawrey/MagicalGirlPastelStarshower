@@ -683,6 +683,7 @@
     {"id":{"name":"spr_bg_street_1","path":"sprites/spr_bg_street_1/spr_bg_street_1.yy",},},
     {"id":{"name":"spr_box_classic","path":"sprites/spr_box_classic/spr_box_classic.yy",},},
     {"id":{"name":"spr_box","path":"sprites/spr_box/spr_box.yy",},},
+    {"id":{"name":"spr_star","path":"sprites/spr_star/spr_star.yy",},},
     {"id":{"name":"spr_stella_map","path":"sprites/spr_stella_map/spr_stella_map.yy",},},
     {"id":{"name":"spr_stella","path":"sprites/spr_stella/spr_stella.yy",},},
     {"id":{"name":"spr_talk","path":"sprites/spr_talk/spr_talk.yy",},},

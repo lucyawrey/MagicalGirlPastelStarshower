@@ -57,6 +57,22 @@ if (!is_undefined(current_character.background)) {
 	}
 }
 
+// Text advance icon
+if (typist.get_state() == 1 && !obj_game.paused && current_text != "") {
+	var _offset = get_offset_for_rotation(spr_star, advance_icon_rotation, 0.5);
+	draw_sprite_ext(
+		spr_star,
+		0,
+		global.view_width - 100 - _offset.x,
+		global.view_height - 60 - _offset.y,
+		0.5,
+		0.5,
+		advance_icon_rotation,
+		c_white,
+		1
+	);
+}
+
 // Text
 spacer = 40;
 gx = 108;

@@ -54,3 +54,5 @@ if (visible && !obj_game.paused) {
 		}
 	}
 }
+
+advance_icon_rotation = (advance_icon_rotation - 1.5) % 360;

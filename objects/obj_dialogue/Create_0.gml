@@ -19,12 +19,14 @@ is_new_node = false;
 delay_behavior = "";
 gx = 0;
 gy = 0;
+advance_icon_rotation = 0;
 
 // Method definitions
 function continue_on() {
 	if (ChatterboxIsStopped(chatterbox)) {
 		visible = false;
 	} else if (ChatterboxIsWaiting(chatterbox)) {
+		show_advance_icon = false;
 		ChatterboxContinue(chatterbox);
 		if (current_state == DIALOGUE_STATE.OPTION) {
 			current_state = DIALOGUE_STATE.TEXT;

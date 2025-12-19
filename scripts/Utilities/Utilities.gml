@@ -42,3 +42,13 @@ function add_prefix(_base_str, _prefix_str) {
 		return _prefix_str + _base_str;
 	}
 }
+
+function get_offset_for_rotation(_sprite, _angle, _scale = 2) {
+	var _w = sprite_get_width(_sprite) * _scale;
+	var _h = sprite_get_height(_sprite) * _scale;
+
+	return {
+		x: sqrt(power(_w, 2) + power(_h, 2)) / 2 * dcos(-_angle + darctan(_h / _w)),
+		y: sqrt(power(_w, 2) + power(_h, 2)) / 2 * dsin(-_angle + darctan(_h / _w)),
+	};
+}
