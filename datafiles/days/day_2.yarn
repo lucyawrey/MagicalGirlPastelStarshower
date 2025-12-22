@@ -94,11 +94,15 @@ Stella: Would I like any... bird seed?
 Olivia[?]: You fly, don't you?
 -> Eat Bird Seed
     Stella[Narrator] They taste like completely normal sunflower seeds.
+    Stella: Thanks, hehe.
 -> Do Not
     You do not eat any bird seed...
 -> Explain That You Technically Do Not Fly
     Stella: I don't. Fly I mean.
     Stella: Technically.
+    Stella: It's more like I use raw magical power to fling myself through the air like a slingshot.
+    Stella: But uh, close enough.
+Stella: Anyways, I need to get to work!
 <<jump Day2Cafe>>
 ===
 
