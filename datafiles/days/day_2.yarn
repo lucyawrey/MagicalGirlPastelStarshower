@@ -4,7 +4,10 @@ day: 2
 ---
 <<background "none">>
 <<play "music" "dream">>
-TODO - Add spooky dream text here.
+[Dream]: You see them, falling, one by one.
+[Dream]: Until only you remain.
+Stella[Dream]: I don't want to see this again.
+[Dream]: And you wake.
 
 <<jump Day2Morning>>
 ===
@@ -57,8 +60,8 @@ Stella[Narrator]: And for a joyful moment, I experienced complete freefall. I kn
 Stella[Narrator]: Still, I love it, these seconds with the wind rushing through my hair.
 Stella[Narrator]: Halfway down, I flex my magic in a burst of light, color, and emotion.
 Stella[Narrator]: For just a moment, I am my truest self, clad in a beautiful gown of whites, blues and yellows.
-<<play "music" "power_of_the_wind">>
 <<play "sound" "land">>
+<<play "music" "power_of_the_wind">>
 Stella[Narrator]: And then I hit the ground. The nearby birds scatter.
 Stella[Narrator]: The impact is hard enough that I feel it, yet soft enough that the pavement is undamaged.
 Stella[Narrator]: And then my truest self is gone, motes of magic dissipating in the transformation's wake.
@@ -110,6 +113,10 @@ title: Day2Cafe
 location: cafe
 day: 2
 ---
+<<background "none">>
+<<pause>>
+Thank you for playing! The next portion of the game is not ready for testing yet!
+
 Stella[Narrator]: The bell rings as I open the cafe door. It looks different in the light.
 Stella[Narrator]: There's no one in the front of the house, so I take a seat at a table to wait.
 Stella[Narrator]: It only takes a few moments before Gio comes out from the kitchen wearing a coffee stained apron and a smile.
