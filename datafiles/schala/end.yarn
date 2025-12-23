@@ -1,0 +1,9 @@
+title: End
+location: end
+day: infinity
+---
+[Dream]: The End.
+<<auto 1>>
+[Dream]: _
+<<game_end>>
+===

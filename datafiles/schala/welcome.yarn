@@ -1,0 +1,11 @@
+title: Welcome
+location: simulation
+day: infinity
+---
+<<hide>>
+<<background "none">>
+<<play "music" "dream">>
+[Dream]: Welcome.
+
+<<jump End>>
+===

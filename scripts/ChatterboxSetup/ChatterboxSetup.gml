@@ -5,6 +5,7 @@ function chatterbox_setup() {
 	ChatterboxNodeChangeCallback(on_node_change);
 	ChatterboxVariableSetCallback(on_chatterbox_variable_set);
 
+    ChatterboxAddFunction("game_end", game_end);
 	ChatterboxAddFunction("background", background);
 	ChatterboxAddFunction("show", show);
 	ChatterboxAddFunction("hide", hide);
