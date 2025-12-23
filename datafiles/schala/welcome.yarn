@@ -5,7 +5,20 @@ day: infinity
 <<hide>>
 <<background "none">>
 <<play "music" "dream">>
-[Dream]: Welcome.
+[Dream]: Welcome, Schala.
+[Dream]: Please, relax.
+[Dream]: Focus on the screen in front of you.
+<<auto>>
+[Awkward]: . . . . . .
+<<delay 1>>
+[Dream]: Thank you.
+[Dream]: Now.
+[Dream]: Please be aware following experience must be completed in a single sitting.
+[Dream]: No progress will be saved on this device.
+[Dream]: The only thing that will be changed by the simulation is you.
+[Dream]: Do you understand?
+-> Yes
+-> No
 
 <<jump End>>
 ===
