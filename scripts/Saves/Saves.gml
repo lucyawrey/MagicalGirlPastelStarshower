@@ -1,4 +1,6 @@
 function save_game() {
+    // Disable save.
+    return;
 	if (global.state.shared.developer_mode) {
 		exit;
 	}
@@ -36,6 +38,8 @@ function save_game() {
 }
 
 function load_game() {
+    // Disable load
+    return;
 	if (file_exists(global.shared_path)) {
 		var _shared_json = read_text_from_file_by_filename(global.shared_path);
 		global.state.shared = json_parse(_shared_json);
