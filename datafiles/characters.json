@@ -12,45 +12,20 @@
         "background": "box"
     },
     "Narrator": {
+        "name": ""
+    },
+    "Sim": {
         "name": "",
+        "background": ""
+    },
+    "Lucy": {
+        "name_color": "#a8323a",
         "variants": {
-            "Dream": {
+            "Sim": {
+                "name": "",
                 "background": ""
             }
         }
-    },
-    "Stella": {
-        "name_color": "#e3e06f",
-        "variants": {
-            "Dream": {
-                "name": "",
-                "text_color:": "#e3e06f",
-                "background": ""
-            },
-            "Narrator": {
-                "name": "",
-                "text_color:": "#e3e06f",
-                "prefix:": "(",
-                "suffix:": ")"
-            }
-        }
-    },
-    "Azalea": {
-        "name_color": "#1fad46"
-    },
-    "Gio": {
-        "name_color": "#8a3812"
-    },
-    "Olivia": {
-        "name_color": "#917263",
-        "variants": {
-            "?": {
-                "name": "Bird Caretaker"
-            }
-        }
-    },
-    "Evie": {
-        "name_color": "#0a940a"
     },
     "[Awkward]": {
         "text_speed": 0.05,

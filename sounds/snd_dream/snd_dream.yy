@@ -7,10 +7,10 @@
   },
   "bitDepth":1,
   "channelFormat":0,
-  "compression":1,
+  "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":232.72728,
+  "duration":46.328163,
   "exportDir":"",
   "name":"snd_dream",
   "parent":{
@@ -22,5 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"snd_dream.mp3",
-  "volume":0.5,
+  "volume":0.6,
 }

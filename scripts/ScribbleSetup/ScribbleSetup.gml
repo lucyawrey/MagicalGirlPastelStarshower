@@ -18,6 +18,10 @@ function on_typist_complete() {
 
 function text_play_sound(_element, _position, _typist) {
 	var _current_char = string_char_at(obj_dialogue.current_text, _position);
+    if (_typist.get_state() >= 1) {
+        global.typist_sound_clock = 0;
+        return;
+    }
 	if (_typist.get_skip() || _current_char == " ") {
 		return;
 	}
@@ -26,7 +30,7 @@ function text_play_sound(_element, _position, _typist) {
 			obj_dialogue.current_character.sound,
 			1,
 			false,
-			0.5,
+			0.6,
 			undefined,
 			obj_dialogue.current_character.sound_pitch
 		);

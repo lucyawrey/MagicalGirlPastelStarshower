@@ -5,20 +5,43 @@ day: infinity
 <<hide>>
 <<background "none">>
 <<play "music" "dream">>
-[Dream]: Welcome, Schala.
-[Dream]: Please, relax.
-[Dream]: Focus on the screen in front of you.
+Sim: Use the [\#00AEF0][[Space Bar][/] on your keyboard to advance.
+Sim: You will make choices using the number keys [\#00AEF0][[1][/], [\#00AEF0][[2][/], and [\#00AEF0][[3][/].
+Sim: Now.
+<<auto 1>>
+Sim: _
+Sim: Welcome, Player.
+Sim: Please, relax.
+Sim: Focus on the screen in front of you.
 <<auto>>
-[Awkward]: . . . . . .
-<<delay 1>>
-[Dream]: Thank you.
-[Dream]: Now.
-[Dream]: Please be aware following experience must be completed in a single sitting.
-[Dream]: No progress will be saved on this device.
-[Dream]: The only thing that will be changed by the simulation is you.
-[Dream]: Do you understand?
--> Yes
--> No
+Sim[Awkward]: . . . . .
+<<delay 0.2>>
+Sim: Thank you.
+Sim: Please be aware following experience must be completed in a single sitting.
+Sim: No progress will be saved on this device.
+Sim: The only thing that will be changed by the simulation is you.
+<<jump Understand>>
+===
 
+title: Understand
+location: simulation
+day: infinity
+---
+Sim: Do you understand?
+-> Yes
+    Sim: Good.
+    <<jump Understood>>
+-> No
+    <<auto>>
+    Sim[Awkward]: . . . . .
+    <<delay 0.2>>
+    <<jump Understand>>
+===
+
+title: Understood
+location: simulation
+day: infinity
+---
+Now, we will continue the experience.
 <<jump End>>
 ===
