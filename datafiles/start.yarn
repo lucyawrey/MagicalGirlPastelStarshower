@@ -3,5 +3,6 @@ location: start
 day: 0
 ---
 <<set $runs_completed to 0>>
+<<set $wrongs to 0>>
 <<jump Welcome>>
 ===
