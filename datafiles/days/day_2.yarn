@@ -58,8 +58,9 @@ day: 2
 Stella[Narrator]: I fall through the air.
 Stella[Narrator]: And for a joyful moment, I experienced complete freefall. I know the drop is only seventy floors or so, so this feeling won't last long.
 Stella[Narrator]: Still, I love it, these seconds with the wind rushing through my hair.
-Stella[Narrator]: Halfway down, I flex my magic in a burst of light, color, and emotion.
-Stella[Narrator]: For just a moment, I am my truest self, clad in a beautiful gown of whites, blues and yellows.
+Stella[Narrator]: Halfway down I flex my magic and whisper a word of power.
+Stella[Narrator]: There is a burst of light, color, and emotion.
+Stella[Narrator]: And for just a moment, I am my truest self, clad in a beautiful dress of whites, blues and yellows.
 <<play "sound" "land">>
 <<play "music" "power_of_the_wind">>
 Stella[Narrator]: And then I hit the ground. The nearby birds scatter.
@@ -103,7 +104,7 @@ Olivia[?]: You fly, don't you?
 -> Explain That You Technically Do Not Fly
     Stella: I don't. Fly I mean.
     Stella: Technically.
-    Stella: It's more like I use raw magical power to fling myself through the air like a slingshot.
+    Stella: It's more like I use a sequence of basic spells to convert raw magical power into force in order to fling myself through the air like a slingshot.
     Stella: But uh, close enough.
 Stella: Anyways, I need to get to work!
 <<jump Day2Cafe>>
