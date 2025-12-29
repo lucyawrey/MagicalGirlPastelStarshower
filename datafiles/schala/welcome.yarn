@@ -43,6 +43,25 @@ title: Understood
 location: simulation
 day: infinity
 ---
-Now, we will continue the experience.
-<<jump End>>
+Sim: Now, we will continue the experience.
+Sim: Loading mind control module.
+Module loaded.
+<<jump Cute>>
+===
+title: Cute
+location: simulation
+day: infinity
+---
+Please confirm that you, "Schala", are extremely cute.
+-> I Am Extremely Cute
+    Correct.
+    Thank you.
+    Mind control will continue in a later episode.
+    We are out of time.
+    Lucy: Love you!
+    <<jump End>>
+-> No
+    <<set $wrongs to $wrongs + 1>>
+    <<delay 0.2>>
+    <<jump Cute>>
 ===
