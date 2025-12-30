@@ -89,7 +89,7 @@ Olivia[?]: Morning dearie. You sure gave them a fright.
 Stella[Narrator]: She chuckles, looking towards where the birds circling overhead. 
 Stella: Sorry about that.
 Olivia[?]: It's alright, they'll be back. To be honest I don't think they'd even leave me alone if I wanted them to at this point.
-Stella: That's the life you've earned I suppose. I don't think you're even supposed to be feeding them.
+Stella: I suppose that is the fate you've earned. I don't think you're even supposed to be feeding them.
 Olivia[?]: What are you, a cop?
 Stella: I try my very best not to be.
 Olivia[?]: Good. I only feed them seeds, anyway, since I heard bread isn't any good for them.
@@ -97,15 +97,16 @@ Olivia[?]: Would you like any?
 Stella: Would I like any... bird seed?
 Olivia[?]: You fly, don't you?
 -> Eat Bird Seed
-    Stella[Narrator] They taste like completely normal sunflower seeds.
-    Stella: Thanks, hehe.
+    Stella[Narrator]: They taste like completely normal sunflower seeds. I can't help but laugh.
+    Stella: Thanks.
 -> Do Not
-    You do not eat any bird seed...
+    Stella[Narrator] I do do not eat any bird seed.
+    Stella: Thank you? But no.
 -> Explain That You Technically Do Not Fly
     Stella: I don't. Fly I mean.
     Stella: Technically.
     Stella: It's more like I use a sequence of basic spells to convert raw magical power into force in order to fling myself through the air like a slingshot.
-    Stella: But uh, close enough.
+    Stella: But the details are probably... not interesting to you.
 Stella: Anyways, I need to get to work!
 <<jump Day2Cafe>>
 ===
