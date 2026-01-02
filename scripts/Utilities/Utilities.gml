@@ -9,9 +9,9 @@ function struct_merge(_destination, _source) {
 }
 
 function reset_game_state() {
-    global.state.save_slot = global.initial_state.save_slot;
-    touch_slot();
-    save_game();
+	global.state.save_slot = global.initial_state.save_slot;
+	touch_slot();
+	save_game();
 }
 
 function struct_get_merged_value(_structs, _name) {

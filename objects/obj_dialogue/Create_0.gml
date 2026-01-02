@@ -20,6 +20,7 @@ delay_behavior = "";
 gx = 0;
 gy = 0;
 advance_icon_rotation = 0;
+draw_fullscreen = false;
 
 // Method definitions
 function continue_on() {

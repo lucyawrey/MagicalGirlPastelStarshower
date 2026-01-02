@@ -4,7 +4,7 @@ function debug_create() {
 
 function debug_step() {
 	if (keyboard_check_pressed(vk_escape)) {
-        reset_game_state();
+		reset_game_state();
 		obj_game.alarm[3] = 1;
 	}
 }

@@ -21,7 +21,7 @@ function text_play_sound(_element, _position, _typist) {
 	if (_typist.get_skip() || _current_char == " ") {
 		return;
 	}
-    var _rand_pitch = random_range(-0.2, 0.2);
+	var _rand_pitch = random_range(-0.2, 0.2);
 	if (global.typist_sound_clock >= obj_dialogue.current_character.sound_spacing) {
 		audio_play_sound(
 			obj_dialogue.current_character.sound,

@@ -15,7 +15,21 @@ if (!is_undefined(current_background_sprite)) {
 	draw_sprite_stretched(_bg_box_border, 0, gx, _gutter, _box_width, _bg_box_height);
 }
 
-if (!is_undefined(current_background_sprite)) {
+if (draw_fullscreen) {
+	if (is_undefined(current_background_sprite)) {
+        draw_set_colour(c_black);
+		draw_rectangle(0, 0, global.view_width, global.view_height, false);
+	} else {
+		draw_sprite_stretched(
+			current_background_sprite,
+			0,
+			0,
+			0,
+			global.view_width,
+			global.view_height
+		);
+	}
+} else if (!is_undefined(current_background_sprite)) {
 	draw_sprite_stretched(
 		current_background_sprite,
 		0,
