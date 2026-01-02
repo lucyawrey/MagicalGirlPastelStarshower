@@ -118,6 +118,7 @@ day: 2
 <<background "none">>
 <<pause>>
 Thank you for playing! The next portion of the game is not ready for testing yet!
+<<end_game>>
 
 Stella[Narrator]: The bell rings as I open the cafe door. It looks different in the light.
 Stella[Narrator]: There's no one in the front of the house, so I take a seat at a table to wait.

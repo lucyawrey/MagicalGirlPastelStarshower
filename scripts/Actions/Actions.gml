@@ -113,3 +113,8 @@ function input(_variable_name) {
 	keyboard_lastchar = "";
 	obj_dialogue.current_input_variable = _variable_name;
 }
+
+function end_game() {
+    reset_game_state();
+    game_end();
+}
