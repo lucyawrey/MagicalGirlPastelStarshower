@@ -1,8 +1,4 @@
 function save_game() {
-	if (state.shared.developer_mode) {
-		exit;
-	}
-
 	obj_game.alarm[0] = global.autosave_interval;
 
 	if (state.shared_is_touched) {
@@ -23,14 +19,6 @@ function save_game() {
 		var _number_string = string(state.shared.active_save_slot_id);
 		var _filename = global.slot_path + _number_string + global.json_ext;
 		write_text_to_file_by_filename(_filename, _save_slot_json);
-		state.shared_is_touched = false;
-	}
-
-	if (state.player_is_touched) {
-		var _player_json = json_stringify(state.player);
-		var _number_string = string(state.shared.active_player_id);
-		var _filename = global.player_path + _number_string + global.json_ext;
-		write_text_to_file_by_filename(_filename, _player_json);
 		state.shared_is_touched = false;
 	}
 }
@@ -60,20 +48,11 @@ function load_game() {
 		touch_slot();
 	}
 
-	var _player_number_string = string(state.shared.active_player_id);
-	var _player_filename = global.player_path + _player_number_string + global.json_ext;
-	if (file_exists(_player_filename)) {
-		var _player_json = read_text_from_file_by_filename(_player_filename);
-		state.player = json_parse(_player_json);
-	} else {
-		touch_player();
-	}
-
 	load_chatterbox_variables_from_state();
 	save_game();
 }
 
-function switch_slot(_slot_number, _update_player = true) {
+function switch_slot(_slot_number) {
 	if (_slot_number >= global.available_save_slots) {
 		return;
 	}
@@ -86,31 +65,7 @@ function switch_slot(_slot_number, _update_player = true) {
 	save_game();
 	state.save_slot = variable_clone(initial_state.save_slot);
 	load_game();
-	if (_update_player && state.save_slot.player_id != -1) {
-		switch_player(state.save_slot.player_id);
-	}
 	ChatterboxVariablesResetAll();
-}
-
-function switch_player(_player_id) {
-	if (_player_id >= global.available_player_slots) {
-		return;
-	}
-	if (state.shared.active_player_id == _player_id) {
-		return;
-	}
-	save_game();
-	state.shared.active_player_id = _player_id;
-	touch_shared();
-	save_game();
-	state.player = variable_clone(initial_state.player);
-	load_game();
-}
-
-function switch_player_new() {
-	var _player_count = state.shared.player_count;
-	state.shared.player_count++;
-	switch_player(_player_count);
 }
 
 function write_text_to_file_by_filename(_filename, _text) {
@@ -138,18 +93,8 @@ function touch_slot() {
 	state.save_slot_is_touched = true;
 }
 
-function touch_player() {
-	state.player_is_touched = true;
-}
-
-function get(_name) {
-	if (string_starts_with(_name, "player_")) {
-		_name = string_delete(_name, 1, 7);
-		if (array_contains(global.player_base_variables, _name)) {
-			return struct_get(state.player, _name);
-		}
-		return struct_get(state.player.data, _name);
-	} else if (string_starts_with(_name, "secret_")) {
+function get(_name) { 
+    if (string_starts_with(_name, "secret_")) {
 		_name = string_delete(_name, 1, 7);
 		return struct_get(state.secret.data, _name);
 	} else {
@@ -161,9 +106,7 @@ function get(_name) {
 }
 
 function set(_name, _value) {
-	if (string_starts_with(_name, "player_")) {
-		ChatterboxVariableSet(_name, _value);
-	} else if (string_starts_with(_name, "secret_")) {
+    if (string_starts_with(_name, "secret_")) {
 		ChatterboxVariableSet(_name, _value);
 	} else {
 		ChatterboxVariableSet(_name, _value);
@@ -175,22 +118,16 @@ function load_chatterbox_variables_from_state() {
 	array_foreach(global.slot_base_variables, function(_name) {
 		struct_set(import, _name, struct_get(state.save_slot, _name));
 	});
-	array_foreach(global.player_base_variables, function(_name) {
-		struct_set(import, "player_" + _name, struct_get(state.player, _name));
-	});
 	struct_foreach(state.secret.data, function(_name, _value) {
 		struct_set(import, "secret_" + _name, _value);
 	});
 	struct_foreach(state.save_slot.data, function(_name, _value) {
 		struct_set(import, _name, _value);
 	});
-	struct_foreach(state.player.data, function(_name, _value) {
-		struct_set(import, "player_" + _name, _value);
-	});
-	struct_foreach(state.player.visited_nodes, function(_name, _value) {
+	struct_foreach(state.save_slot.visited_nodes, function(_name, _value) {
 		struct_set(import, "visited(default:" + _name + ")", _value);
 	});
-	struct_foreach(get_pronoun_list(state.player.gender_pronouns), function(
+	struct_foreach(get_pronoun_list(state.save_slot.gender_pronouns), function(
 		_name,
 		_value
 	) {
@@ -201,22 +138,14 @@ function load_chatterbox_variables_from_state() {
 }
 
 function on_chatterbox_variable_set(_name, _value) {
-	if (string_starts_with(_name, "player_gender_pronoun_")) {
+	if (string_starts_with(_name, "gender_pronoun_")) {
 		return;
 	}
 	if (string_starts_with(_name, "visited(default:")) {
-		touch_player();
+		touch_slot();
 		_name = string_delete(_name, 1, 16);
 		_name = string_delete(_name, string_length(_name), 1);
-		struct_set(state.player.visited_nodes, _name, _value);
-	} else if (string_starts_with(_name, "player_")) {
-		touch_player();
-		_name = string_delete(_name, 1, 7);
-		if (array_contains(global.player_base_variables, _name)) {
-			struct_set(state.player, _name, _value);
-		} else {
-			struct_set(state.player.data, _name, _value);
-		}
+		struct_set(state.save_slot.visited_nodes, _name, _value);
 	} else if (string_starts_with(_name, "secret_")) {
 		touch_secret();
 		_name = string_delete(_name, 1, 7);

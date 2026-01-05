@@ -17,7 +17,7 @@ if (!is_undefined(current_background_sprite)) {
 
 if (draw_fullscreen) {
 	if (is_undefined(current_background_sprite)) {
-        draw_set_colour(c_black);
+		draw_set_colour(c_black);
 		draw_rectangle(0, 0, global.view_width, global.view_height, false);
 	} else {
 		draw_sprite_stretched(

@@ -4,11 +4,8 @@ day: 0
 ---
 <<set $id to 0>>
 <<set $runs_completed to 0>>
-
-<<set $player_id to 0>>
-<<set $player_name to "">>
-<<set $player_runs_completed to 0>>
-
+<<set $name to "">>
 <<set $mood to -2>>
+
 <<jump Day1Dream>>
 ===

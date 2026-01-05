@@ -36,7 +36,7 @@ function get_pronoun_list(_pronouns) {
 	out = {};
 	var _list = struct_get(global.pronoun_map, _pronouns);
 	array_foreach(_list, function(_item, _i) {
-		struct_set(out, "player_gender_pronoun_" + string(_i), _item);
+		struct_set(out, "gender_pronoun_" + string(_i), _item);
 	});
 	return out;
 }
