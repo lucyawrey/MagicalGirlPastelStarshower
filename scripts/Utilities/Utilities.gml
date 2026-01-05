@@ -8,12 +8,6 @@ function struct_merge(_destination, _source) {
 	});
 }
 
-function reset_game_state() {
-	state.save_slot = initial_state.save_slot;
-	touch_slot();
-	save_game();
-}
-
 function struct_get_merged_value(_structs, _name) {
 	for (var _i = array_length(_structs) - 1; _i >= 0; _i--) {
 		var _item = _structs[_i];
@@ -57,4 +51,8 @@ function get_offset_for_rotation(_sprite, _angle, _scale = 2) {
 		x: sqrt(power(_w, 2) + power(_h, 2)) / 2 * dcos(-_angle + darctan(_h / _w)),
 		y: sqrt(power(_w, 2) + power(_h, 2)) / 2 * dsin(-_angle + darctan(_h / _w)),
 	};
+}
+
+function game_soft_restart() {
+    obj_game.alarm[3] = 1;
 }
