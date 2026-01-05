@@ -2,10 +2,6 @@
 base_character_name = "Base";
 default_character_name = "Narrator";
 
-// Characters state
-characters = {};
-characters_cache = {};
-
 // Gender constants
 player_form = {androgynous: "androgynous", feminine: "feminine", masculine: "masculine"};
 player_pronouns = {

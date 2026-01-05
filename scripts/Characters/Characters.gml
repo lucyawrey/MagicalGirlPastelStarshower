@@ -1,3 +1,7 @@
+// Characters global state
+characters = {};
+characters_cache = {};
+
 function get_character(_character_name = "", _character_data = "") {
 	if (_character_name == "") {
 		_character_name = global.default_character_name;
