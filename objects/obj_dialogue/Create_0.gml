@@ -17,8 +17,6 @@ current_input_variable = "";
 loading = false;
 is_new_node = false;
 delay_behavior = "";
-gx = 0;
-gy = 0;
 advance_icon_rotation = 0;
 draw_fullscreen = false;
 

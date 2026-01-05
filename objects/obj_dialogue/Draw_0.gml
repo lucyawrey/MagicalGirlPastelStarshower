@@ -8,9 +8,6 @@ var _NAME_PADDING = 25;
 
 var _BACKGROUND_VIEW_PERCENT = 0.7;
 
-gx = _MARGIN_Y * 3;
-gy = global.view_height * 0.7;
-
 draw_background(_MARGIN_X, _MARGIN_Y, _BACKGROUND_VIEW_PERCENT);
 draw_textbox(_MARGIN_X, _MARGIN_Y, 1 - _BACKGROUND_VIEW_PERCENT);
 draw_characters();
@@ -161,13 +158,13 @@ function draw_options(_textbox_x, _textbox_y, _textbox_w) {
 	}
 	var _padding_x = 48;
 	var _padding_y = 34;
-	var _x = _textbox_x + _padding_x;
-	var _y = _textbox_y + _padding_y;
+	option_x = _textbox_x + _padding_x; // Function scoped to allow passing to array_foreach
+	option_y = _textbox_y + _padding_y; // Function scoped to allow passing to array_foreach
 
 	array_foreach(current_options, function(_option, _i) {
 		var _option_scribble = scribble($"[#999999]{_i + 1}.[/] {_option.text}");
-		_option_scribble.draw(_x, _y);
-		_y += 40;
+		_option_scribble.draw(option_x, option_y);
+		option_y += 40;
 	});
 }
 

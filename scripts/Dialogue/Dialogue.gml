@@ -7,7 +7,7 @@ function show_dialogue(_node, _node_position = 0, _option_queue = []) {
 	ChatterboxJump(obj_dialogue.chatterbox, _node);
 
 	if (_node_position > 0) {
-		skip_to_position(_node_position, _option_queue);
+		move_to_node_position(_node_position, _option_queue);
 	}
 
 	obj_dialogue.get_current_content();
@@ -21,7 +21,7 @@ function hide_dialogue() {
 	}
 }
 
-function skip_to_position(_node_position, _option_queue) {
+function move_to_node_position(_node_position, _option_queue) {
 	var _option_queue_index = 0;
 	repeat (_node_position) {
 		if (ChatterboxIsStopped(obj_dialogue.chatterbox)) {
@@ -45,9 +45,11 @@ function increment_current_node_position() {
 }
 
 function on_node_change(_old_node, _new_node, _action) {
-	state.save.current_node_position = 0;
-	state.save.current_node_option_queue = [];
-	state.save.current_node = _new_node;
+    if (state.save.current_node != _new_node) {
+        state.save.current_node_position = 0;
+        state.save.current_node_option_queue = [];
+        state.save.current_node = _new_node;
+    }
 	touch_save();
 	obj_dialogue.is_new_node = true;
 }
