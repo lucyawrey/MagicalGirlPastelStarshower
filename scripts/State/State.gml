@@ -19,7 +19,7 @@ state_ = {
 		data: {},
 	},
 	/* game_data/save_shared.json */
-	shared: {active_save_id: 0},
+	shared: {active_save_id: 0, developer_mode: false},
 	/* game_data/internal.dat */
 	secret: {save_file_hashes: {}, data: {}},
 };
