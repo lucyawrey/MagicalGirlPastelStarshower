@@ -76,6 +76,8 @@ function draw_textbox(_margin_x, _margin_y, _view_height_percent) {
 
 	draw_textbox_background(_x, _y, _w, _h);
 	draw_speaker_name(_x, _y, _w, 28, 28);
+	draw_dialogue(_x, _y, _w);
+	draw_options(_x, _y, _w);
 }
 
 function draw_textbox_background(_x, _y, _w, _h) {
@@ -93,6 +95,8 @@ function draw_textbox_background(_x, _y, _w, _h) {
 function draw_speaker_name(_textbox_x, _textbox_y, _textbox_w, _speaker_padding, _speaker_margin) {
 	if (is_undefined(current_character.background)) return;
 	if (current_character.name == "") return;
+	if (current_state != DIALOGUE_STATE.TEXT) return;
+
 	var _name_scribble = scribble($"[{current_character.name_color}]{current_character.name}");
 	var _speaker_w = _name_scribble.get_width();
 	var _speaker_h = _name_scribble.get_height();
@@ -124,21 +128,33 @@ function draw_speaker_name(_textbox_x, _textbox_y, _textbox_w, _speaker_padding,
 	);
 }
 
-function draw_text_box(_x, _y, _w, _h, _name_margin, _name_padding) {
-	
+function draw_dialogue(_textbox_x, _textbox_y, _textbox_w) {
+	if (current_state != DIALOGUE_STATE.TEXT) return;
 
-	if (current_character.name == "") return;
-	var _name_width = scribble($"{current_character.name}").get_width();
-	var _name_box_width = _name_width + _name_padding * 2;
-	var _name_pos_x = _x + _name_margin;
-	if (
-		struct_exists(current_character_blocking, current_character.id)
-		&& struct_get(current_character_blocking, current_character.id) == "right"
-	) {
-		_name_pos_x = _x + _w - _name_margin - _name_box_width;
-	}
+	var _padding_x = 48;
+	var _padding_y = 34;
+	var _x = _textbox_x + _padding_x;
+	var _y = _textbox_y + _padding_y;
+	var _w = _textbox_w - (2 * _padding_x);
 
-	
+	scribble(
+		$"[speed,{current_character.text_speed}][{current_character.text_color}]{current_character.prefix}{current_text}{current_character.suffix}"
+	)
+		.wrap(_w)
+		.draw(_x, _y, typist);
+}
+
+function draw_options(_textbox_x, _textbox_y, _textbox_w) {
+	var _padding_x = 48;
+	var _padding_y = 34;
+	var _x = _textbox_x + _padding_x;
+	var _y = _textbox_y + _padding_y;
+
+	array_foreach(current_options, function(_option, _i) {
+		var _option_scribble = scribble($"[#999999]{_i + 1}.[/] {_option.text}");
+		_option_scribble.draw(_x, _y);
+		_y += 40;
+	});
 }
 
 if (!is_undefined(current_character.background)) {
@@ -217,13 +233,13 @@ if (current_state == DIALOGUE_STATE.TEXT) {
 	// 		gy - 1.5 * spacer
 	// 	);
 	// }
-	scribble(
-		$"[speed,{current_character.text_speed}][{current_character.text_color}]{
-			current_character.prefix
-		}{current_text}{current_character.suffix}"
-	)
-		.wrap(_line_width)
-		.draw(gx, gy, typist);
+	// scribble(
+	// 	$"[speed,{current_character.text_speed}][{current_character.text_color}]{
+	// 		current_character.prefix
+	// 	}{current_text}{current_character.suffix}"
+	// )
+	// 	.wrap(_line_width)
+	// 	.draw(gx, gy, typist);
 } else if (current_state == DIALOGUE_STATE.OPTION) {
 	array_foreach(current_options, function(_option, _i) {
 		scribble($"[#999999]{_i + 1}.[/] {_option.text}").draw(gx, gy);
