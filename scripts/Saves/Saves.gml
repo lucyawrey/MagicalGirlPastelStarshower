@@ -24,7 +24,7 @@ function save_game() {
 }
 
 function load_game() {
-    var _save_slot_number_string = string(state.shared.active_save_id);
+	var _save_slot_number_string = string(state.shared.active_save_id);
 	var _slot_filename = global.save_path + _save_slot_number_string + global.json_ext;
 	if (file_exists(_slot_filename)) {
 		var _save_json = read_text_from_file_by_filename(_slot_filename);
@@ -32,7 +32,7 @@ function load_game() {
 	} else {
 		touch_save();
 	}
-    
+
 	if (file_exists(global.shared_path)) {
 		var _shared_json = read_text_from_file_by_filename(global.shared_path);
 		state.shared = json_parse(_shared_json);
@@ -62,21 +62,21 @@ function switch_slot(_save_id) {
 	save_game();
 	state.shared.active_save_id = _save_id;
 	touch_shared();
-    save_game();
+	save_game();
 	state.save = variable_clone(initial_state.save);
 	load_game();
 }
 
 function reload_chatterbox_variables() {
-    ChatterboxVariablesResetAll();
-    load_chatterbox_variables_from_state();
+	ChatterboxVariablesResetAll();
+	load_chatterbox_variables_from_state();
 }
 
 function reset_save_state() {
 	state.save = variable_clone(initial_state.save);
 	touch_save();
 	save_game();
-    load_game();
+	load_game();
 }
 
 function write_text_to_file_by_filename(_filename, _text) {
