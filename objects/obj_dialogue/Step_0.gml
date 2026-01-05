@@ -33,7 +33,7 @@ if (visible && !obj_game.paused) {
 		//If we've pressed a button, select that option
 		if (_option != undefined) {
 			ChatterboxSelect(chatterbox, _option);
-			array_push(global.state.save_slot.current_node_option_queue, _option);
+			array_push(state.save_slot.current_node_option_queue, _option);
 			current_state = DIALOGUE_STATE.TEXT;
 			get_current_content();
 			increment_current_node_position();

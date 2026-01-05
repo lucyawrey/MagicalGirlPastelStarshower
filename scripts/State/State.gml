@@ -1,4 +1,4 @@
-state = {
+state_ = {
 	first_run: false,
 	game_is_started: false,
 	shared_is_touched: false,
@@ -38,5 +38,7 @@ state = {
 		data: {},
 	},
 };
+#macro state global.state_
 
-initial_state = variable_clone(state);
+initial_state_ = variable_clone(state);
+#macro initial_state global.initial_state_

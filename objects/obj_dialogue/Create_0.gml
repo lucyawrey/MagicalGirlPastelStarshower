@@ -45,7 +45,7 @@ function continue_on() {
 function get_current_content() {
 	if (is_new_node) {
 		current_node_metadata = ChatterboxGetCurrentMetadata(chatterbox);
-		global.state.save_slot.current_location = current_node_metadata.location;
+		state.save_slot.current_location = current_node_metadata.location;
 		touch_slot();
 		save_game();
 		is_new_node = false;
