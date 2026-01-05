@@ -1,18 +1,3 @@
-function debug_create() {
-	debug_run_all_tests();
-}
-
-function debug_step() {
-	if (keyboard_check_pressed(vk_escape)) {
-		reset_save_state();
-		game_soft_restart();
-	}
-}
-
-function debug_load_chatterbox_full_text_from_buffer(_buffer) {
-	global.debug_chatterbox_full_text = buffer_read(_buffer, buffer_string);
-}
-
 function debug_run_all_tests() {
 	show_debug_message("\n-- Debug Mode Active --\n\n - Running all tests.");
 	show_debug_message("  - Running printed dialogue line count test.");

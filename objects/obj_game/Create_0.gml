@@ -40,5 +40,5 @@ load_game();
 alarm[3] = 30;
 
 if (debug_mode) {
-	debug_create();
+	debug_run_all_tests();
 }
