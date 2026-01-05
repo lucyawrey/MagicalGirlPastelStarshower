@@ -51,6 +51,7 @@ function draw_background_image(_bg_box_x, _bg_box_y, _bg_box_w, _bg_box_h, _bg_b
 	}
 
 	if (is_undefined(current_background_sprite)) {
+		if (!draw_fullscreen) return;
 		draw_set_colour(c_black);
 		draw_rectangle(_x, _y, _w, _h, false);
 		return;
