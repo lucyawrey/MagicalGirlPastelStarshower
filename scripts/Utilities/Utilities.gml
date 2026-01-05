@@ -54,5 +54,5 @@ function get_offset_for_rotation(_sprite, _angle, _scale = 2) {
 }
 
 function game_soft_restart() {
-    obj_game.alarm[3] = 1;
+	obj_game.alarm[3] = 1;
 }
