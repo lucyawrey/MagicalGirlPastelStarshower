@@ -46,11 +46,11 @@ function show(_sprite_name, _position, _y_position) {
 	var _x_scale = 1; // Set to -1 to mirror image along the x axis
 	if (is_string(_position)) {
 		if (_position == "center") {
-			_x_pos = (global.view_width * 0.3) - (sprite_get_width(_sprite) * 0.5);
+			_x_pos = (VIEW_WIDTH * 0.3) - (sprite_get_width(_sprite) * 0.5);
 		} else if (_position == "left") {
-			_x_pos = (global.view_width * 0.08) + (sprite_get_width(_sprite) * 0.5);
+			_x_pos = (VIEW_WIDTH * 0.08) + (sprite_get_width(_sprite) * 0.5);
 		} else if (_position == "right") {
-			_x_pos = (global.view_width * 0.7) - (sprite_get_width(_sprite) * 0.5);
+			_x_pos = (VIEW_WIDTH * 0.7) - (sprite_get_width(_sprite) * 0.5);
 		}
 		_y_pos = 504 - sprite_get_height(_sprite);
 	} else if (is_real(_position) && is_real(_y_position)) {

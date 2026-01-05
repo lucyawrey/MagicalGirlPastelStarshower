@@ -35,4 +35,4 @@ autosave_interval = 5 * 60;
 slot_base_variables = ["id", "name", "runs_completed", "gender_form", "gender_pronouns"];
 
 initial_state_ = variable_clone(state);
-#macro initial_state global.initial_state_
+#macro INITIAL_STATE global.INITIAL_STATE_

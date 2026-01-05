@@ -16,8 +16,8 @@ draw_text_advance_icon();
 function draw_background(_margin_x, _margin_y, _view_height_percent) {
 	var _x = _margin_x;
 	var _y = _margin_y;
-	var _w = global.view_width - _margin_x * 2;
-	var _h = (global.view_height * _view_height_percent) - (2 * _margin_y);
+	var _w = VIEW_WIDTH - _margin_x * 2;
+	var _h = (VIEW_HEIGHT * _view_height_percent) - (2 * _margin_y);
 
 	draw_background_border(_x, _y, _w, _h);
 	draw_background_image(_x, _y, _w, _h, 6);
@@ -45,8 +45,8 @@ function draw_background_image(
 	if (draw_fullscreen) {
 		_x = 0;
 		_y = 0;
-		_w = global.view_width;
-		_h = global.view_height;
+		_w = VIEW_WIDTH;
+		_h = VIEW_HEIGHT;
 	} else {
 		_x = _bg_box_x + _bg_box_thickness;
 		_y = _bg_box_y + _bg_box_thickness;
@@ -68,9 +68,9 @@ function draw_background_image(
 
 function draw_textbox(_margin_x, _margin_y, _view_height_percent) {
 	var _x = _margin_x;
-	var _w = global.view_width - _margin_x * 2;
-	var _h = (global.view_height * _view_height_percent) - _margin_y;
-	var _y = global.view_height - _h - _margin_y;
+	var _w = VIEW_WIDTH - _margin_x * 2;
+	var _h = (VIEW_HEIGHT * _view_height_percent) - _margin_y;
+	var _y = VIEW_HEIGHT - _h - _margin_y;
 
 	draw_textbox_background(_x, _y, _w, _h);
 	draw_speaker_name(_x, _y, _w, 28, 28);
@@ -194,8 +194,8 @@ function draw_text_advance_icon() {
 	draw_sprite_ext(
 		spr_star,
 		0,
-		global.view_width - 100 - _offset.x,
-		global.view_height - 60 - _offset.y,
+		VIEW_WIDTH - 100 - _offset.x,
+		VIEW_HEIGHT - 60 - _offset.y,
 		0.5,
 		0.5,
 		advance_icon_rotation,

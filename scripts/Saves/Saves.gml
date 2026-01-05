@@ -63,7 +63,7 @@ function switch_slot(_save_id) {
 	state.shared.active_save_id = _save_id;
 	touch_shared();
 	save_game();
-	state.save = variable_clone(initial_state.save);
+	state.save = variable_clone(INITIAL_STATE.save);
 	load_game();
 }
 
@@ -73,7 +73,7 @@ function reload_chatterbox_variables() {
 }
 
 function reset_save_state() {
-	state.save = variable_clone(initial_state.save);
+	state.save = variable_clone(INITIAL_STATE.save);
 	touch_save();
 	save_game();
 	load_game();
@@ -102,26 +102,6 @@ function touch_shared() {
 
 function touch_secret() {
 	state.secret_is_touched = true;
-}
-
-function get(_name) {
-	if (string_starts_with(_name, "secret_")) {
-		_name = string_delete(_name, 1, 7);
-		return struct_get(state.secret.data, _name);
-	} else {
-		if (array_contains(global.slot_base_variables, _name)) {
-			return struct_get(state.save, _name);
-		}
-		return struct_get(state.save.data, _name);
-	}
-}
-
-function set(_name, _value) {
-	if (string_starts_with(_name, "secret_")) {
-		ChatterboxVariableSet(_name, _value);
-	} else {
-		ChatterboxVariableSet(_name, _value);
-	}
 }
 
 function load_chatterbox_variables_from_state() {

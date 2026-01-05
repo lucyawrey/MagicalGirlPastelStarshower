@@ -1,2 +1,2 @@
-view_width = 1280;
-view_height = 720;
+#macro VIEW_WIDTH 1280
+#macro VIEW_HEIGHT 720
