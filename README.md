@@ -3,6 +3,7 @@ A visual novel about a Magical Girl's daily life, years after she has saved the 
 
 ## Credits
 - Lucy Awrey: Writing, Game Design, Programming, UI.
+- Laura Wenning: Additional Programming
 
 ## Setup
 
