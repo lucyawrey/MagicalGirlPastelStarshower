@@ -8,12 +8,6 @@ function struct_merge(_destination, _source) {
 	});
 }
 
-function reset_game_state() {
-	global.state.save_slot = global.initial_state.save_slot;
-	touch_slot();
-	save_game();
-}
-
 function struct_get_merged_value(_structs, _name) {
 	for (var _i = array_length(_structs) - 1; _i >= 0; _i--) {
 		var _item = _structs[_i];
@@ -36,7 +30,7 @@ function get_pronoun_list(_pronouns) {
 	out = {};
 	var _list = struct_get(global.pronoun_map, _pronouns);
 	array_foreach(_list, function(_item, _i) {
-		struct_set(out, "player_gender_pronoun_" + string(_i), _item);
+		struct_set(out, "gender_pronoun_" + string(_i), _item);
 	});
 	return out;
 }
@@ -57,4 +51,8 @@ function get_offset_for_rotation(_sprite, _angle, _scale = 2) {
 		x: sqrt(power(_w, 2) + power(_h, 2)) / 2 * dcos(-_angle + darctan(_h / _w)),
 		y: sqrt(power(_w, 2) + power(_h, 2)) / 2 * dsin(-_angle + darctan(_h / _w)),
 	};
+}
+
+function game_soft_restart() {
+    obj_game.alarm[3] = 1;
 }

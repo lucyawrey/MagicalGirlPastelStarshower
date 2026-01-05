@@ -35,20 +35,20 @@ function skip_to_position(_node_position, _option_queue) {
 			_option_queue_index++;
 		}
 	}
-	global.state.save_slot.current_node_position = _node_position;
-	touch_slot();
+	state.save.current_node_position = _node_position;
+	touch_save();
 }
 
 function increment_current_node_position() {
-	global.state.save_slot.current_node_position++;
-	touch_slot();
+	state.save.current_node_position++;
+	touch_save();
 }
 
 function on_node_change(_old_node, _new_node, _action) {
-	global.state.save_slot.current_node_position = 0;
-	global.state.save_slot.current_node_option_queue = [];
-	global.state.save_slot.current_node = _new_node;
-	touch_slot();
+	state.save.current_node_position = 0;
+	state.save.current_node_option_queue = [];
+	state.save.current_node = _new_node;
+	touch_save();
 	obj_dialogue.is_new_node = true;
 }
 

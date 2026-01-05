@@ -115,6 +115,6 @@ function input(_variable_name) {
 }
 
 function end_game() {
-	reset_game_state();
+	reset_save_state();
 	game_end();
 }
