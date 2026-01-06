@@ -35,7 +35,7 @@ function test_printed_dialogue_line_count() {
 			}
 		}
 
-		var _character = get_character(_name, _data);
+		var _character = get_character(_name);
 
 		var _printed_line_count = scribble(
 			$"{_character.prefix}{_line}{_character.suffix}"

@@ -12,12 +12,10 @@
         "background": "box"
     },
     "Narrator": {
-        "name": "",
-        "variants": {
-            "Dream": {
-                "background": ""
-            }
-        }
+        "name": ""
+    },
+    "Dream": {
+        "background": ""
     },
     "Stella": {
         "name_color": "#e3e06f",
@@ -25,8 +23,8 @@
         "variants": {
             "Dream": {
                 "name": "",
-                "text_color:": "#e3e06f",
-                "background": ""
+                "background": "",
+                "text_color:": "#e3e06f"
             },
             "Narrator": {
                 "name": "",
