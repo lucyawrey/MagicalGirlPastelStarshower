@@ -4,5 +4,4 @@
 enum DIALOGUE_STATE {
 	TEXT,
 	OPTION,
-	INPUT,
 }

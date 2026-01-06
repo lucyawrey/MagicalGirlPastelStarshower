@@ -10,7 +10,6 @@ function chatterbox_setup() {
 	ChatterboxAddFunction("hide", hide);
 	ChatterboxAddFunction("play", play);
 	ChatterboxAddFunction("pause", pause);
-	ChatterboxAddFunction("input", input);
 	ChatterboxAddFunction("delay", delay);
 	ChatterboxAddFunction("auto", auto);
 	ChatterboxAddFunction("block", block);

@@ -107,13 +107,6 @@ function pause(_audio_name = undefined) {
 	}
 }
 
-function input(_variable_name) {
-	obj_dialogue.current_state = DIALOGUE_STATE.INPUT;
-	obj_dialogue.current_input_text = "";
-	keyboard_lastchar = "";
-	obj_dialogue.current_input_variable = _variable_name;
-}
-
 function end_game() {
 	reset_save_state();
 	game_end();

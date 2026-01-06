@@ -27,9 +27,6 @@ if (visible && !obj_game.paused) {
 		if (keyboard_check_pressed(ord("3"))) {
 			_option = 2;
 		}
-		if (keyboard_check_pressed(ord("4"))) {
-			_option = 3;
-		}
 		//If we've pressed a button, select that option
 		if (_option != undefined) {
 			ChatterboxSelect(chatterbox, _option);
@@ -38,19 +35,6 @@ if (visible && !obj_game.paused) {
 			get_current_content();
 			increment_current_node_position();
 			touch_save();
-		}
-	} else if (current_state == DIALOGUE_STATE.INPUT) {
-		if (keyboard_check_pressed(vk_backspace) || keyboard_check_pressed(vk_delete)) {
-			current_input_text = string_delete(
-				current_input_text,
-				string_length(current_input_text),
-				1
-			);
-		} else {
-			if (is_string(keyboard_lastchar) && keyboard_lastchar != "") {
-				current_input_text += keyboard_lastchar;
-				keyboard_lastchar = "";
-			}
 		}
 	}
 }
