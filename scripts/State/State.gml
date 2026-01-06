@@ -30,4 +30,4 @@ state_ = {
 #macro SAVE_BASE_VARIABLES ["id", "name", "runs_completed", "gender_form", "gender_pronouns"]
 
 initial_state_ = variable_clone(state);
-#macro INITIAL_STATE global.INITIAL_STATE_
+#macro INITIAL_STATE global.initial_state_
