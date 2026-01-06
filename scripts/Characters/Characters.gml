@@ -23,8 +23,8 @@ function get_character(_character_name = "", _character_data = "") {
 	&& struct_exists(_base_character, "variants")
 	&& struct_exists(_base_character.variants, _character_data)
 		? struct_get(_base_character.variants, _character_data)
-		: (struct_exists(state.characters, $"[{_character_data}]")
-			? struct_get(state.characters, $"[{_character_data}]")
+		: (struct_exists(state.characters, _character_data)
+			? struct_get(state.characters, _character_data)
 			: undefined);
 	var _queue = [_default_character, _base_character, _variant];
 
