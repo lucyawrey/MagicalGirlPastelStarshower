@@ -1,31 +1,38 @@
+#macro SAVE_SLOT_COUNT 12
+#macro SAVE_PATH "game_data/save_"
+#macro SHARED_PATH "game_data/save_shared.json"
+#macro SECRET_PATH "game_data/internal.dat"
+#macro JSON_EXT ".json"
+#macro AUTOSAVE_INTERVAL 5 * 60
+
 function save_game() {
-	obj_game.alarm[0] = global.autosave_interval;
+	obj_game.alarm[0] = AUTOSAVE_INTERVAL;
 
 	if (state.save_is_touched) {
 		var _save_json = json_stringify(state.save);
 		var _number_string = string(state.shared.active_save_id);
-		var _filename = global.save_path + _number_string + global.json_ext;
+		var _filename = SAVE_PATH + _number_string + JSON_EXT;
 		write_text_to_file_by_filename(_filename, _save_json);
 		state.shared_is_touched = false;
 	}
 
 	if (state.shared_is_touched) {
 		var _shared_json = json_stringify(state.shared);
-		write_text_to_file_by_filename(global.shared_path, _shared_json);
+		write_text_to_file_by_filename(SHARED_PATH, _shared_json);
 		state.shared_is_touched = false;
 	}
 
 	if (state.secret_is_touched) {
 		var _secret_json = json_stringify(state.secret);
 		var _secret_base64 = base64_encode(_secret_json);
-		write_text_to_file_by_filename(global.secret_path, _secret_base64);
+		write_text_to_file_by_filename(SECRET_PATH, _secret_base64);
 		state.secret_is_touched = false;
 	}
 }
 
 function load_game() {
 	var _save_slot_number_string = string(state.shared.active_save_id);
-	var _slot_filename = global.save_path + _save_slot_number_string + global.json_ext;
+	var _slot_filename = SAVE_PATH + _save_slot_number_string + JSON_EXT;
 	if (file_exists(_slot_filename)) {
 		var _save_json = read_text_from_file_by_filename(_slot_filename);
 		state.save = json_parse(_save_json);
@@ -33,15 +40,15 @@ function load_game() {
 		touch_save();
 	}
 
-	if (file_exists(global.shared_path)) {
-		var _shared_json = read_text_from_file_by_filename(global.shared_path);
+	if (file_exists(SHARED_PATH)) {
+		var _shared_json = read_text_from_file_by_filename(SHARED_PATH);
 		state.shared = json_parse(_shared_json);
 	} else {
 		touch_shared();
 	}
 
-	if (file_exists(global.secret_path)) {
-		var _secret_base64 = read_text_from_file_by_filename(global.secret_path);
+	if (file_exists(SECRET_PATH)) {
+		var _secret_base64 = read_text_from_file_by_filename(SECRET_PATH);
 		var _secret_json = base64_decode(_secret_base64);
 		state.secret = json_parse(_secret_json);
 	} else {
@@ -53,7 +60,7 @@ function load_game() {
 }
 
 function switch_slot(_save_id) {
-	if (_save_id >= global.save_slot_count) {
+	if (_save_id >= SAVE_SLOT_COUNT) {
 		return;
 	}
 	if (state.shared.active_save_id == _save_id) {
@@ -106,7 +113,7 @@ function touch_secret() {
 
 function load_chatterbox_variables_from_state() {
 	import = {};
-	array_foreach(global.slot_base_variables, function(_name) {
+	array_foreach(SAVE_BASE_VARIABLES, function(_name) {
 		struct_set(import, _name, struct_get(state.save, _name));
 	});
 	struct_foreach(state.secret.data, function(_name, _value) {
@@ -140,7 +147,7 @@ function on_chatterbox_variable_set(_name, _value) {
 		struct_set(state.secret.data, _name, _value);
 	} else {
 		touch_save();
-		if (array_contains(global.slot_base_variables, _name)) {
+		if (array_contains(SAVE_BASE_VARIABLES, _name)) {
 			struct_set(state.save, _name, _value);
 		} else {
 			struct_set(state.save.data, _name, _value);

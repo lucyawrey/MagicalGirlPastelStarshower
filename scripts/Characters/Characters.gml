@@ -1,31 +1,30 @@
-// Characters global state
-characters = {};
-characters_cache = {};
+#macro BASE_CHARACTER_NAME "Base"
+#macro DEFAULT_CHARACTER_NAME "Narrator"
 
 function get_character(_character_name = "", _character_data = "") {
 	if (_character_name == "") {
-		_character_name = global.default_character_name;
+		_character_name = DEFAULT_CHARACTER_NAME;
 	}
 
 	var _character_id =
 		_character_name + (_character_data == "" ? "" : "." + _character_data);
-	if (struct_exists(global.characters_cache, _character_id)) {
-		return struct_get(global.characters_cache, _character_id);
+	if (struct_exists(state.characters_cache, _character_id)) {
+		return struct_get(state.characters_cache, _character_id);
 	}
 
-	if (!struct_exists(global.characters, global.base_character_name)) {
+	if (!struct_exists(state.characters, BASE_CHARACTER_NAME)) {
 		return;
 	}
-	var _default_character = struct_get(global.characters, global.base_character_name);
-	var _base_character = struct_exists(global.characters, _character_name)
-		? struct_get(global.characters, _character_name)
+	var _default_character = struct_get(state.characters, BASE_CHARACTER_NAME);
+	var _base_character = struct_exists(state.characters, _character_name)
+		? struct_get(state.characters, _character_name)
 		: undefined;
 	var _variant = is_struct(_base_character)
 	&& struct_exists(_base_character, "variants")
 	&& struct_exists(_base_character.variants, _character_data)
 		? struct_get(_base_character.variants, _character_data)
-		: (struct_exists(global.characters, $"[{_character_data}]")
-			? struct_get(global.characters, $"[{_character_data}]")
+		: (struct_exists(state.characters, $"[{_character_data}]")
+			? struct_get(state.characters, $"[{_character_data}]")
 			: undefined);
 	var _queue = [_default_character, _base_character, _variant];
 
@@ -60,7 +59,7 @@ function get_character(_character_name = "", _character_data = "") {
 		background: _background,
 	};
 
-	struct_set(global.characters_cache, _character_id, _character);
+	struct_set(state.characters_cache, _character_id, _character);
 
 	return _character;
 }

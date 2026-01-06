@@ -1,6 +1,3 @@
-// Global state
-typist_sound_clock = 0; // Global clock state for typist sound effects
-
 function scribble_setup() {
 	var _typist = scribble_typist();
 	_typist.in(1, 0);
@@ -22,7 +19,7 @@ function text_play_sound(_element, _position, _typist) {
 		return;
 	}
 	var _rand_pitch = random_range(-0.2, 0.2);
-	if (global.typist_sound_clock >= obj_dialogue.current_character.sound_spacing) {
+	if (state.typist_sound_clock >= obj_dialogue.current_character.sound_spacing) {
 		audio_play_sound(
 			obj_dialogue.current_character.sound,
 			1,
@@ -31,7 +28,7 @@ function text_play_sound(_element, _position, _typist) {
 			undefined,
 			obj_dialogue.current_character.sound_pitch + _rand_pitch
 		);
-		global.typist_sound_clock = 0;
+		state.typist_sound_clock = 0;
 	}
-	global.typist_sound_clock++;
+	state.typist_sound_clock++;
 }

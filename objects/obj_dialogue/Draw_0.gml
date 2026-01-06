@@ -1,12 +1,11 @@
-// Images
-var _MARGIN_Y = 18;
-var _MARGIN_X = 3 * _MARGIN_Y;
-var _BORDER_THICKNESS = 6;
+#macro _MARGIN_Y 18
+#macro _MARGIN_X (3 * _MARGIN_Y)
+#macro _BORDER_THICKNESS 6
 
-var _NAME_MARGIN = 28;
-var _NAME_PADDING = 25;
+#macro _NAME_MARGIN 28
+#macro _NAME_PADDING 25
 
-var _BACKGROUND_VIEW_PERCENT = 0.7;
+#macro _BACKGROUND_VIEW_PERCENT 0.7
 
 draw_background(_MARGIN_X, _MARGIN_Y, _BACKGROUND_VIEW_PERCENT);
 draw_textbox(_MARGIN_X, _MARGIN_Y, 1 - _BACKGROUND_VIEW_PERCENT);
@@ -28,7 +27,7 @@ function draw_background_border(_x, _y, _w, _h) {
 		return;
 	}
 	var _bg_box_border = is_undefined(current_character.background)
-		? get_character(global.base_character_name).background
+		? get_character(BASE_CHARACTER_NAME).background
 		: current_character.background;
 
 	draw_sprite_stretched(_bg_box_border, 0, _x, _y, _w, _h);

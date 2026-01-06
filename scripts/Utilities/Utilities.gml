@@ -28,7 +28,7 @@ function struct_get_merged_value(_structs, _name) {
 
 function get_pronoun_list(_pronouns) {
 	out = {};
-	var _list = struct_get(global.pronoun_map, _pronouns);
+	var _list = struct_get(PRONOUN_MAP, _pronouns);
 	array_foreach(_list, function(_item, _i) {
 		struct_set(out, "gender_pronoun_" + string(_i), _item);
 	});

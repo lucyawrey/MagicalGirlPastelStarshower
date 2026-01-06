@@ -6,7 +6,7 @@ paused = false;
 resumedThisTick = false;
 
 // Set autosave alarm
-alarm[0] = global.autosave_interval;
+alarm[0] = AUTOSAVE_INTERVAL;
 
 // Set game pause alarm
 alarm[1] = 0;

@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"Globals",
+  "%Name":"Types",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"Globals",
+  "name":"Types",
   "parent":{
     "name":"scripts",
     "path":"folders/scripts.yy",

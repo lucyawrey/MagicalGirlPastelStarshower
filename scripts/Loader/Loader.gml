@@ -29,7 +29,7 @@ function load_character_files(_directory) {
 		var _character_file = _character_files[_i];
 		var _character_json = read_text_from_file_by_filename(_character_file);
 		var _characters = json_parse(_character_json);
-		struct_merge(global.characters, _characters);
+		struct_merge(state.characters, _characters);
 	}
 }
 
