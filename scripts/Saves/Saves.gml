@@ -132,6 +132,21 @@ function load_chatterbox_variables_from_state() {
 	ChatterboxVariablesImport(json_stringify(import));
 }
 
+function set_sync_variable(_name, _value) {
+    if (string_starts_with(_name, "secret_")) {
+		touch_secret();
+		struct_set(state.secret.data, string_delete(_name, 1, 7), _value);
+	} else {
+		touch_save();
+		if (array_contains(SAVE_BASE_VARIABLES, _name)) {
+			struct_set(state.save, _name, _value);
+		} else {
+			struct_set(state.save.data, _name, _value);
+		}
+	}
+    ChatterboxVariableSet(_name, _value);
+}
+
 function on_chatterbox_variable_set(_name, _value) {
 	if (string_starts_with(_name, "gender_pronoun_")) {
 		return;
