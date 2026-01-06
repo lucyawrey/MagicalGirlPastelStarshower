@@ -45,11 +45,11 @@ function increment_current_node_position() {
 }
 
 function on_node_change(_old_node, _new_node, _action) {
-    if (state.save.current_node != _new_node) {
-        state.save.current_node_position = 0;
-        state.save.current_node_option_queue = [];
-        state.save.current_node = _new_node;
-    }
+	if (state.save.current_node != _new_node) {
+		state.save.current_node_position = 0;
+		state.save.current_node_option_queue = [];
+		state.save.current_node = _new_node;
+	}
 	touch_save();
 	obj_dialogue.is_new_node = true;
 }

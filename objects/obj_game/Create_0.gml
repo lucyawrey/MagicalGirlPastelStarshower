@@ -40,7 +40,7 @@ load_game();
 alarm[3] = 30;
 
 if (debug_mode) {
-    state.shared.developer_mode = true;
-    touch_save();
+	state.shared.developer_mode = true;
+	touch_save();
 	debug_run_all_tests();
 }
