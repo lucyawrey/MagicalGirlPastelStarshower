@@ -1,7 +1,7 @@
 {
   "$GMRoom":"v1",
   "%Name":"rm_world_map",
-  "creationCodeFile":"",
+  "creationCodeFile":"rooms/rm_world_map/RoomCreationCode.gml",
   "inheritCode":false,
   "inheritCreationOrder":false,
   "inheritLayers":false,
@@ -38,8 +38,8 @@
   ],
   "name":"rm_world_map",
   "parent":{
-    "name":"maps",
-    "path":"folders/rooms/maps.yy",
+    "name":"deprecated",
+    "path":"folders/rooms/deprecated.yy",
   },
   "parentRoom":null,
   "physicsSettings":{
