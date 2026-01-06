@@ -42,6 +42,6 @@ alarm[3] = 30;
 if (debug_mode) {
 	state.shared.developer_mode = true;
 	touch_shared();
-    save_game();
+	save_game();
 	debug_run_all_tests();
 }

@@ -133,7 +133,7 @@ function load_chatterbox_variables_from_state() {
 }
 
 function set_sync_variable(_name, _value) {
-    if (string_starts_with(_name, "secret_")) {
+	if (string_starts_with(_name, "secret_")) {
 		touch_secret();
 		struct_set(state.secret.data, string_delete(_name, 1, 7), _value);
 	} else {
@@ -144,7 +144,7 @@ function set_sync_variable(_name, _value) {
 			struct_set(state.save.data, _name, _value);
 		}
 	}
-    ChatterboxVariableSet(_name, _value);
+	ChatterboxVariableSet(_name, _value);
 }
 
 function on_chatterbox_variable_set(_name, _value) {
