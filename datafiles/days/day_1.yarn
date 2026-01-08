@@ -6,6 +6,7 @@ day: 1
 <<background "none">>
 <<play "music" "dream">>
 
+Narrator test.
 Stella.Slow: Stella Slow test with dot syntax.
 Dream.Slow: Dream Slow test with dot syntax.
 Stella.Dream.Slow: Stella Dream Slow test with dot syntax.
