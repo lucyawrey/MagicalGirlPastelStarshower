@@ -14,6 +14,8 @@ function chatterbox_setup() {
 	ChatterboxAddFunction("auto", auto);
 	ChatterboxAddFunction("block", block);
 	ChatterboxAddFunction("end_game", end_game);
+    ChatterboxAddFunction("event", event);
+    
 
 	return _chatterbox;
 }

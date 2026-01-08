@@ -111,3 +111,11 @@ function end_game() {
 	reset_save_state();
 	game_end();
 }
+
+function event(_name = undefined, _argument = undefined) {
+    if (!is_string(_name) || !struct_exists(EVENT_LIST, _name)) {
+        return;
+    }
+    var _event_func = struct_get(EVENT_LIST, _name);
+    _event_func(_name, _argument);
+}
