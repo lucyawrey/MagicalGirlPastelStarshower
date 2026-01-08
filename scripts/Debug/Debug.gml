@@ -1,8 +1,10 @@
+#macro log show_debug_message
+
 function debug_run_all_tests() {
-	show_debug_message("\n-- Debug Mode Active --\n\n - Running all tests.");
-	show_debug_message("  - Running printed dialogue line count test.");
+	log("\n-- Debug Mode Active --\n\n - Running all tests.");
+	log("  - Running printed dialogue line count test.");
 	//test_printed_dialogue_line_count(); TODO fix test
-	show_debug_message("\n");
+	log("\n");
 }
 
 function test_printed_dialogue_line_count() {
@@ -35,7 +37,7 @@ function test_printed_dialogue_line_count() {
 			}
 		}
 
-		var _character = get_character(_name, _data);
+		var _character = get_character(_name);
 
 		var _printed_line_count = scribble(
 			$"{_character.prefix}{_line}{_character.suffix}"
@@ -44,7 +46,7 @@ function test_printed_dialogue_line_count() {
 			.get_line_count();
 
 		if (_printed_line_count > 3) {
-			show_debug_message($"   - Line too long: \"{_line}\"");
+			log($"   - Line too long: \"{_line}\"");
 			return false;
 		}
 	});

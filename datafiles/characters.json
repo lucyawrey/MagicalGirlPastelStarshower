@@ -12,12 +12,10 @@
         "background": "box"
     },
     "Narrator": {
-        "name": "",
-        "variants": {
-            "Dream": {
-                "background": ""
-            }
-        }
+        "name": ""
+    },
+    "Dream": {
+        "background": ""
     },
     "Stella": {
         "name_color": "#e3e06f",
@@ -25,8 +23,8 @@
         "variants": {
             "Dream": {
                 "name": "",
-                "text_color:": "#e3e06f",
-                "background": ""
+                "background": "",
+                "text_color:": "#e3e06f"
             },
             "Narrator": {
                 "name": "",
@@ -54,7 +52,7 @@
     "Evie": {
         "name_color": "#0a940a"
     },
-    "Awkward": {
+    "Slow": {
         "text_speed": 0.05,
         "sound_spacing": 1
     }

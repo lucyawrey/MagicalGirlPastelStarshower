@@ -6,9 +6,12 @@ day: 1
 <<background "none">>
 <<play "music" "dream">>
 
-Stella[Awkward]: Hello :)
-[Dream][Awkward]: Awkward test.
-Stella[Dream][Awkward]: Stella awkward test.
+Narrator test.
+Stella.Slow: Stella Slow test with dot syntax.
+Dream.Slow: Dream Slow test with dot syntax.
+Stella.Dream.Slow: Stella Dream Slow test with dot syntax.
+Stella.Dream: Stella Dream test with dot syntax.
+Stella: Stella test with dot syntax.
 
 [Dream]: You float formless in the space between.
 [Dream]: It is quiet. It is comfortable. It is vast beyond your comprehension.
@@ -52,7 +55,7 @@ Azalea: I've only been keeping an eye on you, and that's easy to do while I'm he
 Stella: Oh. You didn't have to do that.
 Azalea: Probably not, with this city being so safe, and you being... you. But still, it doesn't feel quite right leaving a friend alone in public while they're totally passed out.
 <<auto>>
-Stella[Awkward]: . . .
+Stella[Slow]: . . .
 Stella: A friend?
 Azalea: Yes, obviously.
 Stella: Right, sorry. Why didn't you just wake me up?
@@ -99,7 +102,7 @@ Stella: That's me by the way.
 Azalea: I'd only actually be mad if you started killing them on purpose. And at that point, I'd probably have to kick your ass.
 Stella: I'd like to see you try.
 <<auto>>
-Stella[Awkward]: . . .
+Stella[Slow]: . . .
 Stella: I don't mean that in a "I'm going to kill more of your plants just to provoke you" kind of way.
 Azalea: I know, Stella.
 Azalea: I also know to never [i]actually[/i] try to kick your ass. Scolding you is going to have to be good enough.

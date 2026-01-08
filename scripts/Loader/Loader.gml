@@ -16,7 +16,7 @@ function load_all_chatterbox() {
 
 function load_yarn_files(_buffer, _directory) {
 	var _yarn_files = find_files(_directory + "*.yarn");
-	show_debug_message(_yarn_files);
+	log(_yarn_files);
 	for (var _i = 0; _i < array_length(_yarn_files); _i++) {
 		var _yarn_file = _directory + _yarn_files[_i];
 		buffer_load_ext(_buffer, _yarn_file, buffer_get_used_size(_buffer));

@@ -59,9 +59,9 @@ function get_content() {
 		return;
 	}
 
-	var _character_name = ChatterboxGetContentSpeaker(obj_dialogue.chatterbox, 0);
-	var _character_data = ChatterboxGetContentSpeakerData(obj_dialogue.chatterbox, 0);
-	var _character = get_character(_character_name, _character_data);
+	// TODO allow [] in addition to . in IDs
+	var _character_id = ChatterboxGetContentSpeaker(obj_dialogue.chatterbox, 0);
+	var _character = get_character(_character_id);
 	var _metadata = ChatterboxGetContentMetadata(obj_dialogue.chatterbox, 0);
 	var _text = ChatterboxGetContentSpeech(obj_dialogue.chatterbox, 0);
 

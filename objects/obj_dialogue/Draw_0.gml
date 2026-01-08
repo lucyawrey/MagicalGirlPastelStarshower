@@ -91,9 +91,6 @@ function draw_speaker_name(
 	_speaker_padding,
 	_speaker_margin
 ) {
-	if (is_undefined(current_character.background)) {
-		return;
-	}
 	if (current_character.name == "") {
 		return;
 	}
@@ -119,14 +116,16 @@ function draw_speaker_name(
 	var _speaker_x = _speaker_box_x + _speaker_padding;
 	var _speaker_y = _speaker_box_y + ((_speaker_box_h - _speaker_h) / 2);
 
-	draw_sprite_stretched(
-		current_character.background,
-		0,
-		_speaker_box_x,
-		_speaker_box_y,
-		_speaker_box_w,
-		_speaker_box_h
-	);
+	if (!is_undefined(current_character.background)) {
+		draw_sprite_stretched(
+			current_character.background,
+			0,
+			_speaker_box_x,
+			_speaker_box_y,
+			_speaker_box_w,
+			_speaker_box_h
+		);
+	}
 
 	_name_scribble.draw(_speaker_x, _speaker_y);
 }
