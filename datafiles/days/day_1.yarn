@@ -6,14 +6,6 @@ day: 1
 <<background "none">>
 <<play "music" "dream">>
 
-Narrator test.
-Stella.Slow: Stella Slow test with dot syntax.
-Dream.Slow: Dream Slow test with dot syntax.
-Stella.Dream.Slow: Stella Dream Slow test with dot syntax.
-Stella[Dream][Slow]: Stella Dream Slow test with bracket syntax.
-Stella.Dream: Stella Dream test with dot syntax.
-Stella: Stella test with dot syntax.
-
 [Dream]: You float formless in the space between.
 [Dream]: It is quiet. It is comfortable. It is vast beyond your comprehension.
 [Dream]: And it is empty.
