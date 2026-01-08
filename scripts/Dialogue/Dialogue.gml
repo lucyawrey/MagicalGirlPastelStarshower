@@ -59,11 +59,41 @@ function get_content() {
 		return;
 	}
 
-	// TODO allow [] in addition to . in IDs
-	var _character_id = ChatterboxGetContentSpeaker(obj_dialogue.chatterbox, 0);
+	var _all_content = ChatterboxGetContent(obj_dialogue.chatterbox, 0);
+	var _speech_content = ChatterboxGetContentSpeech(obj_dialogue.chatterbox, 0);
+
+	var _character_id = parse_character_id(_all_content, _speech_content);
 	var _character = get_character(_character_id);
 	var _metadata = ChatterboxGetContentMetadata(obj_dialogue.chatterbox, 0);
-	var _text = ChatterboxGetContentSpeech(obj_dialogue.chatterbox, 0);
 
-	return {character: _character, metadata: _metadata, text: _text};
+	return {character: _character, metadata: _metadata, text: _speech_content};
+}
+
+/**
+ * Parses the current speaker ID, including any number of modifiers, and formats it into dot notation.
+ * For example, "Stella[Awkward][Slow]" would become "Stella.Awkward.Slow"
+ * @param _all_content - String. The full line of content, including speaker and their text
+ * @param _speech_content - String. The text of what is being spoken
+ * @returns The character_id of the speaker, including modifiers, in dot notation. Empty string otherwise
+ */
+function parse_character_id(_all_content, _speech_content) {
+	_all_content = string_trim(_all_content);
+	_speech_content = string_trim(_speech_content);
+
+	var _speech_length = string_length(_speech_content);
+	var _speaker_is_present = string_length(_all_content) != _speech_length;
+
+	var _default_character_id = "";
+	if (!_speaker_is_present) return _default_character_id;
+
+	var _speaker_content = string_delete(_all_content, -1 * _speech_length, _speech_length);
+	_speaker_content = string_trim(_speaker_content);
+	_speaker_content = string_replace(_speaker_content, ":", "");
+	_speaker_content = string_replace_all(_speaker_content, "[", ".");
+	_speaker_content = string_replace_all(_speaker_content, "]", "");
+
+	var _speaker_is_modifier_only = string_char_at(_speaker_content, 1) == "."
+	if (_speaker_is_modifier_only) _speaker_content = string_delete(_speaker_content, 1, 1);
+
+	return _speaker_content;
 }

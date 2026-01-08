@@ -10,6 +10,7 @@ Narrator test.
 Stella.Slow: Stella Slow test with dot syntax.
 Dream.Slow: Dream Slow test with dot syntax.
 Stella.Dream.Slow: Stella Dream Slow test with dot syntax.
+Stella[Dream][Slow]: Stella Dream Slow test with bracket syntax.
 Stella.Dream: Stella Dream test with dot syntax.
 Stella: Stella test with dot syntax.
 

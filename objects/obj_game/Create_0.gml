@@ -39,8 +39,9 @@ load_game();
 // Set game loading alarm
 alarm[3] = 30;
 
+
+state.shared.developer_mode = debug_mode;
 if (debug_mode) {
-	state.shared.developer_mode = true;
 	touch_shared();
 	save_game();
 	debug_run_all_tests();
