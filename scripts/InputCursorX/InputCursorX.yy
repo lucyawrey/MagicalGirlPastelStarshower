@@ -6,7 +6,7 @@
   "name":"InputCursorX",
   "parent":{
     "name":"Basics",
-    "path":"folders/extensions/input_plugins/Cursor/Basics.yy",
+    "path":"folders/extensions/input_plugIns/Cursor/Basics.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

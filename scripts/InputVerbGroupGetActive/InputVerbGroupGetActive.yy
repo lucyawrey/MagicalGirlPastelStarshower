@@ -6,7 +6,7 @@
   "name":"InputVerbGroupGetActive",
   "parent":{
     "name":"Verb Groups",
-    "path":"folders/extensions/input_plugins/Verb Groups.yy",
+    "path":"folders/extensions/input_plugIns/Verb Groups.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -6,7 +6,7 @@
   "name":"InputTriggerEffectSetPause",
   "parent":{
     "name":"Trigger Effects",
-    "path":"folders/extensions/input_plugins/Trigger Effects.yy",
+    "path":"folders/extensions/input_plugIns/Trigger Effects.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -5,10 +5,11 @@
 /// - INPUT_PLAYER_STATUS.NEWLY_DISCONNECTED
 /// - INPUT_PLAYER_STATUS.NEWLY_CONNECTED
 /// - INPUT_PLAYER_STATUS.CONNECTED
-///
+/// 
 /// @param playerIndex
 
-function InputPlayerGetStatus(_playerIndex) {
-	static _playerArray = __InputSystemPlayerArray();
-	return _playerArray[_playerIndex].__status;
+function InputPlayerGetStatus(_playerIndex)
+{
+    static _playerArray = __InputSystemPlayerArray();
+    return _playerArray[_playerIndex].__status;
 }

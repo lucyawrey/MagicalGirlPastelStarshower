@@ -6,7 +6,7 @@
   "name":"__InputPartySystem",
   "parent":{
     "name":"(System)",
-    "path":"folders/extensions/input_plugins/Party Multiplayer/(System).yy",
+    "path":"folders/extensions/input_plugIns/Party Multiplayer/(System).yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -6,7 +6,7 @@
   "name":"InputColorReset",
   "parent":{
     "name":"Color",
-    "path":"folders/extensions/input_plugins/Color.yy",
+    "path":"folders/extensions/input_plugIns/Color.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

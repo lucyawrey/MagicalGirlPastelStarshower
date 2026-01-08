@@ -6,7 +6,7 @@
   "name":"__InputVibrateClassPulse",
   "parent":{
     "name":"(System)",
-    "path":"folders/extensions/input_plugins/Vibration/(System).yy",
+    "path":"folders/extensions/input_plugIns/Vibration/(System).yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

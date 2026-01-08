@@ -4,8 +4,9 @@
 /// have a connected device then this function returns `undefined`. This is useful to easily
 /// identify a "main" player in a game with multiple local players.
 
-function InputPlayerLowestConnectedIndex() {
-	static _system = __InputSystem();
-
-	return _system.__lowestConnectedPlayerIndex;
+function InputPlayerLowestConnectedIndex()
+{
+    static _system = __InputSystem();
+    
+    return _system.__lowestConnectedPlayerIndex;
 }

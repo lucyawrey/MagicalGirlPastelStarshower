@@ -6,7 +6,7 @@
   "name":"InputVibrateGetSupported",
   "parent":{
     "name":"Vibration",
-    "path":"folders/extensions/input_plugins/Vibration.yy",
+    "path":"folders/extensions/input_plugIns/Vibration.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
