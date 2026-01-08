@@ -5,18 +5,18 @@ if (visible && !obj_game.paused) {
 
 	if (current_state == DIALOGUE_STATE.TEXT) {
 		if (typist.get_state() < 1) {
-			if (keyboard_check_pressed(vk_space)) {
+			if (InputPressed(INPUT_VERB.ACCEPT)) {
 				typist.skip();
 				audio_stop_sound(current_character.sound);
 				exit;
 			}
 		}
 		//If we're in a Text state then let the user press space to advance dialogue
-		if (keyboard_check_pressed(vk_space)) {
+		if (InputPressed(INPUT_VERB.ACCEPT)) {
 			continue_on();
 		}
 	} else if (current_state == DIALOGUE_STATE.OPTION) {
-		//Check for keyboard input
+		// TODO select option with directional input
 		var _option = undefined;
 		if (keyboard_check_pressed(ord("1"))) {
 			_option = 0;

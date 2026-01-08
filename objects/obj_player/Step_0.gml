@@ -1,5 +1,5 @@
-var _horizontal_vector = real(keyboard_check(vk_right)) - real(keyboard_check(vk_left));
-var _vertical_vector = real(keyboard_check(vk_down)) - real(keyboard_check(vk_up));
+var _horizontal_vector = InputX(INPUT_CLUSTER.NAVIGATION);
+var _vertical_vector = InputY(INPUT_CLUSTER.NAVIGATION);
 
 move_and_collide(
 	_horizontal_vector * move_speed,

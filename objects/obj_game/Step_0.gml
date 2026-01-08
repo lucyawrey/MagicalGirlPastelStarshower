@@ -1,4 +1,4 @@
-if (state.shared.developer_mode && keyboard_check_pressed(vk_escape)) {
+if (state.shared.developer_mode && InputPressed(INPUT_VERB.PAUSE)) {
 	reset_save_state();
 	game_soft_restart();
 }
