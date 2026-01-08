@@ -6,9 +6,11 @@ day: 1
 <<background "none">>
 <<play "music" "dream">>
 
-Stella.Awkward: Hello :\)
-Dream.Awkward: Dream Awkward test.
-Stella.Dream.Awkward: Stella awkward test.
+Stella.Awkward: Stella Awkward test with dot syntax.
+Dream.Awkward: Dream Awkward test with dot syntax.
+Stella.Dream.Awkward: Stella Dream Awkward test with dot syntax.
+Stella.Dream: Stella Dream test with dot syntax.
+Stella: Stella test with dot syntax.
 
 [Dream]: You float formless in the space between.
 [Dream]: It is quiet. It is comfortable. It is vast beyond your comprehension.
@@ -22,7 +24,7 @@ Stella.Dream.Awkward: Stella awkward test.
 [Dream]: Light.
 [Dream]: Blinding.
 [Dream]: The void that surrounded you becomes everything all at once and then—
-Stella[Dream]: Hey.
+Stella[Dream][hjkhkj]: Hey.
 Stella[Dream]: It's going to be alright.
 Stella[Dream]: You're not going to be alone anymore.
 Stella[Dream]: It's so, so hard to keep living, but I'd like it if you tried.

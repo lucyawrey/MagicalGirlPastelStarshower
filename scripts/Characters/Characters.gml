@@ -34,6 +34,9 @@ function get_character(_character_id = "") {
 			_last_character = _character;
 		}
 	});
+    
+    log(_last_character);
+    log(_character_queue);
 
 	// Get values
 	var _sound_name = struct_get_merged_value(_character_queue, "sound");
