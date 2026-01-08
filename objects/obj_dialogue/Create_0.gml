@@ -1,7 +1,6 @@
 // Set instance variables
 typist = scribble_setup(); // Set up Scribble plugin for text rendering
 chatterbox = chatterbox_setup(); // Set up Chatterbox plugin for dialogue scripting
-continue_key = vk_space;
 current_state = DIALOGUE_STATE.TEXT;
 current_node_metadata = {};
 current_text = "";

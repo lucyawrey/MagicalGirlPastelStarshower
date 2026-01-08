@@ -5,14 +5,14 @@ if (visible && !obj_game.paused) {
 
 	if (current_state == DIALOGUE_STATE.TEXT) {
 		if (typist.get_state() < 1) {
-			if (keyboard_check_pressed(continue_key)) {
+			if (keyboard_check_pressed(vk_space)) {
 				typist.skip();
 				audio_stop_sound(current_character.sound);
 				exit;
 			}
 		}
 		//If we're in a Text state then let the user press space to advance dialogue
-		if (keyboard_check_pressed(continue_key)) {
+		if (keyboard_check_pressed(vk_space)) {
 			continue_on();
 		}
 	} else if (current_state == DIALOGUE_STATE.OPTION) {
