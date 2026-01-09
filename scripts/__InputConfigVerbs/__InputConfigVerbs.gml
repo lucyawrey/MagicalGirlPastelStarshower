@@ -10,6 +10,7 @@ function __InputConfigVerbs()
         ACCEPT,
         CANCEL,
         PAUSE,
+		RESET,
     }
     
     enum INPUT_CLUSTER
@@ -26,7 +27,8 @@ function __InputConfigVerbs()
         InputDefineVerb(INPUT_VERB.RIGHT,   "right",      [vk_right, "D"],   [ gp_axislh, gp_padr]);
         InputDefineVerb(INPUT_VERB.ACCEPT,  "accept",     [vk_space, vk_enter, mb_left, "Z"],    gp_face1);
         InputDefineVerb(INPUT_VERB.CANCEL,  "cancel",     [vk_backspace, mb_right, "X"],         gp_face2);
-        InputDefineVerb(INPUT_VERB.PAUSE,   "pause",      [vk_escape, "M"],                      gp_start);
+        InputDefineVerb(INPUT_VERB.PAUSE,   "pause",      [vk_escape, "M"],                      gp_start);       
+		InputDefineVerb(INPUT_VERB.RESET,   "reset",      ["R"],                      gp_select);
     }
     else //Flip A/B over on Switch
     {
@@ -36,7 +38,8 @@ function __InputConfigVerbs()
         InputDefineVerb(INPUT_VERB.RIGHT,   "right",   undefined, [ gp_axislh, gp_padr]);
         InputDefineVerb(INPUT_VERB.ACCEPT,  "accept",  undefined,   gp_face2); // !!
         InputDefineVerb(INPUT_VERB.CANCEL,  "cancel",  undefined,   gp_face1); // !!
-        InputDefineVerb(INPUT_VERB.PAUSE,   "pause",   undefined,   gp_start);
+        InputDefineVerb(INPUT_VERB.PAUSE,   "pause",   undefined,   gp_start);       
+		InputDefineVerb(INPUT_VERB.RESET,   "reset",   undefined,   gp_select);
     }
     
     //Define a cluster of verbs for moving around

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Menu",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Menu",
+  "parent":{
+    "name":"MagicalGirlPastelStarshower",
+    "path":"MagicalGirlPastelStarshower.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

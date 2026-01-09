@@ -7,6 +7,8 @@
 
 #macro _BACKGROUND_VIEW_PERCENT 0.7
 
+draw_set_alpha(1);
+
 draw_background(_MARGIN_X, _MARGIN_Y, _BACKGROUND_VIEW_PERCENT);
 draw_textbox(_MARGIN_X, _MARGIN_Y, 1 - _BACKGROUND_VIEW_PERCENT);
 draw_characters();

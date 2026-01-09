@@ -1,8 +1,4 @@
 if (visible && !obj_game.paused) {
-	if (obj_game.resumedThisTick) {
-		continue_on();
-	}
-
 	if (current_state == DIALOGUE_STATE.TEXT) {
 		if (typist.get_state() < 1) {
 			if (InputPressed(INPUT_VERB.ACCEPT)) {

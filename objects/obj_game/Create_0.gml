@@ -28,6 +28,7 @@ function unpause() {
 
 // Create Dialogue Manager Object
 instance_create_depth(0, 0, 0, obj_dialogue);
+instance_create_depth(0, 0, 1, obj_pause_menu);
 
 // Create particle system
 void_dust = part_system_create(ps_void_dust);
