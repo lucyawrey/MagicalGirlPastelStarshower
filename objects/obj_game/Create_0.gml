@@ -5,25 +5,42 @@ gpu_set_tex_filter(false);
 paused = false;
 resumed_this_tick = false;
 
-// Set autosave alarm
+// Autosave alarm
 alarm[0] = AUTOSAVE_INTERVAL;
-
-// Set game pause alarm
+// Unpause alarm
 alarm[1] = 0;
-// set game resumed this tick alarm
+// Resumed alarm
 alarm[2] = 0;
+// Load game alarm
+alarm[3] = 30;
 
 // Method definitions
+function reset_autosave_timer() {
+	alarm[0] = AUTOSAVE_INTERVAL;
+}
+
 function pause(time = -1, mode = "second") {
 	var _factor = mode == "step" ? 1 : 60;
 	paused = true;
 	if (time > 0) {
-		alarm[1] = time * _factor;
+		unpause(time * _factor);
 	}
 }
 
-function unpause() {
-	alarm[1] = 2;
+function unpause(_step_delay = 1) {
+	alarm[1] = _step_delay;
+}
+
+function indefinitely_paused() {
+	return paused && alarm[1] < 1;
+}
+
+function set_resumed_clock() {
+	alarm[2] = 2;
+}
+
+function load(_step_delay = 1) {
+	alarm[3] = _step_delay;
 }
 
 // Create Dialogue Manager Object
@@ -34,11 +51,8 @@ instance_create_depth(0, 0, 1, obj_pause_menu);
 void_dust = part_system_create(ps_void_dust);
 part_system_depth(void_dust, 1);
 
-// Initial game load.
+// Initial save file load.
 load_game();
-
-// Set game loading alarm
-alarm[3] = 30;
 
 if (debug_mode) {
 	state.shared.developer_mode = true;

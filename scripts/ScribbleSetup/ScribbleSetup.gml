@@ -8,7 +8,7 @@ function scribble_setup() {
 }
 
 function on_typist_complete() {
-	if (obj_game.paused && obj_game.alarm[1] < 1 && obj_dialogue.delay_behavior == "auto") {
+	if (obj_game.indefinitely_paused() && obj_dialogue.delay_behavior == "auto") {
 		obj_game.unpause();
 	}
 }

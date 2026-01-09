@@ -6,7 +6,7 @@
 #macro AUTOSAVE_INTERVAL 5 * 60
 
 function save_game() {
-	obj_game.alarm[0] = AUTOSAVE_INTERVAL;
+	obj_game.reset_autosave_timer();
 
 	if (state.save_is_touched) {
 		var _save_json = json_stringify(state.save);

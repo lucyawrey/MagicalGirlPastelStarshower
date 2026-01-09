@@ -1,3 +1,4 @@
+// Unpause alarm
 paused = false;
 resumed_this_tick = true;
-alarm[2] = 2;
+set_resumed_clock();
