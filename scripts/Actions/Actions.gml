@@ -119,19 +119,3 @@ function event(_name = undefined, _argument = undefined) {
 	var _event_func = struct_get(EVENT_LIST, _name);
 	_event_func(_name, _argument);
 }
-
-function pause_game() {
-	obj_game.pause();
-	if (instance_exists(obj_pause_menu)) {
-		obj_pause_menu.open();
-	}
-	show_debug_message("PAUSED");
-}
-
-function unpause_game() {
-	obj_game.unpause();
-	if (instance_exists(obj_pause_menu)) {
-		obj_pause_menu.close();
-	}
-	show_debug_message("UNPAUSED");
-}
