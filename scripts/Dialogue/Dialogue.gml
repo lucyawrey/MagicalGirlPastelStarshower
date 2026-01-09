@@ -84,16 +84,24 @@ function parse_character_id(_all_content, _speech_content) {
 	var _speaker_is_present = string_length(_all_content) != _speech_length;
 
 	var _default_character_id = "";
-	if (!_speaker_is_present) return _default_character_id;
+	if (!_speaker_is_present) {
+		return _default_character_id;
+	}
 
-	var _speaker_content = string_delete(_all_content, -1 * _speech_length, _speech_length);
+	var _speaker_content = string_delete(
+		_all_content,
+		-1 * _speech_length,
+		_speech_length
+	);
 	_speaker_content = string_trim(_speaker_content);
 	_speaker_content = string_replace(_speaker_content, ":", "");
 	_speaker_content = string_replace_all(_speaker_content, "[", ".");
 	_speaker_content = string_replace_all(_speaker_content, "]", "");
 
-	var _speaker_is_modifier_only = string_char_at(_speaker_content, 1) == "."
-	if (_speaker_is_modifier_only) _speaker_content = string_delete(_speaker_content, 1, 1);
+	var _speaker_is_modifier_only = string_char_at(_speaker_content, 1) == ".";
+	if (_speaker_is_modifier_only) {
+		_speaker_content = string_delete(_speaker_content, 1, 1);
+	}
 
 	return _speaker_content;
 }

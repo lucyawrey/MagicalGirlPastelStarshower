@@ -1,4 +1,3 @@
-
 draw_modal_background();
 
 function draw_modal_background() {

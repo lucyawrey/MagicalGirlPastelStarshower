@@ -2,19 +2,19 @@
 
 /// Returns a name for a verb's binding using the player's current device. If a name for a binding
 /// cannot be found, this function will return `missingBindingName` (which is `"???"` by default).
-/// 
+///
 /// N.B. This function is provided for basic binding naming and is suitable for debugging or
 ///      alpha-quality games. Please use the "Binding Icons" plug-in for a higher quality system.
-/// 
+///
 /// @param {Enum.INPUT_VERB,Real} verbIndex
 /// @param {Real} [alternate=0]
 /// @param {Real} [playerIndex=0]
 /// @param {Real} [missingBindingName="???"]
-/// 
+///
 /// If the player is using a gamepad device then one of the following will be returned. This is an
 /// exhaustive list and you will probably not need to support every single one of these return
 /// values. Please see `__InputCreateGamepadBindingNameLookup()` for the specific mappings.
-/// 
+///
 ///   - `"thumbstick l left"`
 ///   - `"thumbstick l up"`
 ///   - `"thumbstick l right"`
@@ -51,10 +51,10 @@
 ///   - `"extra 5"`
 ///   - `"extra 6"`
 ///   - `"touchpad"`
-/// 
+///
 /// If `forGamepad` is set to `false` then one of the following will be returned under the
 /// assumption that the player is using an English Latin keyboard:
-///   
+///
 ///   - For numbers and letters, the label for the keyboard key
 ///   - `"scroll lock"`
 ///   - `"caps lock"`
@@ -117,12 +117,18 @@
 ///   - `"page down"`
 ///   - `"end"`
 
-function InputVerbGetBindingName(_verbIndex, _alternate = 0, _playerIndex = 0, _missingBindingName = "???")
-{
-    __INPUT_VALIDATE_PLAYER_INDEX
-    
-    var _forGamepad = InputPlayerUsingGamepad(_playerIndex);
-    return InputGetBindingName(InputBindingGet(_forGamepad, _verbIndex, _alternate, _playerIndex),
-                               _forGamepad,
-                               _missingBindingName);
+function InputVerbGetBindingName(
+	_verbIndex,
+	_alternate = 0,
+	_playerIndex = 0,
+	_missingBindingName = "???"
+) {
+	__INPUT_VALIDATE_PLAYER_INDEX;
+
+	var _forGamepad = InputPlayerUsingGamepad(_playerIndex);
+	return InputGetBindingName(
+		InputBindingGet(_forGamepad, _verbIndex, _alternate, _playerIndex),
+		_forGamepad,
+		_missingBindingName
+	);
 }

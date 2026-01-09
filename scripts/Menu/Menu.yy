@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"Menu",
   "parent":{
-    "name":"MagicalGirlPastelStarshower",
-    "path":"MagicalGirlPastelStarshower.yyp",
+    "name":"scripts",
+    "path":"folders/scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

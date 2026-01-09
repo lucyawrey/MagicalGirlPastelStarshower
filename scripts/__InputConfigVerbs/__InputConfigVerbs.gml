@@ -1,47 +1,58 @@
-function __InputConfigVerbs()
-{
-    enum INPUT_VERB
-    {
-        //Add your own verbs here!
-        UP,
-        DOWN,
-        LEFT,
-        RIGHT,
-        ACCEPT,
-        CANCEL,
-        PAUSE,
+function __InputConfigVerbs() {
+	enum INPUT_VERB {
+		//Add your own verbs here!
+		UP,
+		DOWN,
+		LEFT,
+		RIGHT,
+		ACCEPT,
+		CANCEL,
+		PAUSE,
 		RESET,
-    }
-    
-    enum INPUT_CLUSTER
-    {
-        //Clusters are used for two-dimensional checkers (InputDirection() etc.)
-        NAVIGATION,
-    }
-    
-    if (not INPUT_ON_SWITCH)
-    {
-        InputDefineVerb(INPUT_VERB.UP,      "up",         [vk_up,    "W"],   [-gp_axislv, gp_padu]);
-        InputDefineVerb(INPUT_VERB.DOWN,    "down",       [vk_down,  "S"],   [ gp_axislv, gp_padd]);
-        InputDefineVerb(INPUT_VERB.LEFT,    "left",       [vk_left,  "A"],   [-gp_axislh, gp_padl]);
-        InputDefineVerb(INPUT_VERB.RIGHT,   "right",      [vk_right, "D"],   [ gp_axislh, gp_padr]);
-        InputDefineVerb(INPUT_VERB.ACCEPT,  "accept",     [vk_space, vk_enter, mb_left, "Z"],    gp_face1);
-        InputDefineVerb(INPUT_VERB.CANCEL,  "cancel",     [vk_backspace, mb_right, "X"],         gp_face2);
-        InputDefineVerb(INPUT_VERB.PAUSE,   "pause",      [vk_escape, "M"],                      gp_start);       
-		InputDefineVerb(INPUT_VERB.RESET,   "reset",      ["R"],                      gp_select);
-    }
-    else //Flip A/B over on Switch
-    {
-        InputDefineVerb(INPUT_VERB.UP,      "up",      undefined, [-gp_axislv, gp_padu]);
-        InputDefineVerb(INPUT_VERB.DOWN,    "down",    undefined, [ gp_axislv, gp_padd]);
-        InputDefineVerb(INPUT_VERB.LEFT,    "left",    undefined, [-gp_axislh, gp_padl]);
-        InputDefineVerb(INPUT_VERB.RIGHT,   "right",   undefined, [ gp_axislh, gp_padr]);
-        InputDefineVerb(INPUT_VERB.ACCEPT,  "accept",  undefined,   gp_face2); // !!
-        InputDefineVerb(INPUT_VERB.CANCEL,  "cancel",  undefined,   gp_face1); // !!
-        InputDefineVerb(INPUT_VERB.PAUSE,   "pause",   undefined,   gp_start);       
-		InputDefineVerb(INPUT_VERB.RESET,   "reset",   undefined,   gp_select);
-    }
-    
-    //Define a cluster of verbs for moving around
-    InputDefineCluster(INPUT_CLUSTER.NAVIGATION, INPUT_VERB.UP, INPUT_VERB.RIGHT, INPUT_VERB.DOWN, INPUT_VERB.LEFT);
+	}
+
+	enum INPUT_CLUSTER {
+		//Clusters are used for two-dimensional checkers (InputDirection() etc.)
+		NAVIGATION,
+	}
+
+	if (!INPUT_ON_SWITCH) {
+		InputDefineVerb(INPUT_VERB.UP, "up", [vk_up, "W"], [-gp_axislv, gp_padu]);
+		InputDefineVerb(INPUT_VERB.DOWN, "down", [vk_down, "S"], [gp_axislv, gp_padd]);
+		InputDefineVerb(INPUT_VERB.LEFT, "left", [vk_left, "A"], [-gp_axislh, gp_padl]);
+		InputDefineVerb(INPUT_VERB.RIGHT, "right", [vk_right, "D"], [gp_axislh, gp_padr]);
+		InputDefineVerb(
+			INPUT_VERB.ACCEPT,
+			"accept",
+			[vk_space, vk_enter, mb_left, "Z"],
+			gp_face1
+		);
+		InputDefineVerb(
+			INPUT_VERB.CANCEL,
+			"cancel",
+			[vk_backspace, mb_right, "X"],
+			gp_face2
+		);
+		InputDefineVerb(INPUT_VERB.PAUSE, "pause", [vk_escape, "M"], gp_start);
+		InputDefineVerb(INPUT_VERB.RESET, "reset", ["R"], gp_select);
+	} else {
+		//Flip A/B over on Switch
+		InputDefineVerb(INPUT_VERB.UP, "up", undefined, [-gp_axislv, gp_padu]);
+		InputDefineVerb(INPUT_VERB.DOWN, "down", undefined, [gp_axislv, gp_padd]);
+		InputDefineVerb(INPUT_VERB.LEFT, "left", undefined, [-gp_axislh, gp_padl]);
+		InputDefineVerb(INPUT_VERB.RIGHT, "right", undefined, [gp_axislh, gp_padr]);
+		InputDefineVerb(INPUT_VERB.ACCEPT, "accept", undefined, gp_face2); // !!
+		InputDefineVerb(INPUT_VERB.CANCEL, "cancel", undefined, gp_face1); // !!
+		InputDefineVerb(INPUT_VERB.PAUSE, "pause", undefined, gp_start);
+		InputDefineVerb(INPUT_VERB.RESET, "reset", undefined, gp_select);
+	}
+
+	//Define a cluster of verbs for moving around
+	InputDefineCluster(
+		INPUT_CLUSTER.NAVIGATION,
+		INPUT_VERB.UP,
+		INPUT_VERB.RIGHT,
+		INPUT_VERB.DOWN,
+		INPUT_VERB.LEFT
+	);
 }
