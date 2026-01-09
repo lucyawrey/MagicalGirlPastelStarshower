@@ -3,7 +3,7 @@ gpu_set_tex_filter(false);
 
 // Set instance variables
 paused = false;
-resumedThisTick = false;
+resumed_this_tick = false;
 
 // Set autosave alarm
 alarm[0] = AUTOSAVE_INTERVAL;

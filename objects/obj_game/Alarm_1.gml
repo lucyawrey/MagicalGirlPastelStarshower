@@ -1,3 +1,3 @@
 paused = false;
-resumedThisTick = true;
+resumed_this_tick = true;
 alarm[2] = 2;

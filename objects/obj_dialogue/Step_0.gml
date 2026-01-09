@@ -1,4 +1,9 @@
 if (visible && !obj_game.paused) {
+    // TODO do not activate on unpause menu
+    if (obj_game.resumed_this_tick) {
+		continue_on();
+	}
+    
 	if (current_state == DIALOGUE_STATE.TEXT) {
 		if (typist.get_state() < 1) {
 			if (InputPressed(INPUT_VERB.ACCEPT)) {

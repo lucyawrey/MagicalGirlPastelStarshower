@@ -1,1 +1,1 @@
-resumedThisTick = false;
+resumed_this_tick = false;
