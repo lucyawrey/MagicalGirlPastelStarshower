@@ -6,6 +6,7 @@
 #macro AUTOSAVE_INTERVAL 5 * 60
 
 function save_game() {
+    return;
 	obj_game.reset_autosave_timer();
 
 	if (state.save_is_touched) {

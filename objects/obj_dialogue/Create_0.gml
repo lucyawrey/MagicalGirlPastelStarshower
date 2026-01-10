@@ -6,6 +6,7 @@ current_node_metadata = {};
 current_text = "";
 current_metadata = [];
 current_options = [];
+current_selection = -2;
 current_character = get_character();
 current_background_sprite = undefined;
 current_shown_sprites = {};
