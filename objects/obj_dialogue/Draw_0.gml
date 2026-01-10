@@ -162,8 +162,7 @@ function draw_options(_textbox_x, _textbox_y, _textbox_w) {
 	option_y = _textbox_y + _padding_y; // Function scoped to allow passing to array_foreach
 
 	array_foreach(current_options, function(_option, _i) {
-		var _option_scribble = scribble($"[#999999]{_i + 1}.[/] {_option.text}");
-		_option_scribble.draw(option_x, option_y);
+		scribble(_option.text).draw(option_x, option_y);
 		option_y += 40;
 	});
 }

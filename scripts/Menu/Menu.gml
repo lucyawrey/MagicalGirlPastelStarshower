@@ -11,5 +11,6 @@ function unpause_game() {
 	if (instance_exists(obj_pause_menu)) {
 		obj_pause_menu.close();
 	}
+    obj_dialogue.you_cannot_advance = true;
 	log("UNPAUSED");
 }

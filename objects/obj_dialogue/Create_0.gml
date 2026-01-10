@@ -16,6 +16,8 @@ is_new_node = false;
 delay_behavior = "";
 advance_icon_rotation = 0;
 draw_fullscreen = false;
+// TODO please solve this properly
+you_cannot_advance = false;
 
 // Method definitions
 function continue_on() {
