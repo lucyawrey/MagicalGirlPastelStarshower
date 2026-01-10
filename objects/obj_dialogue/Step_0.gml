@@ -19,35 +19,39 @@ if (visible && !obj_game.paused) {
 	} else if (current_state == DIALOGUE_STATE.OPTION) {
 		// TODO select option with directional input
 		if (InputPressed(INPUT_VERB.DOWN)) {
-            if (current_selection < 0) {
-                current_selection = -current_selection;
-            }
-            if (current_selection < 3) {
-                current_selection++;
-            } else {
-                current_selection = 1;
-            }
+            play_nav_sound();
+			if (current_selection < 0) {
+				current_selection = -current_selection;
+			}
+			if (current_selection < 3) {
+				current_selection++;
+			} else {
+				current_selection = 1;
+			}
 		} else if (InputPressed(INPUT_VERB.UP)) {
-            if (current_selection < 0) {
-                current_selection = -current_selection;
-            }
-            if (current_selection > 1) {
-                current_selection--;
-            } else {
-                current_selection = 3;
-            }
+            play_nav_sound();
+			if (current_selection < 0) {
+				current_selection = -current_selection;
+			}
+			if (current_selection > 1) {
+				current_selection--;
+			} else {
+				current_selection = 3;
+			}
 		} else if (InputPressed(INPUT_VERB.LEFT) || InputPressed(INPUT_VERB.RIGHT)) {
+            play_nav_sound();
 			current_selection = -current_selection;
 		}
 		//If we've pressed Accept, submit the current selected option to Chatterbox
 		if (InputPressed(INPUT_VERB.ACCEPT) && current_selection > 0) {
+            play_nav_sound();
 			ChatterboxSelect(chatterbox, current_selection - 1);
 			array_push(state.save.current_node_option_queue, current_selection - 1);
 			current_state = DIALOGUE_STATE.TEXT;
 			get_current_content();
 			increment_current_node_position();
 			touch_save();
-            current_selection = -2;
+			current_selection = -2;
 		}
 	}
 }

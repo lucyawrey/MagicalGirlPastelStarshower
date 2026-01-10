@@ -160,12 +160,15 @@ function draw_options(_textbox_x, _textbox_y, _textbox_w) {
 	var _padding_y = 24;
 	option_x = _textbox_x + _padding_x; // Function scoped to allow passing to array_foreach
 	option_y = _textbox_y + _padding_y; // Function scoped to allow passing to array_foreach
-    option_w = _textbox_w - (3 * _padding_x); // Function scoped to allow passing to array_foreach
+	option_w = _textbox_w - (3 * _padding_x); // Function scoped to allow passing to array_foreach
 
 	array_foreach(current_options, function(_option, _i) {
-        var _bg = _i == current_selection - 1 ? spr_box_sel : current_character.background_alt;
-        draw_sprite_stretched(_bg, 0, option_x - 18, option_y - 4, option_w, 52);
-        
+		var _bg = _i
+		== current_selection - 1
+			? spr_box_sel
+			: current_character.background_alt;
+		draw_sprite_stretched(_bg, 0, option_x - 18, option_y - 4, option_w, 52);
+
 		scribble(_option.text).draw(option_x, option_y);
 		option_y += 52;
 	});
@@ -189,7 +192,11 @@ function draw_characters() {
 
 // Text advance icon
 function draw_text_advance_icon() {
-	if (typist.get_state() < 1 || obj_game.paused || (current_state == DIALOGUE_STATE.TEXT && current_text == "")) {
+	if (
+		typist.get_state() < 1
+		|| obj_game.paused
+		|| (current_state == DIALOGUE_STATE.TEXT && current_text == "")
+	) {
 		return;
 	}
 
