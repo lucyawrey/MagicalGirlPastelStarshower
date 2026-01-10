@@ -9,7 +9,8 @@
         "sound": "click",
         "sound_pitch": 1,
         "sound_spacing": 4,
-        "background": "box"
+        "background": "box",
+        "background_alt": "box_alt"
     },
     "Narrator": {
         "name": ""

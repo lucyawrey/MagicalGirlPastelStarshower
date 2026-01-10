@@ -49,19 +49,27 @@ function get_character(_character_id = "") {
 	if (asset_get_type(_background) != asset_sprite) {
 		_background = undefined;
 	}
+    
+    var _background_alt_name = struct_get_merged_value(_character_queue, "background_alt");
+	_background_alt_name = add_prefix(_background_alt_name, "spr_");
+	var _background_alt = asset_get_index(_background_alt_name);
+	if (asset_get_type(_background_alt) != asset_sprite) {
+		_background_alt = undefined;
+	}
 
 	var _character = {
 		id: _character_id,
+        sound: _sound,
+        background: _background,
+        background_alt: _background_alt,
 		name: struct_get_merged_value(_character_queue, "name"),
 		name_color: struct_get_merged_value(_character_queue, "name_color"),
 		text_color: struct_get_merged_value(_character_queue, "text_color"),
 		text_speed: struct_get_merged_value(_character_queue, "text_speed"),
 		prefix: struct_get_merged_value(_character_queue, "prefix"),
 		suffix: struct_get_merged_value(_character_queue, "suffix"),
-		sound: _sound,
 		sound_pitch: struct_get_merged_value(_character_queue, "sound_pitch"),
 		sound_spacing: struct_get_merged_value(_character_queue, "sound_spacing"),
-		background: _background,
 	};
 
 	struct_set(state.characters_cache, _character_id, _character);
