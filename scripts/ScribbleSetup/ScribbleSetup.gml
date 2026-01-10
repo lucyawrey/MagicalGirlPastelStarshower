@@ -29,6 +29,7 @@ function text_play_sound(_element, _position, _typist) {
 			obj_dialogue.current_character.sound_pitch + _rand_pitch
 		);
 		state.typist_sound_clock = 0;
-	}
-	state.typist_sound_clock++;
+	} {
+        state.typist_sound_clock++;
+    }
 }
