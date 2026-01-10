@@ -100,7 +100,7 @@ Olivia[?]: You fly, don't you?
     Stella[Narrator]: They taste like completely normal sunflower seeds. I can't help but laugh.
     Stella: Thanks.
 -> Do Not
-    Stella[Narrator] I do do not eat any bird seed.
+    Stella[Narrator]: I do do not eat any bird seed.
     Stella: Thank you? But no.
 -> Explain That You Technically Do Not Fly
     Stella: I don't. Fly I mean.

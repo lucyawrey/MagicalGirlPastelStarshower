@@ -2,7 +2,7 @@ if (visible && !obj_game.paused) {
 	if (obj_game.resumed_this_tick && !you_cannot_advance) {
 		continue_on();
 	}
-    you_cannot_advance = false;
+	you_cannot_advance = false;
 
 	if (current_state == DIALOGUE_STATE.TEXT) {
 		if (typist.get_state() < 1) {

@@ -157,13 +157,16 @@ function draw_options(_textbox_x, _textbox_y, _textbox_w) {
 		return;
 	}
 	var _padding_x = 48;
-	var _padding_y = 34;
+	var _padding_y = 24;
 	option_x = _textbox_x + _padding_x; // Function scoped to allow passing to array_foreach
 	option_y = _textbox_y + _padding_y; // Function scoped to allow passing to array_foreach
+    option_w = _textbox_w - (2 * _padding_x); // Function scoped to allow passing to array_foreach
 
 	array_foreach(current_options, function(_option, _i) {
+        draw_sprite_stretched(current_character.background_alt, 0, option_x - 18, option_y - 4, option_w, 52);
+        
 		scribble(_option.text).draw(option_x, option_y);
-		option_y += 40;
+		option_y += 52;
 	});
 }
 
