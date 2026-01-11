@@ -17,13 +17,16 @@ if (visible && !obj_game.paused) {
 			continue_on();
 		}
 	} else if (current_state == DIALOGUE_STATE.OPTION) {
-		// TODO select option with directional input
+		var _option_count = array_length(current_options);
+		if (current_selection == -2 && _option_count < 2) {
+			current_selection = -1;
+		}
 		if (InputPressed(INPUT_VERB.DOWN)) {
             play_nav_sound();
 			if (current_selection < 0) {
 				current_selection = -current_selection;
 			}
-			if (current_selection < 3) {
+			if (current_selection < _option_count) {
 				current_selection++;
 			} else {
 				current_selection = 1;
@@ -36,7 +39,7 @@ if (visible && !obj_game.paused) {
 			if (current_selection > 1) {
 				current_selection--;
 			} else {
-				current_selection = 3;
+				current_selection = _option_count;
 			}
 		} else if (InputPressed(INPUT_VERB.LEFT) || InputPressed(INPUT_VERB.RIGHT)) {
             play_nav_sound();

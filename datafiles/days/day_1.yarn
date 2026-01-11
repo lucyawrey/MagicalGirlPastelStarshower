@@ -42,13 +42,19 @@ _
 <<block "Azalea" "right">>
 <<delay 1>>
 Azalea: Hey Stella, are you awake?
-Stella: Um, yeah, I am now. Sorry I passed out.
-Azalea: You're good, it's not like you're sleeping in *my* cafe after closing time.
+-> Confirm
+    Stella: Um, yeah, I am now. Sorry I passed out.
+    Azalea: You're good, it's not like you're sleeping in *my* cafe after closing time.
+-> Deny
+    Stella: No.
+    Azalea: Ah, okay, I'll leave you be then.
+    <<auto>>
+    Stella[Slow]: . . .
+    Stella: I'm awake. Sorry.
+    Azalea: You're alright. I was just teasing you.
 Azalea: I've only been keeping an eye on you, and that's easy to do while I'm here caring for the plants anyways.
 Stella: Oh. You didn't have to do that.
 Azalea: Probably not, with this city being so safe, and you being... you. But still, it doesn't feel quite right leaving a friend alone in public while they're totally passed out.
-<<auto>>
-Stella[Slow]: . . .
 Stella: A friend?
 Azalea: Yes, obviously.
 Stella: Right, sorry. Why didn't you just wake me up?
