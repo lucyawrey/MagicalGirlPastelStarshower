@@ -31,6 +31,13 @@ function save_game() {
 }
 
 function load_game() {
+    if (file_exists(SHARED_PATH)) {
+		var _shared_json = read_text_from_file_by_filename(SHARED_PATH);
+		state.shared = json_parse(_shared_json);
+	} else {
+		touch_shared();
+	}
+    
 	var _save_slot_number_string = string(state.shared.active_save_id);
 	var _slot_filename = SAVE_PATH + _save_slot_number_string + JSON_EXT;
 	if (file_exists(_slot_filename)) {
@@ -38,13 +45,6 @@ function load_game() {
 		state.save = json_parse(_save_json);
 	} else {
 		touch_save();
-	}
-
-	if (file_exists(SHARED_PATH)) {
-		var _shared_json = read_text_from_file_by_filename(SHARED_PATH);
-		state.shared = json_parse(_shared_json);
-	} else {
-		touch_shared();
 	}
 
 	if (file_exists(SECRET_PATH)) {
