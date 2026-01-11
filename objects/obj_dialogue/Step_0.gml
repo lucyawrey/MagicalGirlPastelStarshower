@@ -5,15 +5,17 @@ if (visible && !obj_game.paused) {
 	you_cannot_advance = false;
 
 	if (current_state == DIALOGUE_STATE.TEXT) {
-		if (typist.get_state() < 1) {
-			if (InputPressed(INPUT_VERB.ACCEPT) || InputCheck(INPUT_VERB.RIGHT)) {
-				typist.skip();
-				audio_stop_sound(current_character.sound);
-				exit;
-			}
-		}
-		//If we're in a Text state then let the user press space to advance dialogue, or right to fast forward
+        //If we're in a Text state then let the user press space to advance dialogue, or right to fast forward
 		if (InputPressed(INPUT_VERB.ACCEPT) || InputCheck(INPUT_VERB.RIGHT)) {
+            if(typist.get_paused()) {
+                typist.unpause();
+                exit;
+            }
+            if (typist.get_state() < 1) {
+                typist.skip_to_pause();
+                audio_stop_sound(current_character.sound);
+                exit;
+    		}
 			continue_on();
 		}
 	} else if (current_state == DIALOGUE_STATE.OPTION) {

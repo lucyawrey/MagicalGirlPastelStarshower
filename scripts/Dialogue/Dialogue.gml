@@ -30,9 +30,9 @@ function move_to_node_position(_node_position, _option_queue) {
 		if (ChatterboxIsWaiting(obj_dialogue.chatterbox)) {
 			ChatterboxContinue(obj_dialogue.chatterbox);
 		} else {
-            if (_i == _node_position - 1) {
-                break;
-            }
+			if (_i == _node_position - 1) {
+				break;
+			}
 			var _option = _option_queue[_option_queue_index];
 			ChatterboxSelect(obj_dialogue.chatterbox, _option);
 			_option_queue_index++;
