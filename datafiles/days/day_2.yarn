@@ -95,7 +95,7 @@ Stella: I try my very best not to be.
 Olivia[?]: Good. I only feed them seeds, anyway, since I heard bread isn't any good for them.
 Olivia[?]: Would you like any?
 Stella: Would I like any... bird seed?
-Olivia[?]: You fly, don't you?
+Olivia[?]: You fly, don't you? #bird_seed
 -> Eat Bird Seed
     Stella[Narrator]: They taste like completely normal sunflower seeds. I can't help but laugh.
     Stella: Thanks.

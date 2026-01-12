@@ -41,7 +41,7 @@ _
 <<show "azalea" "right">>
 <<block "Azalea" "right">>
 <<delay 1>>
-Azalea: Hey Stella, are you awake?
+Azalea: Hey Stella, are you awake? #awake
 -> Confirm
     Stella: Um, yeah, I am now. Sorry I passed out.
     Azalea: You're good, it's not like you're sleeping in *my* cafe after closing time.

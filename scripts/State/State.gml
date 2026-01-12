@@ -11,6 +11,7 @@ state_ = {
 		visited_nodes: {},
 		gender_form: PLAYER_FORM.androgynous,
 		gender_pronouns: PLAYER_PRONOUNS.it_its,
+        options: {},
 		data: {},
 	},
 	/* game_data/save_shared.json */

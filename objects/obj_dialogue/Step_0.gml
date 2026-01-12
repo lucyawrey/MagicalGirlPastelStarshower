@@ -5,17 +5,17 @@ if (visible && !obj_game.paused) {
 	you_cannot_advance = false;
 
 	if (current_state == DIALOGUE_STATE.TEXT) {
-        //If we're in a Text state then let the user press space to advance dialogue, or right to fast forward
+		//If we're in a Text state then let the user press space to advance dialogue, or right to fast forward
 		if (InputPressed(INPUT_VERB.ACCEPT) || InputCheck(INPUT_VERB.RIGHT)) {
-            if(typist.get_paused()) {
-                typist.unpause();
-                exit;
-            }
-            if (typist.get_state() < 1) {
-                typist.skip_to_pause();
-                audio_stop_sound(current_character.sound);
-                exit;
-    		}
+			if (typist.get_paused()) {
+				typist.unpause();
+				exit;
+			}
+			if (typist.get_state() < 1) {
+				typist.skip_to_pause();
+				audio_stop_sound(current_character.sound);
+				exit;
+			}
 			continue_on();
 		}
 	} else if (current_state == DIALOGUE_STATE.OPTION) {
@@ -24,7 +24,7 @@ if (visible && !obj_game.paused) {
 			current_selection = -1;
 		}
 		if (InputPressed(INPUT_VERB.DOWN)) {
-            play_nav_sound();
+			play_nav_sound();
 			if (current_selection < 0) {
 				current_selection = -current_selection;
 			}
@@ -34,7 +34,7 @@ if (visible && !obj_game.paused) {
 				current_selection = 1;
 			}
 		} else if (InputPressed(INPUT_VERB.UP)) {
-            play_nav_sound();
+			play_nav_sound();
 			if (current_selection < 0) {
 				current_selection = -current_selection;
 			}
@@ -44,12 +44,13 @@ if (visible && !obj_game.paused) {
 				current_selection = _option_count;
 			}
 		} else if (InputPressed(INPUT_VERB.LEFT) || InputPressed(INPUT_VERB.RIGHT)) {
-            play_nav_sound();
+			play_nav_sound();
 			current_selection = -current_selection;
 		}
 		//If we've pressed Accept, submit the current selected option to Chatterbox
 		if (InputPressed(INPUT_VERB.ACCEPT) && current_selection > 0) {
-            play_nav_sound();
+            log(current_metadata[0]);
+			play_nav_sound();
 			ChatterboxSelect(chatterbox, current_selection - 1);
 			array_push(state.save.current_node_option_queue, current_selection - 1);
 			current_state = DIALOGUE_STATE.TEXT;
