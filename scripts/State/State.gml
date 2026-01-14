@@ -7,11 +7,10 @@ state_ = {
 		current_location: "start",
 		current_node: "Start",
 		current_node_position: 0,
-		current_node_option_queue: [],
 		visited_nodes: {},
 		gender_form: PLAYER_FORM.androgynous,
 		gender_pronouns: PLAYER_PRONOUNS.it_its,
-        options: {},
+		selected_options: {none: 0},
 		data: {},
 	},
 	/* game_data/save_shared.json */

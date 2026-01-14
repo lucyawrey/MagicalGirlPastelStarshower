@@ -31,13 +31,13 @@ function save_game() {
 }
 
 function load_game() {
-    if (file_exists(SHARED_PATH)) {
+	if (file_exists(SHARED_PATH)) {
 		var _shared_json = read_text_from_file_by_filename(SHARED_PATH);
 		state.shared = json_parse(_shared_json);
 	} else {
 		touch_shared();
 	}
-    
+
 	var _save_slot_number_string = string(state.shared.active_save_id);
 	var _slot_filename = SAVE_PATH + _save_slot_number_string + JSON_EXT;
 	if (file_exists(_slot_filename)) {
@@ -81,6 +81,7 @@ function reload_chatterbox_variables() {
 
 function reset_save_state() {
 	state.save = variable_clone(INITIAL_STATE.save);
+	reload_chatterbox_variables();
 	touch_save();
 	save_game();
 	load_game();
@@ -160,7 +161,7 @@ function on_chatterbox_variable_set(_name, _value) {
 		touch_secret();
 		_name = string_delete(_name, 1, 7);
 		struct_set(state.secret.data, _name, _value);
-	} else {
+	} else if (!string_starts_with(_name, "optionChosen")) {
 		touch_save();
 		if (array_contains(SAVE_BASE_VARIABLES, _name)) {
 			struct_set(state.save, _name, _value);

@@ -49,14 +49,14 @@ if (visible && !obj_game.paused) {
 		}
 		//If we've pressed Accept, submit the current selected option to Chatterbox
 		if (InputPressed(INPUT_VERB.ACCEPT) && current_selection > 0) {
-            log(current_metadata[0]);
+			var _selection = current_selection - 1;
 			play_nav_sound();
-			ChatterboxSelect(chatterbox, current_selection - 1);
-			array_push(state.save.current_node_option_queue, current_selection - 1);
+			ChatterboxSelect(chatterbox, _selection);
+			if (current_meta_name != "none") {
+				struct_set(state.save.selected_options, current_meta_name, _selection);
+			}
 			current_state = DIALOGUE_STATE.TEXT;
 			get_current_content();
-			increment_current_node_position();
-			touch_save();
 			current_selection = -2;
 		}
 	}

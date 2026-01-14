@@ -5,6 +5,7 @@ current_state = DIALOGUE_STATE.TEXT;
 current_node_metadata = {};
 current_text = "";
 current_metadata = [];
+current_meta_name = "none";
 current_options = [];
 current_selection = -2;
 current_character = get_character();
@@ -51,5 +52,6 @@ function get_current_content() {
 	var _content = get_content();
 	current_text = scribble_markdown_format(_content.text);
 	current_metadata = _content.metadata;
+	current_meta_name = get_meta_name(current_metadata, state.save.current_node);
 	current_character = _content.character;
 }

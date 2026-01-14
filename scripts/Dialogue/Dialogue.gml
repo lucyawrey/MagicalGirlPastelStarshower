@@ -1,4 +1,4 @@
-function show_dialogue(_node, _node_position = 0, _option_queue = []) {
+function show_dialogue(_node, _node_position = 0) {
 	if (!instance_exists(obj_dialogue)) {
 		return;
 	}
@@ -7,7 +7,7 @@ function show_dialogue(_node, _node_position = 0, _option_queue = []) {
 	ChatterboxJump(obj_dialogue.chatterbox, _node);
 
 	if (_node_position > 0) {
-		move_to_node_position(_node_position, _option_queue);
+		move_to_node_position(_node_position);
 	}
 
 	obj_dialogue.get_current_content();
@@ -21,21 +21,24 @@ function hide_dialogue() {
 	}
 }
 
-function move_to_node_position(_node_position, _option_queue) {
-	var _option_queue_index = 0;
+function move_to_node_position(_node_position) {
+	var _meta_name = "none";
 	for (var _i = 0; _i < _node_position; _i++) {
 		if (ChatterboxIsStopped(obj_dialogue.chatterbox)) {
 			return;
 		}
 		if (ChatterboxIsWaiting(obj_dialogue.chatterbox)) {
 			ChatterboxContinue(obj_dialogue.chatterbox);
+			_meta_name = get_meta_name(
+				ChatterboxGetContentMetadata(obj_dialogue.chatterbox, 0),
+				state.save.current_node
+			);
 		} else {
 			if (_i == _node_position - 1) {
 				break;
 			}
-			var _option = _option_queue[_option_queue_index];
-			ChatterboxSelect(obj_dialogue.chatterbox, _option);
-			_option_queue_index++;
+			var _selection = struct_get(state.save.selected_options, _meta_name);
+			ChatterboxSelect(obj_dialogue.chatterbox, _selection);
 		}
 	}
 	state.save.current_node_position = _node_position;
@@ -50,7 +53,6 @@ function increment_current_node_position() {
 function on_node_change(_old_node, _new_node, _action) {
 	if (state.save.current_node != _new_node) {
 		state.save.current_node_position = 0;
-		state.save.current_node_option_queue = [];
 		state.save.current_node = _new_node;
 	}
 	touch_save();
