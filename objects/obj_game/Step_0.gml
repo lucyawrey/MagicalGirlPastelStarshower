@@ -1,7 +1,5 @@
 if (InputPressed(INPUT_VERB.PAUSE)) {
-	if (paused == true) {
-		unpause_game();
-	} else {
+	if (paused == false) {
 		pause_game();
 	}
 }
