@@ -44,12 +44,7 @@
         "name_color": "#8a3812"
     },
     "Olivia": {
-        "name_color": "#917263",
-        "variants": {
-            "?": {
-                "name": "Bird Caretaker"
-            }
-        }
+        "name_color": "#c46e1d"
     },
     "Evie": {
         "name_color": "#0a940a"

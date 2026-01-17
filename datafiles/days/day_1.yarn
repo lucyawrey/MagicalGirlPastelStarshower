@@ -45,6 +45,7 @@ Azalea: Hey Stella, are you awake? #awake
 -> Confirm
     Stella: Um, yeah, I am now. Sorry I passed out.
     Azalea: You're good, it's not like you're sleeping in *my* cafe after closing time.
+    Azalea: I've only been keeping an eye on you, and that's easy to do while I'm here caring for the plants anyways.
 -> Deny
     Stella: No.
     Azalea: Ah, okay, I'll leave you be then.
@@ -52,7 +53,7 @@ Azalea: Hey Stella, are you awake? #awake
     Stella[Slow]: . . .
     Stella: I'm awake. Sorry.
     Azalea: You're alright. I was just teasing you.
-Azalea: I've only been keeping an eye on you, and that's easy to do while I'm here caring for the plants anyways.
+    Azalea: I just wanted to make sure you were up before I leave, since I had been keeping an eye on you.
 Stella: Oh. You didn't have to do that.
 Azalea: Probably not, with this city being so safe, and you being... you. But still, it doesn't feel quite right leaving a friend alone in public while they're totally passed out.
 Stella: A friend?
