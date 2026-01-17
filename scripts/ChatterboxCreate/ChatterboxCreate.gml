@@ -311,10 +311,11 @@ function __ChatterboxClass(_filename, _singleton, _local_scope) constructor {
 			var _lookup =
 				__CHATTERBOX_OPTION_CHOSEN_PREFIX + string(__optionUUIDArray[_index]);
 			if (ds_map_exists(_system.__variablesMap, _lookup)) {
-				__ChatterboxVariableSetInternal(
-					_lookup,
-					_system.__variablesMap[? _lookup] + 1
-				);
+			// Stub this functionality to fix bug
+			//	__ChatterboxVariableSetInternal(
+			//		_lookup,
+			//		_system.__variablesMap[? _lookup] + 1
+			//	);
 			} else {
 				__ChatterboxVariableSetInternal(_lookup, 1);
 				ds_list_add(_system.__constantsList, _lookup);
