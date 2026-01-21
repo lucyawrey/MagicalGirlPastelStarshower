@@ -34,14 +34,11 @@ title: Day1Cafe
 location: cafe
 day: 1
 ---
-<<background "bg_cafe">>
 <<play "music" "nostalgia">>
-<<auto 0.5>>
-_
+<<background "bg_cafe">>
 <<show "stella" "left">>
 <<show "azalea" "right">>
 <<block "Azalea" "right">>
-<<delay 0.5>>
 Azalea: Hey Stella, are you awake? #awake
 -> Confirm
     Stella: Um, yeah, I am now. Sorry I passed out.
