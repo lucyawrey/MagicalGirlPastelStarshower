@@ -3,7 +3,7 @@ function scribble_setup() {
 	_typist.in(1, 0);
 	_typist.function_per_char(text_play_sound);
 	_typist.function_on_complete(on_typist_complete);
-	scribble_font_set_default("fnt_dialogue");
+	scribble_font_set_default(DEFAULT_FONT);
 	return _typist;
 }
 

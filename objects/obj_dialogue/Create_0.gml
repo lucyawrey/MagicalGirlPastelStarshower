@@ -60,4 +60,5 @@ function get_current_content() {
 	current_metadata = _content.metadata;
 	current_meta_name = get_meta_name(current_metadata, state.save.current_node);
 	current_character = _content.character;
+    draw_fullscreen = current_character.fullscreen;
 }

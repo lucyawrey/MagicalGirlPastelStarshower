@@ -10,7 +10,9 @@
         "sound_pitch": 1,
         "sound_spacing": 4,
         "background": "box",
-        "background_alt": "box_alt"
+        "background_alt": "box_alt",
+        "fullscreen": false,
+        "font": "dialogue"
     },
     "Narrator": {
         "name": ""
@@ -24,7 +26,9 @@
         "background": "",
         "text_speed": 0.05,
         "sound_spacing": 1,
-        "sound_pitch": 1.2
+        "sound_pitch": 1.2,
+        "fullscreen": true,
+        "font": "dialogue_large"
     },
     "Stella": {
         "name_color": "#e3e06f",
