@@ -50,15 +50,6 @@ function increment_current_node_position() {
 	touch_save();
 }
 
-function on_node_change(_old_node, _new_node, _action) {
-	if (state.save.current_node != _new_node) {
-		state.save.current_node_position = 0;
-		state.save.current_node = _new_node;
-	}
-	touch_save();
-	obj_dialogue.is_new_node = true;
-}
-
 function get_content() {
 	if (!instance_exists(obj_dialogue)) {
 		return;

@@ -48,7 +48,8 @@ function get_current_content() {
             state.save.current_location = current_node_metadata.location;
         }
         if (struct_exists(current_node_metadata, "day")) {
-            state.save.current_game_day = current_node_metadata.day;
+            var _new_game_day = real(current_node_metadata.day);
+            ChatterboxVariableSet("day", _new_game_day);
         }
 		touch_save();
 		save_game();

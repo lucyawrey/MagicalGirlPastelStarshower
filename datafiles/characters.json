@@ -19,6 +19,13 @@
         "name": "",
         "background": ""
     },
+    "Card": {
+        "name": "",
+        "background": "",
+        "text_speed": 0.05,
+        "sound_spacing": 1,
+        "sound_pitch": 1.2
+    },
     "Stella": {
         "name_color": "#e3e06f",
         "sound_pitch": 1.3,
