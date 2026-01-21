@@ -2,6 +2,6 @@ title: DateCard
 ---
 <<auto>>
 Card: {$date}
-<<delay 3>>
+<<delay 1>>
 <<hopback>>
 ===

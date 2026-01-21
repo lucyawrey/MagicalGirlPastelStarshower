@@ -16,5 +16,5 @@ function get_date(){
 
 function get_date_string() {
     var _d = get_date();
-    return $"{MONTHS[date_get_month(_d - 1)]} {date_get_day(_d)}, {date_get_year(_d)}";
+    return $"{MONTHS[date_get_month(_d) - 1]} {date_get_day(_d)}, {date_get_year(_d)}";
 }
