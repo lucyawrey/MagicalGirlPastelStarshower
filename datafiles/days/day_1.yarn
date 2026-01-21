@@ -26,6 +26,7 @@ Stella[Dream]: I'd like it... if both of us did.
 Stella[Dream]: So, let's get going, it's a long road.
 <<auto 1>>
 [Dream]: _
+<<hop DateCard>>
 <<jump Day1Cafe>>
 ===
 

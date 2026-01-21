@@ -98,6 +98,7 @@
   "ForcedPrefabProjectReferences":[],
   "IncludedFiles":[
     {"$GMIncludedFile":"","%Name":"characters.json","CopyToMask":-1,"filePath":"datafiles","name":"characters.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"date_card.yarn","CopyToMask":-1,"filePath":"datafiles","name":"date_card.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"day_1.yarn","CopyToMask":-1,"filePath":"datafiles/days","name":"day_1.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"day_2.yarn","CopyToMask":-1,"filePath":"datafiles/days","name":"day_2.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"day_3.yarn","CopyToMask":-1,"filePath":"datafiles/days","name":"day_3.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
@@ -314,6 +315,7 @@
     {"id":{"name":"__scribble_texture_group_get_ready","path":"scripts/__scribble_texture_group_get_ready/__scribble_texture_group_get_ready.yy",},},
     {"id":{"name":"__scribble_tick","path":"scripts/__scribble_tick/__scribble_tick.yy",},},
     {"id":{"name":"Actions","path":"scripts/Actions/Actions.yy",},},
+    {"id":{"name":"Calendar","path":"scripts/Calendar/Calendar.yy",},},
     {"id":{"name":"Characters","path":"scripts/Characters/Characters.yy",},},
     {"id":{"name":"ChatterboxAddFindReplace","path":"scripts/ChatterboxAddFindReplace/ChatterboxAddFindReplace.yy",},},
     {"id":{"name":"ChatterboxAddFunction","path":"scripts/ChatterboxAddFunction/ChatterboxAddFunction.yy",},},

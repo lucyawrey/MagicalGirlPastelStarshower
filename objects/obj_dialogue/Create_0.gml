@@ -44,7 +44,12 @@ function continue_on() {
 function get_current_content() {
 	if (is_new_node) {
 		current_node_metadata = ChatterboxGetCurrentMetadata(chatterbox);
-		state.save.current_location = current_node_metadata.location;
+//        if (!is_undefined(current_node_metadata) && !is_undefined(current_node_metadata.location)) {
+ //           state.save.current_location = current_node_metadata.location;
+  //      }
+    //    if (!is_undefined(current_node_metadata) && !is_undefined(current_node_metadata.day)) {
+      //      state.save.current_location = string_digits(current_node_metadata.day);
+        //}
 		touch_save();
 		save_game();
 		is_new_node = false;
