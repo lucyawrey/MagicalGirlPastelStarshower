@@ -5,7 +5,7 @@ state_ = {
 		name: "",
 		runs_completed: 0,
 		current_location: "start",
-        current_day: 1,
+        current_game_day: 1,
         current_time_block: TIME_BLOCK.EVENING,
 		current_node: "Start",
 		current_node_position: 0,
