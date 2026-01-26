@@ -70,5 +70,6 @@ function reset_current_save() {
 	unpause_game();
 }
 function save_and_quit_game() {
-	show_debug_message("Please press ALT-F4")
+	save_game();
+    game_end();
 }

@@ -203,13 +203,21 @@ function draw_text_advance_icon() {
 	) {
 		return;
 	}
-
+    
 	var _offset = get_offset_for_rotation(spr_star, advance_icon_rotation, 0.5);
+    var _x_pos = VIEW_WIDTH - 100 - _offset.x;
+    var _y_pos = VIEW_HEIGHT - 60 - _offset.y;
+    
+    if (current_state == DIALOGUE_STATE.OPTION && current_selection > 0) {
+        _x_pos -= 42;
+        _y_pos -= 160 - (52 * current_selection);
+    }
+    
 	draw_sprite_ext(
 		spr_star,
 		0,
-		VIEW_WIDTH - 100 - _offset.x,
-		VIEW_HEIGHT - 60 - _offset.y,
+        _x_pos,
+        _y_pos,
 		0.5,
 		0.5,
 		advance_icon_rotation,
