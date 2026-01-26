@@ -113,7 +113,10 @@ function touch_secret() {
 }
 
 function load_chatterbox_variables_from_state() {
-	import = {};
+    // day + date handling
+    ChatterboxVariableSet("day", state.save.current_game_day);
+    
+    import = {};
 	array_foreach(SAVE_BASE_VARIABLES, function(_name) {
 		struct_set(import, _name, struct_get(state.save, _name));
 	});
@@ -149,6 +152,12 @@ function set_sync_variable(_name, _value) {
 }
 
 function on_chatterbox_variable_set(_name, _value) {
+    // day + date handling
+    if (_name == "day") {
+        state.save.current_game_day = _value;
+        ChatterboxVariableSet("date", get_date_string());
+    }
+    
 	if (string_starts_with(_name, "gender_pronoun_")) {
 		return;
 	}

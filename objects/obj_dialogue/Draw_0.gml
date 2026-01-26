@@ -142,9 +142,13 @@ function draw_dialogue(_textbox_x, _textbox_y, _textbox_w) {
 	var _x = _textbox_x + _padding_x;
 	var _y = _textbox_y + _padding_y;
 	var _w = _textbox_w - (2 * _padding_x);
-
+    
+    if (draw_fullscreen) {
+        _y -= 400;
+    }
+    
 	scribble(
-		$"[speed,{current_character.text_speed}][{current_character.text_color}]{
+		$"[speed,{current_character.text_speed}][{current_character.text_color}][{current_character.font}]{
 			current_character.prefix
 		}{current_text}{current_character.suffix}"
 	)

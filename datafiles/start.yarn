@@ -5,7 +5,9 @@ day: 0
 <<set $id to 0>>
 <<set $runs_completed to 0>>
 <<set $name to "">>
-<<set $mood to -2>>
+<<set $day to 1>>
+<<set $date to "">>
+<<set $mood to 0>>
 
 <<jump Day1Dream>>
 ===

@@ -44,7 +44,13 @@ function continue_on() {
 function get_current_content() {
 	if (is_new_node) {
 		current_node_metadata = ChatterboxGetCurrentMetadata(chatterbox);
-		state.save.current_location = current_node_metadata.location;
+        if (struct_exists(current_node_metadata, "location")) {
+            state.save.current_location = current_node_metadata.location;
+        }
+        if (struct_exists(current_node_metadata, "day")) {
+            var _new_game_day = real(current_node_metadata.day);
+            ChatterboxVariableSet("day", _new_game_day);
+        }
 		touch_save();
 		save_game();
 		is_new_node = false;
@@ -54,4 +60,5 @@ function get_current_content() {
 	current_metadata = _content.metadata;
 	current_meta_name = get_meta_name(current_metadata, state.save.current_node);
 	current_character = _content.character;
+    draw_fullscreen = current_character.fullscreen;
 }
