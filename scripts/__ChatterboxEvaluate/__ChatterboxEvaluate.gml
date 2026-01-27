@@ -1,5 +1,7 @@
 // Feather disable all
+
 /// @param localScope
+/// @param nodeTitle
 /// @param filename
 /// @param expression
 /// @param behaviour
@@ -7,6 +9,7 @@
 
 function __ChatterboxEvaluate(
 	_local_scope,
+	_node_title,
 	_filename,
 	_expression,
 	_behaviour,
@@ -49,6 +52,7 @@ function __ChatterboxEvaluate(
 			case "+=":
 				_a = __ChatterboxEvaluate(
 					_local_scope,
+					_node_title,
 					_filename,
 					_expression.a,
 					undefined,
@@ -56,6 +60,7 @@ function __ChatterboxEvaluate(
 				);
 				_b = __ChatterboxEvaluate(
 					_local_scope,
+					_node_title,
 					_filename,
 					_expression.b,
 					undefined,
@@ -69,6 +74,7 @@ function __ChatterboxEvaluate(
 			case "param":
 				_a = __ChatterboxEvaluate(
 					_local_scope,
+					_node_title,
 					_filename,
 					_expression.a,
 					undefined,
@@ -86,6 +92,7 @@ function __ChatterboxEvaluate(
 				repeat (array_length(_parameters)) {
 					_parameter_values[@ _p] = __ChatterboxEvaluate(
 						_local_scope,
+						_node_title,
 						_filename,
 						_parameters[_p],
 						undefined,
@@ -98,6 +105,7 @@ function __ChatterboxEvaluate(
 			case "=":
 				_b = __ChatterboxEvaluate(
 					_local_scope,
+					_node_title,
 					_filename,
 					_expression.b,
 					undefined,
@@ -164,12 +172,46 @@ function __ChatterboxEvaluate(
 				if (_filename == undefined) {
 					return 0;
 				} else {
-					return ChatterboxGetVisited(_parameter_values[0], _filename);
+					if (
+						(array_length(_parameter_values) <= 0)
+						|| (_parameter_values[0] == undefined)
+					) {
+						var _param_node_title = _node_title;
+					} else {
+						var _param_node_title = _parameter_values[0];
+					}
+
+					return ChatterboxGetVisited(_param_node_title, _filename);
+				}
+			} else if (_expression.name == "once") {
+				if (_filename == undefined) {
+					return false;
+				} else {
+					return __ChatterboxLocalCounter(
+						_parameter_values[0],
+						undefined,
+						_node_title,
+						_filename
+					) == 1;
+				}
+			} else if (_expression.name == "localCounter") {
+				if (_filename == undefined) {
+					return 0;
+				} else {
+					var _modulo = (array_length(_parameter_values) >= 2)
+						? _parameter_values[1]
+						: undefined;
+					return __ChatterboxLocalCounter(
+						_parameter_values[0],
+						_modulo,
+						_node_title,
+						_filename
+					);
 				}
 			} else if (_expression.name == "optionChosen") {
 				if (_optionUUID == undefined) {
 					__ChatterboxError(
-						"Cannot use optionChosen() outside of a option condition"
+						"Cannot use optionChosen() outside of an option condition"
 					);
 				} else {
 					return _system.__variablesMap[?
@@ -258,7 +300,6 @@ function __ChatterboxEvaluate(
 				} else if (!ds_map_exists(_system.__declaredVariablesMap, _variable_name)) {
 					_system.__declaredVariablesMap[? _variable_name] = true;
 					_system.__constantsMap[? _variable_name] = false;
-					ds_list_add(_system.__variablesList, _variable_name);
 				}
 				break;
 

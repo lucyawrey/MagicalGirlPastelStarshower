@@ -6,6 +6,10 @@
 /// @param buffer     Buffer to read
 
 function ChatterboxLoadFromBuffer(_aliasName, _buffer) {
+	return __ChatterboxLoadFromBufferInternal(_aliasName, _aliasName, _buffer);
+}
+
+function __ChatterboxLoadFromBufferInternal(_filename, _aliasName, _buffer) {
 	static _system = __ChatterboxSystem();
 
 	_aliasName = __ChatterboxReplaceBackslashes(_aliasName);
@@ -26,7 +30,7 @@ function ChatterboxLoadFromBuffer(_aliasName, _buffer) {
 	}
 
 	//Create a struct that represents this source
-	var _source = new __ChatterboxClassSource(_aliasName, _buffer, true);
+	var _source = new __ChatterboxClassSource(_filename, _aliasName, _buffer, true);
 
 	//If we successfully decoded a buffer add it to our collection of chatterboxes
 	if ((instanceof(_source) == "__ChatterboxClassSource") && _source.loaded) {

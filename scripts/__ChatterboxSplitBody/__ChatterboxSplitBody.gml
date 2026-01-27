@@ -102,6 +102,10 @@ function __ChatterboxSplitBody(
 			buffer_seek(_buffer, buffer_seek_start, _old_tell);
 		}
 
+		if (_type == "metadata") {
+			_text = string_trim(_text);
+		}
+
 		if (__CHATTERBOX_DEBUG_SPLITTER) {
 			__ChatterboxTrace(
 				"Read \"",
@@ -339,7 +343,7 @@ function __ChatterboxSplitBody(
 					_buffer_offset
 				);
 				//Correct the buffer position for when we apply localisation
-				_substring.buffer_end += 2;
+				_substring.buffer_end = buffer_tell(_buffer);
 
 				_type = _line_is_option ? "option" : "text";
 				_in_action = false;

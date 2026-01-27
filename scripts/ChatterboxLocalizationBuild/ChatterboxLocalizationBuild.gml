@@ -1,4 +1,5 @@
 // Feather disable all
+
 /// Parses an array of ChatternScript files stored in your project's Included Filess directory and
 /// creates a CSV that contains all strings in those source files. The ChatterScript files are
 /// modified by this function such that they link up to the CSV. You should then create a copy of
@@ -16,88 +17,11 @@
 function ChatterboxLocalizationBuild(_chatter_path_array, _csv_path_array) {
 	static _system = __ChatterboxSystem();
 
-	if (!CHATTERBOX_LOCALIZATION_ACKNOWLEDGE_WARNING) {
-		__ChatterboxError(
-			"THIS FUNCTION WILL MODIFY SOURCE FILES ON DISK INSIDE YOUR PROJECT\nENSURE YOU HAVE BACKED UP YOUR WORK IN SOURCE CONTROL\n \nSet CHATTERBOX_LOCALIZATION_ACKNOWLEDGE_WARNING to <true> to turn off this warning"
-		);
-	} else if (os_browser != browser_not_a_browser) {
-		__ChatterboxError(
-			"ChatterboxLocalizationBuild() not available when running in a browser"
-		);
-	} else if ((os_type != os_windows) && (os_type != os_macosx) && (os_type != os_linux)) {
-		__ChatterboxError(
-			"ChatterboxLocalizationBuild() only available when running on Windows, MacOS, or Linux"
-		);
-	} else if (GM_build_type != "run") {
-		__ChatterboxError(
-			"ChatterboxLocalizationBuild() only available when running from the IDE"
-		);
-	}
-	var _root_directory =
-		filename_dir(GM_project_filename)
-		+ "/datafiles/"
-		+ _system.__directory;
+	var _root_directory = __ChatterboxLocGetRootDirectory();
+	var _data = ChatterboxLocalizationExportData(_chatter_path_array);
 
-	if (!directory_exists(_root_directory)) {
-		__ChatterboxError(
-			"Could not find \"",
-			_root_directory,
-			"\"\nPlease check the file system sandbox is disabled"
-		);
-	}
-
-	if (!is_array(_chatter_path_array)) {
-		_chatter_path_array = [_chatter_path_array];
-	}
 	if (!is_array(_csv_path_array)) {
 		_csv_path_array = [_csv_path_array];
-	}
-
-	var _file_order = [];
-	var _file_dict = {};
-	// [
-	//     <filename>,
-	// ]
-	//
-	// {
-	//     <filename>: {
-	//         order: [
-	//             <node title>,
-	//         ],
-	//         nodes: {
-	//             <node title>: {
-	//                 order: [
-	//                     <hash>,
-	//                 ],
-	//                 strings: {
-	//                     <hash>: <string>,
-	//                 },
-	//             },
-	//         },
-	//     }.
-	// }
-
-	var _count = array_length(_chatter_path_array);
-	var _i = 0;
-	repeat (_count) {
-		var _local_path = __ChatterboxReplaceBackslashes(_chatter_path_array[_i]);
-		var _absolute_path = __ChatterboxReplaceBackslashes(
-			_root_directory + _local_path
-		);
-
-		var _buffer = buffer_load(_absolute_path);
-		var _source = new __ChatterboxClassSource(_local_path, _buffer, false);
-
-		var _buffer_batch = new __ChatterboxBufferBatch();
-		_buffer_batch.__FromBuffer(_buffer);
-
-		_source.__BuildLocalisation(_file_order, _file_dict, _buffer_batch);
-
-		//Save out the modified ChatterScript file
-		buffer_save(_buffer_batch.__GetBuffer(), _absolute_path);
-		_buffer_batch.__Destroy();
-
-		++_i;
 	}
 
 	//Go through each CSV file and merge in changes
@@ -118,8 +42,10 @@ function ChatterboxLocalizationBuild(_chatter_path_array, _csv_path_array) {
 		__ChatterboxLocalizationLoadIntoMap(_absolute_path, _csv_loc_map, true);
 
 		var _f = 0;
-		repeat (array_length(_file_order)) {
-			var _filename = _file_order[_f];
+		repeat (array_length(_data)) {
+			var _file_struct = _data[_f];
+			var _filename = _file_struct.filename;
+			var _node_array = _file_struct.nodes;
 
 			buffer_write(_output_buffer, buffer_text, ",\"");
 			buffer_write(
@@ -129,13 +55,11 @@ function ChatterboxLocalizationBuild(_chatter_path_array, _csv_path_array) {
 			);
 			buffer_write(_output_buffer, buffer_text, "\",,,,\n");
 
-			var _file_struct = _file_dict[$ _filename];
-			var _node_order = _file_struct.order;
-			var _node_dict = _file_struct.nodes;
-
 			var _n = 0;
-			repeat (array_length(_node_order)) {
-				var _node_title = _node_order[_n];
+			repeat (array_length(_node_array)) {
+				var _node_struct = _node_array[_n];
+				var _node_title = _node_struct.title;
+				var _string_array = _node_struct.strings;
 
 				buffer_write(_output_buffer, buffer_text, ",,\"");
 				buffer_write(
@@ -145,15 +69,12 @@ function ChatterboxLocalizationBuild(_chatter_path_array, _csv_path_array) {
 				);
 				buffer_write(_output_buffer, buffer_text, "\",,,\n");
 
-				var _node_struct = _node_dict[$ _node_title];
-				var _string_order = _node_struct.order;
-				var _string_dict = _node_struct.strings;
-
 				var _s = 0;
-				repeat (array_length(_string_order)) {
-					var _line_id = _string_order[_s];
+				repeat (array_length(_string_array)) {
+					var _string_struct = _string_array[_s];
+					var _line_id = _string_struct.line_id;
+					var _new_text = _string_struct.content;
 
-					var _new_text = _string_dict[$ _line_id];
 					var _new_hash =
 						"#"
 						+ string_copy(

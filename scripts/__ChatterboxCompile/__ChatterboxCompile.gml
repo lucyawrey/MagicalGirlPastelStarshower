@@ -92,6 +92,7 @@ function __ChatterboxCompile(_in_substring_array, _root_instruction, _hash_prefi
 					__ChatterboxEvaluate(
 						undefined,
 						undefined,
+						undefined,
 						_instruction.expression,
 						"declare",
 						undefined
@@ -120,6 +121,7 @@ function __ChatterboxCompile(_in_substring_array, _root_instruction, _hash_prefi
 					__ChatterboxEvaluate(
 						undefined,
 						undefined,
+						undefined,
 						_instruction.expression,
 						"constant",
 						undefined
@@ -146,6 +148,7 @@ function __ChatterboxCompile(_in_substring_array, _root_instruction, _hash_prefi
 						);
 					}
 					__ChatterboxEvaluate(
+						undefined,
 						undefined,
 						undefined,
 						_instruction.expression,
@@ -223,6 +226,7 @@ function __ChatterboxCompile(_in_substring_array, _root_instruction, _hash_prefi
 							">> is non-standard ChatterScript syntax, please use <<elseif>>\n \n(Set CHATTERBOX_ERROR_NONSTANDARD_SYNTAX to <false> to hide this error)"
 						);
 					}
+				//Fall through!
 				case "elseif":
 					var _instruction = new __ChatterboxClassInstruction(
 						"else if",
@@ -247,6 +251,7 @@ function __ChatterboxCompile(_in_substring_array, _root_instruction, _hash_prefi
 							"<<end if>> is non-standard ChatterScript syntax, please use <<endif>>\n \n(Set CHATTERBOX_ERROR_NONSTANDARD_SYNTAX to <false> to hide this error)"
 						);
 					}
+				//Fall through!
 				case "endif":
 					var _instruction = new __ChatterboxClassInstruction(
 						"end if",
@@ -292,6 +297,52 @@ function __ChatterboxCompile(_in_substring_array, _root_instruction, _hash_prefi
 							_line,
 							_indent
 						);
+					}
+					break;
+
+				case "choose":
+					var _instruction = new __ChatterboxClassInstruction(
+						_first_word,
+						_line,
+						_indent
+					);
+					_instruction.expression = __ChatterboxParseExpression(
+						_remainder,
+						false
+					);
+
+					var _q = _s + 1;
+					repeat (_substring_count - _q) {
+						if (_in_substring_array[_q] != _line) {
+							break;
+						}
+						++_q;
+					}
+
+					if (_q >= _substring_count - 1) {
+						__ChatterboxError("Cannot use <<choose>> at the end of a node");
+					} else if (_in_substring_array[_q].type != "option") {
+						__ChatterboxError(
+							"Must use <<choose>> immediately before an option (type=",
+							_in_substring_array[_q].type,
+							", string=\"",
+							_in_substring_array[_q].text,
+							"\")"
+						);
+					}
+					break;
+
+				case "moveAhead":
+					if (is_struct(_previous_instruction)) {
+						if (_previous_instruction.type != "content") {
+							__ChatterboxError(
+								"Cannot use <<moveAhead>> after any instruction other than content"
+							);
+						} else if (_previous_instruction.line != _line) {
+							__ChatterboxError("Cannot use <<moveAhead>> on a new line");
+						} else {
+							_previous_instruction.startMoveAhead = true;
+						}
 					}
 					break;
 
@@ -366,6 +417,7 @@ function __ChatterboxCompile(_in_substring_array, _root_instruction, _hash_prefi
 									1,
 									__CHATTERBOX_LINE_HASH_PREFIX_LENGTH
 								);
+							_previous_instruction.loc_hash = _instruction_text.loc_hash; //Store the line ID in the instruction too for collection later
 						}
 					}
 

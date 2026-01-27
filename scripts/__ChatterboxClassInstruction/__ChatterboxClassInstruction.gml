@@ -8,6 +8,8 @@ function __ChatterboxClassInstruction(_type, _line, _indent) constructor {
 	indent = _indent;
 	metadata = [];
 	text = undefined;
+	loc_hash = undefined;
+	startMoveAhead = false;
 
 	static toString = function() {
 		return "Instr " + string(type);

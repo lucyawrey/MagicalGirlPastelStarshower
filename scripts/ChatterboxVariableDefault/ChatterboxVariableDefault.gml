@@ -1,4 +1,5 @@
 // Feather disable all
+
 /// Sets the default value of the Chatterbox variable with the given name
 /// Chatterbox variables are only strings, numbers, or booleans
 ///
@@ -63,7 +64,6 @@ function ChatterboxVariableDefault(_name, _value) {
 		_system.__variablesMap[? _name] = _value;
 		_system.__defaultVariablesMap[? _name] = _value;
 		_system.__declaredVariablesMap[? _name] = true;
-		ds_list_add(_system.__variablesList, _name);
 
 		if (CHATTERBOX_VERBOSE) {
 			__ChatterboxTrace(

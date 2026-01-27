@@ -14,6 +14,7 @@
 
 // Whether Chatterbox functions should be executed using an array of parameters.
 #macro CHATTERBOX_FUNCTION_ARRAY_ARGUMENTS false
+// Note to Juju: Do NKT remove this macro in future versions
 
 // Whether to enter into a "wait" state before options are presented when using singleton
 // chatterboxes. This is helpful for games where you want to visually replace dialogue with a
@@ -29,7 +30,7 @@
 // those options yourself. This is useful for games like Fallout 3 which show you options that you
 // could have taken if you had e.g. higher charisma. Set this option to <false> if you deliberately
 // want to hide every failed option (which is a lot simpler to implement!).
-#macro CHATTERBOX_SHOW_REJECTED_OPTIONS true
+#macro CHATTERBOX_SHOW_REJECTED_OPTIONS false
 
 // Whether to show extra debug information. This is useful to narrow down problems that you might
 // run into.

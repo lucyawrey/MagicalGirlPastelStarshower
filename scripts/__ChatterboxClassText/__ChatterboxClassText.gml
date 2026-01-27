@@ -77,7 +77,7 @@ function __ChatterboxClassText(_string) constructor {
 		buffer_delete(_buffer);
 	};
 
-	static Evaluate = function(_local_scope, _filename, _delimitStrings) {
+	static Evaluate = function(_local_scope, _node_title, _filename, _delimitStrings) {
 		//Check our localisation map to see if we need to re-parse this chunk of text
 		if (loc_hash != undefined) {
 			var _found_string = _system.__localisationMap[? loc_hash] ?? raw_string;
@@ -95,6 +95,7 @@ function __ChatterboxClassText(_string) constructor {
 			if (is_struct(_value)) {
 				_value = __ChatterboxEvaluate(
 					_local_scope,
+					_node_title,
 					_filename,
 					_value,
 					undefined,

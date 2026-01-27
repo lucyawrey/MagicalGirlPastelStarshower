@@ -3,6 +3,6 @@
 ///
 /// @param value
 
-function IsChatterbox(value) {
-	return instanceof(value) == "__ChatterboxClass";
+function IsChatterbox(_value) {
+	return instanceof(_value) == "__ChatterboxClass";
 }

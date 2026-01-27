@@ -1,20 +1,23 @@
 // Feather disable all
+
 /// @param filename
+/// @param alias
 /// @param string
 /// @param compile
 
-function __ChatterboxClassSource(_filename, _buffer, _compile) constructor {
-	filename = _filename;
-	name = _filename;
+function __ChatterboxClassSource(_filename, _alias, _buffer, _compile) constructor {
+	originalFilename = _filename;
+
+	filename = _alias; //TODO - Rename to `alias`
 	tags = [];
 	nodes = [];
 	loaded = false; //We set this to <true> at the bottom of the constructor
 
 	__ChatterboxTrace(
 		"Parsing \"",
-		filename,
+		originalFilename,
 		"\" as a source file with alias \"",
-		name,
+		filename,
 		"\""
 	);
 
@@ -41,6 +44,7 @@ function __ChatterboxClassSource(_filename, _buffer, _compile) constructor {
 			__ChatterboxError("Node in \"", filename, "\" has no title metadata");
 		} else {
 			var _node = new __ChatterboxClassNode(
+				originalFilename,
 				filename,
 				_node_metadata,
 				_compile,
@@ -93,17 +97,16 @@ function __ChatterboxClassSource(_filename, _buffer, _compile) constructor {
 		return tags;
 	};
 
-	static __BuildLocalisation = function(_file_order, _file_dict, _buffer_batch) {
-		array_push(_file_order, filename);
-
-		var _node_order = [];
-		var _node_dict = {};
-
-		_file_dict[$ filename] = {order: _node_order, nodes: _node_dict};
+	static __BuildLocalisation = function(_json, _buffer_batch) {
+		var _file_struct = {};
+		var _node_array = [];
+		_file_struct.filename = filename;
+		_file_struct.nodes = _node_array;
+		array_push(_json, _file_struct);
 
 		var _i = 0;
 		repeat (array_length(nodes)) {
-			nodes[_i].__BuildLocalisation(_node_order, _node_dict, _buffer_batch);
+			nodes[_i].__BuildLocalisation(_node_array, _buffer_batch);
 			++_i;
 		}
 	};

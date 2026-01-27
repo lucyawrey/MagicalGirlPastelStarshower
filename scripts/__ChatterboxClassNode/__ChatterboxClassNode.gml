@@ -1,4 +1,6 @@
 // Feather disable all
+
+/// @param originalFilename
 /// @param filename
 /// @param nodeTags
 /// @param bodyString
@@ -8,6 +10,7 @@
 /// @param bufferEnd
 
 function __ChatterboxClassNode(
+	_originalFilename,
 	_filename,
 	_node_metadata,
 	_compile,
@@ -17,6 +20,7 @@ function __ChatterboxClassNode(
 ) constructor {
 	static _system = __ChatterboxSystem();
 
+	originalFilename = _originalFilename;
 	filename = _filename;
 	title = _node_metadata.title;
 	metadata = _node_metadata;
@@ -43,7 +47,7 @@ function __ChatterboxClassNode(
 		__ChatterboxCompile(
 			_substring_array,
 			root_instruction,
-			filename + ":" + title + ":#"
+			originalFilename + ":" + title + ":#"
 		);
 	} else {
 		substring_array = _substring_array;
@@ -51,7 +55,7 @@ function __ChatterboxClassNode(
 
 	static MarkVisited = function() {
 		var _long_name =
-			"visited("
+			__CHATTERBOX_VISITED_PREFIX
 			+ string(filename)
 			+ CHATTERBOX_FILENAME_SEPARATOR
 			+ string(title)
@@ -72,13 +76,12 @@ function __ChatterboxClassNode(
 		return "Node " + string(filename) + CHATTERBOX_FILENAME_SEPARATOR + string(title);
 	};
 
-	static __BuildLocalisation = function(_node_order, _node_dict, _buffer_batch) {
-		array_push(_node_order, title);
-
-		var _hash_order = [];
-		var _hash_dict = {};
-
-		_node_dict[$ title] = {order: _hash_order, strings: _hash_dict};
+	static __BuildLocalisation = function(_node_array, _buffer_batch) {
+		var _node_struct = {};
+		var _string_array = [];
+		_node_struct.title = title;
+		_node_struct.strings = _string_array;
+		array_push(_node_array, _node_struct);
 
 		//Collect substrings together into lines
 		var _lines_array = [];
@@ -107,7 +110,7 @@ function __ChatterboxClassNode(
 		//Build localisation for each line
 		var _i = 0;
 		repeat (array_length(_lines_array)) {
-			_lines_array[_i].__BuildLocalisation(_hash_order, _hash_dict, _buffer_batch);
+			_lines_array[_i].__BuildLocalisation(_string_array, _buffer_batch);
 			++_i;
 		}
 	};

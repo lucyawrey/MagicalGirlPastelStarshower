@@ -70,11 +70,14 @@ function __ChatterboxClass(_filename, _singleton, _local_scope) constructor {
 	content = [];
 	contentConditionBool = [];
 	contentMetadata = [];
+	contentLineID = [];
 	contentStructArray = [];
 
 	option = [];
 	optionConditionBool = [];
+	optionHasCondition = [];
 	optionMetadata = [];
+	optionLineID = [];
 	optionInstruction = [];
 	__optionUUIDArray = [];
 	optionStructArray = [];
@@ -92,6 +95,7 @@ function __ChatterboxClass(_filename, _singleton, _local_scope) constructor {
 	fastForward = false;
 	loaded = true;
 	wait_instruction = undefined;
+	moveAhead = false;
 
 	__fastForwardContentCount = 0;
 
@@ -145,7 +149,7 @@ function __ChatterboxClass(_filename, _singleton, _local_scope) constructor {
 		__ChangeNode(_node, true, "jump");
 		current_instruction = current_node.root_instruction;
 
-		__ChatterboxVM();
+		__ChatterboxVM(false);
 	};
 
 	static JumpBack = function() {
@@ -156,7 +160,7 @@ function __ChatterboxClass(_filename, _singleton, _local_scope) constructor {
 		__ChangeNode(previous_node, true, "jump");
 		current_instruction = current_node.root_instruction;
 
-		__ChatterboxVM();
+		__ChatterboxVM(false);
 	};
 
 	//Jumps to a given node in the given source
@@ -205,7 +209,7 @@ function __ChatterboxClass(_filename, _singleton, _local_scope) constructor {
 		__ChangeNode(_node, true, "hop");
 		current_instruction = current_node.root_instruction;
 
-		__ChatterboxVM();
+		__ChatterboxVM(false);
 	};
 
 	static __HopPush = function(_next) {
@@ -276,7 +280,7 @@ function __ChatterboxClass(_filename, _singleton, _local_scope) constructor {
 		__ChangeNode(_hop_data.node, false, "hopback");
 		current_instruction = _hop_data.next;
 
-		__ChatterboxVM();
+		__ChatterboxVM(false);
 	};
 
 	static Select = function(_index) {
@@ -311,18 +315,17 @@ function __ChatterboxClass(_filename, _singleton, _local_scope) constructor {
 			var _lookup =
 				__CHATTERBOX_OPTION_CHOSEN_PREFIX + string(__optionUUIDArray[_index]);
 			if (ds_map_exists(_system.__variablesMap, _lookup)) {
-				// Stub this functionality to fix bug
-				//	__ChatterboxVariableSetInternal(
-				//		_lookup,
-				//		_system.__variablesMap[? _lookup] + 1
-				//	);
+				__ChatterboxVariableSetInternal(
+					_lookup,
+					_system.__variablesMap[? _lookup] + 1
+				);
 			} else {
 				__ChatterboxVariableSetInternal(_lookup, 1);
 				ds_list_add(_system.__constantsList, _lookup);
 			}
 
 			current_instruction = optionInstruction[_index];
-			__ChatterboxVM();
+			__ChatterboxVM(false);
 		} else {
 			__ChatterboxTrace(
 				"Warning! Trying to select an option that failed its conditional check"
@@ -357,7 +360,67 @@ function __ChatterboxClass(_filename, _singleton, _local_scope) constructor {
 		}
 
 		current_instruction = wait_instruction;
-		__ChatterboxVM();
+		__ChatterboxVM(false);
+	};
+
+	static MoveAhead = function() {
+		if (!VerifyIsLoaded()) {
+			__ChatterboxError(
+				"Could not move ahead because \"",
+				filename,
+				"\" is not loaded"
+			);
+			return undefined;
+		}
+
+		if (stopped) {
+			__ChatterboxTrace(
+				"Warning! Could not move ahead because this chatterbox has been stopped"
+			);
+			return undefined;
+		}
+
+		if (!waiting) {
+			__ChatterboxError("Can't move ahead, provided chatterbox isn't waiting");
+			return undefined;
+		}
+
+		current_instruction = wait_instruction;
+		__ChatterboxVM(true);
+	};
+
+	static SkipOptions = function() {
+		if (!VerifyIsLoaded()) {
+			__ChatterboxError(
+				"Could not skip options because \"",
+				filename,
+				"\" is not loaded"
+			);
+			return undefined;
+		}
+
+		if (stopped) {
+			__ChatterboxTrace(
+				"Warning! Could not skip options because this chatterbox has been stopped"
+			);
+			return undefined;
+		}
+
+		if (array_length(optionInstruction) <= 0) {
+			__ChatterboxError(
+				"Could not skip options because this chatterbox is not displaying any options"
+			);
+			return undefined;
+		}
+
+		// 1. Choose the last option
+		// 2. Get the instruction inside the branch
+		// 3. Set up to the branch parent which is the -> option instruction itself
+		// 4. Go to the next instruction after that which is the instruction after the option block
+		current_instruction = optionInstruction[array_length(optionInstruction) - 1]
+			.option_branch_parent
+			.next;
+		__ChatterboxVM(false);
 	};
 
 	static __CurrentlyProcessing = function() {
@@ -447,7 +510,7 @@ function __ChatterboxClass(_filename, _singleton, _local_scope) constructor {
 			fastForward = true;
 			__fastForwardContentCount = 0;
 
-			__ChatterboxVM();
+			__ChatterboxVM(false);
 		}
 	};
 
@@ -471,14 +534,37 @@ function __ChatterboxClass(_filename, _singleton, _local_scope) constructor {
 	static GetContentMetadata = function(_index) {
 		VerifyIsLoaded();
 		if ((_index < 0) || (_index >= array_length(contentMetadata))) {
-			return undefined;
+			return [];
 		}
 		return contentMetadata[_index];
+	};
+
+	static GetContentLineID = function(_index) {
+		VerifyIsLoaded();
+		if ((_index < 0) || (_index >= array_length(contentLineID))) {
+			return undefined;
+		}
+		return contentLineID[_index];
 	};
 
 	static GetContentArray = function() {
 		VerifyIsLoaded();
 		return contentStructArray;
+	};
+
+	static GetContentHasMetadata = function(_index, _string) {
+		var _metadataArray = GetContentMetadata(_index);
+
+		var _i = 0;
+		repeat (array_length(_metadataArray)) {
+			if (_metadataArray[_i] == _string) {
+				return true;
+			}
+
+			++_i;
+		}
+
+		return false;
 	};
 
 	#endregion
@@ -511,9 +597,77 @@ function __ChatterboxClass(_filename, _singleton, _local_scope) constructor {
 	static GetOptionMetadata = function(_index) {
 		VerifyIsLoaded();
 		if ((_index < 0) || (_index >= array_length(optionMetadata))) {
-			return undefined;
+			return [];
 		}
 		return optionMetadata[_index];
+	};
+
+	static GetOptionLineID = function(_index) {
+		VerifyIsLoaded();
+		if ((_index < 0) || (_index >= array_length(optionLineID))) {
+			return undefined;
+		}
+		return optionLineID[_index];
+	};
+
+	static FindOptionWithMetadata = function(_metadata, _respectCondition = true) {
+		VerifyIsLoaded();
+
+		var _index = 0;
+		repeat (array_length(optionMetadata)) {
+			if ((!_respectCondition) || optionConditionBool[_index]) {
+				var _metadataArray = optionMetadata[_index];
+				if (is_array(_metadataArray)) {
+					var _i = 0;
+					repeat (array_length(_metadataArray)) {
+						if (_metadataArray[_i] == _metadata) {
+							return _index;
+						}
+					}
+
+					++_i;
+				}
+			}
+
+			++_index;
+		}
+
+		return undefined;
+	};
+
+	static GetOptionContainsMetadata = function(
+		_index,
+		_metadata,
+		_respectCondition = true
+	) {
+		VerifyIsLoaded();
+
+		if ((_index < 0) || (_index >= array_length(optionMetadata))) {
+			return false;
+		}
+
+		if (_respectCondition && (!optionConditionBool[_index])) {
+			__ChatterboxTrace(
+				"Warning! Option ",
+				_index,
+				" failed its conditional check, returning `false` for GetOptionContainsMetadata() check"
+			);
+			return false;
+		}
+
+		var _metadataArray = optionMetadata[_index];
+		if (is_array(_metadataArray)) {
+			var _i = 0;
+			repeat (array_length(_metadataArray)) {
+				if (_metadataArray[_i] == _metadata) {
+					return true;
+				}
+
+				++_i;
+			}
+		}
+
+		return false;
 	};
 
 	static GetOptionConditionBool = function(_index) {
@@ -522,6 +676,14 @@ function __ChatterboxClass(_filename, _singleton, _local_scope) constructor {
 			return undefined;
 		}
 		return optionConditionBool[_index];
+	};
+
+	static GetOptionHasCondition = function(_index) {
+		VerifyIsLoaded();
+		if ((_index < 0) || (_index >= array_length(option))) {
+			return undefined;
+		}
+		return optionHasCondition[_index];
 	};
 
 	static GetOptionArray = function() {
@@ -586,13 +748,20 @@ function __ChatterboxClass(_filename, _singleton, _local_scope) constructor {
 		array_resize(content, _count);
 		array_resize(contentConditionBool, _count);
 		array_resize(contentMetadata, _count);
+		array_resize(contentLineID, _count);
 		array_resize(contentStructArray, _count);
 	};
 
 	static __ClearOptions = function(_count = 0) {
+		entered_option = false;
+		randomize_option = false;
+		choose_option = undefined;
+
 		array_resize(option, _count);
 		array_resize(optionConditionBool, _count);
+		array_resize(optionHasCondition, _count);
 		array_resize(optionMetadata, _count);
+		array_resize(optionLineID, _count);
 		array_resize(optionInstruction, _count);
 		array_resize(__optionUUIDArray, _count);
 		array_resize(optionStructArray, _count);

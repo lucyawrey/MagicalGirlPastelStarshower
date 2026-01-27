@@ -1,4 +1,5 @@
 // Feather disable all
+
 /// Adds a custom function that can be called by expressions
 ///
 /// Custom functions can return values, but they should be numbers or strings.
@@ -85,7 +86,11 @@ function ChatterboxAddFunction(_name, _in_function) {
 		case "hop":
 		case "hopback":
 		case "visited":
+		case "localCounter":
+		case "once":
+		case "choose":
 		case "optionChosen":
+		case "moveAhead":
 			__ChatterboxError(
 				"Function name \"",
 				_name,
