@@ -142,15 +142,15 @@ function draw_dialogue(_textbox_x, _textbox_y, _textbox_w) {
 	var _x = _textbox_x + _padding_x;
 	var _y = _textbox_y + _padding_y;
 	var _w = _textbox_w - (2 * _padding_x);
-    
-    if (draw_fullscreen) {
-        _y -= 400;
-    }
-    
+
+	if (draw_fullscreen) {
+		_y -= 400;
+	}
+
 	scribble(
-		$"[speed,{current_character.text_speed}][{current_character.text_color}][{current_character.font}]{
-			current_character.prefix
-		}{current_text}{current_character.suffix}"
+		$"[speed,{current_character.text_speed}][{current_character.text_color}][{
+			current_character.font
+		}]{current_character.prefix}{current_text}{current_character.suffix}"
 	)
 		.wrap(_w)
 		.draw(_x, _y, typist);
@@ -203,21 +203,21 @@ function draw_text_advance_icon() {
 	) {
 		return;
 	}
-    
+
 	var _offset = get_offset_for_rotation(spr_star, advance_icon_rotation, 0.5);
-    var _x_pos = VIEW_WIDTH - 100 - _offset.x;
-    var _y_pos = VIEW_HEIGHT - 60 - _offset.y;
-    
-    if (current_state == DIALOGUE_STATE.OPTION && current_selection > 0) {
-        _x_pos -= 42;
-        _y_pos -= 160 - (52 * current_selection);
-    }
-    
+	var _x_pos = VIEW_WIDTH - 100 - _offset.x;
+	var _y_pos = VIEW_HEIGHT - 60 - _offset.y;
+
+	if (current_state == DIALOGUE_STATE.OPTION && current_selection > 0) {
+		_x_pos -= 42;
+		_y_pos -= 160 - (52 * current_selection);
+	}
+
 	draw_sprite_ext(
 		spr_star,
 		0,
-        _x_pos,
-        _y_pos,
+		_x_pos,
+		_y_pos,
 		0.5,
 		0.5,
 		advance_icon_rotation,
