@@ -21,6 +21,12 @@ draw_fullscreen = false;
 // TODO please solve this properly
 you_cannot_advance = false;
 
+ink_setup();
+while (ink_can_continue()) {
+    var _text = ink_continue();
+    log($"TEST!!: {_text}");
+}
+
 // Method definitions
 function continue_on() {
 	if (ChatterboxIsStopped(chatterbox)) {
