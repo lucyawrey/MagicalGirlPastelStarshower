@@ -1,9 +1,8 @@
 == day_1_dream ==
 # location dream
 # day 1
-
-// Clear screen ex: ~ clear()
-~ background("none")
+~ hide(none)
+~ background(none)
 ~ play("music", "dream", 1)
 [Dream]: You float formless in the space between.
 [Dream]: It is quiet. It is comfortable. It is vast beyond your comprehension.
@@ -25,17 +24,17 @@ Stella[Dream]: I'd like it... if both of us did.
 Stella[Dream]: So, let's get going, it's a long road.
 ~ auto(1)
 [Dream]: _
-<<hop DateCard>>
+~ show_date_card()
 -> day_1_cafe
 
 == day_1_cafe
 # location cafe
 # day 1
-<<play "music" "nostalgia">>
-<<background "bg_cafe">>
-<<show "stella" "left">>
-<<show "azalea" "right">>
-<<block "Azalea" "right">>
+~ play("music", "nostalgia", 1)
+~ background("bg_cafe")
+~ show("stella", "left", none)
+~ show("azalea", "right", none)
+~ block("Azalea", "right")
 Azalea: Hey Stella, are you awake?
 * Confirm
     Stella: Um, yeah, I am now. Sorry I passed out.
@@ -44,7 +43,7 @@ Azalea: Hey Stella, are you awake?
 * Deny
     Stella: No.
     Azalea: Ah, okay, I'll leave you be then.
-    <<auto>>
+    ~ auto(none)
     Stella[Slow]: . . .
     Stella: I'm awake. Sorry.
     Azalea: You're alright. I was just teasing you.
@@ -96,7 +95,7 @@ Stella: Woe be upon any who would do them harm.
 Stella: That's me by the way.
 Azalea: I'd only actually be mad if you started killing them on purpose. And at that point, I'd probably have to kick your ass.
 Stella: I'd like to see you try.
-<<auto>>
+~ auto(none)
 Stella[Slow]: . . .
 Stella: I don't mean that in a "I'm going to kill more of your plants just to provoke you" kind of way.
 Azalea: I know, Stella.
@@ -186,5 +185,5 @@ Stella: They usually do.
 
 -> END
 
-// ~ hide()
+// ~ hide(none)
 // -> Day2Dream
