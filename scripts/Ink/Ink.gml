@@ -2,9 +2,21 @@
 #macro INK_STORY_MOD_PATH "mods/base_game_story.json"
 #macro INK_STORY_FULL_PATH $"{game_save_id}/mods/base_game_story.json"
 
-function story_setup(){
+function story_setup() {
     copy_datafile_to_save(INK_STORY_DATAFILE_PATH, INK_STORY_MOD_PATH)
     ink_load(INK_STORY_FULL_PATH)
+    
+    ink_bind_external("background", background);
+	ink_bind_external("show", show);
+	ink_bind_external("hide", hide);
+	ink_bind_external("play", play);
+	ink_bind_external("pause", pause);
+	ink_bind_external("delay", delay);
+	ink_bind_external("auto", auto);
+	ink_bind_external("block", block);
+	ink_bind_external("event", event);
+    // End game with ink -> END
+    ink_bind_external("end_game", end_game);
 }
 
 function story_can_continue() {

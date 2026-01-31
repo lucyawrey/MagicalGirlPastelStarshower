@@ -1,8 +1,0 @@
-title: DateCard
----
-<<pause>>
-<<auto 2>>
-Card: _
-Card: {$date}
-<<hopback>>
-===

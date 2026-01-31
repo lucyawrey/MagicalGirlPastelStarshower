@@ -20,7 +20,7 @@ you_cannot_advance = false;
 
 // Setup character db
 load_character_files();
-// Setup External Ink Story
+// Setup external ink Story
 story_setup();
 
 // Method definitions
