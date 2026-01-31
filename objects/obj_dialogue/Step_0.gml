@@ -47,14 +47,11 @@ if (visible && !obj_game.paused) {
 			play_nav_sound();
 			current_selection = -current_selection;
 		}
-		//If we've pressed Accept, submit the current selected option to Chatterbox
+		//If we've pressed Accept, submit the current selected option
 		if (InputPressed(INPUT_VERB.ACCEPT) && current_selection > 0) {
 			var _selection = current_selection - 1;
 			play_nav_sound();
-			ChatterboxSelect(chatterbox, _selection);
-			if (current_meta_name != "none") {
-				struct_set(state.save.selected_options, current_meta_name, _selection);
-			}
+			story_choose(_selection);
 			current_state = DIALOGUE_STATE.TEXT;
 			get_current_content();
 			current_selection = -2;

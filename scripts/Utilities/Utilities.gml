@@ -56,15 +56,3 @@ function get_offset_for_rotation(_sprite, _angle, _scale = 2) {
 function play_nav_sound(_pitch = 0.3) {
 	audio_play_sound(snd_click, 1, false, 0.4, undefined, _pitch);
 }
-
-function get_meta_name(_metadata, _node) {
-	if (
-		is_array(_metadata)
-		&& array_length(_metadata) > 0
-		&& is_string(_metadata[0])
-		&& is_string(_node)
-	) {
-		return $"{_node}.{_metadata[0]}";
-	}
-	return "none";
-}

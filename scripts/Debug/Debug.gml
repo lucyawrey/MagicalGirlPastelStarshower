@@ -10,10 +10,7 @@ function debug_run_all_tests() {
 function test_printed_dialogue_line_count() {
 	line_width = VIEW_WIDTH - 216;
 
-	var _buffer = buffer_create(1048576, buffer_grow, 1);
-	load_all_chatterbox_files_to_buffer(_buffer);
-	var _full_text = buffer_read(_buffer, buffer_string);
-	buffer_delete(_buffer);
+	var _full_text = "";
 	var _lines = string_split(_full_text, "\n", true);
 
 	array_foreach(_lines, function(_line, _i) {

@@ -1,5 +1,4 @@
 function chatterbox_setup() {
-	load_all_chatterbox();
 	var _chatterbox = ChatterboxCreate();
 
 	ChatterboxNodeChangeCallback(on_node_change);

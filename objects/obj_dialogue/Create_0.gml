@@ -1,11 +1,8 @@
 // Set instance variables
 typist = scribble_setup(); // Set up Scribble plugin for text rendering
-chatterbox = chatterbox_setup(); // Set up Chatterbox plugin for dialogue scripting
 current_state = DIALOGUE_STATE.TEXT;
-current_node_metadata = {};
+current_tags = [];
 current_text = "";
-current_metadata = [];
-current_meta_name = "none";
 current_options = [];
 current_selection = -2;
 current_character = get_character();
@@ -21,50 +18,46 @@ draw_fullscreen = false;
 // TODO please solve this properly
 you_cannot_advance = false;
 
-ink_setup();
-while (ink_can_continue()) {
-    var _text = ink_continue();
-    log($"TEST!!: {_text}");
-}
+// Setup character db
+load_character_files();
+// Setup External Ink Story
+story_setup();
 
 // Method definitions
-function continue_on() {
-	if (ChatterboxIsStopped(chatterbox)) {
-		visible = false;
-	} else if (ChatterboxIsWaiting(chatterbox)) {
+function continue_on() { 
+    if (story_can_continue()) {
 		show_advance_icon = false;
-		ChatterboxContinue(chatterbox);
-		if (current_state == DIALOGUE_STATE.OPTION) {
-			current_state = DIALOGUE_STATE.TEXT;
-		}
+        current_state = DIALOGUE_STATE.TEXT;
 		if (!obj_game.paused || delay_behavior == "auto") {
 			get_current_content();
 			increment_current_node_position();
 		}
 	} else {
 		current_state = DIALOGUE_STATE.OPTION;
-		current_options = ChatterboxGetOptionArray(chatterbox);
+		current_options = story_get_choices();
 	}
 }
 
 function get_current_content() {
 	if (is_new_node) {
-		current_node_metadata = ChatterboxGetCurrentMetadata(chatterbox);
-		if (struct_exists(current_node_metadata, "location")) {
-			state.save.current_location = current_node_metadata.location;
-		}
-		if (struct_exists(current_node_metadata, "day")) {
-			var _new_game_day = real(current_node_metadata.day);
-			ChatterboxVariableSet("day", _new_game_day);
-		}
+		current_tags = story_get_tags();
+        array_foreach(current_tags, function(_tag) {
+            if (string_starts_with(_tag, "location ")) {
+    			state.save.current_location = string_delete(_tag, 1, 9);
+    		}
+    		if (string_starts_with(_tag, "day ")) {
+    			state.save.day = real(string_delete(_tag, 1, 4));
+    		}
+        })
 		touch_save();
 		save_game();
 		is_new_node = false;
 	}
-	var _content = get_content();
-	current_text = scribble_markdown_format(_content.text);
-	current_metadata = _content.metadata;
-	current_meta_name = get_meta_name(current_metadata, state.save.current_node);
-	current_character = _content.character;
+
+    // TODO get content tags
+	var _content = story_continue();
+	var _parsed = parse_text_and_character_id(_content);
+	current_text = scribble_markdown_format(_parsed.text);
+	current_character = get_character(_parsed.character_id);
 	draw_fullscreen = current_character.fullscreen;
 }

@@ -18,7 +18,6 @@ function delay(_time_in_seconds = 1) {
 	}
 	if (is_numeric(_time_in_seconds)) {
 		obj_game.pause(_time_in_seconds);
-		ChatterboxWait(obj_dialogue.chatterbox);
 		obj_dialogue.delay_behavior = "delay";
 	}
 }

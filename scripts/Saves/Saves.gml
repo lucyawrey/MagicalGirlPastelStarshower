@@ -55,7 +55,6 @@ function load_game() {
 		touch_secret();
 	}
 
-	reload_chatterbox_variables();
 	save_game();
 }
 
@@ -81,7 +80,6 @@ function reload_chatterbox_variables() {
 
 function reset_save_state() {
 	state.save = variable_clone(INITIAL_STATE.save);
-	reload_chatterbox_variables();
 	touch_save();
 	save_game();
 	load_game();
