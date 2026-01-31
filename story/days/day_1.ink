@@ -2,10 +2,9 @@
 # location dream
 # day 1
 
-<<hide>>
-<<background "none">>
-<<play "music" "dream">>
-
+// Clear screen ex: ~ clear()
+~ background("none")
+~ play("music", "dream", 1)
 [Dream]: You float formless in the space between.
 [Dream]: It is quiet. It is comfortable. It is vast beyond your comprehension.
 [Dream]: And it is empty.
@@ -24,7 +23,7 @@ Stella[Dream]: You're not going to be alone anymore.
 Stella[Dream]: It's so, so hard to keep living, but I'd like it if you tried.
 Stella[Dream]: I'd like it... if both of us did.
 Stella[Dream]: So, let's get going, it's a long road.
-<<auto 1>>
+~ auto(1)
 [Dream]: _
 <<hop DateCard>>
 -> day_1_cafe
