@@ -6,6 +6,7 @@ function start_dialogue() {
 	obj_dialogue.loading = true;
     
     obj_dialogue.continue_on();
+    obj_dialogue.continue_on();
     
 	obj_dialogue.visible = true;
 	obj_dialogue.loading = false;

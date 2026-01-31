@@ -1,10 +1,11 @@
 #macro INK_STORY_DATAFILE_PATH "story.json"
 #macro INK_STORY_MOD_PATH "mods/base_game_story.json"
 #macro INK_STORY_FULL_PATH $"{game_save_id}/mods/base_game_story.json"
+#macro INONE -2147483647
 
 function story_setup() {
-    copy_datafile_to_save(INK_STORY_DATAFILE_PATH, INK_STORY_MOD_PATH)
-    ink_load(INK_STORY_FULL_PATH)
+    copy_datafile_to_save(INK_STORY_DATAFILE_PATH, INK_STORY_MOD_PATH);
+    ink_load(INK_STORY_FULL_PATH);
     
     ink_bind_external("background", background);
 	ink_bind_external("show", show);
