@@ -20,9 +20,9 @@ function chatterbox_setup() {
 }
 
 function on_node_change(_old_node, _new_node, _action) {
-    if (_action == "hop") {
-        return;
-    }
+	if (_action == "hop") {
+		return;
+	}
 	if (state.save.current_node != _new_node) {
 		state.save.current_node_position = 0;
 		state.save.current_node = _new_node;
