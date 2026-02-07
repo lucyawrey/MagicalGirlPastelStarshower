@@ -98,8 +98,9 @@ Olivia: Would you like any?
 Stella: Would I like any... bird seed?
 Olivia: You fly, don't you? #bird_seed
 -> Eat Bird Seed
-    Stella[Narrator]: They taste like completely normal sunflower seeds.
-    Stella[Narrator]: I can't help but giggle, and Olivia soon joins me.
+    Stella[Narrator]: I take the proffered seeds and toss one into my mouth.
+    Stella[Narrator]: It tastes like a normal unsalted sunflower seed.
+    Stella[Narrator]: I can't help but laugh a little, and eat a few more.
     Stella: Thanks for the snack.
     Olivia: You're welcome dear.
 -> Do Not
@@ -115,7 +116,7 @@ Olivia: You fly, don't you? #bird_seed
     Stella: Technically.
     Stella: It's more like I use a sequence of basic spells to convert raw magical power into force in order to fling myself through the air like a slingshot.
     Stella: But the details are probably... not interesting to you.
-Stella: Anyways, I need to get to work!
+Stella: I need to get to work!
 <<jump Day2Cafe>>
 ===
 
@@ -126,8 +127,11 @@ day: 2
 <<background "none">>
 <<pause>>
 Thank you for playing! The next portion of the game is not ready for testing yet!
-<<end_game>>
-
+Skipping to screen test.
+<<background "spr_gray">>
+<<hide>>
+Stella[Narrator]: Ever wants something so sweet you can hardly taste the coffee.
+Skipping to cafe scewne.
 Stella[Narrator]: The bell rings as I open the cafe door. It looks different in the light.
 Stella[Narrator]: There's no one in the front of the house, so I take a seat at a table to wait.
 Stella[Narrator]: It only takes a few moments before Gio comes out from the kitchen wearing a coffee stained apron and a smile.
