@@ -51,13 +51,18 @@
         "name_color": "#1fad46",
         "sound_pitch": 1.8
     },
-    "Gio": {
+    "Giovanni": {
         "name_color": "#8a3812"
     },
     "Olivia": {
+        "variants": {
+            "?": {
+                "name": "??????"
+            }
+        },
         "name_color": "#c46e1d"
     },
-    "Evie": {
+    "Evelyn": {
         "name_color": "#0a940a"
     },
     "Slow": {

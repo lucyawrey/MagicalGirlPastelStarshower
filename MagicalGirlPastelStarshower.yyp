@@ -707,6 +707,7 @@
     {"id":{"name":"spr_box_classic","path":"sprites/spr_box_classic/spr_box_classic.yy",},},
     {"id":{"name":"spr_box_sel","path":"sprites/spr_box_sel/spr_box_sel.yy",},},
     {"id":{"name":"spr_box","path":"sprites/spr_box/spr_box.yy",},},
+    {"id":{"name":"spr_giovanni","path":"sprites/spr_giovanni/spr_giovanni.yy",},},
     {"id":{"name":"spr_gray","path":"sprites/spr_gray/spr_gray.yy",},},
     {"id":{"name":"spr_star","path":"sprites/spr_star/spr_star.yy",},},
     {"id":{"name":"spr_stella_map","path":"sprites/spr_stella_map/spr_stella_map.yy",},},

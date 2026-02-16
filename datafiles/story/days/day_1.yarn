@@ -9,23 +9,23 @@ day: 1
 [Dream]: You float formless in the space between.
 [Dream]: It is quiet. It is comfortable. It is vast beyond your comprehension.
 [Dream]: And it is empty.
-[Dream]: You are alone. You have been alone for a very long time.
+[Dream]: You are alone. You have been alone for so very long.
 [Dream]: You drift as you always have, for what might have been eons or an instant.
-[Dream]: Then, you observe a tiny mote of light floating in that eternal void.
-[Dream]: It is so close. How could you not have noticed it before?
+[Dream]: Then, you observe a small mote of light floating in that endless void.
+[Dream]: It is so close. How did you not notice it before?
 [Dream]: It feels familiar. It feels warm.
-[Dream]: You reach out to touch it.
+[Dream]: You reach out as if to touch it.
 [Dream]: Light.
 [Dream]: Blinding.
-[Dream]: The void that surrounded you becomes everything all at once and then—
+[Dream]: Nothing becomes everything all at once and then—
 Stella[Dream]: Hey.
 Stella[Dream]: It's going to be alright.
-Stella[Dream]: You're not going to be alone anymore.
-Stella[Dream]: It's so, so hard to keep living, but I'd like it if you tried.
-Stella[Dream]: I'd like it... if both of us did.
-Stella[Dream]: So, let's get going, it's a long road.
-<<auto 1>>
-[Dream]: _
+Stella[Dream]: You're not alone anymore.
+Stella[Dream]: We won't be alone anymore.
+Stella[Dream]: It's so hard to keep going, but I'd like it if you tried to.
+Stella[Dream]: I'd like it if both of us tried.
+Stella[Dream]: So, let's get going.
+Stella[Dream]: It's a long road.
 <<hop DateCard>>
 <<jump Day1Cafe>>
 ===
@@ -39,11 +39,13 @@ day: 1
 <<show "stella" "left">>
 <<show "azalea" "right">>
 <<block "Azalea" "right">>
-Azalea: Hey Stella, are you awake? #awake
+Stella[Narrator]: I open my eyes to find my head lying on a wooden counter. A woman with dye green hair and a smile is looking at me.
+Stella[Narrator]: Azalea. I don't remember her being here when I fell asleep.
+Azalea: You finally awake, Stella? #awake
 -> Confirm
     Stella: Um, yeah, I am now. Sorry I passed out.
     Azalea: You're good, it's not like you're sleeping in *my* cafe after closing time.
-    Azalea: I've only been keeping an eye on you, and that's easy to do while I'm here caring for the plants anyways.
+    Azalea: I've only been keeping an eye on you, and that's easy to do while I'm tending to the indoor garden here anyways.
 -> Deny
     Stella: No.
     Azalea: Ah, okay, I'll leave you be then.
@@ -51,8 +53,8 @@ Azalea: Hey Stella, are you awake? #awake
     Stella[Slow]: . . .
     Stella: I'm awake. Sorry.
     Azalea: You're alright. I was just teasing you.
-    Azalea: I just wanted to make sure you were up before I leave, since I had been keeping an eye on you.
-Stella: Oh. You didn't have to do that.
+    Azalea: I am just about done tending to all the plants in the building, so I just wanted to make sure you were up before I left you alone in the cafe with the front door unlocked.
+    Stella: Oh. You didn't have to do that.
 Azalea: Probably not, with this city being so safe, and you being... you. But still, it doesn't feel quite right leaving a friend alone in public while they're totally passed out.
 Stella: A friend?
 Azalea: Yes, obviously.
@@ -159,7 +161,8 @@ Stella: So I asked Gio if I could start working here at the cafe a few weeks bac
 Stella: I've loved coming here to relax and get something nice to drink for a while now, and I actually used to be a barista a very long time ago.
 Stella: I thought it would be a good fit.
 Stella: I've also been trying be more be more social and open up to people more.
-Stella: Like right now.
+Stella: Like with you right now.
+Stella: And I've been trying to pick up old hobbies again.
 Stella: But it hasn't really made me feel any better yet. I really am not doing okay at all.
 Stella[Narrator]: We are both silent for a while, a comfortable silence.
 Stella[Narrator]: Then, I start to cry, even though I shouldn't. Azalea doesn't say anything, and just holds me until I stop.
@@ -185,7 +188,7 @@ Stella: No, I'm all good.
 Stella: Good night, Azalea.
 Azalea: Sleep well. Sorry things left off on such a sad note.
 Stella: It's alright.
-Stella: They usually do.
+Stella: That's just how it is sometimes.
 
 <<hide>>
 <<jump Day2Dream>>

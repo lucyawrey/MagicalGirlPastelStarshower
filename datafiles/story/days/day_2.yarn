@@ -16,8 +16,9 @@ title: Day2Morning
 location: apartment
 day: 2
 ---
+<<background "gray">>
 <<play "music" "morning">>
-Stella[Narrator]: I open my eyes. The morning sun is bright and pleasant through the window.
+Stella[Narrator]: I open my eyes to find my head halfway off my bed. The morning sun is bright and pleasant through the window.
 Stella[Narrator]: I don't really remember making it back home last night.
 Stella[Narrator]: I was very tired, both physically and emotionally. It's all a bit of a blur.
 Stella[Narrator]: Not a bad blur, really. More the blur of routine. Taking a path home so well trodden I barely need to be conscious for it.
@@ -56,16 +57,13 @@ day: 2
 ---
 <<play "music" "woosh">>
 Stella[Narrator]: I fall through the air.
-Stella[Narrator]: And for a joyful moment, I experienced complete freefall. I know the drop is only seventy floors or so, so this feeling won't last long.
+Stella[Narrator]: And for a joyful moment, I experience complete freefall. I know the drop is only seventy floors or so, so this feeling won't last long.
 Stella[Narrator]: Still, I love it, these seconds with the wind rushing through my hair.
 Stella[Narrator]: Halfway down I flex my magic and whisper a word of power.
 Stella[Narrator]: There is a burst of light, color, and emotion.
 Stella[Narrator]: And for just a moment, I am my truest self, clad in a beautiful dress of whites, blues and yellows.
 <<play "sound" "land">>
 <<play "music" "power_of_the_wind">>
-Stella[Narrator]: And then I hit the ground. The nearby birds scatter.
-Stella[Narrator]: The impact is hard enough that I feel it, yet soft enough that the pavement is undamaged.
-Stella[Narrator]: And then my truest self is gone, motes of magic dissipating in the transformation's wake.
 
 <<jump Day2Streets>>
 ===
@@ -77,6 +75,10 @@ day: 2
 <<background "bg_street_1">>
 <<show "stella" "left">>
 <<block "Olivia.?" "right">>
+<<block "Olivia" "right">>
+Stella[Narrator]: And then I hit the ground. The nearby birds scatter.
+Stella[Narrator]: The impact is hard enough that I feel it, yet soft enough that the pavement is undamaged.
+Stella[Narrator]: And then my truest self is gone, motes of magic dissipating in the transformation's wake.
 Stella[Narrator]: I don't jump from the balcony every morning. It's... really not a very responsible use of my power.
 Stella[Narrator]: But when a falling can't hurt you, it feels freeing. It feels refreshing, like a splash of cold water in the morning.
 Stella[Narrator]: And it's faster than an elevator.
@@ -85,38 +87,45 @@ Stella[Narrator]: I feel a little embarrassed that I just did that.
 Stella[Narrator]: But no one on the street is paying me much attention to me at all, aside from the woman who had been feeding the birds before I scared them all off.
 Stella[Narrator]: She looks at me with little surprise and an amused smile.
 Stella: Good morning ma'am, It's good to see you again.
-Olivia: Morning dearie. You sure gave them a fright.
-Stella[Narrator]: She chuckles, looking towards where the birds circling overhead. 
+Olivia[?]: Morning dearie. You sure gave them a fright.
+Stella[Narrator]: She chuckles, looking towards where the birds circling overhead. I've seen her before, although we have never talked much aside passing greetings. I think her name is Olivia.
 Stella: Sorry about that.
 Olivia: It's alright, they'll be back. To be honest I don't think they'd even leave me alone if I wanted them to at this point.
 Stella: I suppose that is the fate you've earned. I don't think you're even supposed to be feeding them.
-Olivia: What are you, a cop?
+Olivia: Hah! What are you, a cop?
 Stella: I try my very best not to be.
-Olivia: Hah! That's good.
-Olivia: I only feed them seeds, anyway, since I heard bread isn't any good for them.
+Olivia: Good, good.
+Olivia: Don't worry, I only ever feed them bird seed. I'm well aware bread and the like isn't very good for them.
 Olivia: Would you like any?
 Stella: Would I like any... bird seed?
-Olivia: You fly, don't you? #bird_seed
+Olivia: Yeah. You fly, don't you? #bird_seed
 -> Eat Bird Seed
-    Stella[Narrator]: I take the proffered seeds and toss one into my mouth.
-    Stella[Narrator]: It tastes like a normal unsalted sunflower seed.
-    Stella[Narrator]: I can't help but laugh a little, and eat a few more.
-    Stella: Thanks for the snack.
+    Stella: Why not.
+    Stella[Narrator]: I take the proffered seeds and toss a few into my mouth.
+    Stella[Narrator]: They taste like ordinary sunflower seeds.
+    Stella[Narrator]: I can't help but laugh a little, and snack on a few more.
+    Stella: Thanks for the food.
     Olivia: You're welcome dear.
 -> Do Not
     Stella[Narrator]: I do do not eat any bird seed.
     Stella: Thank you, but no.
     Olivia: Suit yourself.
-    Stella[Narrator]: She takes a few of them and eats them herself.
+    Stella[Narrator]: She eats a few of them herself.
     Stella: Oh you can actually eat them.
     Olivia: They're just sunflower seeds.
-    Stella: Well, maybe I'll have to try them sometime.
+    Stella: Well, maybe I'll have some next time.
+    Olivia: If I am ever this generous again.
 -> Explain That You Technically Do Not Fly
     Stella: I don't. Fly I mean.
     Stella: Technically.
     Stella: It's more like I use a sequence of basic spells to convert raw magical power into force in order to fling myself through the air like a slingshot.
     Stella: But the details are probably... not interesting to you.
-Stella: I need to get to work!
+    Olivia: I think you'd be suprised!
+    Olivia: It's always a somewhat interesting to hear someone talk about their craft, especially when it's something I could never experience myself.
+Olivia: Now don't you need to have somewhere you needed to be?
+Stella: Right, work!
+Stella: I'll see you later, ma'am.
+Olivia: Have a good day!
 <<jump Day2Cafe>>
 ===
 
@@ -124,41 +133,27 @@ title: Day2Cafe
 location: cafe
 day: 2
 ---
-<<background "none">>
-<<pause>>
-Thank you for playing! The next portion of the game is not ready for testing yet!
-Skipping to screen test.
-<<background "spr_gray">>
-<<hide>>
-Stella[Narrator]: Ever wants something so sweet you can hardly taste the coffee.
-Skipping to cafe scewne.
-Stella[Narrator]: The bell rings as I open the cafe door. It looks different in the light.
-Stella[Narrator]: There's no one in the front of the house, so I take a seat at a table to wait.
-Stella[Narrator]: It only takes a few moments before Gio comes out from the kitchen wearing a coffee stained apron and a smile.
+<<play "music" "nostalgia">>
+<<background "bg_cafe">>
+<<show "stella" "left">>
+Stella[Narrator]: The bell rings as I open the door to the cafe.
+Stella[Narrator]: There's no one in the front of the house at all yet, so I take a seat at the bar and rest my head on the counter to wait.
+<<show "giovanni" "right">>
+<<block "Giovanni" "right">>
+Stella[Narrator]: It only takes a few moments before a sleepy Giovanni comes out from the kitchen wearing a coffee stained apron.
 Stella: Morning.
-Gio: Hey Stella. You're here early.
+Giovanni: Hey Stella. You're here early.
 Stella: We open in like five minutes.
-Stella: I'm pretty sure I'm supposed to be here earlier than that to help.
-Gio: And you're usually much later.
+Stella: I'm pretty sure this is when I'm supposed to be here, if not earlier.
+Giovanni: And you're usually not.
 Stella: Sorry.
-Gio: No need to apologize, I'm just happy to have you around to help at all.
-Gio: I'm just finishing food prep work for the morning rush, would you mind changing the sign to open and watching front of the house?"
-"Um, do you need anything from me?"
-"Stella."
-"No, I don't think so."
-"Um, I guess... is it just us working the cafe today?"
-"Giovanni."
-"Yep. Just us."
-"No one else wanted to come in, so I figure once the two of us finish up this shift, we'll just close up for the evening."
-"Stella."
-"Sounds good."
-"Joe."
-"Well, I'll be in the back finishing up that prep work. Let me know if you need anything."
-"And really do let me know. I know it's a bit soon to be managing the front of the cafe by yourself, but you're capable. I think you'll manage."
-"Stella."
-"I'm not too worried about making the drinks, but I am a bit worried about dealing with the people."
-"Joe."
-"I'm sure no one will give you trouble of all people."
-"Stella."
-"Stella."
-"Don't remind me."
+Giovanni: No, no. I am just giving you a hard time. Truthfully I'm just happy to have you around as extra help at all.
+Giovanni: I'm just finishing food prep for morning rush, would you mind changing the sign to open and watching the front for me?"
+Stella: No problem.
+Giovanni: Need anything from me?
+Stella: Don't think so.
+Stella: Oh, I do want to ask. Is it just us working today?
+Giovanni: Yep.
+Giovanni: I figure once the two of us finish up this shift we'll just close up for the day.
+Stella: Works for me. I'll see you once that prep is done.
+Stella[Narrator]: He gives me a wave of aknowledgement and disapears into the kitchen.
