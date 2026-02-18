@@ -106,6 +106,7 @@
     {"$GMIncludedFile":"","%Name":"day_1.yarn","CopyToMask":-1,"filePath":"datafiles/story/days","name":"day_1.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"day_2.yarn","CopyToMask":-1,"filePath":"datafiles/story/days","name":"day_2.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"day_3.yarn","CopyToMask":-1,"filePath":"datafiles/story/days","name":"day_3.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"bad_guest.yarn","CopyToMask":-1,"filePath":"datafiles/story/not_implemented","name":"bad_guest.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"city_map.yarn","CopyToMask":-1,"filePath":"datafiles/story/not_implemented","name":"city_map.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"confession.yarn","CopyToMask":-1,"filePath":"datafiles/story/not_implemented","name":"confession.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"ending.yarn","CopyToMask":-1,"filePath":"datafiles/story/not_implemented","name":"ending.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
