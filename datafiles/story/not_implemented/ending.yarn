@@ -1,6 +1,5 @@
 title: EndingEverConversation
 location: city_streets
-day: ?
 ---
 <<background "none">>
 <<play "music" "dream">>
