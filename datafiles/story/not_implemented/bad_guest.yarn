@@ -2,6 +2,43 @@ title: BadCafeGuest
 location: cafe
 ---
 Stella[Narrator]: The bell rings as a new guest enters the cafe, someone I don't recognize.
-Sellap[Narrator]: He is a young man with dark brown hair and a confident smile, and he lazily wanders towards the counter.
+Sellap[Narrator]: He is a young man with dark brown hair and a confident grin, and he lazily wanders towards the counter.
 Stella: Morning. Can I get you anything?
-Dude: Not yet, I'm just browsing the menu.
+Dude: Nah, I'm just browsing the menu.
+Stella: Well, just let me know.
+Stella[Marrator]: I turn away from him for now.
+Isabella: Um, if he doesn't need anything at the moment, could I bother you for another pot of tea?
+Stella: The same?
+Isabella: Yes, please.
+Stella: Got it.
+<<interupt>>
+Dude: Okay, I'll have a double shot cappuccino with vanilla and the hamd and swiss bagel sandwhich. 
+Stella: Can do, please wait umtil I'm done next time if you could.
+<<order "black tea" "sweet" "milk">>
+Stella[Narrator]: I hand Isa a fresh pot of tea with a smile,
+Stella: Enjoy.
+Isabella: Thanks!
+Dude: Are you going to make mine, or?
+Stella: Please just give me a moment.
+<<order "cappuccino" "vanilla" "food:sandwhich">>
+Stella[Narrator]: I hand over the drink.
+Dude: What, no smile for me?
+Stella[Narrator]: I almost reflexively apologize, but push down the impulse. I hate being asked to smile.
+Stella: It's going to be a bit on the sandwhich. Could I get your name for when it's done?
+Dude: Going to ignore my question?
+Stella: I don't really know how to respond to it.
+Dude: You could smile?
+Stella[Narrator]: My patience was really starting to wear thin.
+Stella: No. I only smile for people I like.
+Dude: Oh, you're fiesty. I like that.
+Stella[Narrator]: I notice Isabella and a couple other patrons in the restaurant looking at us, for some reason.
+Dude: You don't really know me well enough to decide how you feel about me, maybe I could change that?
+Stella[Narrator]: Is he seriously asking me out? No, of course he is.
+Stella: I am not interested. At all. Please do not talk to me anymore, I'll have my cowokrer get you your sandwhich.
+Dude: Wow. You don't need to be such a bitch, I'm just trying to be nice.
+Stella[Narrator]: I breifly concider reaching across the counter, lifting him into the air by his collar, and telling him to fuck off if he doesn't want to get thrown through the front window.
+Stella[Narrator]: Maybe that is what the other patrons are expecting me to do.
+Stella[Narrator]: Instead I point to a sign on the wall.
+Sign: Please be polite to our staff. We will deny service to any guest displaying rude or agressive behavior.
+Stella[Narrator]: I walk into the back to get Giovanni, ignoring whatever else he was starting to say.
+===
