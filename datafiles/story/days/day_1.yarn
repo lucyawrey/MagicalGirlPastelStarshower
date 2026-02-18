@@ -39,8 +39,8 @@ day: 1
 <<show "stella" "left">>
 <<show "azalea" "right">>
 <<block "Azalea" "right">>
-Stella[Narrator]: I open my eyes to find my head lying on a wooden counter. A woman with dye green hair and a smile is looking at me.
-Stella[Narrator]: Azalea. I don't remember her being here when I fell asleep.
+Stella[Narrator]: I open my eyes to find my head lying on a wooden counter. I must have fallen asleep at the cafe.
+Stella[Narrator]: A woman with dye green hair and a smile is looking at me. Azalea. I don't remember her being earlier.
 Azalea: You finally awake, Stella? #awake
 -> Confirm
     Stella: Um, yeah, I am now. Sorry I passed out.
@@ -58,7 +58,7 @@ Azalea: You finally awake, Stella? #awake
 Azalea: Probably not, with this city being so safe, and you being... you. But still, it doesn't feel quite right leaving a friend alone in public while they're totally passed out.
 Stella: A friend?
 Azalea: Yes, obviously.
-Stella: Right, sorry. Why didn't you just wake me up?
+Stella: Right. Why didn't you just wake me up?
 Azalea: Stella, please, we both know you need whatever sleep you can get.
 Stella[Narrator]: She flashes a small smile at me, one I find myself returning.
 Stella: You're not wrong. Thank you.
