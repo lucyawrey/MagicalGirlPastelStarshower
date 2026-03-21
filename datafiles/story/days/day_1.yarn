@@ -7,7 +7,7 @@ day: 1
 <<play "music" "dream">>
 
 [Dream]: You float formless in the space between.
-[Dream]: It is quiet. It is comfortable. It is vast beyond your comprehension.
+[Dream]: It is quiet. It is comfortable. It is vast beyond all comprehension.
 [Dream]: And it is empty.
 [Dream]: You are alone. You have been alone for so very long.
 [Dream]: You drift as you always have, for what might have been eons or an instant.
@@ -20,12 +20,12 @@ day: 1
 [Dream]: Nothing becomes everything all at once and then—
 Stella[Dream]: Hey.
 Stella[Dream]: It's going to be alright.
-Stella[Dream]: You're not alone anymore.
-Stella[Dream]: We won't be alone anymore.
+Stella[Dream]: You don't need to be alone anymore.
+Stella[Dream]: We don't be alone anymore.
 Stella[Dream]: It's so hard to keep going, but I'd like it if you tried to.
 Stella[Dream]: I'd like it if both of us tried.
-Stella[Dream]: So, let's get going.
-Stella[Dream]: It's a long road.
+Stella[Dream]: We have a long road ahead.
+Stella[Dream]: So, it's time to wake up.
 <<hop DateCard>>
 <<jump Day1Cafe>>
 ===
@@ -43,10 +43,12 @@ Stella[Narrator]: I open my eyes to find my head lying on a wooden counter. I mu
 Stella[Narrator]: A woman with dye green hair and a smile is looking at me. Azalea. I don't remember her being earlier.
 Azalea: You finally awake, Stella? #awake
 -> Confirm
+    <<set $awake_flag to 0>>
     Stella: Um, yeah, I am now. Sorry I passed out.
     Azalea: You're good, it's not like you're sleeping in *my* cafe after closing time.
     Azalea: I've only been keeping an eye on you, and that's easy to do while I'm tending to the indoor garden here anyways.
 -> Deny
+    <<set $awake_flag to 1>>
     Stella: No.
     Azalea: Ah, okay, I'll leave you be then.
     <<auto>>
