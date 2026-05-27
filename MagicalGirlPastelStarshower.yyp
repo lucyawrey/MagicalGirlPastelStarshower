@@ -111,6 +111,7 @@
     {"$GMIncludedFile":"","%Name":"confession.yarn","CopyToMask":-1,"filePath":"datafiles/story/not_implemented","name":"confession.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"ending.yarn","CopyToMask":-1,"filePath":"datafiles/story/not_implemented","name":"ending.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"forever_foretold.yarn","CopyToMask":-1,"filePath":"datafiles/story/not_implemented","name":"forever_foretold.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"stella_azalea_confession.yarn","CopyToMask":-1,"filePath":"datafiles/story/not_implemented","name":"stella_azalea_confession.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"void_heart.yarn","CopyToMask":-1,"filePath":"datafiles/story/not_implemented","name":"void_heart.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"start.yarn","CopyToMask":-1,"filePath":"datafiles/story","name":"start.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
   ],
