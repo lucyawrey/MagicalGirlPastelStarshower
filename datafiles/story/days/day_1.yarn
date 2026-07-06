@@ -18,10 +18,10 @@ day: 1
 [Dream]: Light.
 [Dream]: Blinding.
 [Dream]: Nothingness becomes everything.
-[Dream]: A woman stands before you holding a gleaming blade aloft.
+[Dream]: A woman stands before you. She holds a gleaming blade aloft.
 [Dream]: Women, standing, and blades are new to you. Yet, you know them.
 [Dream]: The blade of light falls.
-[Dream]: Death, too, is new to you. Yet you know it is coming for you all the same.
+[Dream]: Death, too, is new to you. Yet, you know it is coming for you all the same.
 Stella[Dream]: Not like this.
 <<hop DateCard>>
 <<jump Day1Home>>
@@ -31,7 +31,52 @@ title: Day1Home
 location: home
 day: 1
 ---
-Test.
+<<background "gray">>
+// Replace with quiet background noise.
+<<play "music" "morning">>
+Stella[Narrator]: I open my eyes and find myself lying halfway off my bed.
+Stella[Narrator]: Somehow, every one of my blankets are discarded on the floor on the other side of the room.
+Stella[Narrator]: The first thing I notice about my body is that I feel sweaty and unusually sick.
+Stella[Narrator]: At least the bright morning sun coming through the window helps.
+Stella: I don't wanna to get up.
+// Pause
+// Play annoying J-pop!
+Stella[Narrator]: An alarm clock starts blaring mid 2010's J-pop as if in direct response.
+Stella: Ughhhh.
+Stella[Narrator]: I only set it to go off on days I have to work, which means...
+Stella: I could just call in sick.
+Stella: What're they going to do, fire me?
+Stella: ...where am I working again today?
+Stella: Well, the hospital won't fire me at least.
+Stella[Narrator]: The alarm continues to go off.
+Stella[Narrator]: I can't even turn it off because it's all the way across the room from my bed, exactly where I left it, in order to ensure I had to actually the fuck out of bed in the morning.
+Stella[Narrator]: (It did, I will note, somehow avoid the fate of being buried in blankets.)
+Stella[Narrator]: It's getting louder.
+Stella[Narrator]: I breifly concider exploding it from here, but eventually resolve myself to my fate.
+Stella[Narrator]: I could use a cold shower anyway. Might help with the nausea.
+Stella[Narrator]: I pull myself out of bed, stretch, and then finally cross the distance to turn off that Wanderers damned alarm clock.
+// Click SFX
+// Replace J-pop with calming music.
+Stella[Narrator]: I run my fingers through my hair. It's somehow even messier than usual, and getting a little long for my tastes.
+Stella[Narrator]: It doesn't really matter, so I slowly make my way to the bathroom.
+Stella[Narrator]: There, I roughly brush my hair into some semblance of order, then brush my teeth even if it's more out of habit than necessity.
+Stella[Narrator]: I splash my face with water, and force myself to smile at my reflection.
+Stella[Narrator]: Despite my lack of care, I, as always, look almost flawless.
+Stella[Narrator]: I sign, and head back to my bedroom.
+Stella[Narrator]: I strip off my sleepwear, and look around for fresh clothes.
+Stella[Narrator]: There is a set of underwear, a tank top, and a pair of leggings in my "clean" pile of clothes that I quickly throw on.
+Stella[Narrator]: I step onto my apartment's balcony. It's a beautiful morning.
+Stella[Narrator]: The skies are clear, the sun is shining, and the fall air is... nice.
+Stella[Narrator]: I'm pretty sure I'm late for work, if only by a little.
+Stella[Narrator]: I never have been much good at keeping a decent sleep schedule.
+Stella[Narrator]: I hope Gio isn't too annoyed with me. Still, It's hard to be too stressed when I'm looking out on the streets of Neo Detroit in the midmorning light.
+Stella[Narrator]: I climb up on the railing of the balcony, dangling my feet off the edge, and enjoy the sight for a little longer.
+Stella[Narrator]: I forgot to put on shoes, I realize, as my feet start to get cold.
+Stella: Nothing for it.
+Stella[Narrator]: I jump.
+<<pause>>
+<<delay 0.5>>
+
 <<hide>>
 <<jump Day2Dream>>
 ===

@@ -18,7 +18,9 @@ day: 2
 ---
 <<background "gray">>
 <<play "music" "morning">>
-Stella[Narrator]: I open my eyes to find my head halfway off my bed. The morning sun is bright and pleasant through the window.
+Stella[Narrator]: I open my eyes to and find myself halfway off my bed.
+Stella[Narrator]:
+The morning sun is bright and pleasant through the window.
 Stella[Narrator]: I don't really remember making it back home last night.
 Stella[Narrator]: I was very tired, both physically and emotionally. It's all a bit of a blur.
 Stella[Narrator]: Not a bad blur, really. More the blur of routine. Taking a path home so well trodden I barely need to be conscious for it.
