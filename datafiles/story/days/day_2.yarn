@@ -101,14 +101,14 @@ Olivia: Don't worry, I only ever feed them bird seed. I'm well aware bread and t
 Olivia: Would you like any?
 Stella: Would I like any... bird seed?
 Olivia: Yeah. You fly, don't you? #bird_seed
--> Eat Bird Seed
+-> Eat bird seed
     Stella: Why not.
     Stella[Narrator]: I take the proffered seeds and toss a few into my mouth.
     Stella[Narrator]: They taste like ordinary sunflower seeds.
     Stella[Narrator]: I can't help but laugh a little, and snack on a few more.
     Stella: Thanks for the food.
     Olivia: You're welcome dear.
--> Do Not
+-> Do not
     Stella[Narrator]: I do do not eat any bird seed.
     Stella: Thank you, but no.
     Olivia: Suit yourself.
@@ -117,7 +117,7 @@ Olivia: Yeah. You fly, don't you? #bird_seed
     Olivia: They're just sunflower seeds.
     Stella: Well, maybe I'll have some next time.
     Olivia: If I am ever this generous again.
--> Explain That You Technically Do Not Fly
+-> Explain that you technically do not fly
     Stella: I don't. Fly I mean.
     Stella: Technically.
     Stella: It's more like I use a sequence of basic spells to convert raw magical power into force in order to fling myself through the air like a slingshot.

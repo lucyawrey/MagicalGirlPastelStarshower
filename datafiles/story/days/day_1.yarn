@@ -19,9 +19,12 @@ day: 1
 [Dream]: Blinding.
 [Dream]: Nothingness becomes everything.
 [Dream]: A woman stands before you. She holds a gleaming blade aloft.
+// Show glowing light
 [Dream]: Women, standing, and blades are new to you. Yet, you know them.
 [Dream]: The blade of light falls.
-[Dream]: Death, too, is new to you. Yet, you know it is coming for you all the same.
+[Dream]: Death, too, is new to you.
+[Dream]: Yet, you know it is coming for you all the same.
+// Aborted slashing animation, SFX.
 Stella[Dream]: Not like this.
 <<hop DateCard>>
 <<jump Day1Home>>
@@ -32,33 +35,71 @@ location: home
 day: 1
 ---
 <<background "gray">>
-// Replace with quiet background noise.
-<<play "music" "morning">>
+// Quiet background noise.
 Stella[Narrator]: I open my eyes and find myself lying halfway off my bed.
 Stella[Narrator]: Somehow, every one of my blankets are discarded on the floor on the other side of the room.
 Stella[Narrator]: The first thing I notice about my body is that I feel sweaty and unusually sick.
 Stella[Narrator]: At least the bright morning sun coming through the window helps.
 Stella: I don't wanna to get up.
-// Pause
-// Play annoying J-pop!
-Stella[Narrator]: An alarm clock starts blaring mid 2010's J-pop as if in direct response.
+<<delay 0.2>>
+<<play "music" "typhoon_parade">>
+Stella[Narrator]: An alarm clock starts blaring mid 2010's J-pop as if in direct rejection of my plea.
 Stella: Ughhhh.
 Stella[Narrator]: I only set it to go off on days I have to work, which means...
 Stella: I could just call in sick.
 Stella: What're they going to do, fire me?
-Stella: ...where am I working again today?
-Stella: Well, the hospital won't fire me at least.
+Stella[Narrator]: I can't remember if I'm working at the hospital or the cafe today.
+Stella: Whoever they are.
 Stella[Narrator]: The alarm continues to go off.
-Stella[Narrator]: I can't even turn it off because it's all the way across the room from my bed, exactly where I left it, in order to ensure I had to actually the fuck out of bed in the morning.
-Stella[Narrator]: (It did, I will note, somehow avoid the fate of being buried in blankets.)
+Stella[Narrator]: I can't even shut it off from here because it's all the way across the room, exactly where I left it.
+Stella[Narrator]: Specifically to ensure I had to actually get out of bed in the morning.
 Stella[Narrator]: It's getting louder.
-Stella[Narrator]: I breifly concider exploding it from here, but eventually resolve myself to my fate.
+Stella[Narrator]: I breifly concider blowing it up.
+Stella[Narrator]: But eventually, I resolve myself to fate.
 Stella[Narrator]: I could use a cold shower anyway. Might help with the nausea.
-Stella[Narrator]: I pull myself out of bed, stretch, and then finally cross the distance to turn off that Wanderers damned alarm clock.
-// Click SFX
-// Replace J-pop with calming music.
-Stella[Narrator]: I run my fingers through my hair. It's somehow even messier than usual, and getting a little long for my tastes.
-Stella[Narrator]: It doesn't really matter, so I slowly make my way to the bathroom.
+Stella[Narrator]: I pull myself out of bed, stretch, and finally cross the room to turn off that cursed alarm clock.
+<<delay 0.2>>
+<<pause>>
+<<play "sound" "click_2">>
+<<delay 0.2>>
+<<play "music" "morning">>
+Stella[Narrator]: I take a breath while running my fingers through blonde hair.
+Stella[Narrator]: It's damp from sweat and, somehow, even messier than normal.
+<<jump Act1>>
+===
+
+title: Act1
+---
+Stella[Narrator]: I need to check where I'm supposed to be today. And take that shower. #act1
+-> Act
+    What to do? #do
+    -> Investigate room <<if $investigate_room == false>>
+        <<set $investigate_room to true>>
+        It's a room.
+    -> Go back to sleep <<if $sleep_more == false>>
+        <<set $sleep_more to true>>
+        Stella: Maybe just for a little while.
+    -> Check wall calendar <<if $check_calendar == false>>
+        <<set $check_calendar to true>>
+        The dessert themed wall calendar has a tasty-yet-incriminating ice cream cone drawn next to the month name, July.
+        It hasn't been changed in three months.
+        Stella[Slow]: ...
+    -> Check phone calendar <<if $check_calendar == true>>
+        The dessert themed wall calendar has a tasty-yet-incriminating ice cream cone drawn next to the month name, July.
+        It hasn't been changed in three months.
+        Stella[Slow]: ...
+-> Talk
+    Stella: There's nobody here but me, right?
+-> Move
+    Where to go? #go
+    -> Bathroom
+        SCENE TRANSITION
+    -> Balcony
+        Time to go jump off! But not in a suicidey way.
+    -> Nowhere
+        You're already there.
+<<jump Act1>>
+
 Stella[Narrator]: There, I roughly brush my hair into some semblance of order, then brush my teeth even if it's more out of habit than necessity.
 Stella[Narrator]: I splash my face with water, and force myself to smile at my reflection.
 Stella[Narrator]: Despite my lack of care, I, as always, look almost flawless.
